@@ -15,7 +15,9 @@ export default function App({ Component, pageProps, router }) {
           setTimeout( () => {
             setIsLoading(false);
             document.body.style.cursor = 'default'
-            window.scrollTo(0,0);
+            if (typeof window !== 'undefined') {
+              window.scrollTo(0,0);
+            }
           }, 2000)
       }
     )()

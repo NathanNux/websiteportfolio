@@ -7,15 +7,29 @@ import Description from "@/components/LandingPage/Description";
 
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import LocomotiveScroll from "locomotive-scroll";
 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const container = useRef(null)
+  const [LocomotiveScroll, setLocomotiveScroll] = useState(null);
+  const [scroll, setScroll] = useState(null);
+
+  
+  useEffect(() => {
+    import('locomotive-scroll').then((LocomotiveModule) => {
+      if (container.current) {
+        const scrollInstance = new LocomotiveModule.default({
+          el: container.current,
+          smooth: true,
+        });
+        setScroll(scrollInstance);
+      }
+    });
+  }, []);
 
   useEffect(() => {
     const targers = container.current.querySelectorAll('h1, p')
@@ -23,14 +37,6 @@ export default function Home() {
     window.scrollTo(0, 0)
   }, [])
 
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-    });
-
-    return () => scroll.destroy();
-  }, []);
 
   // this needs to be in every page, because of the smooth scroll anim. it won't work without it when you navigate to another page
 
