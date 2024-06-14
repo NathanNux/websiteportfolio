@@ -1,8 +1,8 @@
 'use client'
 import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
-import Navbar from "@/components/Navbar";
-import Header from "@/components/Header";
+import Navbar from "@/components/navbar";
+import Header from "@/components/header";
 
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
