@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Curve from './nav/Curve';
 
 
-export default function index() {
+export default function Index() {
 
     const [isActive, setIsActive] = useState(false);
     const navbar = useRef(null);
