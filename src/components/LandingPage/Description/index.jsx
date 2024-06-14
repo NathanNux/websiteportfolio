@@ -6,7 +6,7 @@ import { slideUp, opacity } from './animation';
 import styles from './style.module.scss';
 import { useMousePosition } from '@/utils/useMousePosition';
 
-export default function index () {
+export default function Index () {
 
     const phrase = 'Pomáhám značkám a firmám růst v digitálním světě. Společně nastavíme nový standard pro webové projekty. Vždy s nejnovější technologií, principy a kvalitou, žádné nesmysly.'
     const phraseHidden = 'Visuální desinger + Fullstack Dev, který má schopnosti a zkušenosti dělat díla, které (ještě) nebyla a nebudou nahrazena umělou inteligencí - Odvádím skvělou práci, když je cena stejně tak skvělá.'
