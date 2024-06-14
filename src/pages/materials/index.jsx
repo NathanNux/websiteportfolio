@@ -2,14 +2,11 @@ import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
-import Landing from "@/components/LandingPage/Landing";
-import Description from "@/components/LandingPage/Description";
 
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import LocomotiveScroll from "locomotive-scroll";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,17 +20,6 @@ export default function Home() {
     window.scrollTo(0, 0)
   }, [])
 
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-    });
-
-    return () => scroll.destroy();
-  }, []);
-
-  // this needs to be in every page, because of the smooth scroll anim. it won't work without it when you navigate to another page
-
   return (
     <>
       <Head>
@@ -45,11 +31,9 @@ export default function Home() {
       <Header />
       <Navbar />
       <CurveTransition>
-      <Landing />
-      <Description />
          <main ref={container} className={`${styles.main} ${inter.className}`}>
           <div className={styles.container}>
-            <h1>Domov</h1>
+            <h1>Materiály</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et mollis elit. Nulla facilisi. Phasellus ac pulvinar ante. Morbi maximus feugiat sapien nec cursus. Phasellus in ornare elit. Suspendisse viverra porta dui et efficitur. Sed ut rhoncus nibh. Cras eleifend tellus a enim sodales, a efficitur odio euismod. Aenean non consequat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis eleifend ipsum, sit amet posuere ligula.</p>
             <p>Sed ut rhoncus nibh. Cras eleifend tellus a enim sodales, a efficitur odio euismod. Aenean non consequat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis eleifend ipsum, sit amet posuere ligula.</p>
           </div>

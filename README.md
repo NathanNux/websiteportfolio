@@ -38,3 +38,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+## Notes in creation 
+page transitions can be only used in page router not in app router 
+in page router for only text no framer transitons, it needs to be added context transition - Oliver larose has it, I have it on github, that just for text. GSAP transitions
+
+Page transition using framer motion can be used here. 
+
+Be aware of GSAP scrollTrigger, look into this project, useLayoutEffect will not work otherwise - so be aware of this issue on page router
+
