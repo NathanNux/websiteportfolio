@@ -1,0 +1,123 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    padding: 5rem 0rem;
+    z-index: 1;
+    position: relative;
+    .textContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        p{ 
+            width: 80%;
+            text-align: center;
+            line-height: 1.8;
+            color: #22272d;
+            position: relative;
+            font-size: 4em;
+
+            &:nth-of-type(1){
+                font-weight: 300;
+                margin: 0;
+                padding: 2em 0 6em 0;
+                span.highLighted{
+                    color: #ff5100;
+                    font-weight: 400;
+                }
+            }
+            &:nth-of-type(2){
+                font-weight: 300;
+                margin: 0;
+                padding: 2em 0 6em 0;
+                span.highLighted{
+                    color: #ff5100;
+                    font-weight: 400;
+                }
+            }
+            &:nth-of-type(3){
+                font-weight: 300;
+                margin: 0;
+                padding: 2em 0 4em 0;
+                span.highLighted{
+                    color: #ff5100;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1750px){
+   .main{
+        .textContainer{
+            p{
+                font-size: 3.5em;
+                width: 65%;
+            }
+        }
+   }
+}
+
+@media only screen and (max-width: 1550px){
+    .main{
+         .textContainer{
+             p{
+                 font-size: 3em;
+                 width: 65%;
+             }
+         }
+    }
+}
+
+
+@media only screen and (max-width: 1450px){
+    .main{
+            .textContainer{
+                p{
+                    font-size: 2.8em;
+                    width: 65%;
+                }
+            }
+    }
+}
+
+@media only screen and (max-width: 1250px){
+    .main{
+            .textContainer{
+                p{
+                    font-size: 2.7em;
+                    width: 70%;
+                }
+            }
+    }
+}
+
+
+@media only screen and (max-width: 1000px) and (min-height: 600px){
+    .main{
+            .textContainer{
+                p{
+                    font-size: 2.5em;
+                    width: 70%;
+                }
+            }
+    }
+}
+@media only screen and (max-width: 450px) and (max-height: 950px){
+    .main{
+            .textContainer{
+                p{
+                    width: 98%;
+                    font-size: 2.2em;
+                    width: 70%;
+                }
+            }
+    }
+}

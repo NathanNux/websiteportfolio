@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import throttle from 'lodash/throttle';
+// this throttle will limit the number of times the function is called - the number of times the component will rerender
+// it will be called every 100ms and makes the anim hell a lot faster and smoother
 
 export const useMousePosition = (elRef) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   
-    const updateMousePosition = ev => {
+    const updateMousePosition = throttle(ev => {
         if (elRef.current) {
             const rect = elRef.current.getBoundingClientRect();
             setMousePosition({ 
@@ -11,7 +14,7 @@ export const useMousePosition = (elRef) => {
             y: ev.clientY - rect.top 
             });
         }
-    };
+    }, 50); // Adjust this value to change the throttling rate here
   
     useEffect(() => {
       window.addEventListener("mousemove", updateMousePosition);

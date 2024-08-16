@@ -1,0 +1,178 @@
+"filename", "language", "JavaScript", "SCSS", "JavaScript JSX", "comment", "blank", "total"
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/AboutSections/Programing/index.jsx", "JavaScript JSX", 0, 0, 57, 1, 6, 64
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/AboutSections/Programing/style.module.scss", "SCSS", 0, 84, 0, 0, 4, 88
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/AboutSections/School/index.jsx", "JavaScript JSX", 0, 0, 57, 1, 6, 64
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/AboutSections/School/style.module.scss", "SCSS", 0, 83, 0, 0, 4, 87
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/AboutSections/Sport/index.jsx", "JavaScript JSX", 0, 0, 57, 1, 6, 64
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/AboutSections/Sport/style.module.scss", "SCSS", 0, 83, 0, 0, 4, 87
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/AboutSections/index.jsx", "JavaScript JSX", 0, 0, 32, 0, 6, 38
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/AboutSections/style.module.scss", "SCSS", 0, 34, 0, 0, 2, 36
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/Description/index.jsx", "JavaScript JSX", 0, 0, 58, 1, 8, 67
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/Description/style.module.scss", "SCSS", 0, 25, 0, 0, 2, 27
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/Intro/index.jsx", "JavaScript JSX", 0, 0, 89, 1, 17, 107
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/Intro/style.module.scss", "SCSS", 0, 52, 0, 0, 1, 53
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/Landing/index.jsx", "JavaScript JSX", 0, 0, 76, 2, 9, 87
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/Landing/style.module.scss", "SCSS", 0, 52, 0, 0, 4, 56
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/Service/index.jsx", "JavaScript JSX", 0, 0, 99, 1, 16, 116
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/AboutPage/Service/style.module.scss", "SCSS", 0, 103, 0, 0, 0, 103
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ContactPage/Calendly/index.jsx", "JavaScript JSX", 0, 0, 62, 1, 10, 73
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ContactPage/Calendly/style.module.scss", "SCSS", 0, 51, 0, 0, 5, 56
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ContactPage/Contact/index.jsx", "JavaScript JSX", 0, 0, 341, 1, 22, 364
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ContactPage/Contact/style.module.scss", "SCSS", 0, 277, 0, 0, 12, 289
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ContactPage/Footer/index.jsx", "JavaScript JSX", 0, 0, 73, 6, 10, 89
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ContactPage/Footer/style.module.scss", "SCSS", 0, 76, 0, 0, 3, 79
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Footer/index.jsx", "JavaScript JSX", 0, 0, 164, 41, 40, 245
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Footer/style.module.scss", "SCSS", 0, 253, 0, 0, 12, 265
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/anim.js", "JavaScript", 72, 0, 0, 0, 7, 79
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/index.jsx", "JavaScript JSX", 0, 0, 49, 57, 18, 124
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/nav/Body/index.jsx", "JavaScript JSX", 0, 0, 40, 0, 4, 44
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/nav/Body/style.module.scss", "SCSS", 0, 30, 0, 0, 6, 36
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/nav/Curve/index.jsx", "JavaScript JSX", 0, 0, 29, 4, 9, 42
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/nav/Curve/style.module.scss", "SCSS", 0, 10, 0, 0, 0, 10
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/nav/Footer/index.jsx", "JavaScript JSX", 0, 0, 56, 1, 5, 62
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/nav/Footer/style.module.scss", "SCSS", 0, 60, 0, 0, 9, 69
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/nav/Image/index.jsx", "JavaScript JSX", 0, 0, 16, 0, 1, 17
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/nav/Image/style.module.scss", "SCSS", 0, 16, 0, 0, 5, 21
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/nav/index.jsx", "JavaScript JSX", 0, 0, 49, 0, 4, 53
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/nav/style.module.scss", "SCSS", 0, 22, 0, 0, 4, 26
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Header/style.module.scss", "SCSS", 0, 113, 0, 0, 20, 133
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/Description/index.jsx", "JavaScript JSX", 0, 0, 56, 0, 7, 63
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/Description/style.module.scss", "SCSS", 0, 81, 0, 0, 5, 86
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/FreeStuff/Projects/index.jsx", "JavaScript JSX", 0, 0, 68, 1, 6, 75
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/FreeStuff/Projects/style.module.scss", "SCSS", 0, 49, 0, 0, 0, 49
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/FreeStuff/index.jsx", "JavaScript JSX", 0, 0, 84, 1, 21, 106
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/FreeStuff/style.module.scss", "SCSS", 0, 76, 0, 0, 5, 81
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/IntroText/index.jsx", "JavaScript JSX", 0, 0, 78, 12, 18, 108
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/IntroText/style.module.scss", "SCSS", 0, 54, 0, 0, 1, 55
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/Landing/index.jsx", "JavaScript JSX", 0, 0, 69, 2, 7, 78
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/Landing/style.module.scss", "SCSS", 0, 52, 0, 0, 4, 56
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/MainOffer/Timer/index.jsx", "JavaScript JSX", 0, 0, 38, 0, 9, 47
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/MainOffer/Timer/style.module.scss", "SCSS", 0, 5, 0, 0, 0, 5
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/MainOffer/index.jsx", "JavaScript JSX", 0, 0, 67, 1, 7, 75
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/MainOffer/style.module.scss", "SCSS", 0, 107, 0, 0, 0, 107
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/NewestWork/Model/index.jsx", "JavaScript JSX", 0, 0, 68, 11, 11, 90
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/NewestWork/Projects/index.jsx", "JavaScript JSX", 0, 0, 37, 1, 3, 41
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/NewestWork/Projects/styles.module.scss", "SCSS", 0, 73, 0, 0, 5, 78
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/NewestWork/Scene/index.jsx", "JavaScript JSX", 0, 0, 12, 2, 3, 17
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/NewestWork/Scene/style.module.scss", "SCSS", 0, 7, 0, 0, 0, 7
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/NewestWork/Shader/index.js", "JavaScript", 24, 0, 0, 3, 3, 30
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/NewestWork/data.js", "JavaScript", 30, 0, 0, 0, 0, 30
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/NewestWork/index.jsx", "JavaScript JSX", 0, 0, 20, 1, 2, 23
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/NewestWork/styles.module.scss", "SCSS", 0, 22, 0, 0, 1, 23
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/OfferSections/Design/index.jsx", "JavaScript JSX", 0, 0, 95, 1, 9, 105
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/OfferSections/Design/style.module.scss", "SCSS", 0, 88, 0, 0, 5, 93
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/OfferSections/Sales/index.jsx", "JavaScript JSX", 0, 0, 95, 1, 8, 104
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/OfferSections/Sales/style.module.scss", "SCSS", 0, 90, 0, 2, 4, 96
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/OfferSections/Services/index.jsx", "JavaScript JSX", 0, 0, 95, 1, 8, 104
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/OfferSections/Services/style.module.scss", "SCSS", 0, 87, 0, 0, 4, 91
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/OfferSections/index.jsx", "JavaScript JSX", 0, 0, 32, 0, 6, 38
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/OfferSections/style.module.scss", "SCSS", 0, 33, 0, 0, 2, 35
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/ParallaxZoom/index.jsx", "JavaScript JSX", 0, 0, 169, 3, 19, 191
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/ParallaxZoom/style.module.scss", "SCSS", 0, 108, 0, 0, 4, 112
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/Slider/index.jsx", "JavaScript JSX", 0, 0, 230, 2, 20, 252
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/LandingPage/Slider/style.module.scss", "SCSS", 0, 66, 0, 0, 5, 71
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/MaterialsPage/FreeStuff/Projects/index.jsx", "JavaScript JSX", 0, 0, 68, 1, 5, 74
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/MaterialsPage/FreeStuff/Projects/style.module.scss", "SCSS", 0, 49, 0, 0, 0, 49
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/MaterialsPage/FreeStuff/index.jsx", "JavaScript JSX", 0, 0, 145, 13, 32, 190
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/MaterialsPage/FreeStuff/style.module.scss", "SCSS", 0, 110, 0, 0, 6, 116
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/MaterialsPage/Landing/anim.js", "JavaScript", 32, 0, 0, 2, 1, 35
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/MaterialsPage/Landing/index.jsx", "JavaScript JSX", 0, 0, 73, 2, 12, 87
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/MaterialsPage/Landing/style.module.scss", "SCSS", 0, 54, 0, 0, 5, 59
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Navbar/index.jsx", "JavaScript JSX", 0, 0, 45, 3, 6, 54
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Navbar/style.module.scss", "SCSS", 0, 190, 0, 0, 9, 199
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Preloader/anim.js", "JavaScript", 18, 0, 0, 0, 3, 21
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Preloader/index.jsx", "JavaScript JSX", 0, 0, 42, 1, 8, 51
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/Preloader/style.module.scss", "SCSS", 0, 35, 0, 0, 0, 35
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/IconList/index.jsx", "JavaScript JSX", 0, 0, 153, 6, 22, 181
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/IconList/style.module.scss", "SCSS", 0, 79, 0, 0, 3, 82
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/Model/index.jsx", "JavaScript JSX", 0, 0, 70, 10, 13, 93
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/Projects/index.jsx", "JavaScript JSX", 0, 0, 49, 0, 4, 53
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/Projects/styles.module.scss", "SCSS", 0, 58, 0, 0, 6, 64
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/Scene/index.jsx", "JavaScript JSX", 0, 0, 12, 0, 3, 15
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/Scene/style.module.scss", "SCSS", 0, 14, 0, 0, 1, 15
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/Shader/index.js", "JavaScript", 24, 0, 0, 3, 3, 30
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/anim.js", "JavaScript", 79, 0, 0, 1, 5, 85
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/index.jsx", "JavaScript JSX", 0, 0, 117, 2, 12, 131
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsPage/Projects/styles.module.scss", "SCSS", 0, 148, 0, 0, 17, 165
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Description/index.jsx", "JavaScript JSX", 0, 0, 58, 1, 8, 67
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Description/style.module.scss", "SCSS", 0, 25, 0, 0, 2, 27
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Intro/index.jsx", "JavaScript JSX", 0, 0, 22, 0, 9, 31
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Intro/style.module.scss", "SCSS", 0, 13, 0, 0, 0, 13
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/NextProjects/Projects/index.jsx", "JavaScript JSX", 0, 0, 164, 6, 27, 197
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/NextProjects/Projects/style.module.scss", "SCSS", 0, 81, 0, 0, 5, 86
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/NextProjects/index.jsx", "JavaScript JSX", 0, 0, 30, 0, 9, 39
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/NextProjects/style.module.scss", "SCSS", 0, 78, 0, 0, 6, 84
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/ParallaxZoom/index.jsx", "JavaScript JSX", 0, 0, 170, 3, 19, 192
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/ParallaxZoom/style.module.scss", "SCSS", 0, 106, 0, 0, 4, 110
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/Introduction/index.jsx", "JavaScript JSX", 0, 0, 57, 1, 6, 64
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/Introduction/style.module.scss", "SCSS", 0, 82, 0, 0, 5, 87
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/MobileView/Projects/index.jsx", "JavaScript JSX", 0, 0, 81, 1, 6, 88
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/MobileView/Projects/style.module.scss", "SCSS", 0, 57, 0, 0, 1, 58
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/MobileView/index.jsx", "JavaScript JSX", 0, 0, 27, 0, 8, 35
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/MobileView/style.module.scss", "SCSS", 0, 76, 0, 0, 5, 81
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/Services/index.jsx", "JavaScript JSX", 0, 0, 57, 1, 6, 64
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/Services/style.module.scss", "SCSS", 0, 83, 0, 0, 4, 87
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/StyleChoice/index.jsx", "JavaScript JSX", 0, 0, 57, 1, 6, 64
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/StyleChoice/style.module.scss", "SCSS", 0, 84, 0, 0, 4, 88
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/index.jsx", "JavaScript JSX", 0, 0, 33, 3, 6, 42
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/Sections/style.module.scss", "SCSS", 0, 33, 0, 0, 2, 35
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/TopBar/index.jsx", "JavaScript JSX", 0, 0, 40, 0, 7, 47
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ProjectsTemplate/TopBar/style.module.scss", "SCSS", 0, 58, 0, 0, 6, 64
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/anim.js", "JavaScript", 120, 0, 0, 1, 10, 131
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/transition/CurveTransition/animations.js", "JavaScript", 50, 0, 0, 0, 3, 53
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/transition/CurveTransition/index.jsx", "JavaScript JSX", 0, 0, 84, 0, 11, 95
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/transition/CurveTransition/style.module.scss", "SCSS", 0, 43, 0, 0, 1, 44
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/animated-tooltip.jsx", "JavaScript JSX", 0, 0, 72, 2, 3, 77
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/chart.jsx", "JavaScript JSX", 0, 0, 274, 2, 34, 310
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/clickButton.jsx", "JavaScript JSX", 0, 0, 45, 0, 4, 49
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/clickButton.module.scss", "SCSS", 0, 80, 0, 0, 6, 86
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/linkButton.jsx", "JavaScript JSX", 0, 0, 16, 0, 1, 17
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/linkButton.module.scss", "SCSS", 0, 45, 0, 0, 3, 48
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/phoneButton.jsx", "JavaScript JSX", 0, 0, 33, 1, 4, 38
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/phoneButton.module.scss", "SCSS", 0, 48, 0, 0, 2, 50
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/toast.jsx", "JavaScript JSX", 0, 0, 76, 0, 11, 87
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/toaster.jsx", "JavaScript JSX", 0, 0, 32, 0, 4, 36
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/components/ui/use-toast.js", "JavaScript", 128, 0, 0, 3, 25, 156
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/constants/index.js", "JavaScript", 198, 0, 0, 0, 5, 203
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/context/index.jsx", "JavaScript JSX", 0, 0, 23, 2, 6, 31
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/_app.js", "JavaScript", 29, 0, 0, 1, 7, 37
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/_document.js", "JavaScript", 13, 0, 0, 0, 2, 15
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/about/index.jsx", "JavaScript JSX", 0, 0, 49, 0, 6, 55
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/about/style.module.scss", "SCSS", 0, 0, 0, 0, 1, 1
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/api/contact.js", "JavaScript", 15, 0, 0, 0, 1, 16
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/api/hello.js", "JavaScript", 3, 0, 0, 1, 2, 6
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/contact/index.jsx", "JavaScript JSX", 0, 0, 43, 0, 9, 52
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/contact/style.module.scss", "SCSS", 0, 0, 0, 0, 1, 1
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/cookies/index.jsx", "JavaScript JSX", 0, 0, 38, 0, 7, 45
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/cookies/style.module.scss", "SCSS", 0, 0, 0, 0, 1, 1
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/index.js", "JavaScript", 64, 0, 0, 45, 25, 134
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/materials/index.jsx", "JavaScript JSX", 0, 0, 40, 0, 8, 48
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/materials/style.module.scss", "SCSS", 0, 0, 0, 0, 1, 1
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/ochrana-osobnich-udaju/index.jsx", "JavaScript JSX", 0, 0, 38, 0, 7, 45
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/ochrana-osobnich-udaju/style.module.scss", "SCSS", 0, 0, 0, 0, 1, 1
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/3d-pc/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/3d-tee/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/3d-windmill/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/agency/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/apple-site/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/bank/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/blog/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/brainwave/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/car-app/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/components/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/denis-clone/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/e-comm/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/framer/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/index.jsx", "JavaScript JSX", 0, 0, 41, 1, 10, 52
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/nft/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/restaurant/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/smooth-scroll/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/sushi/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/pages/projects/travel/index.jsx", "JavaScript JSX", 0, 0, 50, 5, 10, 65
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/styles/Home.module.scss", "SCSS", 0, 22, 0, 0, 1, 23
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/styles/globals.scss", "SCSS", 0, 71, 0, 0, 4, 75
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/utils.js", "JavaScript", 5, 0, 0, 0, 2, 7
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/utils/useDimensions.js", "JavaScript", 20, 0, 0, 0, 4, 24
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/utils/useMouse.js", "JavaScript", 39, 0, 0, 4, 7, 50
+"/Users/matejforejt/Desktop/Projects/porfolio-final/src/utils/useMousePosition.js", "JavaScript", 19, 0, 0, 7, 7, 33
+"Total", "-", 982, 4244, 6091, 385, 1277, 12979

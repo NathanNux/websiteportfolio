@@ -1,0 +1,124 @@
+.main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 20rem;
+    z-index: 1;
+    .title{
+        display: flex;
+        padding: 0 11rem;
+        p {
+            font-size: 1.3em;
+            font-weight: 300;
+            margin: 0;
+        }
+    }
+    .section {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-height: 850px){
+    .main {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 15rem;
+        z-index: 1;
+        .title{
+            display: flex;
+            padding: 0 11rem;
+            p {
+                font-size: 1.3em;
+                font-weight: 300;
+                margin: 0;
+            }
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-height: 800px){
+    .main {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 12rem;
+        z-index: 1;
+        .title{
+            display: flex;
+            padding: 0 11rem;
+            p {
+                font-size: 1.3em;
+                font-weight: 300;
+                margin: 0;
+            }
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-height: 800px){
+    .main {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 12rem;
+        z-index: 1;
+        .title{
+            display: flex;
+            padding: 0 6rem;
+            p {
+                font-size: 1.3em;
+                font-weight: 300;
+                margin: 0;
+            }
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 450px) and (max-height: 950px){
+    .main {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 20rem;
+        z-index: 1;
+        .title{
+            display: flex;
+            padding: 0 3rem;
+            p {
+                font-size: 1.3em;
+                font-weight: 300;
+                margin: 0;
+            }
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}

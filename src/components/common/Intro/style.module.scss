@@ -1,0 +1,208 @@
+.main {
+    width: 100vw;
+    height: 120vh;
+    z-index: -1;
+    position: relative;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .textContainer{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .firstText{
+            position: absolute;
+            top: 25%;
+            left: 30%;
+            width: 55%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 2.5em;
+            font-weight: 300;
+            text-align: left;
+            z-index: 1;
+        }
+        .secondText{
+            position: absolute;
+            top: 35%;
+            right: -20%;
+            width: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 2.5em;
+            font-weight: 300;
+            text-align: right;
+            z-index: 1;
+        }
+        .mainText{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 65%;
+            transform: translate(-50%, -50%);
+            color: #FF5508;
+            font-size: 6em;
+            font-weight: 500;
+            text-align: left;
+            z-index: 1;
+        }
+    }
+}
+
+@media only screen and (max-width: 1750px){
+    .main {
+        .textContainer{
+            .firstText{
+                top: 25%;
+                left: 30%;
+                font-size: 2.5em;
+            }
+            .secondText{
+                top: 35%;
+                right: -20%;
+                font-size: 2.5em;
+            }
+            .mainText{
+                left: 50%;
+                font-size: 6em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1550px){
+    .main {
+        .textContainer{
+            .firstText{
+                top: 30%;
+                left: 30%;
+                font-size: 2.3em;
+            }
+            .secondText{
+                top: 40%;
+                right: -20%;
+                font-size: 2.3em;
+            }
+            .mainText{
+                bottom: -5%;
+                left: 50%;
+                font-size: 5em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1450px){
+    .main {
+        .textContainer{
+            .firstText{
+                top: 30%;
+                left: 30%;
+                font-size: 2.2em;
+            }
+            .secondText{
+                top: 40%;
+                right: -20%;
+                font-size: 2.2em;
+            }
+            .mainText{
+                bottom: 5%;
+                left: 50%;
+                font-size: 4.5em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-height: 600px){
+    .main {
+        .textContainer{
+            .firstText{
+                top: 30%;
+                left: 30%;
+                font-size: 1.8em;
+            }
+            .secondText{
+                top: 40%;
+                right: -20%;
+                font-size: 1.8em;
+            }
+            .mainText{
+                bottom: 0;
+                left: 50%;
+                font-size: 4em;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 900px) and (min-height: 800px){
+    .main {
+        .textContainer{
+            .firstText{
+                top: 30%;
+                left: 30%;
+                font-size: 2em;
+                font-weight: 400;
+            }
+            .secondText{
+                top: 50%;
+                right: -20%;
+                font-size: 2em;
+                font-weight: 400;
+            }
+            .mainText{
+                bottom: 5%;
+                left: 50%;
+                font-size: 4.5em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) and (max-height: 950px){
+    .main {
+        .textContainer{
+            .firstText{
+                top: 30%;
+                left: 30%;
+                font-size: 1.5em;
+            }
+            .secondText{
+                top: 55%;
+                right: -20%;
+                font-size: 1.5em;
+            }
+            .mainText{
+                bottom: -5%;
+                left: 50%;
+                font-size: 3.5em;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 400px) and (max-height: 700px){
+    .main {
+        .textContainer{
+            .firstText{
+                top: 30%;
+                left: 30%;
+                font-size: 1.5em;
+            }
+            .secondText{
+                top: 50%;
+                right: -20%;
+                font-size: 1.5em;
+            }
+            .mainText{
+                bottom: -5%;
+                left: 50%;
+                font-size: 3em;
+            }
+        }
+    }
+}

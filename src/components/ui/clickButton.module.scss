@@ -1,0 +1,99 @@
+.barButton{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+    background-color: #22272d;
+    color: #fff;
+    z-index: 1;
+
+    .link{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0.1rem 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        p{
+            font-size: 1.2em;
+            font-weight: 300;
+            margin: 0;
+            font-family: 'Inter' , sans-serif;
+            transition: color 0.5s cubic-bezier(0.26, 0, 0.72, 1);
+            z-index: 3;
+        }
+        .black{
+            color: #22272d;
+        }
+        .svgContainer{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            svg{
+                width: 100%;
+                height: 100%;
+                scale: 1.5;
+                path{
+                    fill: #fff;
+                    transition: fill 0.5s cubic-bezier(0.26, 0, 0.72, 1);
+                }
+                .blackSVG{
+                    fill: #22272d;
+                }
+            }
+            &:hover{
+                svg{
+                    path{
+                        fill: #22272d;
+                    }
+                }
+            }
+        }
+    }
+   
+
+    .dot {
+        width: 200px;
+        height: 150px;
+        scale: 1.2;
+        background-color: #fb6b28;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    &:hover {
+        p{
+            color: #22272d;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-height: 600px){
+    .barButton{
+        height: 40px;
+        width: 80px;
+        .link{
+            p{
+                font-size: 1em;
+            }
+        }
+    }
+    
+}

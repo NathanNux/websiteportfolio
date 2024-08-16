@@ -1,9 +1,12 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { text, curve, translate } from './animations';
+import debounce from 'lodash/debounce'; // Assuming lodash is installed
+
 
 import styles from './style.module.scss'
+import { useLoad } from '@/context';
 
 const routes = {
     '/': 'Domov',
@@ -12,7 +15,26 @@ const routes = {
     '/contact': 'Kontakt',
     '/materials': 'Materiály',
     '/ochrana-osobnich-udaju': 'Ochrana osobních údajů',
-    '/cookies': 'Cookies'
+    '/cookies': 'Cookies',
+    '/projects/components': 'Komponenty',
+    '/projects/blog': 'Blog',
+    '/projects/agency': 'Agentura',
+    '/projects/bank': 'Banka',
+    '/projects/car-app': 'Půjčovna Aut',
+    '/projects/travel': 'Cestovní Web',
+    '/projects/e-comm': 'E-commerce',
+    '/projects/sushi': 'Sushi Restaurace',
+    '/projects/smooth-scroll': 'Smooth Scroll',
+    '/projects/restaurant': 'Restaurace',
+    '/projects/nft': 'NFT Marketplace',
+    '/projects/framer': 'Framer Website',
+    '/projects/denis-clone': 'Portfolio DS',
+    '/projects/brainwave': 'Brainwave',
+    '/projects/3d-pc': '3D Portfolio',
+    '/projects/3d-tee': '3D T-shirt',
+    '/projects/3d-windmill': '3D Mlýn',
+    '/projects/apple-site': 'Apple Web',
+
 }
 
 const anim = (variants) => {
@@ -49,30 +71,31 @@ const SVG = ({height, width}) => {
     )
 }
 
-export default function CurveTransition({children, backgroundColor}) {
-  const router = useRouter();
-    const [ dimensions, setDimensions ] = useState({ width: null, height: null });
+export default function CurveTransition({children}) {
+    const router = useRouter();
+    const [dimensions, setDimensions] = useState({ width: null, height: null });
+    const { isLoading, setIsLoading } = useLoad();
+
+
+    const handleResize = useCallback(debounce(() => {
+        setDimensions({
+            width: window.innerWidth,
+            height: window.innerHeight,
+        });
+    }, 250), []);
 
     useEffect(() => {
-        function resize() {
-            setDimensions({
-                width: window.innerWidth,
-                height: window.innerHeight
-            })
-        }
-        resize();
-        window.addEventListener('resize', resize);
-        return () => window.removeEventListener('resize', resize);
-    }, [])
+        handleResize(); // Initial resize to set dimensions
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [handleResize]);
 
-  return (
-    <div className={styles.pageCurve} style={{backgroundColor}}>
-        <div style={{opacity: dimensions.width == null ? 1 : 0}} className={styles.background}/>
-        <motion.p className={styles.route} {...anim(text)}>
-            {routes[router.pathname]}
-        </motion.p>
-        {dimensions.width != null && <SVG {...dimensions} />}
-        {children}
-    </div>
-  )
+    return (
+        <div className={styles.pageCurve}>
+            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className={styles.background} />
+            <motion.p className={styles.route} {...anim(text)} style={{scale: isLoading ? 1 : 0}}><span></span> {routes[router.pathname]}</motion.p>
+            {dimensions.width != null && <SVG {...dimensions} />}
+            {children}
+        </div>
+    );
 }

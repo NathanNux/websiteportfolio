@@ -1,26 +1,20 @@
-'use client'
 import Image from 'next/image'
 import styles from './style.module.scss'
 import { useRef, useLayoutEffect, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { slideUp } from './animation';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { FirstSlideUp, slideUp } from '@/components/anim';
+import { useLoad } from '@/context';
 
 export default function Index() {
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect( () => {
-        setIsLoading(false);
-    }, [])
-
-  const container = useRef(null)
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
   let xPercent = 0;
   let direction = -1;
+
+  const { delayAnim, setDelayAnim } = useLoad();
 
   useLayoutEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
@@ -40,43 +34,49 @@ export default function Index() {
   }, [])
 
   const animate = () => {
-    if(xPercent < -100){
-      xPercent = 0;
+    if(firstText.current && secondText.current) {
+      if(xPercent < -100){
+        xPercent = 0;
+      }
+      else if(xPercent > 0){
+        xPercent = -100;
+      }
+      gsap.set(firstText.current, {xPercent: xPercent})
+      gsap.set(secondText.current, {xPercent: xPercent})
+      requestAnimationFrame(animate);
+      xPercent += 0.01 * direction;
     }
-    else if(xPercent > 0){
-      xPercent = -100;
-    }
-    gsap.set(firstText.current, {xPercent: xPercent})
-    gsap.set(secondText.current, {xPercent: xPercent})
-    requestAnimationFrame(animate);
-    xPercent += 0.1 * direction;
   }
 
+  // this useEffect will run only once, when the component is mounted, and it ensures there is no spamming warnings about the refs of texts being null, because the animate function is called only when the refs are not null
+  // just helps with warnings in console and performance a bit, that's all
   useEffect(() => {
-    const targers = container.current.querySelectorAll('h1, p')
-    gsap.fromTo(targers, {y: 30, opacity: 0}, {y: 0, opacity: 1, delay: 0.65, stagger: 0.15})
-    window.scrollTo(0, 0)
-  }, [])
+    if (firstText.current && secondText.current) {
+        requestAnimationFrame(animate);
+    }
+  }, [firstText, secondText]);
 
 
-    return (
-        <motion.main variants={slideUp} initial="initial" animate='enter' className={styles.landing}>
-          <Image 
-            src="/images/background.png"
-            fill={true}
-            alt="background"
-          />
-          <div className={styles.sliderContainer}>
-            <div ref={slider} className={styles.slider}>
-              <p ref={firstText}> Freelance Web Designer -</p>
-              <p ref={secondText}>Freelance Fullstack Dev -</p>
-            </div>
+  return (
+      <motion.main variants={ delayAnim ? FirstSlideUp : slideUp } initial="initial" animate='enter' className={styles.landing}>
+        <Image 
+          src="/images/landing/background.png"
+          fill
+          sizes="true"
+          alt="background"
+          priority
+        />
+        <div className={styles.sliderContainer}>
+          <div ref={slider} className={styles.slider}>
+            <p ref={firstText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
+            <p ref={secondText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
           </div>
+        </div>
 
-          <div data-scroll data-scroll-speed={0.08} className={styles.description} ref={container}>
-                <p>Jmenuji se <br /> Matěj Forejt</p>
-                <p>Vítejte u mě v Centru</p>
-            </div>
-        </motion.main>
-    )
+        <div data-scroll data-scroll-speed={0.08} className={styles.description}>
+              <p>Jmenuji se <br /> Matěj Forejt</p>
+              <p>Vítejte u mě v Centru</p>
+          </div>
+      </motion.main>
+  )
 }

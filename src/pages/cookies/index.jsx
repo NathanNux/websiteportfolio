@@ -1,7 +1,9 @@
 import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
-import Navbar from "@/components/navbar";
-import Header from "@/components/header";
+
+import Footer from "@/components/common/Footer";
+import Navbar from "@/components/common/Navbar";
+import Header from "@/components/common/Header";
 
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
@@ -38,6 +40,7 @@ export default function Home() {
             <p>Sed ut rhoncus nibh. Cras eleifend tellus a enim sodales, a efficitur odio euismod. Aenean non consequat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis eleifend ipsum, sit amet posuere ligula.</p>
           </div>
         </main>
+        <Footer />
       </CurveTransition>
     </>
   );

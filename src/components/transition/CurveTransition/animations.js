@@ -1,3 +1,4 @@
+
 export const text = {
     initial: {
         opacity: 1,
@@ -6,11 +7,11 @@ export const text = {
         opacity: 0,
         top: -100,
         transition: {duration: .75, delay: .35, ease: [0.76, 0, 0.24, 1]},
-        transitionEnd: {top: "47.5%"}
+        transitionEnd: {top: "57.5%"}
     },
     exit: {
         opacity: 1,
-        top: "40%",
+        top: "50%",
         transition: {duration: .5, delay: .4, ease: [0.33, 1, 0.68, 1]}
     }
 }

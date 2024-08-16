@@ -1,41 +1,56 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import CurveTransition from "@/components/transition/CurveTransition";
-import Navbar from "@/components/navbar";
-import Header from "@/components/header";
-import Landing from "@/components/LandingPage/Landing";
-import Description from "@/components/LandingPage/Description";
+const Landing = dynamic(() => import('@/components/LandingPage/Landing'), { ssr: false });
+const Description = dynamic(() => import('@/components/LandingPage/Description'), { ssr: false });
+// import Slider from "@/components/LandingPage/Slider";
+const Slider = dynamic(() => import('@/components/LandingPage/Slider'), { ssr: false });
+const NewestWork = dynamic(() => import('@/components/LandingPage/NewestWork'), { ssr: false });
 
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.scss";
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
+import { useEffect } from "react";
+import IntroText from "@/components/common/IntroText";
+import OfferSection from "@/components/LandingPage/OfferSections";
+import MainOffer from "@/components/LandingPage/MainOffer";
+import { AnimatePresence } from "framer-motion";
+import Preloader from "@/components/Preloader";
+import { useLoad } from "@/context";
+import FreeOffers from "@/components/common/FreeStuff";
+import ZoomParallax from "@/components/common/ParallaxZoom";
 
+import Footer from "@/components/common/Footer";
+import Navbar from "@/components/common/Navbar";
+import Header from "@/components/common/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const phrases = [
+  {
+      text: "Vyvíjím a pracuji <span>jednoduše</span>.<br />To je <span>proč má práce</span> prostě funguje.<br />Nejsem ale jen<span> Designer a programátor</span><br /> ale i Architekt<span> takže dostanete celý balíček...</span>",
+  },
+  {
+      text: "Autentický desing, správné praktiky pro web,<br /> <span>SEO, Výzkum a materiály </span> společně s <br />pořádnými a ověřenými stystémy <span>Marketingu</span><br /> abyste byli opravdu <span>úspěšní</span> Online.",
+  },
+  {
+      text: "Ti, kdo chtějí vést <span>Orchestr</span>, se musí <span>obrátit</span> zády k davu.<br />Pojďte se spolu podívat, <span> co všechno</span> <br /> můžeme společne vybudovat <span>a není toho vůbec málo.</span>",
+  }
+]
 
 export default function Home() {
-  const container = useRef(null)
-  const [LocomotiveScroll, setLocomotiveScroll] = useState(null);
-  const [scroll, setScroll] = useState(null);
 
-  
+  const { firstLoad, setFirstLoad } = useLoad();
+
   useEffect(() => {
-    import('locomotive-scroll').then((LocomotiveModule) => {
-      if (container.current) {
-        const scrollInstance = new LocomotiveModule.default({
-          el: container.current,
+    if (typeof window !== 'undefined') {
+      import('locomotive-scroll').then(LocomotiveScroll => {
+        const scroll = new LocomotiveScroll.default({
+          el: document.querySelector('[data-scroll-container]'),
           smooth: true,
         });
-        setScroll(scrollInstance);
-      }
-    });
-  }, []);
 
-  useEffect(() => {
-    const targers = container.current.querySelectorAll('h1, p')
-    gsap.fromTo(targers, {y: 30, opacity: 0}, {y: 0, opacity: 1, delay: 0.8, stagger: 0.2})
-    window.scrollTo(0, 0)
-  }, [])
+        return () => {
+          if(scroll) scroll.destroy();
+        };
+      });
+    }
+  }, []);
 
 
   // this needs to be in every page, because of the smooth scroll anim. it won't work without it when you navigate to another page
@@ -48,19 +63,34 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Navbar />
-      <CurveTransition>
-      <Landing />
-      <Description />
-         <main ref={container} className={`${styles.main} ${inter.className}`}>
-          <div className={styles.container}>
-            <h1>Domov</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et mollis elit. Nulla facilisi. Phasellus ac pulvinar ante. Morbi maximus feugiat sapien nec cursus. Phasellus in ornare elit. Suspendisse viverra porta dui et efficitur. Sed ut rhoncus nibh. Cras eleifend tellus a enim sodales, a efficitur odio euismod. Aenean non consequat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis eleifend ipsum, sit amet posuere ligula.</p>
-            <p>Sed ut rhoncus nibh. Cras eleifend tellus a enim sodales, a efficitur odio euismod. Aenean non consequat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis eleifend ipsum, sit amet posuere ligula.</p>
-          </div>
-        </main>
+        <Header />
+        <Navbar />
+        <AnimatePresence wait>
+          {firstLoad && <Preloader key="preloader"/>}
+        </AnimatePresence>
+        <CurveTransition>
+        <Landing />
+        <Description />
+        <Slider />
+        <NewestWork />
+        <IntroText phrases={phrases}/>
+        <ZoomParallax 
+          src1='/assets/images/projects/components.png' 
+          src2='/assets/images/slider-la/seo.png' 
+          src3='/assets/images/slider-la/coding.png' 
+          src4='/assets/images/slider-la/performance.png' 
+          src5='/assets/images/slider-la/color-pallet.png' 
+          src6='/assets/images/slider-la/offer.png' 
+          src7='/assets/images/slider-la/research.png' 
+          path='/assets/images/slider-la/videos/main.mp4'
+          text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
+        />
+        <OfferSection />
+        <MainOffer />
+        <FreeOffers text='1'/>
+        <Footer />
       </CurveTransition>
     </>
   );
 }
+

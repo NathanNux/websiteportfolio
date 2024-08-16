@@ -1,0 +1,28 @@
+.imageContainer{
+    display: block;
+    width: 32vw;
+    height: calc(32vw * 0.625);
+    position: absolute;
+    right: 5%;
+    top: 20%;
+
+    img{
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .imageContainer{
+        display: none;
+    }
+}
+
+// tablets vertical
+
+@media only screen and (max-width: 1050px) and (min-height: 1000px) {
+    .imageContainer{
+        display: none;
+    }
+}
+
+// for viewports of mobile devices and smaller screens like tablets

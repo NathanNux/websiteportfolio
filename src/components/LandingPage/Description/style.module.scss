@@ -1,41 +1,49 @@
 .description{
-    padding: 100px 200px 300px 200px;
+    padding: 0px 200px 300px 0px;
     display: flex;
     justify-content: center;
+    z-index: 0;
     .body{
         display: flex;
         gap: 20%;
         position: relative;
         .main {
-            padding-right: 50px;
             position: relative; //this is important for the mask to work - it needs to be relative to the parent so the it will be positioned absolutely to it
+            overflow: visible;
+            justify-content: center;
             
             .mask {
+                overflow: visible;
                 position: absolute;
-                width: 100%;
-                height: 100%;
+                padding: 100px 200px 150px 200px;
+                width: 80%;
+                height: fit-content;
                 cursor: default;
                 mask-image: url('../../../../public/mask.svg');
                 mask-repeat: no-repeat;
-                mask-size: 40px;
-                background: black;
+                mask-size: 20px;
+                background: #22272d;
                 position: absolute;
-                color: black;
+                color: #22272d;
                 z-index: 1;
 
                 p{
-                    color: white;
+                    color: #FF5508;
                     margin: 0px;
                     font-size: 2em;
                     line-height: 1.4,
                 }
             }
             .bodyHidden {
+                padding: 100px 0px 0px 200px;
+            
                 p{
+                    color: #22272d;
                     margin: 0px;
                     font-size: 2em;
                     gap: 8px;
                     line-height: 1.4;
+                    width: 90%;
                     span{
                         margin-right: 3px;
                     }
@@ -50,40 +58,381 @@
         }
         
         .about {
+            padding-top: 100px;
             position: relative;
             align-items: center; // this centers it on width - and justify content centers it on height
             display: flex;
             flex-direction: column;
-            p {
-                
+            .text {
+                color: #22272d;
                 margin: 0px;
                 font-size: 1.5em;
             }
-            .button{
-                top: 80%;
+            div{
+                position: relative;
+               .button{
                 width: 180px;
                 height: 180px;
-                background-color: #1C1D20;
-                color: white;
+                background-color: #22272d;
                 border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 cursor: pointer;
-                p{
-                    margin: 0px;
-                    font-size: 1.5em;
-                    font-weight: 300;
-                    position: relative;
-                    z-index: 1;
-                    text-decoration: none;
-                }
+                overflow: hidden;
+            } 
             }
+            
         }
     }
     .moreWork{
         padding: 20px;
         border-radius: 40px;
-        border: 1px solid grey;
+        border: 1px solid #22272d;
+    }
+}
+
+@media only screen and (max-width: 1750px){
+    .description{
+        .body{
+            .main { 
+                .mask {
+                    p{
+                        font-size: 1.8em;
+                    }
+                }
+                .bodyHidden {  
+                    width: 85%;    
+                    p{
+                        font-size: 1.8em;
+                    }
+                }
+                
+            }
+            
+            .about {
+                .text {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1550px){
+    .description{
+        .body{
+            .main { 
+                .mask {
+                    p{
+                        font-size: 1.8em;
+                    }
+                }
+                .bodyHidden {  
+                    width: 85%;    
+                    p{
+                        font-size: 1.8em;
+                    }
+                }
+                
+            }
+            
+            .about {
+                .text {
+                    font-size: 1.3em;
+                }
+                div{
+                   .button{
+                        width: 150px;
+                        height: 150px;
+                    } 
+                }
+                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px){
+    .description{
+        padding: 0px 150px 100px 0px;
+        .body{
+            .main { 
+                .mask {
+                    padding: 100px 100px 150px 150px;
+                    p{
+                        font-size: 1.5em;
+                    }
+                }
+                .bodyHidden { 
+                    padding: 100px 0px 0px 150px; 
+                    width: 90%;    
+                    p{
+                        font-size: 1.5em;
+                    }
+                }
+                
+            }
+            
+            .about {
+                .text {
+                    font-size: 1.2em;
+                }
+                div{
+                   .button{
+                        width: 130px;
+                        height: 130px;
+                        font-size: 0.8em;
+                    } 
+                }
+                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .description{
+        padding: 0px 100px 50px 0px;
+        .body{
+            .main { 
+                .mask {
+                    padding: 100px 50px 150px 100px;
+                    p{
+                        font-size: 1.5em;
+                    }
+                }
+                .bodyHidden { 
+                    padding: 100px 0px 0px 100px; 
+                    width: 90%;    
+                    p{
+                        font-size: 1.5em;
+                    }
+                }
+                
+            }
+            
+            .about {
+                .text {
+                    font-size: 1.2em;
+                }
+                div{
+                   .button{
+                        width: 130px;
+                        height: 130px;
+                        font-size: 0.8em;
+                    } 
+                }
+                
+            }
+        }
+    }
+}
+
+// tablets vertical
+
+@media only screen and (max-width: 1050px) and (min-height: 1000px) {
+
+    .description{
+        padding: 0px 150px 200px 0;
+        .body{
+            gap: 15%;
+            .main {
+                
+                .mask {
+                    padding: 100px 150px 150px 100px;
+                    width: 80%;
+    
+                    p{
+                        font-size: 1.5em;
+                    }
+                }
+                .bodyHidden {
+                    padding: 100px 0px 0px 100px;
+                
+                    p{
+                        font-size: 1.5em;
+                    }
+                }
+                
+            }
+            
+            .about {
+                padding-top: 100px;
+                .text {
+                    font-size: 1.2em;
+                }
+                div{
+                   .button{
+                        width: 160px;
+                        height: 160px;
+                        font-size: 1em;
+                    } 
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-height: 800px) {
+
+    .description{
+        padding: 50px 100px 250px 0;
+        .body{
+            gap: 15%;
+            .main {
+                
+                .mask {
+                    padding: 100px 150px 150px 100px;
+                    width: 80%;
+    
+                    p{
+                        font-size: 1.5em;
+                    }
+                }
+                .bodyHidden {
+                    padding: 100px 0px 0px 100px;
+                
+                    p{
+                        font-size: 1.5em;
+                    }
+                }
+                
+            }
+            
+            .about {
+                padding-top: 100px;
+                .text {
+                    font-size: 1.2em;
+                }
+                div{
+                   .button{
+                        width: 130px;
+                        height: 130px;
+                        font-size: 0.8em;
+                    } 
+                }
+            }
+        }
+    }
+}
+
+// mobiles
+
+
+@media only screen and (max-width: 450px) and (max-height: 950px){
+    .description{
+        padding: 0px 0px 300px 0px;
+        display: flex;
+        justify-content: center;
+        z-index: 0;
+        .body{
+            display: flex;
+            gap: 20%;
+            position: relative;
+            flex-direction: column;
+            .main {
+                position: relative; //this is important for the mask to work - it needs to be relative to the parent so the it will be positioned absolutely to it
+                overflow: visible;
+                justify-content: center;
+                
+                .mask {
+                    scale: 0;
+                }
+                .bodyHidden {
+                    padding: 100px 0px 0px 10%;
+                    width: 90%;
+                    text-align: center;
+                    p{
+                        font-size: 2em;
+                        width: 90%;
+                    }
+                }
+                
+            }
+            
+            .about {
+                .text {
+                    text-align: center;
+                    color: #22272d;
+                    margin: 0px;
+                    font-size: 1.8em;
+                    width: 90%; 
+                    padding-right: 5%;
+
+                }
+                div{
+                    position: relative;
+                    padding-top: 20px;
+                    .button{
+                        width: 180px;
+                        height: 180px;
+                        background-color: #22272d;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        overflow: hidden;
+                        font-size: 1.2em;
+                    } 
+                }
+                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) and (max-height: 850px){
+    .description{
+        padding: 0px 0px 300px 0px;
+        display: flex;
+        justify-content: center;
+        z-index: 0;
+        .body{
+            display: flex;
+            gap: 20%;
+            position: relative;
+            flex-direction: column;
+            .main {
+                position: relative; //this is important for the mask to work - it needs to be relative to the parent so the it will be positioned absolutely to it
+                overflow: visible;
+                justify-content: center;
+                
+                .mask {
+                    scale: 0;
+                }
+                .bodyHidden {
+                    padding: 100px 0px 0px 10%;
+                    width: 90%;
+                    text-align: center;
+                    p{
+                        font-size: 2em;
+                        width: 90%;
+                    }
+                }
+                
+            }
+            
+            .about {
+                .text {
+                    text-align: center;
+                    color: #22272d;
+                    margin: 0px;
+                    font-size: 1.8em;
+                    width: 90%; 
+                    padding-right: 5%;
+
+                }
+                div{
+                    position: relative;
+                    padding-top: 20px;
+                    .button{
+                        width: 150px;
+                        height: 150px;
+                        background-color: #22272d;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        overflow: hidden;
+                        font-size: 1em;
+                    } 
+                }
+                
+            }
+        }
     }
 }
