@@ -71,6 +71,23 @@
     
 }
 
+@media only screen and (min-width: 1750px){
+    .main{
+        .body{
+            width: 160vw;
+            .slider{
+                .column{
+                    min-height: 80px;
+                    width: 35%;
+                    .imageContainer{
+                        min-height: 480px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 1750px){
     .main{
         .body{

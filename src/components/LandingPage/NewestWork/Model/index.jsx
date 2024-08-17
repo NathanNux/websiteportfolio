@@ -8,6 +8,12 @@ import { fragment, vertex } from "../Shader";
 import { motion } from "framer-motion-3d";
 import { NewestProjects } from "@/constants";
 
+// const is causing erro because the images are not loaded yet and the useTexture is used in callback function.
+function useProjectTextures(projects) {
+    const textures = projects.map((project, i) => useTexture(project.src));
+    return textures;    
+}
+
 // we have passed the activeProject as a prop to the model component and then we need to show it individually
 export default function Model ({ activeProject, containerRef }) {
     // Refs
@@ -22,21 +28,16 @@ export default function Model ({ activeProject, containerRef }) {
     const mouse = useMouse(containerRef);
     const opacity = useMotionValue(0);
 
+    // Textures
+    // const textures = NewestProjects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
+
+    const textures = useProjectTextures(NewestProjects);
+
     // Motion values
     const smoothMouse = {
         x: useMotionValue(0),
         y: useMotionValue(0),
     };
-
-    // Textures
-    // const textures = NewestProjects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
-
-    // const is causing erro because the images are not loaded yet and the useTexture is used in callback function.
-    function useProjectTextures(projects) {
-        const textures = projects.map((project, i) => useTexture(project.src));
-        return textures;    
-    }
-    const textures = useProjectTextures(NewestProjects);
 
     // Uniforms
     const uniforms = useRef({

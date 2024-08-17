@@ -20,6 +20,16 @@ export default function IntroText ({phrases}) {
   )
 }
 
+// New component for handling the animation of each character
+const AnimatedChar = ({ char, range, progress, isHighlighted }) => {
+  const opacity = useTransform(progress, range, [0, 1]);
+  return (
+    <motion.span className={isHighlighted ? styles.highLighted : ''} style={{ opacity }}>
+      {char}
+    </motion.span>
+  );
+};
+
 const TextWithBrAndSpan = ({ text, progress }) => {
   // Split the text into lines using <br /> as the separator
   const lines = text.split('<br />');
@@ -61,13 +71,8 @@ const TextWithBrAndSpan = ({ text, progress }) => {
 
               return chars.map((char, k) => {
                 const range = ranges[i][j][k];
-                const opacity = useTransform(progress, range, [0, 1]);
-
-                if (j % 2 === 1) {
-                  return <motion.span className={styles.highLighted} key={k} style={{opacity}}>{char}</motion.span>;
-                } else {
-                  return <motion.span key={k} style={{opacity}}>{char}</motion.span>;
-                }
+                const isHighlighted = j % 2 === 1;
+                return <AnimatedChar key={k} char={char} range={range} progress={progress} isHighlighted={isHighlighted} />;
               });
             })}
             {i < lines.length - 1 && <br />}

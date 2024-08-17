@@ -4,7 +4,7 @@ const Scene = dynamic(() => import('@/components/LandingPage/NewestWork/Scene'),
 import styles from './styles.module.scss';
 import { useRef, useState } from 'react';
 
-export default function () {
+export default function NewestWork () {
     const [ activeProject, setActiveProject ] = useState(null);
     const ref = useRef(null);
 
