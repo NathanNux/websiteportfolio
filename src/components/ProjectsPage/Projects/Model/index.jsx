@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { animate, useMotionValue, useTransform } from "framer-motion";
 import { useAspect, useTexture } from "@react-three/drei";
@@ -9,8 +9,15 @@ import { projects } from "@/constants";
 
 // const is causing erro because the images are not loaded yet and the useTexture is used in callback function.
 function useProjectTextures(projects) {
-    const textures = projects.map((project, i) => useTexture(project.src));
-    return textures;    
+    const [textures, setTextures] = useState([]);
+
+    useEffect(() => {
+        // Load textures asynchronously and update state
+        Promise.all(projects.map(project => useTexture(project.src)))
+               .then(setTextures);
+    }, [projects]); // Re-run when `projects` changes
+
+    return textures;
 }
 
 // we have passed the activeProject as a prop to the model component and then we need to show it individually
