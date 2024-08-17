@@ -29,7 +29,14 @@ export default function Model ({ activeProject, containerRef }) {
     };
 
     // Textures
-    const textures = NewestProjects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
+    // const textures = NewestProjects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
+
+    // const is causing erro because the images are not loaded yet and the useTexture is used in callback function.
+    function useProjectTextures(projects) {
+        const textures = projects.map((project, i) => useTexture(project.src));
+        return textures;    
+    }
+    const textures = useProjectTextures(NewestProjects);
 
     // Uniforms
     const uniforms = useRef({
@@ -59,7 +66,7 @@ export default function Model ({ activeProject, containerRef }) {
                 mesh.current.material.uniforms.uAlpha.value = 0;
             }
         }
-    }, [activeProject]);
+    }, [activeProject, opacity, textures]);
 
     useFrame(() => { // this effect works that you have 2 values of the mouse, the real and the smooth
         const { x, y } = mouse;

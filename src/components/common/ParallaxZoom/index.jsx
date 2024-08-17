@@ -1,6 +1,6 @@
 import { motion, useTransform, useScroll  } from "framer-motion";
 import Image from "next/image";
-import { useRef, useLayoutEffect, useEffect, useState, useMemo } from 'react';
+import { useRef, useEffect, useState, useMemo } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { slideUp } from "@/components/anim";
@@ -87,7 +87,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
         }
     }
   
-    useLayoutEffect( () => {
+    useEffect( () => {
       gsap.registerPlugin(ScrollTrigger);
       gsap.to(slider.current, {
         scrollTrigger: {

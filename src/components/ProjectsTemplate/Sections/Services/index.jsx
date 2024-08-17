@@ -39,7 +39,7 @@ export default function Design () {
             <div className={styles.images}>
                 {images.map((image, i) => (
                     <div key={i} className={styles.imageContainer} data-scroll data-scroll-speed={0.05 * (i + 1)}>
-                        <img src={image.src} alt={image.alt} />
+                        <Image src={image.src} alt={image.alt} fill sizes='true' />
                     </div>
                 ))}
             </div>

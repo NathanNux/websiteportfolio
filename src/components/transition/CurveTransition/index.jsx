@@ -7,6 +7,7 @@ import debounce from 'lodash/debounce'; // Assuming lodash is installed
 
 import styles from './style.module.scss'
 import { useLoad } from '@/context';
+import Image from 'next/image';
 
 const routes = {
     '/': 'Domov',
@@ -92,7 +93,7 @@ export default function CurveTransition({children}) {
 
     return (
         <div className={styles.pageCurve}>
-            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className={styles.background} />
+            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className={styles.background}/>
             <motion.p className={styles.route} {...anim(text)} style={{scale: isLoading ? 1 : 0}}><span></span> {routes[router.pathname]}</motion.p>
             {dimensions.width != null && <SVG {...dimensions} />}
             {children}

@@ -12,27 +12,32 @@ const links = [
   {
     title: "Domů",
     href: "/",
-    src: "landing/background.png"
+    src: "landing/background.png",
+    alt: "landingPage_Image"
   },
   {
     title: "O mně",
     href: "/about",
-    src: "landing/water.jpg"
+    src: "landing/water.jpg",
+    alt: "aboutPage_Image"
   },
   {
     title: "Kontakt",
     href: "/contact",
-    src: "landing/tree.jpg"
+    src: "landing/tree.jpg",
+    alt: "contactPage_Image"
   },
   {
     title: "Projekty",
     href: "/projects",
-    src: "landing/house.jpg"
+    src: "landing/house.jpg",
+    alt: "projectsPage_Image"
   },
   {
     title: "Materiály",
     href: "/materials",
-    src: "landing/cactus.jpg"
+    src: "landing/cactus.jpg",
+    alt: "materialsPage_Image"
   },
 ]
 
@@ -46,7 +51,7 @@ export default function Index() {
         <div className={styles.container}>
           <Body links={links} selectedLink={selectedLink} setSelectedLink={setSelectedLink}/>
         </div>
-        <Image src={links[selectedLink.index].src} isActive={selectedLink.isActive}/>
+        <Image src={links[selectedLink.index].src} isActive={selectedLink.isActive} alt={links[selectedLink.index].alt}/>
       </div>
       <Footer />
     </motion.div>

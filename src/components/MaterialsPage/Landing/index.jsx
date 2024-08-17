@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import styles from './style.module.scss';
 import Image from 'next/image';
 import { scale, slideUp } from './anim';
-import { useRef, useLayoutEffect, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
@@ -17,7 +17,7 @@ export default function Landing() {
   let xPercent = 0;
   let direction = -1;
 
-  useLayoutEffect( () => {
+  useEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {

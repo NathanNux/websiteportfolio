@@ -1,7 +1,7 @@
 .imageContainer{
     display: block;
-    width: 32vw;
-    height: calc(32vw * 0.625);
+    width: 30vw;
+    height: calc(30vw * 0.625);
     position: absolute;
     right: 5%;
     top: 20%;
@@ -9,6 +9,22 @@
     img{
         object-fit: cover;
     }
+}
+
+@media only screen and (max-width: 1750px) {
+    .imageContainer{
+        display: block;
+        width: 32vw;
+        height: calc(32vw * 0.625);
+        position: absolute;
+        right: 5%;
+        top: 20%;
+    
+        img{
+            object-fit: cover;
+        }
+    }
+    
 }
 
 @media only screen and (max-width: 1000px) {

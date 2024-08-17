@@ -11,7 +11,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { useToast } from '@/components/ui/use-toast';
 import { scale, slideUp } from '@/components/anim';
 
-export default function() {
+export default function Contact() {
     const [customStyles, setCustomStyles] = useState([]);
     const [formState, setFormState] = useState({
         name: '',

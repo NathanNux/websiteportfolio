@@ -166,7 +166,7 @@ export default function Footer () {
                 clearTimeout(timeoutId);
             };
         }, msUntilNextMinute);
-    }, []);
+    }, [progress, setPath]);
 
     // this anim works like this, we have svg path. we set it so it has quadratic bezier curve, that is controlled by the y position of the mouse
     // when the mouse enters the path, it stops the animation and when it leaves it starts the animation out => the path goes back to its original shape

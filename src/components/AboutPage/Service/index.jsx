@@ -36,7 +36,7 @@ const Service = ({title, content, index}) => {
     const section = useRef(null);
     const { scrollYProgress } = useScroll({
         target: section,
-        offset: ['start 0.9', 'start 0.5']
+        offset: ['start 0.8', 'start 0.2']
     })
     const width = useTransform(scrollYProgress, [0, 1], ['0%', '80%'])
 
@@ -75,6 +75,14 @@ const header1 = [
     },
 ];
 
+// useTransform cannot be in callback function, because it is not a hook, need to create a new component
+const CharSpan = ({char, index, totalLenght, scrollYProgress}) => {
+    const start = index / totalLenght;
+    const end = start + (1 / totalLenght);
+    const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
+    return <motion.span style={{opacity}}>{char}</motion.span>;
+}
+
 
 const Paragraph = ({text}) => {
     const ref = useRef(null);
@@ -92,19 +100,25 @@ const Paragraph = ({text}) => {
           <Fragment key={lineIndex}>
             {line.split('<span>').map((part, partIndex) => {
               if (partIndex % 2 === 0) {
-                return [...part].map((char, charIndex) => {
-                  const start = charIndex / part.length;
-                  const end = start + (1 / part.length);
-                  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-                  return <motion.span key={charIndex} style={{opacity}}>{char}</motion.span>;
-                });
+                return [...part].map((char, charIndex) => (
+                    <CharSpan 
+                        key={charIndex} 
+                        char={char} 
+                        index={charIndex} 
+                        totalLenght={part.length} 
+                        scrollYProgress={scrollYProgress} 
+                    />
+                ));
               } else {
                 const spanPart = part.split('</span>')[0];
                 return [...spanPart].map((char, charIndex) => {
-                  const start = charIndex / spanPart.length;
-                  const end = start + (1 / spanPart.length);
-                  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-                  return <motion.span key={charIndex} style={{opacity}} className={styles.specialSpan}>{char}</motion.span>;
+                  <CharSpan
+                    key={charIndex}
+                    char={char}
+                    index={charIndex}
+                    totalLenght={spanPart.length}
+                    scrollYProgress={scrollYProgress}
+                  />
                 });
               }
             })}

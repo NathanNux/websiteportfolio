@@ -44,41 +44,55 @@ export default function MainOffer () {
   )
 }
 
-const Paragraph = ({text}) => {
-    const ref = useRef(null);
-    const {scrollYProgress} = useScroll({
-        target: ref,
-        offset: ['start 0.5', 'start 0.25']
-    });
+const CharSpan = ({ char, index, totalLength, scrollYProgress, className }) => {
+  const start = index / totalLength;
+  const end = start + (1 / totalLength);
+  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
+  return <motion.span style={{ opacity }} className={className}>{char}</motion.span>;
+};
 
-    // Split the text into lines using <br/> as the separator
-    const lines = text.split('<br/>');
+const Paragraph = ({ text }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start 0.5', 'start 0.25']
+  });
 
-    return (
-      <p ref={ref}>
-        {lines.map((line, lineIndex) => (
-          <Fragment key={lineIndex}>
-            {line.split('<span>').map((part, partIndex) => {
-              if (partIndex % 2 === 0) {
-                return [...part].map((char, charIndex) => {
-                  const start = charIndex / part.length;
-                  const end = start + (1 / part.length);
-                  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-                  return <motion.span key={charIndex} style={{opacity}}>{char}</motion.span>;
-                });
-              } else {
-                const spanPart = part.split('</span>')[0];
-                return [...spanPart].map((char, charIndex) => {
-                  const start = charIndex / spanPart.length;
-                  const end = start + (1 / spanPart.length);
-                  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-                  return <motion.span key={charIndex} style={{opacity}} className={styles.specialSpan}>{char}</motion.span>;
-                });
-              }
-            })}
-            {lineIndex < lines.length - 1 && <br />}
-          </Fragment>
-        ))}
-      </p>
-    );
+  const lines = text.split('<br/>');
+
+  return (
+    <p ref={ref}>
+      {lines.map((line, lineIndex) => (
+        <React.Fragment key={lineIndex}>
+          {line.split('<span>').map((part, partIndex) => {
+            if (partIndex % 2 === 0) {
+              return [...part].map((char, charIndex) => (
+                <CharSpan 
+                  key={`${lineIndex}-${charIndex}`} 
+                  char={char} 
+                  index={charIndex} 
+                  totalLength={part.length} 
+                  scrollYProgress={scrollYProgress}
+                  // remember to apply correct key and don't forget about the return
+                />
+              ));
+            } else {
+              const spanPart = part.split('</span>')[0];
+              return [...spanPart].map((char, charIndex) => (
+                <CharSpan 
+                  key={`${lineIndex}-${charIndex}`}
+                  char={char}
+                  index={charIndex}
+                  totalLength={spanPart.length}
+                  scrollYProgress={scrollYProgress}
+                  className={styles.specialSpan}
+                />
+              ));
+            }
+          })}
+          {lineIndex < lines.length - 1 && <br />}
+        </React.Fragment>
+      ))}
+    </p>
+  );
 };

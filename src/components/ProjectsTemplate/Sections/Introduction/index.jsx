@@ -1,6 +1,7 @@
 
 import React, { Fragment } from 'react';
 import styles from './style.module.scss'
+import Image from 'next/image';
 export default function Introduction ({images, phrases}) {
     return (
         <section className={styles.main}>
@@ -15,7 +16,7 @@ export default function Introduction ({images, phrases}) {
             <div className={styles.images}>
                 {images.map((image, i) => (
                     <div key={i} className={styles.imageContainer} data-scroll data-scroll-speed={0.05 * (i + 1)}>
-                        <img src={image.src} alt={image.alt} />
+                        <Image src={image.src} alt={image.alt} fill sizes='true' />
                     </div>
                 ))}
             </div>

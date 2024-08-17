@@ -4,14 +4,14 @@ import Image from 'next/image';
 import styles from './style.module.scss';
 import { opacity } from '../../anim';
 
-export default function Index({src, isActive}) {
+export default function Index({src, isActive, alt}) {
   return (
     <motion.div variants={opacity} initial="initial" animate={isActive ? "open" : "closed"} className={styles.imageContainer}>
         <Image 
         src={`/images/${src}`}
         fill
         sizes="true"
-        alt="image"
+        alt={alt}
         loading='lazy'
         />
     </motion.div>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './style.module.scss'
-import { useRef, useLayoutEffect, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -27,7 +27,7 @@ export default function Index() {
   })
   const y = useTransform(scrollYProgress, [0, 1], ['0vh', '100vh'])
 
-  useLayoutEffect( () => {
+  useEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
