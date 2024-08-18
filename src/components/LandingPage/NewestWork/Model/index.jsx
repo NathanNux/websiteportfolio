@@ -1,18 +1,19 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { animate, useMotionValue, useTransform } from "framer-motion";
-import { useAspect, useTexture } from "@react-three/drei";
+import { useAspect } from "@react-three/drei";
 import useDimensions from "@/utils/useDimensions";
 import useMouse from "@/utils/useMouse"
 import { fragment, vertex } from "../Shader";
 import { motion } from "framer-motion-3d";
 import { NewestProjects } from "@/constants";
+import { useModelTexture } from "@/utils/useModelTexture";
 
 // we have passed the activeProject as a prop to the model component and then we need to show it individually
 export default function Model ({ activeProject, containerRef }) {
     // Refs
     const mesh = useRef(null); // three.js mesh component work in cartographic coordinates, so we need to convert the mouse position from pixels to cartographic coordinates
-    const textures = NewestProjects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
+    const textures = useModelTexture(NewestProjects) // creating a texture for the component - need to access the project images
 
     // Utils
     const lerp = (x, y, a) => x * (1 - a) + y * a; // create the linear interpolation for the mouse position to make it smooth
