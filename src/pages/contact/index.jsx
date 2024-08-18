@@ -4,13 +4,13 @@ import CurveTransition from "@/components/transition/CurveTransition";
 import { Inter } from "next/font/google";
 
 import { useEffect } from "react";
-import Contact from "@/components/ContactPage/Contact";
 import Calendly from "@/components/ContactPage/Calendly";
 import dynamic from "next/dynamic";
 
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 const Footer = dynamic(() => import('@/components/ContactPage/Footer'), { ssr: false });
+const Contact = dynamic(() => import('@/components/ContactPage/Contact'), { ssr: false });
 
 
 const inter = Inter({ subsets: ["latin"] });

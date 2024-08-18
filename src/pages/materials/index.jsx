@@ -3,12 +3,15 @@ import CurveTransition from "@/components/transition/CurveTransition";
 import IntroText from "@/components/common/IntroText"
 
 import { useEffect } from "react";
-import Landing from "@/components/MaterialsPage/Landing";
 import FreeOffers from "@/components/common/FreeStuff";
 
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
+import dynamic from "next/dynamic";
+const Landing = dynamic(() => import('@/components/MaterialsPage/Landing'), { ssr: false });
+
+
 
 
 const phrases = [
