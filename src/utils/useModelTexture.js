@@ -1,7 +1,8 @@
 import { useTexture } from "@react-three/drei";
 
 export function useModelTexture(projects) {
-    const textures = projects.map((project) => useTexture(project.src));
+    const sources = projects.map((project) => project.src);
+    const textures = useTexture(sources);
 
     return textures;
 }
