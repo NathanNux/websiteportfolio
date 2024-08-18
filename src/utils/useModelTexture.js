@@ -3,6 +3,7 @@ import { useTexture } from "@react-three/drei";
 export function useModelTexture(projects) {
     const sources = projects.map((project) => project.src);
     const textures = useTexture(sources);
+    // useTexture cannot be used in project.map() that brakes the react hook rules. 
 
     return textures;
 }
