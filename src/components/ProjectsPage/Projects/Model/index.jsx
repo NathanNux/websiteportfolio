@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { animate, useMotionValue, useTransform } from "framer-motion";
 import { useAspect } from "@react-three/drei";
+import useDimensions from "@/utils/useDimensions";
 import useMouse from "@/utils/useMouse"
 import { fragment, vertex } from "../Shader";
 import { motion } from "framer-motion-3d";
@@ -12,27 +13,26 @@ import { useModelTexture } from "@/utils/useModelTexture";
 export default function Model ({ activeProject, containerRef }) {
     // Refs
     const mesh = useRef(null); // three.js mesh component work in cartographic coordinates, so we need to convert the mouse position from pixels to cartographic coordinates
-
-    const textures = useModelTexture(projects); // creating a texture for the component - need to access the project images
+    const textures = useModelTexture(projects) // creating a texture for the component - need to access the project images
 
     // Utils
     const lerp = (x, y, a) => x * (1 - a) + y * a; // create the linear interpolation for the mouse position to make it smooth
 
     // Hooks
-    const { viewport, camera } = useThree(); // this hook will give us access to the width and height context of our window, that leaves us with measuring the min and max values the scene can go to. so width/2 and * -1 for the other side
-    const dimension = containerRef.current.getBoundingClientRect(); // if the parrent compoment (the scene) is bigger than the viewport, we need to get the dimension of the container to make the mouse move correctly and creates no offset
+    const { viewport } = useThree(); // this hook will give us access to the width and height context of our window, that leaves us with measuring the min and max values the scene can go to. so width/2 and * -1 for the other side
+    const dimension = containerRef.current.getBoundingClientRect();
     const mouse = useMouse(containerRef);
     const opacity = useMotionValue(0);
+    const { width, height } = textures[0].image;
 
+    // Textures
+    // const textures = NewestProjects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
     // Motion values
     const smoothMouse = {
         x: useMotionValue(0),
         y: useMotionValue(0),
     };
 
-
-    // Textures
-    // const textures = projects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
     // Uniforms
     const uniforms = useRef({
         uTexture: { value: textures[0] }, // for using the texture I need to set up uniforms in the shader material
@@ -41,8 +41,12 @@ export default function Model ({ activeProject, containerRef }) {
         uAlpha: { value: 1},
     });
 
-    const baseWidth = 1920;
-    const baseHeight = 1080;
+    // Aspect ratio
+    const scale = useAspect(
+        width,
+        height,
+        0.125
+    );
 
     // Effects
     useEffect(() => { // now I need to create useEffect for the texture change manually
@@ -71,12 +75,6 @@ export default function Model ({ activeProject, containerRef }) {
         }
     });
 
-    const scale = useAspect(
-        16,
-        10,
-        0.125
-    )
-
     // Transforms
     const x = useTransform(smoothMouse.x, [0, dimension.width], [-1 * viewport.width / 2, viewport.width / 2]); // we can't use window.innerWidth because we are in next.js and it will be undefined - ssr
     const y = useTransform(smoothMouse.y, [0, dimension.height], [viewport.height / 2, -1 * viewport.height / 2]);
@@ -84,7 +82,7 @@ export default function Model ({ activeProject, containerRef }) {
     // Render
     return(
         <motion.mesh scale={scale} position-x={x} position-y={y} ref={mesh}>
-            <planeGeometry args={[1, 1.15, 100, 100]}/> {/* first is height and widht of the plane and then how much detailed we want it to be */}
+            <planeGeometry args={[1, 1, 55, 55]}/> {/* first is height and widht of the plane and then how much detailed we want it to be */}
             <shaderMaterial 
                 vertexShader={vertex} // we need 2 things for the photo vertex shader and fragment shader, they can be custom
                 fragmentShader={fragment}

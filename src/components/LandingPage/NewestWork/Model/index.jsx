@@ -23,6 +23,7 @@ export default function Model ({ activeProject, containerRef }) {
     const dimension = useDimensions();
     const mouse = useMouse(containerRef);
     const opacity = useMotionValue(0);
+    const { width, height } = textures[0].image;
 
     // Textures
     // const textures = NewestProjects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
@@ -42,8 +43,8 @@ export default function Model ({ activeProject, containerRef }) {
 
     // Aspect ratio
     const scale = useAspect(
-        textures[0].image.width,
-        textures[0].image.height,
+        width,
+        height,
         0.3
     );
 
