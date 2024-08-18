@@ -12,6 +12,7 @@ import { NewestProjects } from "@/constants";
 export default function Model ({ activeProject, containerRef }) {
     // Refs
     const mesh = useRef(null); // three.js mesh component work in cartographic coordinates, so we need to convert the mouse position from pixels to cartographic coordinates
+    const textures = NewestProjects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
 
     // Utils
     const lerp = (x, y, a) => x * (1 - a) + y * a; // create the linear interpolation for the mouse position to make it smooth
@@ -24,9 +25,6 @@ export default function Model ({ activeProject, containerRef }) {
 
     // Textures
     // const textures = NewestProjects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
-
-    const textures = projects.map((project, i)=> useTexture(project.src)); // creating a texture for the component - need to access the project images
-
     // Motion values
     const smoothMouse = {
         x: useMotionValue(0),
