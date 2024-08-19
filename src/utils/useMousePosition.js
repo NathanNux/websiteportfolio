@@ -20,7 +20,7 @@ export const useMousePosition = (elRef) => {
       window.addEventListener("mousemove", updateMousePosition);
   
       return () => window.removeEventListener("mousemove", updateMousePosition);
-    }, []);
+    }, [updateMousePosition]);
   
     return mousePosition;
 }

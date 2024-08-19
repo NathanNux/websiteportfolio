@@ -56,7 +56,7 @@ const videos = [
         alt: "website_12"
     },
     {
-        src: "/assets/a-footage/beginner-components-2.mp4",
+        src: "/assets/b-footage/bc1.mp4",
         alt: "website_13"
     },
     {
@@ -187,7 +187,7 @@ export default function Index (){
 }
 
 const Column = ({videos, images, y }) => {
-    const [ isLoaded, setIsLoaded ] = useState(false)
+    const [ isLoaded, setIsLoaded ] = useState(videos.map(() => false))
     const [ isVisible, setIsVisible ] = useState(false)
     const columnRef = useRef(null)
 
@@ -196,6 +196,7 @@ const Column = ({videos, images, y }) => {
 
 
     useEffect( () => {
+        const currentColumn = columnRef.current
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach( entry => {
@@ -207,12 +208,12 @@ const Column = ({videos, images, y }) => {
             { threshold: 0.1 }
         )
 
-        if (columnRef.current) {
-            observer.observe(columnRef.current); // Observe the column
+        if (currentColumn) {
+            observer.observe(currentColumn); // Observe the column
         }
         return () => {
-            if (columnRef.current) {
-                observer.unobserve(columnRef.current);
+            if (currentColumn) {
+                observer.unobserve(currentColumn);
             }
         };
     }, [videos])
@@ -245,7 +246,11 @@ const Column = ({videos, images, y }) => {
                                 muted
                                 preload="metadata"
                                 style={{ display: isLoaded ? "block" : "none"}}
-                                onLoadedData={ () => setIsLoaded(true)}
+                                onLoadedData={ () => {
+                                    const newIsLoaded = [...isLoaded]
+                                    newIsLoaded[index] = true
+                                    setIsLoaded(newIsLoaded)
+                                }}
                             >
                                 <source src={src} type="video/mp4"/>
                             </video>

@@ -25,7 +25,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
     const secondText = useRef(null);
     const slider = useRef(null);
     let xPercent = 0;
-    let direction = -1;
+    let direction = useRef(-1);
     const [ isLoaded, setIsLoaded ] = useState(false)
     const [ isVisible, setIsVisible ] = useState(false)
     const columnRef = useRef(null)
@@ -83,7 +83,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
           gsap.set(firstText.current, {xPercent: xPercent})
           gsap.set(secondText.current, {xPercent: xPercent})
           requestAnimationFrame(animate);
-          xPercent += 0.03 * direction;
+          xPercent += 0.03 * direction.current;
         }
     }
   
@@ -95,7 +95,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
           scrub: 0.25,
           start: 0,
           end: '300%',
-          onUpdate: e => direction = e.direction * -1
+          onUpdate: e => direction.current = e.direction * -1
         },
         x: "-500px",
         repeat: -1,
@@ -116,6 +116,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
 
 
     useEffect( () => {
+        const currentColumn = columnRef.current
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach( entry => {
@@ -124,15 +125,15 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
                     }
                 })
             },
-            { threshold: 0.1 }
+            { threshold: 0.5 }
         )
 
-        if (columnRef.current) {
-            observer.observe(columnRef.current); // Observe the column
+        if (currentColumn) {
+            observer.observe(currentColumn); // Observe the column
         }
         return () => {
-            if (columnRef.current) {
-                observer.unobserve(columnRef.current);
+            if (currentColumn) {
+                observer.unobserve(currentColumn);
             }
         };
     }, [pictures])

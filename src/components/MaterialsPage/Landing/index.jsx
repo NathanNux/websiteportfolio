@@ -15,7 +15,7 @@ export default function Landing() {
   const secondText = useRef(null);
   const slider = useRef(null);
   let xPercent = 0;
-  let direction = -1;
+  let direction = useRef(-1);
 
   useEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
@@ -25,7 +25,7 @@ export default function Landing() {
         scrub: 0.25,
         start: 0,
         end: window.innerHeight,
-        onUpdate: e => direction = e.direction * -1
+        onUpdate: e => direction.current = e.direction * -1
       },
       x: "-500px",
       repeat: -1,
@@ -45,7 +45,7 @@ export default function Landing() {
       gsap.set(firstText.current, {xPercent: xPercent})
       gsap.set(secondText.current, {xPercent: xPercent})
       requestAnimationFrame(animate);
-      xPercent += 0.01 * direction;
+      xPercent += 0.01 * direction.current;
     }
   }
 

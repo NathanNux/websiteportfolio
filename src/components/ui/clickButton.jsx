@@ -15,7 +15,7 @@ export default function ButtonClick({ title, onClick, currentView, filterCategor
         } else {
             setActive(false);
         }
-    }, [currentView, filterCategory]);
+    }, [currentView, filterCategory, trigger]);
 
     const handleClick = () => {
         setActive(!active);

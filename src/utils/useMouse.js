@@ -44,7 +44,7 @@ export default function useMouse(containerRef) {
             //important: remove the event listener when the component is unmounted instantly for performance
             // this helps so much the the smoothens of the animation
         };
-    }, []);
+    }, [scroll, mouseMove]);
 
     return mouse;
 }

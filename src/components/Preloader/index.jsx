@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
 import Head from 'next/head';
 
-const words = [ "Dobrý den","Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo"]
+const words = [ "Dobrý den","Hello", "Bonjour", "Ciao", "Olà", "やあ", "Vítejte", "V Centru"]
 
 export default function Preloader() {
     const [index, setIndex] = useState(0);

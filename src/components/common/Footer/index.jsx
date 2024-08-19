@@ -35,10 +35,10 @@ export default function Footer() {
     return date.toLocaleTimeString('en-US', options).replace('GMT+1', 'CET').replace('GMT+2', 'CEST');
   }
 
-  const setPath = useCallback((progress) => {
+    const setPath = useCallback((progress) => {
     const width = window.innerWidth * 0.7;
     path.current.setAttributeNS(null, "d", `M0 250 Q${width * x} ${250 + progress}, ${width} 250`);
-  });
+    }, []);
 
   const lerp = (x, y, z) => x * (1 - z) + y * z;
 

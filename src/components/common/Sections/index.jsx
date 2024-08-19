@@ -8,6 +8,7 @@ export default function Section ({images, phrases, styles}) {
     const columnRef = useRef(null)
 
     useEffect( () => {
+        const currentColumn = columnRef.current
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach( entry => {
@@ -19,12 +20,12 @@ export default function Section ({images, phrases, styles}) {
             { threshold: 0.1 }
         )
 
-        if (columnRef.current) {
-            observer.observe(columnRef.current); // Observe the column
+        if (currentColumn) {
+            observer.observe(currentColumn); // Observe the column
         }
         return () => {
-            if (columnRef.current) {
-                observer.unobserve(columnRef.current);
+            if (currentColumn) {
+                observer.unobserve(currentColumn);
             }
         };
     }, [images])
