@@ -102,15 +102,14 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
         yoyo: true
       })
       requestAnimationFrame(animate);
-    }, [])
-  
-    // this useEffect will run only once, when the component is mounted, and it ensures there is no spamming warnings about the refs of texts being null, because the animate function is called only when the refs are not null
-    // just helps with warnings in console and performance a bit, that's all
-    useEffect(() => {
+      
+        // this useEffect will run only once, when the component is mounted, and it ensures there is no spamming warnings about the refs of texts being null, because the animate function is called only when the refs are not null
+        // just helps with warnings in console and performance a bit, that's all
+
       if (firstText.current && secondText.current) {
-          requestAnimationFrame(animate);
-      }
-    }, [firstText, secondText]);
+            requestAnimationFrame(animate);
+            }
+    }, [firstText, secondText])
 
     // we are again looping through the videos and checking if they are in the viewport, if they are, we are setting the isLoaded to true
 
@@ -125,7 +124,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
                     }
                 })
             },
-            { threshold: 0.5 }
+            { threshold: 0.05 }
         )
 
         if (currentColumn) {

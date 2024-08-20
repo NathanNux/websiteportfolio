@@ -99,3 +99,9 @@ export default function Home() {
   );
 }
 
+
+// the issue seems like it is inisde the paralax zoom scss and the section css.
+// because the glitch is happening in the main page. then in the projects page it is not happening.
+// but is happening again in the projectstemplate page. but not in the material page
+// and small glitch is happening in about me page, which only has sections component, not parallazoom component
+

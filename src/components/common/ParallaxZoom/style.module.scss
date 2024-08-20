@@ -11,7 +11,7 @@
         overflow: hidden;
         .sliderContainer{ 
             position: absolute;
-            top: calc(100% - 350px);
+            top: 275vh;
             .slider {
                 position: relative;
                 white-space: nowrap;
@@ -121,7 +121,7 @@
     .main{
         .bodySlider{
             .sliderContainer{
-                top: calc(100% - 250px);
+                top: 280vh;
                 .slider{
                     font-size: 8em;
                 }
@@ -134,7 +134,7 @@
     .main{
         .bodySlider{
             .sliderContainer{
-                top: calc(100% - 250px);
+                top: 280vh;
                 .slider{
                     font-size: 7em;
                 }
@@ -151,7 +151,7 @@
         .bodySlider{
             .sliderContainer{ 
                 position: absolute;
-                top: calc(100% - 250px);
+                top: 275vh;
                 .slider {
                     font-size: 10em;
     
@@ -249,7 +249,7 @@
         .bodySlider{
             .sliderContainer{ 
                 position: absolute;
-                top: calc(100% - 250px);
+                top: 280vh;
                 .slider {
                     font-size: 9em;
     
@@ -346,7 +346,7 @@
         .bodySlider{
             .sliderContainer{ 
                 position: absolute;
-                top: calc(100% - 250px);
+                top: 280vh;
                 .slider {
                     font-size: 9em;
     
