@@ -1,10 +1,10 @@
 import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
-const Landing = dynamic(() => import('@/components/AboutPage/Landing'), { ssr: false });
 import dynamic from "next/dynamic";
+const Landing = dynamic(() => import('@/components/AboutPage/Landing'), { ssr: false });
+const Services = dynamic(() => import('@/components/AboutPage/Service'), { ssr: false });
 import Intro from "@/components/common/Intro";
 import AboutSections from "@/components/AboutPage/AboutSections";
-import Services from "@/components/AboutPage/Service";
 import { useEffect } from "react";
 import FreeOffers from "@/components/common/FreeStuff";
 import Description from "@/components/common/Description";
