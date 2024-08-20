@@ -1,5 +1,5 @@
+import "@/styles/globals.css";
 import { LoadProvider } from "@/context";
-import "@/styles/globals.scss";
 import { AnimatePresence } from "framer-motion";
 
 export default function App({ Component, pageProps, router }) {
