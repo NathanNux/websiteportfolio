@@ -26,17 +26,17 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
     const slider = useRef(null);
     let xPercent = 0;
     let direction = useRef(-1);
-    const [ isLoaded, setIsLoaded ] = useState(false)
 
+    const video = [
+        {
+            path: path,
+            alt: 'A beautiful landscape',
+            scale: scale1,
+        },
+    ]
 
     const pictures = useMemo(() => 
         [
-            {
-                src: src1,
-                path: path,
-                alt: 'A beautiful landscape',
-                scale: scale1,
-            },
             {
                 src: src2,
                 alt: 'A beautiful landscape',
@@ -112,6 +112,22 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
     return(
         <motion.section ref={ref} className={styles.main} variants={slideUp} initial='initial' animate='enter'>
             <div className={styles.container}>
+                {video.map((video, i) => (
+                    <motion.div
+                        key={i}
+                        className={styles.motionContainer}
+                        style={{ scale: video.scale }}
+                    >
+                        <div className={styles.imageContainer}>
+                            <video 
+                                src={video.path}
+                                autoPlay
+                                loop
+                                muted
+                            />
+                        </div>
+                    </motion.div>
+                ))}
                 {pictures.map((picture, i) => (
                     <motion.div
                         key={i}
@@ -119,26 +135,12 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
                         style={{ scale: picture.scale }}
                     >
                         <div className={styles.imageContainer}>
-                            {!picture.path &&
-                                <Image 
-                                    src={picture.src}
-                                    alt={picture.alt}
-                                    fill
-                                    sizes="true"
-                                    loading="lazy"
-                                />
-                            }
-                            {picture.path && 
-                                <video
-                                    autoPlay
-                                    loop
-                                    muted
-                                    onLoadedData={ () => setIsLoaded(true)}
-                                    style={{ display: isLoaded ? "block" : "none"}}
-                                >
-                                    <source src={picture.path} type="video/mp4"/>
-                                </video>
-                            }   
+                            <Image 
+                                src={picture.src}
+                                alt={picture.alt}
+                                fill
+                                sizes="true"
+                            />
                         </div>
                     </motion.div>
                 ))}
