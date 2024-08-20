@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 
 export default function App({ Component, pageProps, router }) {
 
-  //now i need o pit all the content inside the AnimatePresence component to make the animations work
+  //now i need o put all the content inside the AnimatePresence component to make the animations work
 
   return (
   <LoadProvider>

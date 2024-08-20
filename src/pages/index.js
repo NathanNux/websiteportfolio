@@ -12,6 +12,7 @@ import IntroText from "@/components/common/IntroText";
 import OfferSection from "@/components/LandingPage/OfferSections";
 import MainOffer from "@/components/LandingPage/MainOffer";
 import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Preloader from "@/components/Preloader";
 import { useLoad } from "@/context";
 import FreeOffers from "@/components/common/FreeStuff";
@@ -79,27 +80,37 @@ export default function Home() {
         <AnimatePresence wait>
           {firstLoad && <Preloader key="preloader"/>}
         </AnimatePresence>
-        <CurveTransition>
-        <Landing />
-        <Description />
-        <Slider />
-        <NewestWork />
-        <IntroText phrases={phrases}/>
-        <ZoomParallax 
-          src1='/assets/images/projects/components.png' 
-          src2='/assets/images/slider-la/seo.png' 
-          src3='/assets/images/slider-la/coding.png' 
-          src4='/assets/images/slider-la/performance.png' 
-          src5='/assets/images/slider-la/color-pallet.png' 
-          src6='/assets/images/slider-la/offer.png' 
-          src7='/assets/images/slider-la/research.png' 
-          path='/assets/images/slider-la/videos/main.mp4'
-          text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
-        />
-        <OfferSection />
-        <MainOffer />
-        <FreeOffers text='1'/>
-        <Footer />
+      <CurveTransition>
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.5, delay: 2 } }}
+          >
+            <Landing />
+            <Description />
+            <Slider />
+            <NewestWork />
+            <IntroText phrases={phrases}/>
+            <ZoomParallax 
+              src1='/assets/images/projects/components.png' 
+              src2='/assets/images/slider-la/seo.png' 
+              src3='/assets/images/slider-la/coding.png' 
+              src4='/assets/images/slider-la/performance.png' 
+              src5='/assets/images/slider-la/color-pallet.png' 
+              src6='/assets/images/slider-la/offer.png' 
+              src7='/assets/images/slider-la/research.png' 
+              path='/assets/images/slider-la/videos/main.mp4'
+              text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
+            />
+            <OfferSection />
+            <MainOffer />
+            <FreeOffers text='1'/>
+            <Footer />
+          </motion.div>
+          
+        </AnimatePresence>
+        
       </CurveTransition>
     </>
   );
