@@ -59,6 +59,7 @@ export default function Home() {
         <Slider />
         <NewestWork />
         <IntroText phrases={phrases}/>
+        <OfferSection />
         <MainOffer />
         <FreeOffers text='1'/>
         <Footer />
