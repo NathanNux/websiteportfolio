@@ -5,7 +5,6 @@ const Landing = dynamic(() => import('@/components/AboutPage/Landing'), { ssr: f
 const Services = dynamic(() => import('@/components/AboutPage/Service'), { ssr: false });
 import Intro from "@/components/common/Intro";
 import AboutSections from "@/components/AboutPage/AboutSections";
-import { useEffect } from "react";
 import FreeOffers from "@/components/common/FreeStuff";
 import Description from "@/components/common/Description";
 
@@ -37,21 +36,6 @@ const phrase3 = [
 ];
 
 export default function Home() {
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      import('locomotive-scroll').then(LocomotiveScroll => {
-        const scroll = new LocomotiveScroll.default({
-          el: document.querySelector('[data-scroll-container]'),
-          smooth: true,
-        });
-
-        return () => {
-          if(scroll) scroll.destroy();
-        };
-      });
-    }
-  }, []);
 
   return (
     <>

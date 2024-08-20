@@ -1,9 +1,6 @@
 import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
 
-import { Inter } from "next/font/google";
-
-import { useEffect } from "react";
 import Calendly from "@/components/ContactPage/Calendly";
 import dynamic from "next/dynamic";
 
@@ -12,25 +9,7 @@ import Header from "@/components/common/Header";
 const Footer = dynamic(() => import('@/components/ContactPage/Footer'), { ssr: false });
 const Contact = dynamic(() => import('@/components/ContactPage/Contact'), { ssr: false });
 
-
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      import('locomotive-scroll').then(LocomotiveScroll => {
-        const scroll = new LocomotiveScroll.default({
-          el: document.querySelector('[data-scroll-container]'),
-          smooth: true,
-        });
-
-        return () => {
-          if(scroll) scroll.destroy();
-        };
-      });
-    }
-  }, []);
 
   return (
     <>

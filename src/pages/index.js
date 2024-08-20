@@ -37,26 +37,6 @@ const phrases = [
 export default function Home() {
 
   const { firstLoad, setFirstLoad } = useLoad();
-  const pathname = usePathname()
-
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 2000);
-
-    if (typeof window !== 'undefined') {
-      import('locomotive-scroll').then(LocomotiveScroll => {
-        const scroll = new LocomotiveScroll.default({
-          el: document.querySelector('[data-scroll-container]'),
-          smooth: true,
-        });
-
-        return () => {
-          if(scroll) scroll.destroy();
-        };
-      });
-    }
-  }, [pathname]);
 
   // this needs to be in every page, because of the smooth scroll anim. it won't work without it when you navigate to another page
 

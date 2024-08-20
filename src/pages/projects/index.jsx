@@ -7,25 +7,7 @@ import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 
-import { useEffect } from "react";
-
 export default function Home() {
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      import('locomotive-scroll').then(LocomotiveScroll => {
-        const scroll = new LocomotiveScroll.default({
-          el: document.querySelector('[data-scroll-container]'),
-          smooth: true,
-        });
-
-        return () => {
-          if(scroll) scroll.destroy();
-        };
-      });
-    }
-  }, []);
-
   return (
     <>
       <Head>
