@@ -70,6 +70,7 @@ export default function Home() {
           path='/assets/images/slider-la/videos/main.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
+        <OfferSection />
         <MainOffer />
         <FreeOffers text='1'/>
         <Footer />

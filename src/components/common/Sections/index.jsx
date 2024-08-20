@@ -17,17 +17,13 @@ export default function Section ({images, phrases, styles}) {
                     }
                 })
             },
-            { threshold: 0.1 }
+            { threshold: 0.05 }
         )
 
         if (currentColumn) {
             observer.observe(currentColumn); // Observe the column
         }
-        return () => {
-            if (currentColumn) {
-                observer.unobserve(currentColumn);
-            }
-        };
+        return () => {observer.disconnect()}
     }, [images])
 
     return (

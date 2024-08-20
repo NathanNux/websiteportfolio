@@ -102,7 +102,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
         yoyo: true
       })
       requestAnimationFrame(animate);
-      
+
         // this useEffect will run only once, when the component is mounted, and it ensures there is no spamming warnings about the refs of texts being null, because the animate function is called only when the refs are not null
         // just helps with warnings in console and performance a bit, that's all
 
@@ -130,11 +130,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
         if (currentColumn) {
             observer.observe(currentColumn); // Observe the column
         }
-        return () => {
-            if (currentColumn) {
-                observer.unobserve(currentColumn);
-            }
-        };
+        return () => {observer.disconnect()}
     }, [pictures])
 
     return(
