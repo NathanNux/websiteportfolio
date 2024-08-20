@@ -70,23 +70,13 @@ export default function Landing() {
         
         <motion.div className={styles.background} variants={scale} initial="initial" animate="enter">
             <Image 
-                src='/images/materials/background.png'
+                src="/images/about/background.png"
                 alt='background'
                 fill
                 sizes="true"
                 priority
             />
         </motion.div>
-        <div className={styles.imageContainer} data-scroll data-scroll-speed={0.1}>
-            <Image 
-                src='/images/landing/7.jpg'
-                alt='materials'
-                fill
-                sizes="true"
-                priority
-                //WIP: add here Images for Material Page
-            />
-        </div>
     </section>
   )
 };
