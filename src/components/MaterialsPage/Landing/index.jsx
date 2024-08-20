@@ -32,7 +32,7 @@ export default function Landing() {
       yoyo: true
     })
     requestAnimationFrame(animate);
-  }, [animate])
+  }, [])
 
   const animate = () => {
     if(firstText.current && secondText.current) {
@@ -55,7 +55,7 @@ export default function Landing() {
     if (firstText.current && secondText.current) {
         requestAnimationFrame(animate);
     }
-  }, [firstText, secondText, animate]);
+  }, [firstText, secondText]);
 
 
 
