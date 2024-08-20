@@ -70,7 +70,6 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
                 scale: scale5,
             },
         ]
-        [src1, src2, src3, src4, src5, src6, src7, path, scale1, scale2, scale3, scale4, scale5]
     )
 
     const animate = () => {
