@@ -83,7 +83,7 @@ export default function CurveTransition({children}) {
             width: window.innerWidth,
             height: window.innerHeight,
         });
-    }, 250), []);
+    }, 250), [setDimensions]);
 
     useEffect(() => {
         handleResize(); // Initial resize to set dimensions

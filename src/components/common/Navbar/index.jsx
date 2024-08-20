@@ -29,7 +29,7 @@ export default function Index () {
 
     // Clear the timeout when the component unmounts
     return () => clearTimeout(timer);
-  }, [pathname]);
+  }, [pathname, delayedPathname]);
 
   return (
     <nav ref={container} className={`${isContactPage ? styles.navbarBlack : styles.navbarWhite }`}>

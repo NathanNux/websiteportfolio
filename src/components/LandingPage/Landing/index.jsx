@@ -31,7 +31,7 @@ export default function Index() {
       yoyo: true
     })
     requestAnimationFrame(animate);
-  }, [])
+  }, [animate])
 
   const animate = () => {
     if(firstText.current && secondText.current) {
@@ -54,7 +54,7 @@ export default function Index() {
     if (firstText.current && secondText.current) {
         requestAnimationFrame(animate);
     }
-  }, [firstText, secondText]);
+  }, [firstText, secondText, animate]);
 
 
   return (
