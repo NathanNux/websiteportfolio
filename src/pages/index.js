@@ -2,10 +2,10 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import CurveTransition from "@/components/transition/CurveTransition";
 const Landing = dynamic(() => import('@/components/LandingPage/Landing'), { ssr: false });
-const Description = dynamic(() => import('@/components/LandingPage/Description'), { ssr: false });
-// import Slider from "@/components/LandingPage/Slider";
-const Slider = dynamic(() => import('@/components/LandingPage/Slider'), { ssr: false });
-const NewestWork = dynamic(() => import('@/components/LandingPage/NewestWork'), { ssr: false });
+import Slider from "@/components/LandingPage/Slider";
+import NewestWork from "@/components/LandingPage/NewestWork";
+import Description from "@/components/LandingPage/Description";
+
 
 import { useEffect } from "react";
 import IntroText from "@/components/common/IntroText";
@@ -20,6 +20,7 @@ import ZoomParallax from "@/components/common/ParallaxZoom";
 const Footer = dynamic(() => import('@/components/common/Footer'), { ssr: false });
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
+import { usePathname } from "next/navigation";
 
 const phrases = [
   {
@@ -36,8 +37,13 @@ const phrases = [
 export default function Home() {
 
   const { firstLoad, setFirstLoad } = useLoad();
+  const pathname = usePathname()
 
   useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 2000);
+
     if (typeof window !== 'undefined') {
       import('locomotive-scroll').then(LocomotiveScroll => {
         const scroll = new LocomotiveScroll.default({
@@ -50,8 +56,7 @@ export default function Home() {
         };
       });
     }
-  }, []);
-
+  }, [pathname]);
 
   // this needs to be in every page, because of the smooth scroll anim. it won't work without it when you navigate to another page
 

@@ -13,7 +13,9 @@ export default function App({ Component, pageProps, router }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1500);
   }, [pathname]);
 
 
