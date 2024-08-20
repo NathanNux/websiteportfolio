@@ -7,7 +7,7 @@ import NewestWork from "@/components/LandingPage/NewestWork";
 import Description from "@/components/LandingPage/Description";
 
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import IntroText from "@/components/common/IntroText";
 import OfferSection from "@/components/LandingPage/OfferSections";
 import MainOffer from "@/components/LandingPage/MainOffer";
@@ -37,9 +37,35 @@ const phrases = [
 export default function Home() {
 
   const { firstLoad, setFirstLoad } = useLoad();
+  const pathname = usePathname()
 
-  // this needs to be in every page, because of the smooth scroll anim. it won't work without it when you navigate to another page
+  const [isLoading, setIsLoading] = useState(true);
+  // to always return to the top of the page when the page changes
+  // its easier to look for changes in the pathname then to look for changes in the router object
 
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1500);
+  }, [pathname]);
+
+  useEffect( () => {
+    (
+      async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
+
+          setTimeout( () => {
+            setIsLoading(false);
+            document.body.style.cursor = 'default'
+            if (typeof window !== 'undefined') {
+              window.scrollTo(0,0);
+            }
+          }, 2000)
+      }
+    )()
+  }, [])
+  
   return (
     <>
       <Head>
@@ -59,6 +85,17 @@ export default function Home() {
         <Slider />
         <NewestWork />
         <IntroText phrases={phrases}/>
+        <ZoomParallax 
+          src1='/assets/images/projects/components.png' 
+          src2='/assets/images/slider-la/seo.png' 
+          src3='/assets/images/slider-la/coding.png' 
+          src4='/assets/images/slider-la/performance.png' 
+          src5='/assets/images/slider-la/color-pallet.png' 
+          src6='/assets/images/slider-la/offer.png' 
+          src7='/assets/images/slider-la/research.png' 
+          path='/assets/images/slider-la/videos/main.mp4'
+          text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
+        />
         <OfferSection />
         <MainOffer />
         <FreeOffers text='1'/>

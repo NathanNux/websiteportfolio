@@ -6,8 +6,39 @@ const Projects = dynamic(() => import('@/components/ProjectsPage/Projects'), { s
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
+
+  const pathname = usePathname()
+
+  const [isLoading, setIsLoading] = useState(true);
+  // to always return to the top of the page when the page changes
+  // its easier to look for changes in the pathname then to look for changes in the router object
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1500);
+  }, [pathname]);
+
+  useEffect( () => {
+    (
+      async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
+
+          setTimeout( () => {
+            setIsLoading(false);
+            document.body.style.cursor = 'default'
+            if (typeof window !== 'undefined') {
+              window.scrollTo(0,0);
+            }
+          }, 2000)
+      }
+    )()
+  }, [])
   return (
     <>
       <Head>
