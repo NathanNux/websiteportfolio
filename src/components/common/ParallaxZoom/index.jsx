@@ -27,8 +27,6 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
     let xPercent = 0;
     let direction = useRef(-1);
     const [ isLoaded, setIsLoaded ] = useState(false)
-    const [ isVisible, setIsVisible ] = useState(false)
-    const columnRef = useRef(null)
 
 
     const pictures = useMemo(() => 
@@ -111,31 +109,9 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
             }
     }, [firstText, secondText])
 
-    // we are again looping through the videos and checking if they are in the viewport, if they are, we are setting the isLoaded to true
-
-
-    useEffect( () => {
-        const currentColumn = columnRef.current
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach( entry => {
-                    if(entry.isIntersecting) {
-                        setIsVisible(true)
-                    }
-                })
-            },
-            { threshold: 0.05 }
-        )
-
-        if (currentColumn) {
-            observer.observe(currentColumn); // Observe the column
-        }
-        return () => {observer.disconnect()}
-    }, [pictures])
-
     return(
         <motion.section ref={ref} className={styles.main} variants={slideUp} initial='initial' animate='enter'>
-            <div className={styles.container} ref={columnRef}>
+            <div className={styles.container}>
                 {pictures.map((picture, i) => (
                     <motion.div
                         key={i}
@@ -143,7 +119,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
                         style={{ scale: picture.scale }}
                     >
                         <div className={styles.imageContainer}>
-                            {isLoaded && !picture.path &&
+                            {!picture.path &&
                                 <Image 
                                     src={picture.src}
                                     alt={picture.alt}
@@ -152,7 +128,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
                                     loading="lazy"
                                 />
                             }
-                            {isVisible && 
+                            {picture.path && 
                                 <video
                                     autoPlay
                                     loop
