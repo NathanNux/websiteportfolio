@@ -1,20 +1,18 @@
-.landing {
+.main {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    flex-direction: column;
+    padding: 0 0 30em 0;
     height: 100vh;
-    overflow: hidden;
-    z-index: -1;
-    width: 100vw;
-
-    img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
+    width: 100%;
+    margin: 0;
 
     .sliderContainer {
         position: absolute;
-        top: calc(100vh - 250px);
+        top: 75vh;
+        z-index: 1;
 
         .slider {
             position: relative;
@@ -36,26 +34,32 @@
             }
         }
     }
-    .description{
+
+    .background{
         position: absolute;
-        top: 35%;
-        left: 70%;
-        color: white;
-        font-size: 2em;
-        font-weight: 300;
-        p{
-          margin: 0px;
-          margin-bottom: 10px;
+        width: 100%;
+        height: 100%;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
         }
-        svg{
-          transform: scale(2);
-          margin-bottom: 100px;
+    }
+
+    .imageContainer{
+        width: 30vw;
+        height: 60vh;
+        position: absolute;
+        img{ 
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
         }
     }
 }
 
 @media only screen and (max-width: 1550px) {
-    .landing{
+    .main{
         .sliderContainer{
             .slider{
                 font-size: 8em;
@@ -64,10 +68,9 @@
     }
 }
 
-@media only screen and (max-width: 1550px) {
-    .landing{
+@media only screen and (max-width: 1450px) {
+    .main{
         .sliderContainer{
-            top: calc(100vh - 200px);
             .slider{
                 font-size: 7em;
             }
@@ -76,9 +79,8 @@
 }
 
 @media only screen and (max-width: 1000px) and (min-height: 600px){
-    .landing{
+    .main{
         .sliderContainer{
-            top: calc(100vh - 150px);
             .slider{
                 font-size: 6em;
             }
@@ -86,32 +88,42 @@
     }
 }
 
-//tablets vertical
+// tablets vertical
 
 @media only screen and (max-width: 1050px) and (min-height: 1000px){
-    .landing{
+    .main{
         .sliderContainer{
-            top: calc(100vh - 250px);
+            top: 70vh;
             .slider{
-                font-size: 10em;
+                font-size: 12em;
             }
         }
     }
 }
 
 @media only screen and (max-width: 900px) and (min-height: 800px){
-    .landing{
+    .main{
         .sliderContainer{
-            top: calc(100vh - 250px);
+            top: 70vh;
             .slider{
-                font-size: 9em;
+                font-size: 10em;
+            }
+        }
+        .imageContainer{
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+            img{ 
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
             }
         }
     }
 }
 
 @media only screen and (max-width: 450px) and (max-height: 950px){
-    .landing{
+    .main{
         .sliderContainer{
             top: calc(100vh - 250px);
             .slider{
@@ -123,6 +135,16 @@
             left: 60%;
             font-size: 2em;
             font-weight: 400;
+        }
+        .imageContainer{
+            width: 80vw;
+            height: 50vh;
+            position: absolute;
+            img{ 
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }

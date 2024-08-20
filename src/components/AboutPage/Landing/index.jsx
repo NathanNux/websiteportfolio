@@ -1,31 +1,21 @@
-import Image from 'next/image'
-import styles from './style.module.scss'
+import { motion } from 'framer-motion';
+
+import styles from './style.module.scss';
+import Image from 'next/image';
+import { scale, slideUp } from './anim';
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useState } from 'react';
-import { slideUp } from '@/components/anim';
 
-export default function Index() {
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect( () => {
-      setIsLoading(false);
-  }, [])
 
-  const container = useRef(null)
+export default function Landing() {
+
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
   let xPercent = 0;
   let direction = useRef(-1);
-
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start start', 'end start']
-  })
-  const y = useTransform(scrollYProgress, [0, 1], ['0vh', '100vh'])
 
   useEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
@@ -55,7 +45,7 @@ export default function Index() {
       gsap.set(firstText.current, {xPercent: xPercent})
       gsap.set(secondText.current, {xPercent: xPercent})
       requestAnimationFrame(animate);
-      xPercent += 0.015 * direction.current;
+      xPercent += 0.01 * direction.current;
     }
   }
 
@@ -68,21 +58,35 @@ export default function Index() {
   }, [firstText, secondText]);
 
 
-    return (
-        <motion.main variants={slideUp} style={{y}}  initial="initial" animate='enter' className={styles.landing} ref={container}>
-          <Image 
-            src="/images/about/background.png"
-            fill
-            sizes="true"
-            alt="background_aboutPage"
-            priority
-          />
-          <div className={styles.sliderContainer}>
+
+  return (
+    <section className={styles.main}>
+        <motion.div className={styles.sliderContainer} variants={slideUp} initial="initial" animate="enter">
             <motion.div ref={slider} className={styles.slider}>
-              <p ref={firstText}>AETHER - O MÉ DUŠI - CENTRUM - AETHER - O MÉ DUŠI - CENTRUM -</p>
-              <p ref={secondText}>AETHER - O MÉ DUŠI - CENTRUM - AETHER - O MÉ DUŠI - CENTRUM -</p>
+                <p ref={firstText}>Materiály - Pro Vás - Materiály - Pro Vás -</p>
+                <p ref={secondText}>Materiály - Pro Vás - Materiály - Pro Vás -</p>
             </motion.div>
-          </div>
-        </motion.main>
-    )
-}
+        </motion.div>
+        
+        <motion.div className={styles.background} variants={scale} initial="initial" animate="enter">
+            <Image 
+                src='/images/materials/background.png'
+                alt='background'
+                fill
+                sizes="true"
+                priority
+            />
+        </motion.div>
+        <div className={styles.imageContainer} data-scroll data-scroll-speed={0.1}>
+            <Image 
+                src='/images/landing/7.jpg'
+                alt='materials'
+                fill
+                sizes="true"
+                priority
+                //WIP: add here Images for Material Page
+            />
+        </div>
+    </section>
+  )
+};

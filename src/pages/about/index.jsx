@@ -1,6 +1,7 @@
 import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
-import Landing from "@/components/AboutPage/Landing";
+const Landing = dynamic(() => import('@/components/AboutPage/Landing'), { ssr: false });
+import dynamic from "next/dynamic";
 import Intro from "@/components/common/Intro";
 import AboutSections from "@/components/AboutPage/AboutSections";
 import Services from "@/components/AboutPage/Service";
