@@ -17,7 +17,7 @@ import { useLoad } from "@/context";
 import FreeOffers from "@/components/common/FreeStuff";
 import ZoomParallax from "@/components/common/ParallaxZoom";
 
-import Footer from "@/components/common/Footer";
+const Footer = dynamic(() => import('@/components/common/Footer'), { ssr: false });
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 
