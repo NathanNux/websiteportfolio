@@ -25,7 +25,7 @@ export default function Index () {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDelayedPathname(pathname);
-    }, 500);
+    }, 1000);
 
     // Clear the timeout when the component unmounts
     return () => clearTimeout(timer);

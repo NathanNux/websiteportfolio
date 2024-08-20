@@ -7,8 +7,8 @@ import Intro from "@/components/common/Intro";
 import ZoomParallax from "@/components/common/ParallaxZoom";
 import NextProjects from "@/components/ProjectsTemplate/NextProjects";
 import Sections from "@/components/ProjectsTemplate/Sections";
-
-import Footer from "@/components/common/Footer";
+import dynamic from "next/dynamic";
+const Footer = dynamic(() => import('@/components/common/Footer'), { ssr: false });
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 
