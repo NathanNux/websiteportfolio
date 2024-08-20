@@ -79,7 +79,7 @@ export default function Home() {
         <Slider />
         <NewestWork />
         <IntroText phrases={phrases}/>
-        <ZoomParallax 
+        {/* <ZoomParallax 
           src1='/assets/images/projects/components.png' 
           src2='/assets/images/slider-la/seo.png' 
           src3='/assets/images/slider-la/coding.png' 
@@ -89,7 +89,7 @@ export default function Home() {
           src7='/assets/images/slider-la/research.png' 
           path='/assets/images/slider-la/videos/main.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
-        />
+        /> */}
         <OfferSection />
         <MainOffer />
         <FreeOffers text='1'/>
