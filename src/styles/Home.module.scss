@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    max-width: 50vw;
+    .p {
+        font-size: 18px;
+        color: black;
+        width: 50%;
+    }
+  }
+}
