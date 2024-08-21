@@ -1,23 +1,26 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import styles from "./linkButton.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { scale } from "@/components/anim";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function ButtonLink({ href, title, className }) {
     const [ isHovered, setIsHovered ] = useState(false);
+    const pathname = usePathname();
 
-    const router = useRouter();
-
-    const scrollBack = () => {
-        setTimeout(() => {
+    useEffect(() => {
+        const timer = setTimeout(() => {
             window.scrollTo(0, 0);
-        }, 2500);
-        router.push(href);
-    }
+        }, 1500)
+
+        return () => {
+            clearTimeout(timer);
+        }
+    }, [pathname])
+
     return (
-        <div className={`${styles.main} ${className}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={scrollBack}>
+        <div className={`${styles.main} ${className}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <Link href={href} className={styles.link}>
                 <p className={styles.buttonText}>{title}</p>
             </Link>

@@ -18,10 +18,14 @@ export default function Home() {
   // its easier to look for changes in the pathname then to look for changes in the router object
 
   useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 1500);
-  }, [pathname]);
+      const timer = setTimeout(() => {
+          window.scrollTo(0, 0);
+      }, 1500)
+
+      return () => {
+          clearTimeout(timer);
+      }
+  }, [pathname])
 
   useEffect( () => {
     (

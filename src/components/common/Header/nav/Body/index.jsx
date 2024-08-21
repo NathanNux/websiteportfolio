@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styles from './style.module.scss';
 import { blur, translate } from '../../anim';
+import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Body({links, selectedLink, setSelectedLink}) {
 
@@ -21,6 +23,18 @@ export default function Body({links, selectedLink, setSelectedLink}) {
         })
         return chars;
     }
+
+    const pathname = usePathname();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 1500)
+
+        return () => {
+            clearTimeout(timer);
+        }
+    }, [pathname])
     
     return (
         <div className={styles.body}>

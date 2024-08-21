@@ -12,6 +12,7 @@ import dynamic from "next/dynamic";
 const Footer = dynamic(() => import('@/components/common/Footer'), { ssr: false });
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
+import { usePathname } from "next/navigation";
 
 const description = [
   {
@@ -105,6 +106,18 @@ const stylePhrases = [
 ]
 
 export default function Home() {
+
+  const pathname = usePathname();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 1500)
+
+        return () => {
+            clearTimeout(timer);
+        }
+    }, [pathname])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

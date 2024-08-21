@@ -44,11 +44,15 @@ export default function Home() {
   // to always return to the top of the page when the page changes
   // its easier to look for changes in the pathname then to look for changes in the router object
 
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 1500);
-  }, [pathname]);
+    useEffect(() => {
+      const timer = setTimeout(() => {
+          window.scrollTo(0, 0);
+      }, 1500)
+
+      return () => {
+          clearTimeout(timer);
+      }
+    }, [pathname])
 
   useEffect( () => {
     (
