@@ -11,7 +11,6 @@ import Description from "@/components/common/Description";
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const description = [
@@ -40,21 +39,9 @@ const phrase3 = [
 export default function Home() {
   const phrases = [phrase1, phrase2, phrase3];
 
-  const pathname = usePathname()
-
   const [isLoading, setIsLoading] = useState(true);
   // to always return to the top of the page when the page changes
   // its easier to look for changes in the pathname then to look for changes in the router object
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-        window.scrollTo(0, 0);
-    }, 1500)
-
-    return () => {
-        clearTimeout(timer);
-    }
-  }, [pathname])
 
   useEffect( () => {
     (

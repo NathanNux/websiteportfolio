@@ -12,7 +12,6 @@ import dynamic from "next/dynamic";
 const Footer = dynamic(() => import('@/components/common/Footer'), { ssr: false });
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
-import { usePathname } from "next/navigation";
 
 const description = [
   {
@@ -106,19 +105,6 @@ const stylePhrases = [
 ]
 
 export default function Home() {
-
-  const pathname = usePathname();
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            window.scrollTo(0, 0);
-        }, 1500)
-
-        return () => {
-            clearTimeout(timer);
-        }
-    }, [pathname])
-
   useEffect(() => {
     if (typeof window !== 'undefined') {
       import('locomotive-scroll').then(LocomotiveScroll => {
@@ -146,7 +132,7 @@ export default function Home() {
       <Navbar />
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
-        {/* <ZoomParallax 
+        <ZoomParallax 
           src1='/assets/images/applesite/apple1.png' 
           src2='/assets/images/applesite/apple2.png' 
           src3='/assets/images/applesite/appleipmain.png' 
@@ -156,7 +142,7 @@ export default function Home() {
           src7='/assets/images/applesite/color.png' 
           path='/assets/a-footage/applesite.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
-        /> */}
+        />
         <Description  description={description}/>
         <Intro src='/assets/images/ps/apple-site-nobg.png'/>
         <Sections 

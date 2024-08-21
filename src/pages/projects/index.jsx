@@ -7,25 +7,12 @@ import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 
 export default function Home() {
-
-  const pathname = usePathname()
 
   const [isLoading, setIsLoading] = useState(true);
   // to always return to the top of the page when the page changes
   // its easier to look for changes in the pathname then to look for changes in the router object
-
-  useEffect(() => {
-      const timer = setTimeout(() => {
-          window.scrollTo(0, 0);
-      }, 1500)
-
-      return () => {
-          clearTimeout(timer);
-      }
-  }, [pathname])
 
   useEffect( () => {
     (

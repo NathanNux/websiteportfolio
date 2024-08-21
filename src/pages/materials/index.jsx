@@ -7,8 +7,6 @@ import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 import dynamic from "next/dynamic";
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
 const Landing = dynamic(() => import('@/components/MaterialsPage/Landing'), { ssr: false });
 
 
@@ -27,17 +25,6 @@ const phrases = [
 ]
 
 export default function Home() {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-        window.scrollTo(0, 0);
-    }, 1500)
-
-    return () => {
-        clearTimeout(timer);
-    }
-  }, [pathname])
 
   return (
     <>

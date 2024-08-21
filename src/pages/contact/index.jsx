@@ -6,27 +6,15 @@ import dynamic from "next/dynamic";
 
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 const Footer = dynamic(() => import('@/components/ContactPage/Footer'), { ssr: false });
 const Contact = dynamic(() => import('@/components/ContactPage/Contact'), { ssr: false });
 
 export default function Home() {
-  const pathname = usePathname()
 
   const [isLoading, setIsLoading] = useState(true);
   // to always return to the top of the page when the page changes
   // its easier to look for changes in the pathname then to look for changes in the router object
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-        window.scrollTo(0, 0);
-    }, 1500)
-
-    return () => {
-        clearTimeout(timer);
-    }
-  }, [pathname])
 
   useEffect( () => {
     (

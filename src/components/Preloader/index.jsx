@@ -27,7 +27,7 @@ export default function Preloader() {
     const videoPath = {
         initial: {
             // Approximating the initial curve with a polygon. This is a rough approximation.
-            clipPath: `polygon(0% 0%, 100% 0%, 100% 100%, 50% 110%, 0% 100%)`, //  0 0 {top left corner}, 100% 0 {top right corner}, 100% 100% {bottom right corner}, 50% 110% {curve control point} (at half and it makes it 10% more height to do the curve), 0% 100% {bottom left corner}
+            clipPath: `polygon(0% 0%, 100% 0%, 100% 100%, 50% 120%, 0% 100%)`, //  0 0 {top left corner}, 100% 0 {top right corner}, 100% 100% {bottom right corner}, 50% 110% {curve control point} (at half and it makes it 10% more height to do the curve), 0% 100% {bottom left corner}
             transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] } // easing function [bezier curve]
         },
         exit: {
