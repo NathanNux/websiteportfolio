@@ -5,7 +5,7 @@ import { AnimatePresence, motion, useScroll, useTransform} from 'framer-motion';
 import { opacity, slideUp } from './anim';
 import dynamic from 'next/dynamic';
 import IconList from './IconList';
-import ButtonClick from '@/components/ui/clickButton';
+import ButtonClick from '@/components/common/ClickButton/clickButton';
 const Scene = dynamic(() => import('./Scene'), { ssr: false });
 
 export default function ProjectsList() {
