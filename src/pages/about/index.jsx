@@ -70,6 +70,7 @@ export default function Home() {
       </Head>
       <Header />
       <Navbar />
+      <CurveTransition>
         <Landing />
         <Description  description={description}/>
         <Intro phrase1={phrase1} phrase2={phrase2} phrase3={phrase3} src='/images/about/intro.png'/>
@@ -77,6 +78,7 @@ export default function Home() {
         <Services />
         <FreeOffers text='1'/> 
         <Footer />
+      </CurveTransition>
     </>
   );
 }

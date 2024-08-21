@@ -73,6 +73,7 @@ export default function Home() {
         <AnimatePresence wait>
           {firstLoad && <Preloader key="preloader"/>}
         </AnimatePresence>
+      <CurveTransition>
             <Landing />
             <Description />
             <Slider />
@@ -93,6 +94,7 @@ export default function Home() {
             <MainOffer />
             <FreeOffers text='1'/>
             <Footer />
+      </CurveTransition>
     </>
   );
 }
