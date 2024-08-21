@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 
-import styles from "./style.module.scss"
 import Link from "next/link";
 import { scale } from "@/components/anim";
 import { motion } from "framer-motion";
@@ -53,9 +52,9 @@ export default function Footer () {
     }, []);
 
     return (
-        <footer className={styles.main}>
-            <div className={styles.footer}>
-                <div className={styles.time}>
+        <footer className="mainFooterr">
+            <div className="footer">
+                <div className="time">
                     <p>
                         Verze<br />
                         <span>2024 © Edice</span>
@@ -65,13 +64,13 @@ export default function Footer () {
                         { delay &&<span>{timeString}</span>}
                     </p>
                 </div>
-                <div className={styles.socials}>
+                <div className="socials">
                     <p>Socky</p>
-                    <div className={styles.icons}>
+                    <div className="icons">
                         {footerLinks.map(({ title, href }, i) => (
-                            <div className={styles.links} key={i} onMouseEnter={() => setIsHovered(i)} onMouseLeave={() => setIsHovered(null)}>
+                            <div className="links" key={i} onMouseEnter={() => setIsHovered(i)} onMouseLeave={() => setIsHovered(null)}>
                                 <Link href={href}>{title}
-                                    <motion.div className={styles.dot} variants={scale} initial='initial' animate={ isHovered === i ? "enter" : "exit"}></motion.div>
+                                    <motion.div className="dot" variants={scale} initial='initial' animate={ isHovered === i ? "enter" : "exit"}></motion.div>
                                 </Link>
                             </div>
                         ))}

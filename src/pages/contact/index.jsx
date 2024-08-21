@@ -43,9 +43,12 @@ export default function Home() {
       <Header />
       <Navbar />
       <CurveTransition>
-        <Contact />
-        <Calendly />
-         <Footer />
+        <div className="page">
+          <Contact />
+          <Calendly />
+          <Footer />
+        </div>
+        
       </CurveTransition>
     </>
   );

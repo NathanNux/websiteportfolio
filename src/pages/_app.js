@@ -1,4 +1,5 @@
 import "@/styles/globals.scss";
+import "@/styles/styles.scss";
 import { LoadProvider } from "@/context";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";

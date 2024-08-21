@@ -1,7 +1,6 @@
 
 
 import { InlineWidget } from 'react-calendly';
-import styles from './style.module.scss';
 import { useScroll, useTransform } from 'framer-motion';
 import { Fragment, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -16,17 +15,17 @@ const phrase = [
 export default function Calendly() {
 
     return (
-        <section className={styles.main}>
-            <div className={styles.text}>
+        <section className="mainCalendly">
+            <div className="text">
                 <h2>Chcete se spojit<br/> hned? </h2> 
-                <div className={styles.firstText}>
+                <div className="firstText">
                     {phrase.map((phrase, i) => (
                         <Paragraph key={i} text={phrase.text} />
                     ))}
                 </div>
             </div>
 
-            <div className={styles.calendly}>
+            <div className="calendly">
                 <InlineWidget url="https://calendly.com/forejtovic/30min" />
             </div>
         </section>
@@ -76,7 +75,7 @@ const Paragraph = ({text}) => {
                   index={charIndex}
                   totalLenght={spanPart.length}
                   scrollYProgress={scrollYProgress}
-                  className={styles.specialSpan}
+                  className="specialSpan"
                 />
               });
             }

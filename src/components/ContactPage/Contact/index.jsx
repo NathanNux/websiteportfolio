@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
-import styles from './style.module.scss'; 
 import Image from 'next/image';
 import Link from 'next/link';
 import Select from 'react-select';
@@ -245,47 +244,47 @@ export default function Contact() {
     };
 
     return (
-        <motion.section variants={slideUp} initial="initial" animate='enter' className={styles.main}>
-            <div className={styles.toast}>
+        <motion.section variants={slideUp} initial="initial" animate='enter' className="mainContact">
+            <div className="toast">
                 <Toaster />
             </div>
-            <div className={styles.header}>
+            <div className="header">
                 <h1>Pojďme se spojit, <br />budovat a uspět!</h1>
-                <div className={styles.imageContainer} data-scroll data-scroll-speed={0.05}>
+                <div className="imageContainer" data-scroll data-scroll-speed={0.05}>
                     <Image src="/images/landing/background.png" alt="photo" fill sizes="true" />
                 </div>
             </div>
-            <div className={styles.formContainer}>
+            <div className="formContainer">
                 <form onSubmit={handleSubmit}>
-                    <div className={styles.inputContainer}>
-                        <div className={styles.inputText}>
+                    <div className="inputContainer">
+                        <div className="inputText">
                             <p><span>01</span>Jaké je Vaše Jméno</p>
                         </div>
                         <input type="text" name="name" value={formState.name} onChange={handleInputChange} placeholder="John Doe *"/>
                     </div>
-                    <div className={styles.inputContainer}>
-                        <div className={styles.inputText}>
+                    <div className="inputContainer">
+                        <div className="inputText">
                             <p><span>02</span>Jak se jmenuje Vaše firma?</p>
                         </div>
                         <input type="text" name="companyName" value={formState.companyName} onChange={handleInputChange} placeholder="John & Doe corp. *"/>
                     </div>
-                    <div className={styles.inputContainer}>
-                        <div className={styles.inputText}>
+                    <div className="inputContainer">
+                        <div className="inputText">
                             <p><span>03</span>Jaký je Váš E-mail?</p>
                         </div>
                         <input type="email" name="email" value={formState.email} onChange={handleInputChange} placeholder="john@doe.com *"/>
                     </div>
-                    <div className={styles.inputContainer}>
-                        <div className={styles.inputText}>
+                    <div className="inputContainer">
+                        <div className="inputText">
                             <p><span>04</span>Jaké je Vaše tel.číslo?</p>
                         </div>
                         <input type="tel" name="phoneNumber" value={formState.phoneNumber} onChange={handleInputChange} placeholder="V případě, že chcete, abych Vám zavolal." />
                     </div>
-                    <div className={styles.inputContainer}>
-                        <div className={styles.inputText}>
+                    <div className="inputContainer">
+                        <div className="inputText">
                             <p><span>05</span>Co pro Vás mohu udělat?</p>
                         </div>
-                        <div className={styles.selectWrapper}>
+                        <div className="selectWrapper">
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -304,35 +303,35 @@ export default function Contact() {
                         </motion.div>
                         </div>              
                     </div>
-                    <div className={styles.inputContainer}>
-                        <div className={styles.inputText}>
+                    <div className="inputContainer">
+                        <div className="inputText">
                             <p><span>06</span>Vaše zpráva</p>
                         </div>
                         <textarea name="message" value={formState.message} onChange={handleInputChange} placeholder="Ahoj Matěji, potřebovali bychom... "></textarea>
                     </div>
-                    <div className={styles.buttonSubmit}>
-                         <Button title='Poslat' onClick={handleSubmit} className={styles.buttonLink}/>
+                    <div className="buttonSubmit">
+                         <Button title='Poslat' onClick={handleSubmit} className="buttonLink"/>
                     </div>
                 </form>
-                <div className={styles.addInfo}>
-                    <div className={styles.info}>
+                <div className="addInfo">
+                    <div className="info">
                         <h2>Kontaktní informace</h2>
                         <p>forejtovic@gmail.com</p>
                         <p>+420 776 157 476</p>
                     </div>
-                    <div className={styles.info}>
+                    <div className="info">
                         <h2>Další informace</h2>
                         <p>Lokace: Česká republika</p>
                         <p>Kraj: Jihočeský</p>
                         <p>Město: Písek</p>
                     </div>
-                    <div className={styles.info}>
+                    <div className="info">
                         <h2>Sociální sítě</h2>
                         <Link href="/">LinkedIn</Link>
                         <Link href="/">Facebook</Link>
                         <Link href="/">Instagram</Link>
                     </div>
-                    <div className={styles.info}>
+                    <div className="info">
                         <h2>Ocenění (V budoucnu)</h2>
                         <Link href="/">Awwwards</Link>
                     </div>
@@ -344,11 +343,11 @@ export default function Contact() {
 const Button =({ title, onClick }) => {
     const [ isHovered, setIsHovered ] = useState(false);
     return (
-        <div className={styles.mainButton} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={onClick}>
-            <div className={styles.link}>
+        <div className="mainButton" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={onClick}>
+            <div className="link">
                 <p>{title}</p>
             </div>
-            <motion.div className={styles.dot} variants={scale} initial='initial' animate={isHovered ? 'enter' : 'exit'}></motion.div>
+            <motion.div className="dot" variants={scale} initial='initial' animate={isHovered ? 'enter' : 'exit'}></motion.div>
         </div>
     )
 }
