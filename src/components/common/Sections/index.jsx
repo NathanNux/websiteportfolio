@@ -1,41 +1,61 @@
 
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
-export default function Section({ images, phrases, styles }) {
-    const [isMediaReady, setIsMediaReady] = useState(false); // Simplified state
+export default function Section ({images, phrases, styles}) {
+    const [ isLoaded, setIsLoaded ] = useState(false)
+    const [ isVisible, setIsVisible ] = useState(false)
+    const columnRef = useRef(null)
+
+    useEffect( () => {
+        const currentColumn = columnRef.current
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach( entry => {
+                    if(entry.isIntersecting) {
+                        setIsVisible(true)
+                    }
+                })
+            },
+            { threshold: 0.05 }
+        )
+
+        if (currentColumn) {
+            observer.observe(currentColumn); // Observe the column
+        }
+        return () => {observer.disconnect()}
+    }, [images])
 
     return (
         <section className={styles.sectionContainer}>
             <div className={styles.text}>
                 {phrases.map((phrase, i) => (
                     <p key={i} data-scroll data-scroll-speed={0.04 * (i + 2)}>
-                        <TextWithBr text={phrase.text} />
+                        <TextWithBr text={phrase.text}  />
                     </p>
                 ))}
-            </div>
-
-            <div className={styles.images}>
+            </div> 
+            
+            <div className={styles.images} ref={columnRef}>
                 {images.map((image, i) => (
                     <div key={i} className={styles.imageContainer} data-scroll data-scroll-speed={0.05 * (i + 1)}>
-                        {image.path ? (
+                        {!image.path && <Image src={image.src} alt={image.alt} fill sizes="true"/>}
+                        {isVisible && image.path && 
                             <video
                                 autoPlay
                                 loop
                                 muted
-                                onLoadedData={() => setIsMediaReady(true)}
-                                style={{ display: isMediaReady ? "block" : "none" }}
+                                onLoadedData={ () => setIsLoaded(true)}
+                                style={{ display: isLoaded ? "block" : "none"}}
                             >
-                                <source src={image.path} type="video/mp4" />
+                                <source src={image.path} type="video/mp4"/>
                             </video>
-                        ) : (
-                            <Image src={image.src} alt={image.alt} fill sizes="true" />
-                        )}
+                        }
                     </div>
                 ))}
             </div>
         </section>
-    );
+    )
 }
 
 const TextWithBr = ({ text }) => {

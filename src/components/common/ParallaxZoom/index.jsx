@@ -1,6 +1,6 @@
 import { motion, useTransform, useScroll  } from "framer-motion";
 import Image from "next/image";
-import { useRef, useEffect, useState, useMemo } from 'react';
+import { useRef, useLayoutEffect, useEffect, useState, useMemo } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { slideUp } from "@/components/anim";
@@ -25,15 +25,20 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
     const secondText = useRef(null);
     const slider = useRef(null);
     let xPercent = 0;
-    let direction = useRef(-1);
+    let direction = -1;
+    const [ isLoaded, setIsLoaded ] = useState(false)
+    const [ isVisible, setIsVisible ] = useState(false)
+    const columnRef = useRef(null)
 
-    const video = [
-        {
-            path: path,
-            alt: 'A beautiful landscape',
-            scale: scale1,
-        },
-    ]
+    const videos = useMemo(() => 
+        [
+            {
+                path: path,
+                alt: 'A beautiful landscape',
+                scale: scale1,
+            },
+        ]
+    )
 
     const pictures = useMemo(() => 
         [
@@ -81,11 +86,11 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
           gsap.set(firstText.current, {xPercent: xPercent})
           gsap.set(secondText.current, {xPercent: xPercent})
           requestAnimationFrame(animate);
-          xPercent += 0.03 * direction.current;
+          xPercent += 0.03 * direction;
         }
     }
   
-    useEffect( () => {
+    useLayoutEffect( () => {
       gsap.registerPlugin(ScrollTrigger);
       gsap.to(slider.current, {
         scrollTrigger: {
@@ -93,38 +98,69 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
           scrub: 0.25,
           start: 0,
           end: '300%',
-          onUpdate: e => direction.current = e.direction * -1
+          onUpdate: e => direction = e.direction * -1
         },
         x: "-500px",
         repeat: -1,
         yoyo: true
       })
       requestAnimationFrame(animate);
-
-        // this useEffect will run only once, when the component is mounted, and it ensures there is no spamming warnings about the refs of texts being null, because the animate function is called only when the refs are not null
-        // just helps with warnings in console and performance a bit, that's all
-
+    }, [])
+  
+    // this useEffect will run only once, when the component is mounted, and it ensures there is no spamming warnings about the refs of texts being null, because the animate function is called only when the refs are not null
+    // just helps with warnings in console and performance a bit, that's all
+    useEffect(() => {
       if (firstText.current && secondText.current) {
-            requestAnimationFrame(animate);
+          requestAnimationFrame(animate);
+      }
+    }, [firstText, secondText]);
+
+    // we are again looping through the videos and checking if they are in the viewport, if they are, we are setting the isLoaded to true
+
+
+    useEffect( () => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach( entry => {
+                    if(entry.isIntersecting) {
+                        setIsVisible(true)
+                    }
+                })
+            },
+            { threshold: 0.1 }
+        )
+
+        if (columnRef.current) {
+            observer.observe(columnRef.current); // Observe the column
+        }
+        return () => {
+            if (columnRef.current) {
+                observer.unobserve(columnRef.current);
             }
-    }, [firstText, secondText])
+        };
+    }, [pictures])
 
     return(
         <motion.section ref={ref} className={styles.main} variants={slideUp} initial='initial' animate='enter'>
-            <div className={styles.container}>
-                {video.map((video, i) => (
+            <div className={styles.container} ref={columnRef}>
+                {videos.map((video, i) => (
                     <motion.div
                         key={i}
                         className={styles.motionContainer}
                         style={{ scale: video.scale }}
                     >
                         <div className={styles.imageContainer}>
-                            <video 
-                                src={video.path}
-                                autoPlay
-                                loop
-                                muted
-                            />
+                            {isVisible && 
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    onLoadedData={ () => setIsLoaded(true)}
+                                    style={{ display: isLoaded ? "block" : "none"}}
+                                >
+                                    <source src={video.path} type="video/mp4"/>
+                                </video>
+                            }   
                         </div>
                     </motion.div>
                 ))}
@@ -140,7 +176,7 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
                                 alt={picture.alt}
                                 fill
                                 sizes="true"
-                            />
+                            />   
                         </div>
                     </motion.div>
                 ))}
