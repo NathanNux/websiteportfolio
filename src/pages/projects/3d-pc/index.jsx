@@ -1,6 +1,6 @@
 import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import TopBar from "@/components/ProjectsTemplate/TopBar";
 import Description from "@/components/common/Description";
 import Intro from "@/components/common/Intro";

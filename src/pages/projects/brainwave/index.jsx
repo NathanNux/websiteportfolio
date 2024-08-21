@@ -1,6 +1,6 @@
 import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import TopBar from "@/components/ProjectsTemplate/TopBar";
 import Description from "@/components/common/Description";
 import Intro from "@/components/common/Intro";
@@ -89,21 +89,26 @@ const stylePhrases = [
 ]
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  // to always return to the top of the page when the page changes
+  // its easier to look for changes in the pathname then to look for changes in the router object
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      import('locomotive-scroll').then(LocomotiveScroll => {
-        const scroll = new LocomotiveScroll.default({
-          el: document.querySelector('[data-scroll-container]'),
-          smooth: true,
-        });
+  useEffect( () => {
+    (
+      async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
 
-        return () => {
-          if(scroll) scroll.destroy();
-        };
-      });
-    }
-  }, []);
+          setTimeout( () => {
+            setIsLoading(false);
+            document.body.style.cursor = 'default'
+            if (typeof window !== 'undefined') {
+              window.scrollTo(0,0);
+            }
+          }, 2000)
+      }
+    )()
+  }, [])
 
   return (
     <>
