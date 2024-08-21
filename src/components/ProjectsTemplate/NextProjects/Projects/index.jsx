@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { scaleAnim, shade, textTranslate } from '@/components/anim';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { projects } from '@/constants';
 import { useMediaQuery } from 'react-responsive';
 
@@ -25,6 +25,8 @@ export default function Projects () {
     const [selectedProject, setSelectedProject] = useState({isActive: false, index: 0});
 
     // function that find out what the previous and next projects are based on the current project
+
+    const pathname = usePathname();
 
     const currentProject = projects.find(project => project.href === pathname);
 
