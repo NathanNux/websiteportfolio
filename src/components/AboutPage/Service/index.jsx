@@ -3,7 +3,7 @@ import { Fragment, useRef } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./style.module.scss";
-import ButtonLink from "@/components/ui/linkButton";
+import ButtonLink from "@/components/common/LinkButton/linkButton";
 
 
 export default function Services() {

@@ -1,7 +1,7 @@
 import { slideUp } from "@/components/anim";
 import styles from './style.module.scss'
 import { motion } from 'framer-motion'
-import ButtonLink from '@/components/ui/linkButton'
+import ButtonLink from '@/components/common/LinkButton/linkButton'
 
 export default function TopBar ({ name, service, year, style, price }) {
     return (

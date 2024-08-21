@@ -1,6 +1,6 @@
-import styles from './styles.module.scss';
+import styles from './style.module.scss';
 import Link from 'next/link';
-import ButtonLink from '@/components/ui/linkButton';
+import ButtonLink from '@/components/common/LinkButton/linkButton';
 import { NewestProjects } from '@/constants';
 
 export default function Index ({setActiveProject}) {

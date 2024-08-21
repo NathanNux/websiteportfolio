@@ -1,13 +1,11 @@
+"use client";
 import { useRouter } from 'next/router';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { text, curve, translate } from './animations';
-import debounce from 'lodash/debounce'; // Assuming lodash is installed
-
 
 import styles from './style.module.scss'
 import { useLoad } from '@/context';
-import Image from 'next/image';
 
 const routes = {
     '/': 'Domov',
@@ -47,6 +45,40 @@ const anim = (variants) => {
     }
 }
 
+export default function CurveTransition({children}) {
+    const router = useRouter();
+    const [dimensions, setDimensions] = useState({ width: null, height: null });
+    const { isLoading, setIsLoading } = useLoad();
+
+    // using function inside useEffect to avoid infinite loop of re-rendering the component
+    // when the window is resized
+
+    useEffect(() => {
+        function resize () {
+            setDimensions({
+                width: window.innerWidth,
+                height: window.innerHeight
+            })
+        }
+        resize()
+        window.addEventListener('resize', resize);
+        return () => {
+            window.removeEventListener('resize', resize)
+        };
+    }, []);
+
+    return (
+        <div className={styles.pageCurve}>
+            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className={styles.background}/>
+            <motion.p className={styles.route} {...anim(text)} style={{scale: isLoading ? 1 : 0}}><span></span> {routes[router.pathname]}</motion.p>
+            {dimensions.width != null && <SVG {...dimensions} />}
+            {children}
+        </div>
+    );
+}
+
+
+
 const SVG = ({height, width}) => {
 
     const initialPath = `
@@ -70,33 +102,4 @@ const SVG = ({height, width}) => {
             <motion.path {...anim(curve(initialPath, targetPath))} />
         </motion.svg>
     )
-}
-
-export default function CurveTransition({children}) {
-    const router = useRouter();
-    const [dimensions, setDimensions] = useState({ width: null, height: null });
-    const { isLoading, setIsLoading } = useLoad();
-
-
-    const handleResize = useCallback(debounce(() => {
-        setDimensions({
-            width: window.innerWidth,
-            height: window.innerHeight,
-        });
-    }, 250), [setDimensions]);
-
-    useEffect(() => {
-        handleResize(); // Initial resize to set dimensions
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, [handleResize]);
-
-    return (
-        <div className={styles.pageCurve}>
-            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className={styles.background}/>
-            <motion.p className={styles.route} {...anim(text)} style={{scale: isLoading ? 1 : 0}}><span></span> {routes[router.pathname]}</motion.p>
-            {dimensions.width != null && <SVG {...dimensions} />}
-            {children}
-        </div>
-    );
 }

@@ -1,7 +1,7 @@
 import React, { Fragment, use, useEffect, useRef, useState } from 'react'
 import styles from './style.module.scss'
 import { useScroll, useTransform, motion } from 'framer-motion';
-import ButtonLink from '@/components/ui/linkButton';
+import ButtonLink from '@/components/common/LinkButton/linkButton';
 import CountdownTimer from './Timer';
 
 const phrase1 = [

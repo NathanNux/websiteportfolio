@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useScroll } from "framer-motion";
 import { motion, useTransform } from "framer-motion";
-import ButtonLink from "../../ui/linkButton";
+import ButtonLink from "../LinkButton/linkButton";
 import { Toaster } from "../../ui/toaster";
-import PhoneButton from "../../ui/phoneButton";
+import PhoneButton from "../PhoneButton/phoneButton";
 import { scale } from "../../anim";
 import { footerLinks } from "@/constants";
 

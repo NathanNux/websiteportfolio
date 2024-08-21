@@ -1,4 +1,4 @@
-import { useToast } from "./use-toast";
+import { useToast } from "../../ui/use-toast";
 import { motion } from 'framer-motion';
 import { useState } from "react";
 import { scale } from "@/components/anim";

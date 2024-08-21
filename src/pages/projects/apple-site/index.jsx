@@ -133,6 +133,17 @@ export default function Home() {
       <Navbar />
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
+        {/* <ZoomParallax 
+          src1='/assets/images/applesite/apple1.png' 
+          src2='/assets/images/applesite/apple2.png' 
+          src3='/assets/images/applesite/appleipmain.png' 
+          src4='/assets/images/applesite/apple4.png' 
+          src5='/assets/images/applesite/apple5.png' 
+          src6='/assets/images/applesite/appleip2.png' 
+          src7='/assets/images/applesite/color.png' 
+          path='/assets/a-footage/applesite.mp4'
+          text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
+        /> */}
         <Description  description={description}/>
         <Intro src='/assets/images/ps/apple-site-nobg.png'/>
         <Sections 

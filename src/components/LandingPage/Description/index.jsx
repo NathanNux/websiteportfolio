@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 
 import styles from './style.module.scss';
 import { useMousePosition } from '@/utils/useMousePosition';
-import ButtonLink from '@/components/ui/linkButton';
+import ButtonLink from '@/components/common/LinkButton/linkButton';
 import { textOpacity, textSlideUp } from '@/components/anim';
 
 export default function Index () {

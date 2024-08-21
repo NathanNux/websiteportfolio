@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import styles from './style.module.scss';
 import Link from 'next/link';
 import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
 import { slide } from '../anim';

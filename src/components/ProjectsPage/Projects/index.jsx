@@ -1,5 +1,5 @@
 import Projects from './Projects'
-import styles from './styles.module.scss';
+import styles from './style.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useScroll, useTransform} from 'framer-motion';
 import { opacity, slideUp } from './anim';
