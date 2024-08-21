@@ -1,7 +1,6 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
 import CurveTransition from "@/components/transition/CurveTransition";
-const Landing = dynamic(() => import('@/components/LandingPage/Landing'), { ssr: false });
+import Landing from '@/components/LandingPage/Landing';
 import Slider from "@/components/LandingPage/Slider";
 import NewestWork from "@/components/LandingPage/NewestWork";
 import Description from "@/components/LandingPage/Description";
@@ -12,13 +11,12 @@ import IntroText from "@/components/common/IntroText";
 import OfferSection from "@/components/LandingPage/OfferSections";
 import MainOffer from "@/components/LandingPage/MainOffer";
 import { AnimatePresence } from "framer-motion";
-import { motion } from "framer-motion";
 import Preloader from "@/components/Preloader";
 import { useLoad } from "@/context";
 import FreeOffers from "@/components/common/FreeStuff";
 import ZoomParallax from "@/components/common/ParallaxZoom";
 
-const Footer = dynamic(() => import('@/components/common/Footer'), { ssr: false });
+import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 
@@ -74,26 +72,26 @@ export default function Home() {
           {firstLoad && <Preloader key="preloader"/>}
         </AnimatePresence>
       <CurveTransition>
-            <Landing />
-            <Description />
-            <Slider />
-            <NewestWork />
-            <IntroText phrases={phrases}/>
-            <ZoomParallax 
-              src1='/assets/images/projects/components.png' 
-              src2='/assets/images/slider-la/seo.png' 
-              src3='/assets/images/slider-la/coding.png' 
-              src4='/assets/images/slider-la/performance.png' 
-              src5='/assets/images/slider-la/color-pallet.png' 
-              src6='/assets/images/slider-la/offer.png' 
-              src7='/assets/images/slider-la/research.png' 
-              path='/assets/images/slider-la/videos/main.mp4'
-              text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
-            />
-            <OfferSection />
-            <MainOffer />
-            <FreeOffers text='1'/>
-            <Footer />
+          <Landing />
+          <Description />
+          <Slider />
+          <NewestWork />
+          <IntroText phrases={phrases}/>
+          <ZoomParallax 
+            src1='/assets/images/projects/components.png' 
+            src2='/assets/images/slider-la/seo.png' 
+            src3='/assets/images/slider-la/coding.png' 
+            src4='/assets/images/slider-la/performance.png' 
+            src5='/assets/images/slider-la/color-pallet.png' 
+            src6='/assets/images/slider-la/offer.png' 
+            src7='/assets/images/slider-la/research.png' 
+            path='/assets/images/slider-la/videos/main.mp4'
+            text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
+          />
+          <OfferSection />
+          <MainOffer />
+          <FreeOffers text='1'/>
+          <Footer />
       </CurveTransition>
     </>
   );

@@ -6,9 +6,7 @@ import FreeOffers from "@/components/common/FreeStuff";
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
-import dynamic from "next/dynamic";
-const Landing = dynamic(() => import('@/components/MaterialsPage/Landing'), { ssr: false });
-
+import Landing from "@/components/MaterialsPage/Landing";
 
 
 

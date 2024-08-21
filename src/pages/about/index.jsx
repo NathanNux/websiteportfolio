@@ -1,8 +1,7 @@
 import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
-import dynamic from "next/dynamic";
-const Landing = dynamic(() => import('@/components/AboutPage/Landing'), { ssr: false });
-const Services = dynamic(() => import('@/components/AboutPage/Service'), { ssr: false });
+import Landing from "@/components/AboutPage/Landing";
+import Services from "@/components/AboutPage/Service";
 import Intro from "@/components/common/Intro";
 import AboutSections from "@/components/AboutPage/AboutSections";
 import FreeOffers from "@/components/common/FreeStuff";

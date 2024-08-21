@@ -2,13 +2,12 @@ import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
 
 import Calendly from "@/components/ContactPage/Calendly";
-import dynamic from "next/dynamic";
 
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 import { useEffect, useState } from "react";
-const Footer = dynamic(() => import('@/components/ContactPage/Footer'), { ssr: false });
-const Contact = dynamic(() => import('@/components/ContactPage/Contact'), { ssr: false });
+import Contact from "@/components/ContactPage/Contact";
+import Footer from '@/components/ContactPage/Footer';
 
 export default function Home() {
 

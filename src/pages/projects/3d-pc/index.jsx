@@ -1,13 +1,14 @@
 import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
+import { useEffect } from "react";
 import TopBar from "@/components/ProjectsTemplate/TopBar";
 import Description from "@/components/common/Description";
 import Intro from "@/components/common/Intro";
 import ZoomParallax from "@/components/common/ParallaxZoom";
 import NextProjects from "@/components/ProjectsTemplate/NextProjects";
 import Sections from "@/components/ProjectsTemplate/Sections";
-import dynamic from "next/dynamic";
-const Footer = dynamic(() => import('@/components/common/Footer'), { ssr: false });
+
+import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 
@@ -89,6 +90,26 @@ const stylePhrases = [
 ]
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  // to always return to the top of the page when the page changes
+  // its easier to look for changes in the pathname then to look for changes in the router object
+
+  useEffect( () => {
+    (
+      async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
+
+          setTimeout( () => {
+            setIsLoading(false);
+            document.body.style.cursor = 'default'
+            if (typeof window !== 'undefined') {
+              window.scrollTo(0,0);
+            }
+          }, 2000)
+      }
+    )()
+  }, [])
 
   return (
     <>
