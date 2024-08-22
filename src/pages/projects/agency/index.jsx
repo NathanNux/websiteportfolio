@@ -22,15 +22,15 @@ const description = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/agency/agencyipmain.png",
+      src:"/assets/images/agency/agencyipmain.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/agency/color.png",
+      src:"/assets/images/agency/color.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/agency/agency3.png",
+      src:"/assets/images/agency/agency3.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -47,17 +47,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/agency/agencyipmain.png',
+      src: '/assets/images/agency/agencyipmain.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/agency/agencyipmain3.png',
+      src: '/assets/images/agency/agencyipmain3.webp',
       alt: 'project2',
       title: 'Nabídka služeb',
   },
   {
-      src: '/assets/images/agency/agencyipmain2.png',
+      src: '/assets/images/agency/agencyipmain2.webp',
       alt: 'project3',
       title: 'Spec. Prvky',
   }
@@ -67,15 +67,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/agency/agency2.png",
+      src:"/assets/images/agency/agency2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/agency/code.png",
+      src:"/assets/images/agency/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/agency/agencyip1.png",
+      src:"/assets/images/agency/agencyip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -124,18 +124,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 
-          src1='/assets/images/agency/agency1.png' 
-          src2='/assets/images/agency/agency2.png' 
-          src3='/assets/images/agency/agencyipmain.png' 
-          src4='/assets/images/agency/agency4.png' 
-          src5='/assets/images/agency/agency5.png' 
-          src6='/assets/images/agency/agencyip2.png' 
-          src7='/assets/images/agency/color.png' 
+          src1='/assets/images/agency/agency1.webp' 
+          src2='/assets/images/agency/agency2.webp' 
+          src3='/assets/images/agency/agencyipmain.webp' 
+          src4='/assets/images/agency/agency4.webp' 
+          src5='/assets/images/agency/agency5.webp' 
+          src6='/assets/images/agency/agencyip2.webp' 
+          src7='/assets/images/agency/color.webp' 
           path='/assets/a-footage/agency.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/agency.png'/>
+        <Intro src='/assets/images/ps/agency.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}

@@ -21,15 +21,15 @@ const description = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/carapp/car-app-ip-main.png",
+      src:"/assets/images/carapp/car-app-ip-main.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/carapp/color.png",
+      src:"/assets/images/carapp/color.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/carapp/car-app3.png",
+      src:"/assets/images/carapp/car-app3.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -46,17 +46,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/carapp/car-app-ip-main.png',
+      src: '/assets/images/carapp/car-app-ip-main.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/carapp/car-app-ip-main3.png',
+      src: '/assets/images/carapp/car-app-ip-main3.webp',
       alt: 'project2',
       title: '3D modely',
   },
   {
-      src: '/assets/images/carapp/car-app-ip-main2.png',
+      src: '/assets/images/carapp/car-app-ip-main2.webp',
       alt: 'project3',
       title: 'Adv. Carousel',
   }
@@ -66,15 +66,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/carapp/car-app2.png",
+      src:"/assets/images/carapp/car-app2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/carapp/code.png",
+      src:"/assets/images/carapp/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/carapp/car-app-ip1.png",
+      src:"/assets/images/carapp/car-app-ip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -123,18 +123,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 
-          src1='/assets/images/carapp/car-app1.png' 
-          src2='/assets/images/carapp/car-app2.png' 
-          src3='/assets/images/carapp/car-app-ip-main.png' 
-          src4='/assets/images/carapp/car-app4.png' 
-          src5='/assets/images/carapp/car-app5.png' 
-          src6='/assets/images/carapp/car-app-ip2.png' 
-          src7='/assets/images/carapp/color.png' 
+          src1='/assets/images/carapp/car-app1.webp' 
+          src2='/assets/images/carapp/car-app2.webp' 
+          src3='/assets/images/carapp/car-app-ip-main.webp' 
+          src4='/assets/images/carapp/car-app4.webp' 
+          src5='/assets/images/carapp/car-app5.webp' 
+          src6='/assets/images/carapp/car-app-ip2.webp' 
+          src7='/assets/images/carapp/color.webp' 
           path='/assets/a-footage/carapp.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/carapp.png'/>
+        <Intro src='/assets/images/ps/carapp.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}

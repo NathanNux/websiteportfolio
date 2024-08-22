@@ -21,15 +21,15 @@ const description = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/blog/blog-ipmain.png",
+      src:"/assets/images/blog/blog-ipmain.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/blog/color.png",
+      src:"/assets/images/blog/color.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/blog/blog3.png",
+      src:"/assets/images/blog/blog3.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -46,17 +46,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/blog/blog-ipmain.png',
+      src: '/assets/images/blog/blog-ipmain.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/blog/blog-ipmain3.png',
+      src: '/assets/images/blog/blog-ipmain3.webp',
       alt: 'project2',
       title: '3D modely',
   },
   {
-      src: '/assets/images/blog/blog-ipmain2.png',
+      src: '/assets/images/blog/blog-ipmain2.webp',
       alt: 'project3',
       title: 'Adv. Carousel',
   }
@@ -66,15 +66,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/blog/blog2.png",
+      src:"/assets/images/blog/blog2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/blog/code.png",
+      src:"/assets/images/blog/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/blog/blog-ip1.png",
+      src:"/assets/images/blog/blog-ip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -123,18 +123,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 
-          src1='/assets/images/blog/blog1.png' 
-          src2='/assets/images/blog/blog2.png' 
-          src3='/assets/images/blog/blog-ipmain.png' 
-          src4='/assets/images/blog/blog4.png' 
-          src5='/assets/images/blog/blog5.png' 
-          src6='/assets/images/blog/blog-ip2.png' 
-          src7='/assets/images/blog/color.png' 
+          src1='/assets/images/blog/blog1.webp' 
+          src2='/assets/images/blog/blog2.webp' 
+          src3='/assets/images/blog/blog-ipmain.webp' 
+          src4='/assets/images/blog/blog4.webp' 
+          src5='/assets/images/blog/blog5.webp' 
+          src6='/assets/images/blog/blog-ip2.webp' 
+          src7='/assets/images/blog/color.webp' 
           path='/assets/a-footage/blog.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/blog.png'/>
+        <Intro src='/assets/images/ps/blog.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}

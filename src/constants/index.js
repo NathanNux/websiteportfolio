@@ -24,7 +24,7 @@ export const NewestProjects = [
     {
         title: "Brainwave",
         date: "2023",
-        src: "/assets/images/projects/brainwave.png",
+        src: "/assets/images/projects/brainwave.webp",
         link: '/projects/brainwave',
         type: 'web',
         alt: 'project2'
@@ -32,7 +32,7 @@ export const NewestProjects = [
     {
         title: "Komponenty",
         date: "2024",
-        src: "/assets/images/projects/components.png",
+        src: "/assets/images/projects/components.webp",
         link: '/projects/components',
         type: 'web',
         alt: 'project1'
@@ -40,7 +40,7 @@ export const NewestProjects = [
     {
         title: "Apple Web",
         date: "2024",
-        src: "/assets/images/projects/apple-site.png",
+        src: "/assets/images/projects/apple-site.webp",
         link: '/projects/apple-site',
         type: 'web',
         alt: 'project4'
@@ -48,7 +48,7 @@ export const NewestProjects = [
     {
         title: "E-commerce",
         date: "2023",
-        src: "/assets/images/projects/ecom.png",
+        src: "/assets/images/projects/ecom.webp",
         link: '/projects/e-comm',
         type: 'app',
         alt: 'project3'
@@ -59,7 +59,7 @@ export const projects = [
     {
         title: "Komponenty",
         date: "2024",
-        src: "/assets/images/projects/components.png",
+        src: "/assets/images/projects/components.webp",
         href: '/projects/components',
         type: 'web',
         index: 0,
@@ -68,7 +68,7 @@ export const projects = [
     {
         title: "Brainwave",
         date: "2023",
-        src: "/assets/images/projects/brainwave.png",
+        src: "/assets/images/projects/brainwave.webp",
         href: '/projects/brainwave',
         type: 'web',
         index: 1,
@@ -77,7 +77,7 @@ export const projects = [
     {
         title: "E-commerce",
         date: "2023",
-        src: "/assets/images/projects/ecom.png",
+        src: "/assets/images/projects/ecom.webp",
         href: '/projects/e-comm',
         type: 'app',
         index: 2,
@@ -86,7 +86,7 @@ export const projects = [
     {
         title: "Apple Web",
         date: "2024",
-        src: "/assets/images/projects/apple-site.png",
+        src: "/assets/images/projects/apple-site.webp",
         href: '/projects/apple-site',
         type: 'web',
         index: 3,
@@ -95,7 +95,7 @@ export const projects = [
     {
         title: "Portfolio DS",
         date: "2024",
-        src: "/assets/images/projects/denisclone.png",
+        src: "/assets/images/projects/denisclone.webp",
         href: '/projects/denis-clone',
         type: 'web',
         index: 4,
@@ -104,7 +104,7 @@ export const projects = [
     {
         title: "3D Portfolio",
         date: "2024",
-        src: "/assets/images/projects/3dpc.png",
+        src: "/assets/images/projects/3dpc.webp",
         href: '/projects/3d-pc',
         type: 'web',
         index: 5,
@@ -112,7 +112,7 @@ export const projects = [
     {
         title: "3D Mlýn",
         date: "2023",
-        src: "/assets/images/projects/3dwindmill.png",
+        src: "/assets/images/projects/3dwindmill.webp",
         href: '/projects/3d-windmill',
         type: 'web',
         index: 6,
@@ -120,7 +120,7 @@ export const projects = [
     {
         title: "3D T-shirt",
         date: "2023",
-        src: "/assets/images/projects/3dtshirt.png",
+        src: "/assets/images/projects/3dtshirt.webp",
         href: '/projects/3d-tee',
         type: 'web',
         index: 7,
@@ -128,7 +128,7 @@ export const projects = [
     {
         title: "Framer Website",
         date: "2024",
-        src: "/assets/images/projects/framer.png",
+        src: "/assets/images/projects/framer.webp",
         href: '/projects/framer',
         type: 'web',
         index: 8,
@@ -136,7 +136,7 @@ export const projects = [
     {
         title: "Smooth Scroll",
         date: "2024",
-        src: "/assets/images/projects/smoothscroll.png",
+        src: "/assets/images/projects/smoothscroll.webp",
         href: '/projects/smooth-scroll',
         type: 'web',
         index: 9,
@@ -144,7 +144,7 @@ export const projects = [
     {
         title: "Sushi Restaurace",
         date: "2023",
-        src: "/assets/images/projects/sushi.png",
+        src: "/assets/images/projects/sushi.webp",
         href: '/projects/sushi',
         type: 'web',
         index: 10,
@@ -153,7 +153,7 @@ export const projects = [
     {
         title: "NFT Marketplace",
         date: "2023",
-        src: "/assets/images/projects/nft.png",
+        src: "/assets/images/projects/nft.webp",
         href: '/projects/nft',
         type: 'app',
         index: 11,
@@ -162,7 +162,7 @@ export const projects = [
     {
         title: "Blog",
         date: "2024",
-        src: "/assets/images/projects/blog.png",
+        src: "/assets/images/projects/blog.webp",
         href: '/projects/blog',
         type: 'app',
         index: 12,
@@ -171,7 +171,7 @@ export const projects = [
     {
         title: "Agentura",
         date: "2024",
-        src: "/assets/images/projects/agency.png",
+        src: "/assets/images/projects/agency.webp",
         href: '/projects/agency',
         type: 'web',
         index: 13,
@@ -180,7 +180,7 @@ export const projects = [
     {
         title: "Banka",
         date: "2023",
-        src: "/assets/images/projects/bank.png",
+        src: "/assets/images/projects/bank.webp",
         href: '/projects/bank',
         type: 'web',
         index: 14,
@@ -189,7 +189,7 @@ export const projects = [
     {
         title: "Půjčovna Aut",
         date: "2023",
-        src: "/assets/images/projects/car.png",
+        src: "/assets/images/projects/car.webp",
         href: '/projects/car-app',
         type: 'app',
         index: 15,
@@ -198,7 +198,7 @@ export const projects = [
     {
         title: "Cestovní Web",
         date: "2023",
-        src: "/assets/images/projects/travel.png",
+        src: "/assets/images/projects/travel.webp",
         href: '/projects/travel',
         type: 'web',
         index: 16,

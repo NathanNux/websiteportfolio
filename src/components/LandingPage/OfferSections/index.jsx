@@ -6,17 +6,17 @@ const sections = [
     {
         images: [
             {   
-                src:'/assets/images/slider-la/color-pallet.png',
+                src:'/assets/images/slider-la/color-pallet.webp',
                 path: '/assets/images/slider-la/videos/color.mp4',
                 alt: "A beautiful landscape",
                 app: "A beautiful landscape"
             },
             {
-                src:"/assets/images/projects/smoothscroll.png",
+                src:"/assets/images/projects/smoothscroll.webp",
                 alt: "A beautiful landscape"
             },
             {
-                src:'/assets/images/slider-la/coding.png',
+                src:'/assets/images/slider-la/coding.webp',
                 path: '/assets/a-footage/gsap-all.mp4',
                 alt: "A beautiful landscape",
                 app: "A beautiful landscape"
@@ -35,17 +35,17 @@ const sections = [
         images: [
             {   
                 path: '/assets/images/slider-la/videos/offer.mp4',
-                src: "/assets/images/slider-la/performance.png",
+                src: "/assets/images/slider-la/performance.webp",
                 alt: "A beautiful landscape",
                 app: "A beautiful landscape"
             },
             {
-                src:"/assets/images/slider-la/performance.png",
+                src:"/assets/images/slider-la/performance.webp",
                 alt: "A beautiful landscape"
             },
             {
                 path: '/assets/images/slider-la/videos/research.mp4',
-                src: "/assets/images/slider-la/performance.png",
+                src: "/assets/images/slider-la/performance.webp",
                 alt: "A beautiful landscape",
                 app: 'A beautiful landscape'
             }
@@ -63,17 +63,17 @@ const sections = [
         images: [
             {   
                 path: '/assets/images/slider-la/videos/analytics.mp4',
-                src: "/assets/images/slider-la/performance.png",
+                src: "/assets/images/slider-la/performance.webp",
                 alt: "A beautiful landscape",
                 app: "A beautiful landscape"
             },
             {
-                src: "/assets/images/slider-la/coding.png",
+                src: "/assets/images/slider-la/coding.webp",
                 alt: "A beautiful landscape"
             },
             {
                 path: '/assets/images/slider-la/videos/visualization.mp4',
-                src: "/assets/images/slider-la/seo.png",
+                src: "/assets/images/slider-la/seo.webp",
                 alt: "A beautiful landscape",
                 app: 'A beautiful landscape'
             }

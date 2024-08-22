@@ -22,13 +22,13 @@ const description = [
 
 const nextProjects = [
   {
-    src: '/assets/images/projects/components.png',
+    src: '/assets/images/projects/components.webp',
     alt: 'project1',
     title: 'Komponenty',
     href: '/projects/components'
   },
   {
-    src: '/assets/images/projects/brainwave.png',
+    src: '/assets/images/projects/brainwave.webp',
     alt: 'project2',
     title: 'Brainwave',
     href: '/projects/brainwave'
@@ -38,15 +38,15 @@ const nextProjects = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/applesite/appleipmain.png",
+      src:"/assets/images/applesite/appleipmain.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/applesite/color.png",
+      src:"/assets/images/applesite/color.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/applesite/apple3.png",
+      src:"/assets/images/applesite/apple3.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -63,17 +63,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/applesite/appleipmain.png',
+      src: '/assets/images/applesite/appleipmain.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/applesite/appleipmain3.png',
+      src: '/assets/images/applesite/appleipmain3.webp',
       alt: 'project2',
       title: '3D modely',
   },
   {
-      src: '/assets/images/applesite/appleipmain2.png',
+      src: '/assets/images/applesite/appleipmain2.webp',
       alt: 'project3',
       title: 'Adv. Carousel',
   }
@@ -83,15 +83,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/applesite/apple2.png",
+      src:"/assets/images/applesite/apple2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/applesite/code.png",
+      src:"/assets/images/applesite/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/applesite/appleip1.png",
+      src:"/assets/images/applesite/appleip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -140,18 +140,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 
-          src1='/assets/images/applesite/apple1.png' 
-          src2='/assets/images/applesite/apple2.png' 
-          src3='/assets/images/applesite/appleipmain.png' 
-          src4='/assets/images/applesite/apple4.png' 
-          src5='/assets/images/applesite/apple5.png' 
-          src6='/assets/images/applesite/appleip2.png' 
-          src7='/assets/images/applesite/color.png' 
+          src1='/assets/images/applesite/apple1.webp' 
+          src2='/assets/images/applesite/apple2.webp' 
+          src3='/assets/images/applesite/appleipmain.webp' 
+          src4='/assets/images/applesite/apple4.webp' 
+          src5='/assets/images/applesite/apple5.webp' 
+          src6='/assets/images/applesite/appleip2.webp' 
+          src7='/assets/images/applesite/color.webp' 
           path='/assets/a-footage/applesite.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/apple-site-nobg.png'/>
+        <Intro src='/assets/images/ps/apple-site-nobg.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}

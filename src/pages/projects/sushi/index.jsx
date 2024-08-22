@@ -21,15 +21,15 @@ const description = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/sushi/sushi-ip-main.png",
+      src:"/assets/images/sushi/sushi-ip-main.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/sushi/color.png",
+      src:"/assets/images/sushi/color.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/sushi/sushi3.png",
+      src:"/assets/images/sushi/sushi3.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -46,17 +46,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/sushi/sushi-ip-main.png',
+      src: '/assets/images/sushi/sushi-ip-main.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/sushi/sushi-ip-main3.png',
+      src: '/assets/images/sushi/sushi-ip-main3.webp',
       alt: 'project2',
       title: '3D modely',
   },
   {
-      src: '/assets/images/sushi/sushi-ip-main2.png',
+      src: '/assets/images/sushi/sushi-ip-main2.webp',
       alt: 'project3',
       title: 'Adv. Carousel',
   }
@@ -66,15 +66,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/sushi/sushi2.png",
+      src:"/assets/images/sushi/sushi2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/sushi/code.png",
+      src:"/assets/images/sushi/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/sushi/sushi-ip1.png",
+      src:"/assets/images/sushi/sushi-ip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -123,18 +123,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 
-          src1='/assets/images/sushi/sushi1.png' 
-          src2='/assets/images/sushi/sushi2.png' 
-          src3='/assets/images/sushi/sushi-ip-main.png' 
-          src4='/assets/images/sushi/sushi4.png' 
-          src5='/assets/images/sushi/sushi5.png' 
-          src6='/assets/images/sushi/sushi-ip2.png' 
-          src7='/assets/images/sushi/color.png' 
+          src1='/assets/images/sushi/sushi1.webp' 
+          src2='/assets/images/sushi/sushi2.webp' 
+          src3='/assets/images/sushi/sushi-ip-main.webp' 
+          src4='/assets/images/sushi/sushi4.webp' 
+          src5='/assets/images/sushi/sushi5.webp' 
+          src6='/assets/images/sushi/sushi-ip2.webp' 
+          src7='/assets/images/sushi/color.webp' 
           path='/assets/a-footage/sushi.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/sushi.png'/>
+        <Intro src='/assets/images/ps/sushi.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}

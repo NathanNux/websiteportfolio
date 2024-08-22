@@ -56,7 +56,7 @@ export default function Index() {
   return (
     <motion.main variants={slideUp} initial="initial" animate='enter' className="landingAbout">
       <Image 
-        src="/images/about/background.png"
+        src="/images/about/background.webp"
         fill
         sizes="true"
         alt="background"

@@ -73,7 +73,7 @@ export default function Home() {
         <div className="page">
           <Landing />
           <Description  description={description}/>
-          <Intro phrase1={phrase1} phrase2={phrase2} phrase3={phrase3} src='/images/about/intro.png'/>
+          <Intro phrase1={phrase1} phrase2={phrase2} phrase3={phrase3} src='/images/about/intro.webp'/>
           <AboutSections />
           <Services />
           <FreeOffers text='1'/> 

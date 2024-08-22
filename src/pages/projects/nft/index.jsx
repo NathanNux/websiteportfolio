@@ -21,15 +21,15 @@ const description = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/nft/nft-ipmain.png",
+      src:"/assets/images/nft/nft-ipmain.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/nft/color.png",
+      src:"/assets/images/nft/color.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/nft/nft3.png",
+      src:"/assets/images/nft/nft3.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -46,17 +46,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/nft/nft-ipmain.png',
+      src: '/assets/images/nft/nft-ipmain.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/nft/nft-ipmain3.png',
+      src: '/assets/images/nft/nft-ipmain3.webp',
       alt: 'project2',
       title: '3D modely',
   },
   {
-      src: '/assets/images/nft/nft-ipmain2.png',
+      src: '/assets/images/nft/nft-ipmain2.webp',
       alt: 'project3',
       title: 'Adv. Carousel',
   }
@@ -66,15 +66,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/nft/nft2.png",
+      src:"/assets/images/nft/nft2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/nft/code.png",
+      src:"/assets/images/nft/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/nft/nft-ip1.png",
+      src:"/assets/images/nft/nft-ip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -123,18 +123,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 
-          src1='/assets/images/nft/nft1.png' 
-          src2='/assets/images/nft/nft2.png' 
-          src3='/assets/images/nft/nft-ipmain.png' 
-          src4='/assets/images/nft/nft4.png' 
-          src5='/assets/images/nft/nft5.png' 
-          src6='/assets/images/nft/nft-ip2.png' 
-          src7='/assets/images/nft/color.png' 
+          src1='/assets/images/nft/nft1.webp' 
+          src2='/assets/images/nft/nft2.webp' 
+          src3='/assets/images/nft/nft-ipmain.webp' 
+          src4='/assets/images/nft/nft4.webp' 
+          src5='/assets/images/nft/nft5.webp' 
+          src6='/assets/images/nft/nft-ip2.webp' 
+          src7='/assets/images/nft/color.webp' 
           path='/assets/a-footage/nft-site.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/nft.png'/>
+        <Intro src='/assets/images/ps/nft.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}

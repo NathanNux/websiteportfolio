@@ -78,13 +78,13 @@ export default function Home() {
           <NewestWork />
           <IntroText phrases={phrases}/>
           <ZoomParallax 
-            src1='/assets/images/projects/components.png' 
-            src2='/assets/images/slider-la/seo.png' 
-            src3='/assets/images/slider-la/coding.png' 
-            src4='/assets/images/slider-la/performance.png' 
-            src5='/assets/images/slider-la/color-pallet.png' 
-            src6='/assets/images/slider-la/offer.png' 
-            src7='/assets/images/slider-la/research.png' 
+            src1='/assets/images/projects/components.webp' 
+            src2='/assets/images/slider-la/seo.webp' 
+            src3='/assets/images/slider-la/coding.webp' 
+            src4='/assets/images/slider-la/performance.webp' 
+            src5='/assets/images/slider-la/color-pallet.webp' 
+            src6='/assets/images/slider-la/offer.webp' 
+            src7='/assets/images/slider-la/research.webp' 
             path='/assets/images/slider-la/videos/main.mp4'
             text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
           />

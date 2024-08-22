@@ -21,15 +21,15 @@ const description = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/brainwave/brainwaveipmain.png",
+      src:"/assets/images/brainwave/brainwaveipmain.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/brainwave/color.png",
+      src:"/assets/images/brainwave/color.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/brainwave/brainwave3.png",
+      src:"/assets/images/brainwave/brainwave3.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -46,17 +46,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/brainwave/brainwaveipmain.png',
+      src: '/assets/images/brainwave/brainwaveipmain.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/brainwave/brainwaveipmain3.png',
+      src: '/assets/images/brainwave/brainwaveipmain3.webp',
       alt: 'project2',
       title: '3D modely',
   },
   {
-      src: '/assets/images/brainwave/brainwaveipmain2.png',
+      src: '/assets/images/brainwave/brainwaveipmain2.webp',
       alt: 'project3',
       title: 'Adv. Carousel',
   }
@@ -66,15 +66,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/brainwave/brainwave2.png",
+      src:"/assets/images/brainwave/brainwave2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/brainwave/code.png",
+      src:"/assets/images/brainwave/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/brainwave/brainwaveip1.png",
+      src:"/assets/images/brainwave/brainwaveip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -123,18 +123,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 
-          src1='/assets/images/brainwave/brainwave1.png' 
-          src2='/assets/images/brainwave/brainwave2.png' 
-          src3='/assets/images/brainwave/brainwaveipmain.png' 
-          src4='/assets/images/brainwave/brainwave4.png' 
-          src5='/assets/images/brainwave/brainwave5.png' 
-          src6='/assets/images/brainwave/brainwaveip2.png' 
-          src7='/assets/images/brainwave/color.png' 
+          src1='/assets/images/brainwave/brainwave1.webp' 
+          src2='/assets/images/brainwave/brainwave2.webp' 
+          src3='/assets/images/brainwave/brainwaveipmain.webp' 
+          src4='/assets/images/brainwave/brainwave4.webp' 
+          src5='/assets/images/brainwave/brainwave5.webp' 
+          src6='/assets/images/brainwave/brainwaveip2.webp' 
+          src7='/assets/images/brainwave/color.webp' 
           path='/assets/a-footage/brainwave-site.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/brainwave.png'/>
+        <Intro src='/assets/images/ps/brainwave.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}

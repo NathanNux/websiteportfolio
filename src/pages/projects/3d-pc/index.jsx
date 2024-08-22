@@ -22,15 +22,15 @@ const description = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/3d-pc/3dpcipmain.png",
+      src:"/assets/images/3d-pc/3dpcipmain.webp",
       alt: "picture1"
   },
   {
-      src:"/assets/images/3d-pc/color.png",
+      src:"/assets/images/3d-pc/color.webp",
       alt: "picture2"
   },
   {
-      src:"/assets/images/3d-pc/3dpc1.png",
+      src:"/assets/images/3d-pc/3dpc1.webp",
       alt: "picture3"
   }
 ]
@@ -47,17 +47,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/3d-pc/3dpcipmain.png',
+      src: '/assets/images/3d-pc/3dpcipmain.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/3d-pc/3dpcipmain3.png',
+      src: '/assets/images/3d-pc/3dpcipmain3.webp',
       alt: 'project2',
       title: '3D Earth',
   },
   {
-      src: '/assets/images/3d-pc/3dpcipmain2.png',
+      src: '/assets/images/3d-pc/3dpcipmain2.webp',
       alt: 'project3',
       title: '3D Spheres',
   }
@@ -67,15 +67,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/3d-pc/3dpc2.png",
+      src:"/assets/images/3d-pc/3dpc2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/3d-pc/code.png",
+      src:"/assets/images/3d-pc/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/3d-pc/3dpcip1.png",
+      src:"/assets/images/3d-pc/3dpcip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -124,18 +124,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$3000'/>
         <ZoomParallax 
-          src1='/assets/images/3d-pc/3dpc1.png' 
-          src2='/assets/images/3d-pc/3dpc2.png' 
-          src3='/assets/images/3d-pc/3dpcipmain.png' 
-          src4='/assets/images/3d-pc/3dpc4.png' 
-          src5='/assets/images/3d-pc/3dpc5.png' 
-          src6='/assets/images/3d-pc/3dpcip2.png' 
-          src7='/assets/images/3d-pc/color.png' 
+          src1='/assets/images/3d-pc/3dpc1.webp' 
+          src2='/assets/images/3d-pc/3dpc2.webp' 
+          src3='/assets/images/3d-pc/3dpcipmain.webp' 
+          src4='/assets/images/3d-pc/3dpc4.webp' 
+          src5='/assets/images/3d-pc/3dpc5.webp' 
+          src6='/assets/images/3d-pc/3dpcip2.webp' 
+          src7='/assets/images/3d-pc/color.webp' 
           path='/assets/a-footage/3dpc.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/3dpc.png'/>
+        <Intro src='/assets/images/ps/3dpc.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}

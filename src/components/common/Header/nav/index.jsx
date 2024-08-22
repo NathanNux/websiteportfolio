@@ -12,31 +12,31 @@ const links = [
   {
     title: "Domů",
     href: "/",
-    src: "landing/background.png",
+    src: "landing/background.webp",
     alt: "landingPage_Image"
   },
   {
     title: "O mně",
     href: "/about",
-    src: "landing/water.jpg",
+    src: "landing/water.webp",
     alt: "aboutPage_Image"
   },
   {
     title: "Kontakt",
     href: "/contact",
-    src: "landing/tree.jpg",
+    src: "landing/tree.webp",
     alt: "contactPage_Image"
   },
   {
     title: "Projekty",
     href: "/projects",
-    src: "landing/house.jpg",
+    src: "landing/house.webp",
     alt: "projectsPage_Image"
   },
   {
     title: "Materiály",
     href: "/materials",
-    src: "landing/cactus.jpg",
+    src: "landing/cactus.webp",
     alt: "materialsPage_Image"
   },
 ]

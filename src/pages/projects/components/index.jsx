@@ -22,15 +22,15 @@ const description = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/components/components-ipmain.png",
+      src:"/assets/images/components/components-ipmain.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/components/color.png",
+      src:"/assets/images/components/color.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/components/components3.png",
+      src:"/assets/images/components/components3.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -47,17 +47,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/components/components-ipmain.png',
+      src: '/assets/images/components/components-ipmain.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/components/components-ipmain3.png',
+      src: '/assets/images/components/components-ipmain3.webp',
       alt: 'project2',
       title: '3D modely',
   },
   {
-      src: '/assets/images/components/components-ipmain2.png',
+      src: '/assets/images/components/components-ipmain2.webp',
       alt: 'project3',
       title: 'Adv. Carousel',
   }
@@ -67,15 +67,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/components/components2.png",
+      src:"/assets/images/components/components2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/components/code.png",
+      src:"/assets/images/components/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/components/components-ip1.png",
+      src:"/assets/images/components/components-ip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -125,18 +125,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 
-          src1='/assets/images/components/components1.png' 
-          src2='/assets/images/components/components2.png' 
-          src3='/assets/images/components/components-ipmain.png' 
-          src4='/assets/images/components/components4.png' 
-          src5='/assets/images/components/components5.png' 
-          src6='/assets/images/components/components-ip2.png' 
-          src7='/assets/images/components/color.png' 
+          src1='/assets/images/components/components1.webp' 
+          src2='/assets/images/components/components2.webp' 
+          src3='/assets/images/components/components-ipmain.webp' 
+          src4='/assets/images/components/components4.webp' 
+          src5='/assets/images/components/components5.webp' 
+          src6='/assets/images/components/components-ip2.webp' 
+          src7='/assets/images/components/color.webp' 
           path='/assets/a-footage/beginner-components-1.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/components.png'/>
+        <Intro src='/assets/images/ps/components.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}

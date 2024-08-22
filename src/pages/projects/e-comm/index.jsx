@@ -21,15 +21,15 @@ const description = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/ecom/ecomipmain.png",
+      src:"/assets/images/ecom/ecomipmain.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/applesite/color.png",
+      src:"/assets/images/applesite/color.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/ecom/ecom3.png",
+      src:"/assets/images/ecom/ecom3.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -46,17 +46,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/ecom/ecomipmain.png',
+      src: '/assets/images/ecom/ecomipmain.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/ecom/ecomipmain3.png',
+      src: '/assets/images/ecom/ecomipmain3.webp',
       alt: 'project2',
       title: '3D modely',
   },
   {
-      src: '/assets/images/ecom/ecomipmain2.png',
+      src: '/assets/images/ecom/ecomipmain2.webp',
       alt: 'project3',
       title: 'Adv. Carousel',
   }
@@ -66,15 +66,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/ecom/ecom2.png",
+      src:"/assets/images/ecom/ecom2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/applesite/code.png",
+      src:"/assets/images/applesite/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/ecom/ecomip1.png",
+      src:"/assets/images/ecom/ecomip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -123,18 +123,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 
-          src1='/assets/images/ecom/ecom1.png' 
-          src2='/assets/images/ecom/ecom2.png' 
-          src3='/assets/images/ecom/ecomipmain.png' 
-          src4='/assets/images/ecom/ecom4.png' 
-          src5='/assets/images/ecom/ecom5.png' 
-          src6='/assets/images/ecom/ecomip2.png' 
-          src7='/assets/images/ecom/color.png' 
+          src1='/assets/images/ecom/ecom1.webp' 
+          src2='/assets/images/ecom/ecom2.webp' 
+          src3='/assets/images/ecom/ecomipmain.webp' 
+          src4='/assets/images/ecom/ecom4.webp' 
+          src5='/assets/images/ecom/ecom5.webp' 
+          src6='/assets/images/ecom/ecomip2.webp' 
+          src7='/assets/images/ecom/color.webp' 
           path='/assets/a-footage/ecomm.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/ecom.png'/>
+        <Intro src='/assets/images/ps/ecom.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}

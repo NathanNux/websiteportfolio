@@ -105,7 +105,7 @@ export default function Footer() {
       <div className="animContainer">
         <div className="head">
           <div className="imgContainer" data-scroll data-scroll-speed={0.002}>
-            <Image src="/images/landing/background.png" alt="photo" fill sizes="true" />
+            <Image src="/images/landing/background.webp" alt="photo" fill sizes="true" />
           </div>
           <h1 data-scroll data-scroll-speed={0.001}>Pojďme se <br /> spojit</h1>
         </div>

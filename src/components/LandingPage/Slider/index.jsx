@@ -69,63 +69,63 @@ const videos = [
 
 const images = [
     {
-        src: "/assets/images/projects/3dtshirt.png",
+        src: "/assets/images/projects/3dtshirt.webp",
         alt: "website_1"
     },
     {
-        src: "/assets/images/projects/3dpc.png",
+        src: "/assets/images/projects/3dpc.webp",
         alt: "website_2"
     },
     {
-        src: "/assets/images/projects/apple-site.png",
+        src: "/assets/images/projects/apple-site.webp",
         alt: "website_3"
     },
     {
-        src: "/assets/images/projects/bank.png",
+        src: "/assets/images/projects/bank.webp",
         alt: "website_4"
     },
     {
-        src: "/assets/images/projects/components.png",
+        src: "/assets/images/projects/components.webp",
         alt: "website_5"
     },
     {
-        src: "/assets/images/projects/agency.png",
+        src: "/assets/images/projects/agency.webp",
         alt: "website_6"
     },
     {
-        src: "/assets/images/projects/brainwave.png",
+        src: "/assets/images/projects/brainwave.webp",
         alt: "website_7"
     },
     {
-        src: "/assets/images/projects/denisclone.png",
+        src: "/assets/images/projects/denisclone.webp",
         alt: "website_8"
     },
     {
-        src: "/assets/images/projects/framer.png",
+        src: "/assets/images/projects/framer.webp",
         alt: "website_9"
     },
     {
-        src: "/assets/images/projects/components.png",
+        src: "/assets/images/projects/components.webp",
         alt: "website_10"
     },
     {
-        src: "/assets/images/projects/nft.png",
+        src: "/assets/images/projects/nft.webp",
         alt: "website_11"
     },
     {
-        src: "/assets/images/projects/smoothscroll.png",
+        src: "/assets/images/projects/smoothscroll.webp",
         alt: "website_12"
     },
     {
-        src: "/assets/images/projects/sushi.png",
+        src: "/assets/images/projects/sushi.webp",
         alt: "website_13"
     },
     {
-        src: "/assets/images/projects/3dwindmill.png",
+        src: "/assets/images/projects/3dwindmill.webp",
         alt: "website_14"
     },
     {
-        src: "/assets/images/projects/apple-site.png",
+        src: "/assets/images/projects/apple-site.webp",
         alt: "website_15"
     }
 ]

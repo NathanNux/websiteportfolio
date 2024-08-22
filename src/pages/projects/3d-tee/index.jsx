@@ -22,15 +22,15 @@ const description = [
 //section introduction images and phrases
 const introductionImages = [
   {
-      src:"/assets/images/3d-tee/3dteeipmain.png",
+      src:"/assets/images/3d-tee/3dteeipmain.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/3d-tee/color.png",
+      src:"/assets/images/3d-tee/color.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/3d-tee/3dtee3.png",
+      src:"/assets/images/3d-tee/3dtee3.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -47,17 +47,17 @@ const introductionPhrases = [
 //section mobile view photos
 const photos = [
   {
-      src: '/assets/images/3d-tee/3dteeipmain.png',
+      src: '/assets/images/3d-tee/3dteeipmain.webp',
       alt: 'project1',
       title: 'Hlavní stránka',
   },
   {
-      src: '/assets/images/3d-tee/3dteeipmain3.png',
+      src: '/assets/images/3d-tee/3dteeipmain3.webp',
       alt: 'project2',
       title: '3D model',
   },
   {
-      src: '/assets/images/3d-tee/3dteeipmain2.png',
+      src: '/assets/images/3d-tee/3dteeipmain2.webp',
       alt: 'project3',
       title: 'Výběr Barvy',
   }
@@ -67,15 +67,15 @@ const photos = [
 
 const styleImages = [
   {
-      src:"/assets/images/3d-tee/3dtee2.png",
+      src:"/assets/images/3d-tee/3dtee2.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/3d-tee/code.png",
+      src:"/assets/images/3d-tee/code.webp",
       alt: "A beautiful landscape"
   },
   {
-      src:"/assets/images/3d-tee/3dteeip1.png",
+      src:"/assets/images/3d-tee/3dteeip1.webp",
       alt: "A beautiful landscape"
   }
 ]
@@ -124,18 +124,18 @@ export default function Home() {
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 
-          src1='/assets/images/3d-tee/3dtee1.png' 
-          src2='/assets/images/3d-tee/3dtee2.png' 
-          src3='/assets/images/3d-tee/3dteeipmain.png' 
-          src4='/assets/images/3d-tee/3dtee4.png' 
-          src5='/assets/images/3d-tee/3dtee5.png' 
-          src6='/assets/images/3d-tee/3dteeip2.png' 
-          src7='/assets/images/3d-tee/color.png' 
+          src1='/assets/images/3d-tee/3dtee1.webp' 
+          src2='/assets/images/3d-tee/3dtee2.webp' 
+          src3='/assets/images/3d-tee/3dteeipmain.webp' 
+          src4='/assets/images/3d-tee/3dtee4.webp' 
+          src5='/assets/images/3d-tee/3dtee5.webp' 
+          src6='/assets/images/3d-tee/3dteeip2.webp' 
+          src7='/assets/images/3d-tee/color.webp' 
           path='/assets/a-footage/3dtshirt.mp4'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
-        <Intro src='/assets/images/ps/3dtee.png'/>
+        <Intro src='/assets/images/ps/3dtee.webp'/>
         <Sections 
           photos={photos}
           section1={introductionImages}
