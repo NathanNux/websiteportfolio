@@ -1,7 +1,5 @@
-import dynamic from 'next/dynamic';
 import Projects from './Projects'
-const Scene = dynamic(() => import('@/components/LandingPage/NewestWork/Scene'), { ssr: false });
-import styles from './styles.module.scss';
+import Scene from '@/components/LandingPage/NewestWork/Scene';
 import { useRef, useState } from 'react';
 
 export default function NewestWork () {
@@ -9,11 +7,11 @@ export default function NewestWork () {
     const ref = useRef(null);
 
     return (
-        <section className={styles.main} ref={ref}>
-            <div className={styles.title}>
+        <section className="mainNewestWork" ref={ref}>
+            <div className="title">
                 <p>Mé nejnovější | Projekty</p>
             </div>
-            <div className={styles.section}>
+            <div className="section">
                 <Projects setActiveProject={setActiveProject}/>
             </div>
             <Scene activeProject={activeProject} containerRef={ref}/>

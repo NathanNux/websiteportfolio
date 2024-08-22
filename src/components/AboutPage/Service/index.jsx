@@ -2,29 +2,28 @@ import { useScroll, useTransform } from "framer-motion";
 import { Fragment, useRef } from "react";
 import { motion } from "framer-motion";
 
-import styles from "./style.module.scss";
 import ButtonLink from "@/components/common/LinkButton/linkButton";
 
 
 export default function Services() {
 
     return (
-        <section className={styles.main}>
-            <div className={styles.serviceContainer}>
-                <div className={styles.mainText}>
+        <section className="mainServiceAbout">
+            <div className="serviceContainer">
+                <div className="mainText">
                     {header1.map((header, i) => (
                         <Paragraph key={i} text={header.text} />
                     ))}
                 </div>
 
-                <div className={styles.services}>
+                <div className="services">
                     {services.map((service, i) => (
                         <Service key={i} index={i} title={service.title} content={service.content}/>
                     ))}
                 </div>
 
-                <div className={styles.button} data-scroll data-scroll-speed={0.5}>
-                    <ButtonLink title='Spojme se' href='/contact' className={styles.buttonLink}/>
+                <div className="button" data-scroll data-scroll-speed={0.5}>
+                    <ButtonLink title='Spojme se' href='/contact' className="buttonLink"/>
                 </div>
             </div>
         </section>
@@ -41,13 +40,13 @@ const Service = ({title, content, index}) => {
     const width = useTransform(scrollYProgress, [0, 1], ['0%', '80%'])
 
     return (
-        <div className={styles.contentContainer} data-scroll data-scroll-speed={0.1 * (index + 5)}>
-            <div className={styles.title}>
+        <div className="contentContainer" data-scroll data-scroll-speed={0.1 * (index + 5)}>
+            <div className="title">
                 <Paragraph text={title} />
             </div>
 
-            <div className={styles.content} ref={section}>
-                <motion.div className={styles.braker} style={{width}}></motion.div>
+            <div className="content" ref={section}>
+                <motion.div className="braker" style={{width}}></motion.div>
                 <Paragraph text={content} />
             </div>
         </div>

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import styles from './style.module.scss'
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -58,25 +57,25 @@ export default function Index() {
 
 
   return (
-      <motion.main variants={ delayAnim ? FirstSlideUp : slideUp } initial="initial" animate='enter' className={styles.landing}>
-        <Image 
-          src="/images/landing/background.png"
-          fill
-          sizes="true"
-          alt="background"
-          priority
-        />
-        <div className={styles.sliderContainer}>
-          <div ref={slider} className={styles.slider}>
-            <p ref={firstText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
-            <p ref={secondText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
-          </div>
+    <motion.main variants={ delayAnim ? FirstSlideUp : slideUp } initial="initial" animate='enter' className="landingPage">
+      <Image 
+        src="/images/landing/background.png"
+        fill
+        sizes="true"
+        alt="background"
+        priority
+      />
+      <div className="sliderContainer">
+        <div ref={slider} className="slider">
+          <p ref={firstText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
+          <p ref={secondText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
         </div>
+      </div>
 
-        <div data-scroll data-scroll-speed={0.08} className={styles.description}>
-              <p>Jmenuji se <br /> Matěj Forejt</p>
-              <p>Vítejte u mě v Centru</p>
-          </div>
-      </motion.main>
+      <div data-scroll data-scroll-speed={0.08} className="description">
+            <p>Jmenuji se <br /> Matěj Forejt</p>
+            <p>Vítejte u mě v Centru</p>
+        </div>
+    </motion.main>
   )
 }

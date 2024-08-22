@@ -3,8 +3,6 @@ import { Fragment, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import styles from "./style.module.scss";
-
 export default function Intro({src, phrase1, phrase2, phrase3}) {
 
     const section = useRef(null);
@@ -16,7 +14,7 @@ export default function Intro({src, phrase1, phrase2, phrase3}) {
     const y = useTransform(scrollYProgress, [0, 1], ["-50%", "50%"]);
 
     return (
-        <motion.section ref={section} className={styles.main} style={{y}} >
+        <motion.section ref={section} className="mainIntro" style={{y}} >
             <Image 
               src={src}
               fill
@@ -25,20 +23,20 @@ export default function Intro({src, phrase1, phrase2, phrase3}) {
               priority
             />
 
-            <div className={styles.textContainer}>
-                <div className={styles.firstText}>
+            <div className="textContainer">
+                <div className="firstText">
                     {phrase1?.map((phrase, i) => (
                         <Paragraph key={i} text={phrase.text} />
                     ))}
                 </div>
 
-                <div className={styles.secondText}>
+                <div className="secondText">
                     {phrase2?.map((phrase, i) => (
                         <Paragraph key={i} text={phrase.text} />
                     ))}
                 </div>
 
-                <div className={styles.mainText}>
+                <div className="mainText">
                     {phrase3?.map((phrase, i) => (
                         <Paragraph key={i} text={phrase.text} />
                     ))}

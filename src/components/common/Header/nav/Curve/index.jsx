@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { gsap } from 'gsap';
-import styles from './style.module.scss';
 
 export default function Index({ isActive }) {
 
@@ -34,7 +33,7 @@ export default function Index({ isActive }) {
     //oterwise it will not work.
 
     return (
-        <svg className={styles.svgCurve}>
+        <svg className="svgCurveHeader">
             <path ref={pathRef} d={initialPath}></path>
         </svg>
     )

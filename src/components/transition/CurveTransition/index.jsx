@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { text, curve, translate } from './animations';
 
-import styles from './style.module.scss'
 import { useLoad } from '@/context';
 
 const routes = {
@@ -68,9 +67,9 @@ export default function CurveTransition({children}) {
     }, []);
 
     return (
-        <div className={styles.pageCurve}>
-            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className={styles.background}/>
-            <motion.p className={styles.route} {...anim(text)} style={{scale: isLoading ? 1 : 0}}><span></span> {routes[router.pathname]}</motion.p>
+        <div className="pageCurveTransition">
+            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className="background"/>
+            <motion.p className="route" {...anim(text)} style={{scale: isLoading ? 1 : 0}}><span></span> {routes[router.pathname]}</motion.p>
             {dimensions.width != null && <SVG {...dimensions} />}
             {children}
         </div>

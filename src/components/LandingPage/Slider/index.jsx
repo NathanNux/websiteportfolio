@@ -1,7 +1,5 @@
-import { createRef, useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
-
-import styles from "./style.module.scss"
 import Image from "next/image"
 import { useScroll, useTransform, motion } from "framer-motion"
 import Lenis from "@studio-freight/lenis"
@@ -170,9 +168,9 @@ export default function Index (){
 
 
     return ( 
-        <section className={styles.main}>
-            <div className={styles.body}>
-                <div ref={slider} className={styles.slider}>
+        <section className="mainSlider">
+            <div className="body">
+                <div ref={slider} className="slider">
                 <Column videos={videos.slice(0,5)} images={images.slice(0,5)} y={y1}/>
                 <Column videos={videos.slice(6,10)} images={images.slice(6, 10)} y={y2}/>
                 <Column videos={videos.slice(11,15)} images={images.slice(11,15)} y={y3}/>
@@ -219,11 +217,11 @@ const Column = ({videos, images, y }) => {
     }, [videos])
 
     return (
-        <motion.section ref={columnRef} className={styles.column} style={{y}}>
+        <motion.section ref={columnRef} className="column" style={{y}}>
             { !isLoaded && images.map((image, index) => {
                 const { src, alt } = image
                 return (
-                    <div key={index} className={styles.imageContainer}>
+                    <div key={index} className="imageContainer">
                         <Image 
                             src={src}
                             alt={alt}
@@ -238,7 +236,7 @@ const Column = ({videos, images, y }) => {
             {videos.map((video, index) => {
                 const { src } = video
                 return (
-                    <div key={index} className={styles.imageContainer}>
+                    <div key={index} className="imageContainer">
                         {isVisible && (
                             <video 
                                 autoPlay 

@@ -1,16 +1,11 @@
-import { motion } from 'framer-motion';
-
-import styles from './style.module.scss';
-import Image from 'next/image';
-import { scale, slideUp } from '../../anim';
+import Image from 'next/image'
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { motion } from 'framer-motion';
+import { slideUp } from '@/components/anim';
 
-
-
-export default function Landing() {
-
+export default function Index() {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -58,25 +53,21 @@ export default function Landing() {
   }, [firstText, secondText]);
 
 
-
   return (
-    <section className={styles.main}>
-        <motion.div className={styles.sliderContainer} variants={slideUp} initial="initial" animate="enter">
-            <motion.div ref={slider} className={styles.slider}>
-                <p ref={firstText}>Materiály - Pro Vás - Materiály - Pro Vás -</p>
-                <p ref={secondText}>Materiály - Pro Vás - Materiály - Pro Vás -</p>
-            </motion.div>
-        </motion.div>
-        
-        <motion.div className={styles.background} variants={scale} initial="initial" animate="enter">
-            <Image 
-                src="/images/about/background.png"
-                alt='background'
-                fill
-                sizes="true"
-                priority
-            />
-        </motion.div>
-    </section>
+    <motion.main variants={slideUp} initial="initial" animate='enter' className="landingAbout">
+      <Image 
+        src="/images/about/background.png"
+        fill
+        sizes="true"
+        alt="background"
+        priority
+      />
+      <div className="sliderContainer">
+        <div ref={slider} className="slider">
+          <p ref={firstText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
+          <p ref={secondText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
+        </div>
+      </div>
+    </motion.main>
   )
-};
+}

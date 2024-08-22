@@ -1,4 +1,3 @@
-import styles from './style.module.scss';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
@@ -55,11 +54,11 @@ export default function Preloader() {
             <Head>
                 <link rel="preload" href="/assets/preloader/0819.mp4" type="video/mp4" />
             </Head>
-            <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
+            <motion.div variants={slideUp} initial="initial" exit="exit" className="introductionPreloader">
                 {dimension.width > 0 && 
                 <>
-                    <motion.div variants={videoPath} initial="initial" exit="exit" className={styles.videoContainer}>
-                        <video src="/assets/preloader/0819.mp4" autoPlay muted loop className={styles.mainVideo} ></video>
+                    <motion.div variants={videoPath} initial="initial" exit="exit" className="videoContainer">
+                        <video src="/assets/preloader/0819.mp4" autoPlay muted loop className="mainVideo" ></video>
                     </motion.div>
                     <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>
                     <svg>

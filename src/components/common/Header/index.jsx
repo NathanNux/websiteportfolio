@@ -1,5 +1,3 @@
-import styles from './style.module.scss';
-import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { opacity, background } from './anim';
@@ -33,17 +31,17 @@ export default function Index() {
     },[isActive, setIsActive])
 
     return (
-            <section ref={navbar} className={styles.header}>
-                <div className={styles.bar}>
-                    <div onClick={() => {setIsActive(!isActive)}} className={styles.el}ref={navbar}>
-                        <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
-                        <div className={styles.label}>
+            <section ref={navbar} className="header">
+                <div className="bar">
+                    <div onClick={() => {setIsActive(!isActive)}} className="el" ref={navbar}>
+                        <div className={`burger ${isActive ? "burgerActive" : ""}`}></div>
+                        <div className="label">
                             <motion.p variants={opacity} animate={!isActive ? "open" : "closed"}>Menu</motion.p>
                             <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>Close</motion.p>
                         </div>
                     </div>
                 </div>
-                <motion.div variants={background} initial="initial" animate={isActive ? "open" : "closed"} className={styles.background}>
+                <motion.div variants={background} initial="initial" animate={isActive ? "open" : "closed"} className="background">
                 </motion.div>
                 <AnimatePresence mode="wait">
                     {isActive && <Nav/>}

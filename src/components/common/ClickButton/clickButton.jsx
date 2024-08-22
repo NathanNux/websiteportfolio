@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import styles from "./clickButton.module.scss"
 import { scale } from "@/components/anim";
 
 export default function ButtonClick({ title, onClick, currentView, filterCategory, trigger, svgPaths }) {
@@ -23,11 +22,11 @@ export default function ButtonClick({ title, onClick, currentView, filterCategor
     };
 
     return (
-        <div className={styles.barButton} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={handleClick}>
-            <div className={styles.link}>
-                <p className={`${active ? styles.black : ''}`}>{title}</p>
+        <div className="barButton" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={handleClick}>
+            <div className="link">
+                <p className={`${active ? 'black' : ''}`}>{title}</p>
                 {svgPaths && 
-                    <div className={styles.svgContainer}>
+                    <div className="svgContainer">
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                             width="500.000000pt" height="500.000000pt" viewBox="0 0 500.000000 500.000000"
                             preserveAspectRatio="xMidYMid meet"
@@ -36,14 +35,14 @@ export default function ButtonClick({ title, onClick, currentView, filterCategor
                                 fill="#000000" stroke="none"
                             >
                                 {svgPaths.map((pathData, i) => (
-                                    <path key={i} d={pathData.d} className={`${active ? styles.blackSVG : ''}`}/>
+                                    <path key={i} d={pathData.d} className={`${active ? 'blackSVG' : ''}`}/>
                                 ))}
                             </g>
                         </svg> 
                     </div>
                 }
             </div>
-            <motion.div className={styles.dot} variants={scale} initial='initial' animate={active ? 'enter' : `${isHovered ? 'enter' : 'exit'}`}></motion.div>
+            <motion.div className="dot" variants={scale} initial='initial' animate={active ? 'enter' : `${isHovered ? 'enter' : 'exit'}`}></motion.div>
         </div>
     );
 }

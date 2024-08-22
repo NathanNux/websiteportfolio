@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-import styles from './style.module.scss';
 import { useMousePosition } from '@/utils/useMousePosition';
 import ButtonLink from '@/components/common/LinkButton/linkButton';
 import { textOpacity, textSlideUp } from '@/components/anim';
@@ -19,10 +18,10 @@ export default function Index () {
     const size = isHovered ? 300 : 20;
 
     return (
-        <section className={styles.description} >
-            <div className={styles.body}>
-                <div className={styles.main} ref={elRef}>
-                    <motion.div className={styles.mask} animate={{
+        <section className="descriptionLanding" >
+            <div className="body">
+                <div className="main" ref={elRef}>
+                    <motion.div className="mask" animate={{
                         WebkitMaskPosition: `${x - (size / 2)}px ${y - (size / 2)}px`,
                         WebkitMaskSize: `${size}px`,
                         }}
@@ -32,12 +31,12 @@ export default function Index () {
                             {phraseHidden}
                         </p>
                     </motion.div>
-                    <div className={styles.bodyHidden}>
+                    <div className="bodyHidden">
                        <p>
                         {
                             phrase.split(' ').map((word, index) => {
                                 return (
-                                    <span key={index} className={styles.maskText} ref={description}><motion.span variants={textSlideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
+                                    <span key={index} className="maskText" ref={description}><motion.span variants={textSlideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
                                 )
                             })
                         }
@@ -46,15 +45,15 @@ export default function Index () {
                     
                 </div>
                 
-                <div className={styles.about}>
+                <div className="about">
                     <motion.p
                         variants={textOpacity} animate={isInView ? "open" : "closed"}
-                        className={styles.text}
+                        className="text"
                     >
                         Kombinace vášně pro design, programování a kreativita mě posunula do unikátního pozice v životě.
                     </motion.p>
                     <div data-scroll data-scroll-speed={0.08}>
-                        <ButtonLink title='Více o mně' href='/about' className={styles.button}/>
+                        <ButtonLink title='Více o mně' href='/about' className="button"/>
                     </div>
                 </div>
             </div>

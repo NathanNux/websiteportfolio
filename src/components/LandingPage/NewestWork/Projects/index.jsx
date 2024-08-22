@@ -1,4 +1,3 @@
-import styles from './style.module.scss';
 import Link from 'next/link';
 import ButtonLink from '@/components/common/LinkButton/linkButton';
 import { NewestProjects } from '@/constants';
@@ -20,7 +19,7 @@ export default function Index ({setActiveProject}) {
     }
 
     return (
-        <div className={styles.main} > 
+        <div className="mainNewestProjects" > 
             <ul onMouseLeave={debounce(() => {setActiveProject(null)}, 50)}>
                 {NewestProjects.map((project, i) => {
                     return (
@@ -33,8 +32,8 @@ export default function Index ({setActiveProject}) {
                     )
                 })}
             </ul>
-            <div className={styles.button}>
-               <ButtonLink title='Více Projektů' href='/projects' className={styles.buttonLink}/> 
+            <div className="button">
+               <ButtonLink title='Více Projektů' href='/projects' className="buttonLink"/> 
             </div>
         </div>
     );

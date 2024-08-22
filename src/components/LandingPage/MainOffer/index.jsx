@@ -1,5 +1,4 @@
-import React, { Fragment, use, useEffect, useRef, useState } from 'react'
-import styles from './style.module.scss'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion';
 import ButtonLink from '@/components/common/LinkButton/linkButton';
 import CountdownTimer from './Timer';
@@ -21,22 +20,22 @@ export default function MainOffer () {
   }, []);
 
   return (
-    <section className={styles.main}>
-        <div className={styles.textContainer} data-scroll data-scroll-speed={0.4}>
+    <section className="mainOffer">
+        <div className="textContainer" data-scroll data-scroll-speed={0.4}>
             {phrase1.map((phrase, i) => (
                 <Paragraph key={i} text={phrase.text} />
             ))}
         </div>
-        <div className={styles.description}>
-            <p data-scroll data-scroll-speed={0.1} className={styles.maintext}>Mohu přijmout ještě<br/><span className={styles.specialSpan}>3</span><br/><span>Nové klienty</span></p>
-            <p className={styles.dateY}>Do roku 2025</p>
+        <div className="description">
+            <p data-scroll data-scroll-speed={0.1} className="maintext">Mohu přijmout ještě<br/><span className="specialSpan">3</span><br/><span>Nové klienty</span></p>
+            <p className="dateY">Do roku 2025</p>
             {/* there was an issue with the time on the server side and client side -> weren't same*/}
            { delay && <CountdownTimer targetDate="2024-12-31T23:59:59"/>}
-            <div data-scroll data-scroll-speed={0.1} className={styles.buttonContainer}>
-              <ButtonLink title='Chci se Spojit Ihned' href='/contact' className={styles.button}/>
+            <div data-scroll data-scroll-speed={0.1} className="buttonContainer">
+              <ButtonLink title='Chci se Spojit Ihned' href='/contact' className="button"/>
             </div>
             
-            <div className={styles.textSales} data-scroll data-scroll-speed={0.1}>
+            <div className="textSales" data-scroll data-scroll-speed={0.1}>
                 <p>A když má práce nesplní Vaše požadavky, <br/> vrátím Vám všechny peníze do poslední kačky.<br/> A nechám Vám navíc celý projekt zdarma. <br/><br/> <span > Bez žádných otázek.</span></p>
             </div>
         </div>
@@ -63,7 +62,7 @@ const Paragraph = ({ text }) => {
   return (
     <p ref={ref}>
       {lines.map((line, lineIndex) => (
-        <React.Fragment key={lineIndex}>
+        <Fragment key={lineIndex}>
           {line.split('<span>').map((part, partIndex) => {
             if (partIndex % 2 === 0) {
               return [...part].map((char, charIndex) => (
@@ -85,13 +84,13 @@ const Paragraph = ({ text }) => {
                   index={charIndex}
                   totalLength={spanPart.length}
                   scrollYProgress={scrollYProgress}
-                  className={styles.specialSpan}
+                  className="specialSpan"
                 />
               ));
             }
           })}
           {lineIndex < lines.length - 1 && <br />}
-        </React.Fragment>
+        </Fragment>
       ))}
     </p>
   );

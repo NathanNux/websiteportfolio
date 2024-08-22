@@ -1,16 +1,12 @@
-import { motion } from 'framer-motion';
-
-import styles from './style.module.scss';
-import Image from 'next/image';
-import { scale, slideUp } from './anim';
+import Image from 'next/image'
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { motion } from 'framer-motion';
+import { slideUp } from '@/components/anim';
+import { scale } from './anim';
 
-
-
-export default function Landing() {
-
+export default function Index() {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -58,35 +54,31 @@ export default function Landing() {
   }, [firstText, secondText]);
 
 
-
   return (
-    <section className={styles.main}>
-        <motion.div className={styles.sliderContainer} variants={slideUp} initial="initial" animate="enter">
-            <motion.div ref={slider} className={styles.slider}>
-                <p ref={firstText}>Materiály - Pro Vás - Materiály - Pro Vás -</p>
-                <p ref={secondText}>Materiály - Pro Vás - Materiály - Pro Vás -</p>
-            </motion.div>
-        </motion.div>
-        
-        <motion.div className={styles.background} variants={scale} initial="initial" animate="enter">
-            <Image 
-                src='/images/materials/background.png'
-                alt='background'
-                fill
-                sizes="true"
-                priority
-            />
-        </motion.div>
-        <div className={styles.imageContainer} data-scroll data-scroll-speed={0.1}>
-            <Image 
-                src='/images/landing/7.jpg'
-                alt='materials'
-                fill
-                sizes="true"
-                priority
-                //WIP: add here Images for Material Page
-            />
+    <motion.main variants={slideUp} initial="initial" animate='enter' className="landingMaterialsPage">
+      <Image 
+        src='/images/materials/background.png'
+        fill
+        sizes="true"
+        alt="background"
+        priority
+      />
+      <motion.main variants={scale} initial="initial" animate='enter' className="imageContainer" data-scroll data-scroll-speed={0.1}>
+        <Image 
+            src='/images/landing/7.jpg'
+            alt='materials'
+            fill
+            sizes="true"
+            priority
+            //WIP: add here Images for Material Page
+        />
+      </motion.main>
+      <div className="sliderContainer">
+        <div ref={slider} className="slider">
+          <p ref={firstText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
+          <p ref={secondText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
         </div>
-    </section>
+      </div>
+    </motion.main>
   )
-};
+}

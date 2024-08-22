@@ -27,8 +27,8 @@ export default function Section ({images, phrases, styles}) {
     }, [images])
 
     return (
-        <section className={styles.sectionContainer}>
-            <div className={styles.text}>
+        <section className="sectionContainer">
+            <div className="text">
                 {phrases.map((phrase, i) => (
                     <p key={i} data-scroll data-scroll-speed={0.04 * (i + 2)}>
                         <TextWithBr text={phrase.text}  />
@@ -36,9 +36,9 @@ export default function Section ({images, phrases, styles}) {
                 ))}
             </div> 
             
-            <div className={styles.images} ref={columnRef}>
+            <div className="images" ref={columnRef}>
                 {images.map((image, i) => (
-                    <div key={i} className={styles.imageContainer} data-scroll data-scroll-speed={0.05 * (i + 1)}>
+                    <div key={i} className="imageContainer" data-scroll data-scroll-speed={0.05 * (i + 1)}>
                         {!image.path && <Image src={image.src} alt={image.alt} fill sizes="true"/>}
                         {isVisible && image.path && 
                             <video

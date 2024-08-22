@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from './style.module.scss'
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -32,20 +31,20 @@ export default function Index () {
   }, [pathname, delayedPathname]);
 
   return (
-    <nav ref={container} className={`${isContactPage ? styles.navbarBlack : styles.navbarWhite }`}>
-        <Link href='/' className={styles.logo}>
-            <p className={styles.copyright}>©</p>
-            <div className={styles.name}>
-                <p className={styles.codeBy}>Kód od</p>
-                <p className={styles.dennis}>Matěje</p>
-                <p className={styles.snellenberg}>Forejta</p>
+    <nav ref={container} className={`${isContactPage ? "navbarBlack" : "navbarWhite" }`}>
+        <Link href='/' className="logo">
+            <p className="copyright">©</p>
+            <div className="name">
+                <p className="codeBy">Kód od</p>
+                <p className="dennis">Matěje</p>
+                <p className="snellenberg">Forejta</p>
             </div>
         </Link>
-        <div className={styles.nav}>
+        <div className="nav">
             {navbarLinks.map(({ href, title }, i) => (
-              <div className={styles.el} key={i} onMouseEnter={() => setHoveredIndex(i)} onMouseLeave={() => setHoveredIndex(null)}>
-                <Link href={href} className={styles.Link}>{title}</Link>
-                <motion.div variants={scale} initial='initial' animate={active === i ? (hoveredIndex !== null && hoveredIndex !== i ? 'exit' : 'enter') : (hoveredIndex === i ? 'enter' : 'exit')} className={styles.indicator}></motion.div>
+              <div className="el" key={i} onMouseEnter={() => setHoveredIndex(i)} onMouseLeave={() => setHoveredIndex(null)}>
+                <Link href={href} className="Link">{title}</Link>
+                <motion.div variants={scale} initial='initial' animate={active === i ? (hoveredIndex !== null && hoveredIndex !== i ? 'exit' : 'enter') : (hoveredIndex === i ? 'enter' : 'exit')} className="indicator"></motion.div>
               </div>
             ))}
         </div>

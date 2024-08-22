@@ -1,5 +1,4 @@
 import React, { Fragment, useRef } from 'react'
-import styles from './style.module.scss'
 import { useScroll, useTransform } from 'framer-motion';
 import {motion} from 'framer-motion';
 
@@ -8,8 +7,8 @@ export default function IntroText ({phrases}) {
     // I have declared the scrollYProgress, now add style and then motion. to the elements
 
   return (
-    <section className={styles.main}>
-        <div className={styles.textContainer}>
+    <section className="mainIntroText">
+        <div className="textContainer">
             {phrases?.map((phrase, i) => {
                 return (
                     <Paragraph key={i} text={phrase.text} />
@@ -24,7 +23,7 @@ export default function IntroText ({phrases}) {
 const AnimatedChar = ({ char, range, progress, isHighlighted }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
-    <motion.span className={isHighlighted ? styles.highLighted : ''} style={{ opacity }}>
+    <motion.span className={isHighlighted ? 'highLighted' : ''} style={{ opacity }}>
       {char}
     </motion.span>
   );

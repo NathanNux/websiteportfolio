@@ -70,13 +70,15 @@ export default function Home() {
       <Header />
       <Navbar />
       <CurveTransition>
-        <Landing />
-        <Description  description={description}/>
-        <Intro phrase1={phrase1} phrase2={phrase2} phrase3={phrase3} src='/images/about/intro.png'/>
-        <AboutSections />
-        <Services />
-        <FreeOffers text='1'/> 
-        <Footer />
+        <div className="page">
+          <Landing />
+          <Description  description={description}/>
+          <Intro phrase1={phrase1} phrase2={phrase2} phrase3={phrase3} src='/images/about/intro.png'/>
+          <AboutSections />
+          <Services />
+          <FreeOffers text='1'/> 
+          <Footer />
+        </div>
       </CurveTransition>
     </>
   );

@@ -1,14 +1,12 @@
 import { useScroll, useTransform } from "framer-motion";
 import { Fragment, useRef } from "react";
 import { motion } from "framer-motion";
-
-import styles from "./style.module.scss";
 import { opacity } from "@/components/anim";
 
 export default function Description({description}) {
 
     return (
-        <motion.section className={styles.main} variants={opacity} initial="initial" animate="enter">
+        <motion.section className="mainDesc" variants={opacity} initial="initial" animate="enter">
             <div>
                 <h2>
                     {description.map((phrase, i) => (

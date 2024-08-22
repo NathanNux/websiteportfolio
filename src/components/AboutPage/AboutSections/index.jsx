@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
-import styles from './style.module.scss'
 import Section from '@/components/common/Sections'
 
 const sections = [
@@ -93,17 +92,17 @@ export default function OfferSection () {
     const height = useTransform(scrollYProgress, [0, 1], [30, 0])
 
     return (
-        <section ref={section} className={styles.offers}>
-            <div className={styles.mainSections}>
-                <div className={styles.main}>
+        <section ref={section} className="offersAbout">
+            <div className="mainSections">
+                <div className="main">
                     {sections.map((section, i) => (
-                        <Section key={i} images={section.images} phrases={section.phrases} styles={styles}/>
+                        <Section key={i} images={section.images} phrases={section.phrases}/>
                     ))}
                 </div>
             </div>
 
-            <motion.div style={{height}} className={styles.svgContainer}>
-                <div className={styles.svgDiv}></div>
+            <motion.div style={{height}} className="svgContainer">
+                <div className="svgDiv"></div>
             </motion.div>
         </section>
     )

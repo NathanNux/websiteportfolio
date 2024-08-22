@@ -5,8 +5,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { slideUp } from "@/components/anim";
 
-import styles from './style.module.scss';
-
 export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, path, text}) {
 
     const ref = useRef(null);
@@ -141,15 +139,15 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
     }, [pictures])
 
     return(
-        <motion.section ref={ref} className={styles.main} variants={slideUp} initial='initial' animate='enter'>
-            <div className={styles.container} ref={columnRef}>
+        <motion.section ref={ref} className="mainParallaxZoom" variants={slideUp} initial='initial' animate='enter'>
+            <div className="container" ref={columnRef}>
                 {videos.map((video, i) => (
                     <motion.div
                         key={i}
-                        className={styles.motionContainer}
+                        className="motionContainer"
                         style={{ scale: video.scale }}
                     >
-                        <div className={styles.imageContainer}>
+                        <div className="imageContainer">
                             {isVisible && 
                                 <video
                                     autoPlay
@@ -167,10 +165,10 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
                 {pictures.map((picture, i) => (
                     <motion.div
                         key={i}
-                        className={styles.motionContainer}
+                        className="motionContainer"
                         style={{ scale: picture.scale }}
                     >
-                        <div className={styles.imageContainer}>
+                        <div className="imageContainer">
                             <Image 
                                 src={picture.src}
                                 alt={picture.alt}
@@ -181,9 +179,9 @@ export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, 
                     </motion.div>
                 ))}
             </div>
-            <div className={styles.bodySlider}>
-                <div className={styles.sliderContainer}>
-                    <div ref={slider} className={styles.slider}>
+            <div className="bodySlider">
+                <div className="sliderContainer">
+                    <div ref={slider} className="slider">
                         <p ref={firstText}>{text}</p>
                         <p ref={secondText}>{text}</p>
                     </div>

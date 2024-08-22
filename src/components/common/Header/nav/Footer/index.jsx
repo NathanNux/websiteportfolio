@@ -1,4 +1,3 @@
-import styles from './style.module.scss';
 import { translate } from '../../anim';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -12,8 +11,8 @@ export default function Footer() {
     timeString = timeString.replace('GMT+1', 'CET').replace('GMT+2', 'CEST');
 
     return (
-        <section className={styles.footer}>
-            <div className={styles.info}>
+        <section className="footerHeader">
+            <div className="info">
                <ul>
                     <motion.li 
                         custom={[0.3, 0]} 
@@ -37,7 +36,7 @@ export default function Footer() {
                     </motion.li>
                 </ul> 
             </div>
-            <div className={styles.terms}>
+            <div className="terms">
                 <ul>
                     <motion.li
                         custom={[0.3, 0]} 

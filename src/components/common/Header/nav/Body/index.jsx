@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import styles from './style.module.scss';
 import { blur, translate } from '../../anim';
 
 export default function Body({links, selectedLink, setSelectedLink}) {
@@ -23,7 +22,7 @@ export default function Body({links, selectedLink, setSelectedLink}) {
     }
     
     return (
-        <div className={styles.body}>
+        <div className="bodyHeader">
         {
             links.map( (link, index) => {
                 const { title, href } = link;

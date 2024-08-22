@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import Projects from "./Projects";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import styles from "./style.module.scss";
 import gsap from "gsap";
 import { scaleAnim } from "@/components/anim";
 
@@ -73,8 +72,8 @@ export default function FreeOffers ({text}) {
     },[modal])
 
     return (
-        <section ref={section} className={styles.main}>
-            { text && <div className={styles.text}>
+        <section ref={section} className="mainFreeStuff">
+            { text && <div className="text">
                  <h1>Nejste si jisti?</h1>
                 <p>Vím, že proces webových stránkej je náročný a těžký, ale i drahý. 
                     doporučuji všem Vám s malými nebo začínajícími podniky začít sami.<br /><br />
@@ -86,20 +85,20 @@ export default function FreeOffers ({text}) {
                     projdu společně s Vámi každý krok za krokem jednodychými postupy, které Vám přinesou skvělý začátek už během pár hodin práce, ne déle</p>
             </div>}
 
-            <div ref={projectsRef} className={styles.projects}>
+            <div ref={projectsRef} className="projects">
                 <Projects/>
             </div>
 
-            <motion.div ref={cursor} className={styles.cursor} variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
-            <motion.div ref={label} className={styles.label} variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
+            <motion.div ref={cursor} className="cursor" variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
+            <motion.div ref={label} className="label" variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
                 <p>Získat</p>
             </motion.div>
 
             <motion.div 
                 ref={curve}
-                className={styles.svgContainer} 
+                className="svgContainer"
             >
-                <motion.div style={{height}}  className={styles.svgDiv}></motion.div>
+                <motion.div style={{height}}  className="svgDiv"></motion.div>
             </motion.div>
         </section>
     )

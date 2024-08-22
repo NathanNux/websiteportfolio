@@ -18,13 +18,13 @@ export const slideUp = {
 
 export const scale = {
     initial: {
-        width: '80%',
-        height: '80%',
+        width: '20%',
+        height: '50%',
         y: 100,
     },
     enter: {
-        width: '100vw',
-        height: '100vh',
+        width: '30vw',
+        height: '60vh',
         y: 0,
         transition: {
             delay: 0.6,
