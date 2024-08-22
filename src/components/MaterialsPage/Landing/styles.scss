@@ -60,7 +60,7 @@
 
 
 @media only screen and (max-width: 1550px) {
-    .main{
+    .landingMaterialsPage{
         .sliderContainer{
             .slider{
                 font-size: 8em;
@@ -70,7 +70,7 @@
 }
 
 @media only screen and (max-width: 1450px) {
-    .main{
+    .landingMaterialsPage{
         .sliderContainer{
             .slider{
                 font-size: 7em;
@@ -80,7 +80,7 @@
 }
 
 @media only screen and (max-width: 1000px) and (min-height: 600px){
-    .main{
+    .landingMaterialsPage{
         .sliderContainer{
             .slider{
                 font-size: 6em;
@@ -92,7 +92,7 @@
 // tablets vertical
 
 @media only screen and (max-width: 1050px) and (min-height: 1000px){
-    .main{
+    .landingMaterialsPage{
         .sliderContainer{
             top: 70vh;
             .slider{
@@ -103,7 +103,7 @@
 }
 
 @media only screen and (max-width: 900px) and (min-height: 800px){
-    .main{
+    .landingMaterialsPage{
         .sliderContainer{
             top: 70vh;
             .slider{
@@ -124,7 +124,7 @@
 }
 
 @media only screen and (max-width: 450px) and (max-height: 950px){
-    .main{
+    .landingMaterialsPage{
         .sliderContainer{
             top: calc(100vh - 250px);
             .slider{

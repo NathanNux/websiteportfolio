@@ -59,7 +59,7 @@
 }
 
 @media only screen and (max-width: 1750px) {
-    .body {
+    .bodyMobileView {
         .project {
             p{
                 span{
@@ -76,7 +76,7 @@
 }
 
 @media only screen and (max-width: 1550px) {
-    .body {
+    .bodyMobileView {
         .project {
             p{
                 gap: 0.6em;
@@ -94,7 +94,7 @@
 }
 
 @media only screen and (max-width: 1450px) {
-    .body {
+    .bodyMobileView {
         .project {
             p{
                 gap: 0.5em;
@@ -112,7 +112,7 @@
 }
 
 @media only screen and (max-width: 1050px) {
-    .body {
+    .bodyMobileView {
         .project {
             width: calc(60vh * 0.625);
             height: 60vh;
@@ -132,7 +132,7 @@
 }
 
 @media only screen and (max-width: 1050px) and (min-height: 1000px){
-    .body {
+    .bodyMobileView {
         .project {
             width: calc(45vh * 0.625);
             height: 45vh;
@@ -153,7 +153,7 @@
 
 
 @media only screen and (max-width: 900px) and (min-height: 1000px){
-    .body {
+    .bodyMobileView {
         .project {
             width: calc(35vh * 0.625);
             height: 35vh;
@@ -173,7 +173,7 @@
 }
 
 @media only screen and (max-width: 450px) and (max-height: 950px){
-    .body {
+    .bodyMobileView {
         flex-wrap: wrap;
         .project {
             width: calc(35vh * 0.625);

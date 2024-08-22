@@ -295,7 +295,7 @@
 }
 
 @media only screen and (max-width: 1550px) {
-    .main {
+    .mainContactIntro {
         .header{
             h1{
                 font-size: 4rem;
@@ -358,7 +358,7 @@
 }
 
 @media only screen and (max-width: 1450px) {
-    .main {
+    .mainContactIntro {
         .header{
             h1{
                 font-size: 3.5rem;
@@ -421,7 +421,7 @@
 }
 
 @media only screen and (max-width: 1250px) {
-    .main {
+    .mainContactIntro {
         height: 160vh;
         .header{
             h1{
@@ -485,7 +485,7 @@
 }
 
 @media only screen and (max-width: 1000px) and (min-height: 600px) {
-    .main {
+    .mainContactIntro {
         height: 175vh;
         .header{
             h1{
@@ -549,7 +549,7 @@
 }
 
 @media only screen and (max-width: 1050px) and (min-height: 1000px) {
-    .main {
+    .mainContactIntro {
         height: 120vh;
         padding: 15vh 0 20vh 0;
         gap: 10vh;
@@ -621,7 +621,7 @@
 }
 
 @media only screen and (max-width: 900px) and (min-height: 800px) {
-    .main {
+    .mainContactIntro {
         height: 120vh;
         padding: 15vh 0 20vh 0;
         gap: 10vh;
@@ -694,7 +694,7 @@
 
 // mobile viewports
 @media only screen and (max-width: 450px) and (max-height: 950px) {
-    .main {
+    .mainContactIntro {
         display: flex;
         flex-direction: column;
         justify-content: top;
@@ -957,7 +957,7 @@
 }
 
 @media only screen and (max-width: 400px) and (max-height: 850px) {
-    .main {
+    .mainContactIntro {
         display: flex;
         flex-direction: column;
         justify-content: top;

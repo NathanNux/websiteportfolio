@@ -27,7 +27,7 @@
 }
 
 @media only screen and (max-width: 1750px){
-    .main{
+    .mainDesc{
         h2{
             font-size: 6rem;
         }
@@ -35,14 +35,14 @@
 }
 
 @media only screen and (max-width: 1550px){
-    .main{
+    .mainDesc{
         h2{
             font-size: 5rem;
         }
     }
 }
 @media only screen and (max-width: 1250px){
-    .main{
+    .mainDesc{
         h2{
             font-size: 4rem;
         }
@@ -50,7 +50,7 @@
 }
 
 @media only screen and (max-width: 1000px) and (min-height: 600px){
-    .main{
+    .mainDesc{
         h2{
             font-size: 3.5rem;
         }
@@ -58,7 +58,7 @@
 }
 
 @media only screen and (max-width: 1050px) and (min-height: 1000px) {
-    .main{
+    .mainDesc{
         h2{
             width: 90%;
             padding-left: 5%;
@@ -68,7 +68,7 @@
 }
 
 @media only screen and (max-width: 900px) and (min-height: 800px) {
-    .main{
+    .mainDesc{
         h2{
             width: 100%;
             font-size: 4rem;
@@ -77,7 +77,7 @@
 }
 
 @media only screen and (max-width: 450px) and (max-height: 950px) {
-    .main{
+    .mainDesc{
         h2{
             width: 90%;
             margin-left: 5%;
