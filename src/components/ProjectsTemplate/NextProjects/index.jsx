@@ -2,9 +2,6 @@ import { useRef } from "react";
 import Projects from "./Projects";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import styles from "./style.module.scss";
-
-
 export default function NextProjects ({projects}) {
     const section = useRef(null);
     const projectsRef = useRef(null);
@@ -20,19 +17,19 @@ export default function NextProjects ({projects}) {
 
 
     return (
-        <section ref={section} className={styles.main}>
-            <div className={styles.text}>
+        <section ref={section} className="mainNextProjectComponent">
+            <div className="text">
                 <p>Podívejte se na další <span>Unikátní</span> Projekty</p>
             </div>
-            <div ref={projectsRef} className={styles.projects}>
+            <div ref={projectsRef} className="projects">
                 <Projects projects={projects}/>
             </div>
 
             <motion.div 
                 ref={curve}
-                className={styles.svgContainer} 
+                className="svgContainer" 
             >
-                <motion.div style={{height}}  className={styles.svgDiv}></motion.div>
+                <motion.div style={{height}}  className="svgDiv"></motion.div>
             </motion.div>
         </section>
     )

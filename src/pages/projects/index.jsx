@@ -40,8 +40,10 @@ export default function Home() {
       <Header />
       <Navbar />
       <CurveTransition>
-        <Projects />
-        <Footer />
+        <div className="page">
+          <Projects />
+          <Footer />
+        </div>
       </CurveTransition>
     </>
   );

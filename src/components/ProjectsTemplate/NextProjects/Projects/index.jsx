@@ -1,8 +1,5 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-
-import styles from './style.module.scss'
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
@@ -149,8 +146,8 @@ export default function Projects () {
 
     
     return (
-        <section ref={section} className={styles.main}>
-            <div className={styles.body}>
+        <section ref={section} className="mainNextProject">
+            <div className="body">
                 {
                     nextProjects.map((project, index) => {
                         const { title, src, alt, href } = project;
@@ -158,7 +155,7 @@ export default function Projects () {
                             <Link
                                 key={`l_${index}`} 
                                 href={href} 
-                                className={styles.project} 
+                                className="project"
                                 data-scroll data-scroll-speed={0.05 * (index + 1)}
                                 onMouseOver={() => {setSelectedProject({isActive: true, index})}} 
                                 onMouseLeave={() => {setSelectedProject({isActive: false, index})}}
@@ -185,8 +182,8 @@ export default function Projects () {
                     })
                 }
             </div>
-            <motion.div ref={cursor} className={styles.cursor} variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
-            <motion.div ref={label} className={styles.label} variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
+            <motion.div ref={cursor} className="cursor" variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
+            <motion.div ref={label} className="label" variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
                 <p>Zobrazit</p>
             </motion.div>
         </section>

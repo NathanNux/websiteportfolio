@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
-import styles from "./style.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import gsap from "gsap";
@@ -124,14 +122,14 @@ export default function IconList({ selectedCategory}) {
     }, [isPhoneDevice]);
         
     return (
-        <section className={styles.main} ref={section}>
-            <motion.div ref={cursor} className={styles.cursor} variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
-            <motion.div ref={label} className={styles.label} variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
+        <section className="mainIconList" ref={section}>
+            <motion.div ref={cursor} className="cursor" variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
+            <motion.div ref={label} className="label" variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
                 <p>Zobrazit</p>
             </motion.div>
 
             <LayoutGroup>
-                <div className={styles.body}>
+                <div className="body">
                     <AnimatePresence wait>
                         {
                             fileteredProjects.map((project, index) => {
@@ -148,12 +146,12 @@ export default function IconList({ selectedCategory}) {
                                         <Link
                                         key={`l_${index}`} 
                                         href={href} 
-                                        className={styles.project} 
+                                        className="project"
                                         onMouseOver={() => {setSelectedProject({isActive: true, index})}} 
                                         onMouseLeave={() => {setSelectedProject({isActive: false, index})}} 
                                         ref={el => projectsRef.current[index] = el}
                                         >
-                                            <motion.div className={styles.imageContainer}>
+                                            <motion.div className="imageContainer">
                                                 <div>
                                                     <Image 
                                                         src={src} 

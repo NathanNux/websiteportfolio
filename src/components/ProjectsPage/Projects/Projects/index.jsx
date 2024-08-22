@@ -1,4 +1,3 @@
-import styles from './style.module.scss';
 import Link from 'next/link';
 import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
 import { slide } from '../anim';
@@ -22,7 +21,7 @@ export default function Index ({setActiveProject, selectedCategory}) {
     }
 
     return (
-        <div className={styles.main} > 
+        <div className="mainProjectsAll" > 
             <LayoutGroup>
                 <ul onMouseLeave={debounce(() => {setActiveProject(null)}, 50)}>
                     <AnimatePresence>

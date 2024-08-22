@@ -1,5 +1,4 @@
 import Projects from './Projects'
-import styles from './style.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useScroll, useTransform} from 'framer-motion';
 import { opacity, slideUp } from './anim';
@@ -35,21 +34,21 @@ export default function ProjectsList() {
     },[])
 
     return (
-        <motion.section className={styles.main} variants={slideUp} initial='initial' animate='enter'>
-            <div className={styles.barContainer}>
+        <motion.section className="mainAllProjectsPage" variants={slideUp} initial='initial' animate='enter'>
+            <div className="barContainer">
                 
-                <div className={styles.header}>
+                <div className="headerProjects">
                     <p>Všechny projekty</p>
                 </div>
                
-                <div className={styles.bar}>
-                    <div className={styles.buttons}>
+                <div className="bar">
+                    <div className="buttons">
                         <ButtonClick title='Všechny' onClick={() => setSelectedCategory('all')} trigger='all' currentView={view} filterCategory={selectedCategory}/>
                         <ButtonClick title='Aplikace' onClick={() => setSelectedCategory('app')} trigger='app' currentView={view} filterCategory={selectedCategory}/>
                         <ButtonClick title='Webovky' onClick={() => setSelectedCategory('web')} trigger='web' currentView={view} filterCategory={selectedCategory}/>
                     </div>
 
-                    <div className={styles.buttons}>
+                    <div className="buttons">
                         <ButtonClick 
                             onClick={() => handleViewChange('list')} 
                             trigger='list' 
@@ -101,9 +100,9 @@ export default function ProjectsList() {
             <AnimatePresence wait>
                 {/* need to have the key in there. without it. The el with list or icon will not be recognized as list or icon => no animations */}
                 {view === 'list' && (
-                    <motion.div className={styles.list} ref={ref} key='list' variants={opacity} initial="exit" animate='enter' exit='exit'>
-                        <div className={styles.options}>
-                            <div className={styles.section}>
+                    <motion.div className="list" ref={ref} key='list' variants={opacity} initial="exit" animate='enter' exit='exit'>
+                        <div className="options">
+                            <div className="section">
                                 <Projects setActiveProject={setActiveProject} selectedCategory={selectedCategory}/>
                             </div>
                         </div>
@@ -112,10 +111,10 @@ export default function ProjectsList() {
                 )}
 
                 {view === 'icon' && (
-                    <motion.div className={styles.iconList} key='icon' variants={opacity} initial='exit' animate='enter' exit='exit'>
+                    <motion.div className="iconList" key='icon' variants={opacity} initial='exit' animate='enter' exit='exit'>
                         <div>
-                            <section className={styles.mainIcon}>
-                                <div className={styles.projects}>
+                            <section className="mainIcon">
+                                <div className="projects">
                                     <IconList selectedCategory={selectedCategory} />
                                 </div>
                             </section>
@@ -126,9 +125,9 @@ export default function ProjectsList() {
 
             <motion.div 
                 ref={curve}
-                className={styles.svgContainer} 
+                className="svgContainer"
             >
-                <motion.div style={{height}}  className={styles.svgDiv}></motion.div>
+                <motion.div style={{height}}  className="svgDiv"></motion.div>
             </motion.div>
 
         </motion.section>

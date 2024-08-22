@@ -1,4 +1,4 @@
-.main{
+.mainAllProjectsPage{
     display: flex;
     flex-direction: column;
     justify-content: top;
@@ -43,13 +43,15 @@
         gap: 2em;
         width: 80%;
         left: 10%;
-        z-index: 2;
+        z-index: 3;
 
-        .header {
+        .headerProjects {
             display: flex;
             justify-content: left;
             align-items: center;
             width: 100%;
+            z-index: 4;
+            position: relative;
 
             p{
                 position: relative;

@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import styles from './style.module.scss'
 import { useState } from 'react';
 import Image from 'next/image';
 import { textTranslate } from '@/components/anim';
@@ -36,7 +34,7 @@ export default function Projects ({photos}) {
     
     return (
         <section>
-            <div className={styles.body}>
+            <div className="bodyMobileView">
                 {
                     photos.map((project, index) => {
                         const { title, src, alt, href } = project;
@@ -44,7 +42,7 @@ export default function Projects ({photos}) {
                             <div
                                 key={`l_${index}`} 
                                 href={href} 
-                                className={styles.project} 
+                                className="project"
                                 data-scroll data-scroll-speed={0.05 * (index + 1)}
                                 onMouseOver={() => {setSelectedProject({isActive: true, index})}} 
                                 onMouseLeave={() => {setSelectedProject({isActive: false, index})}} 

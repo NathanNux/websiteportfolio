@@ -20,6 +20,22 @@
 @import '../components/LandingPage/NewestWork/Scene/styles.scss';
 @import '../components/LandingPage/NewestWork/styles.scss';
 
+//Project page
+@import '../components/ProjectsPage/Projects/IconList/styles.scss';
+@import '../components/ProjectsPage/Projects/Projects/styles.scss';
+@import '../components/ProjectsPage/Projects/Scene/styles.scss';
+@import '../components/ProjectsPage/Projects/styles.scss';
+
+//Individual Project page
+@import '../components/ProjectsTemplate/TopBar/styles.scss';
+@import '../components/ProjectsTemplate/NextProjects/Projects/styles.scss';
+@import '../components/ProjectsTemplate/NextProjects/styles.scss';
+@import '../components/ProjectsTemplate/Sections/Introduction/styles.scss';
+@import '../components/ProjectsTemplate/Sections/MobileView/Projects/styles.scss';
+@import '../components/ProjectsTemplate/Sections/MobileView/styles.scss';
+@import '../components/ProjectsTemplate/Sections/Services/styles.scss';
+@import '../components/ProjectsTemplate/Sections/StyleChoice/styles.scss';
+
 //preloader 
 @import '../components/Preloader/styles.scss';
 //transition
