@@ -244,11 +244,11 @@ export default function Contact() {
     };
 
     return (
-        <motion.section variants={slideUp} initial="initial" animate='enter' className="mainContact">
+        <motion.section variants={slideUp} initial="initial" animate='enter' className="mainContactIntro">
             <div className="toast">
                 <Toaster />
             </div>
-            <div className="header">
+            <div className="headerIntro">
                 <h1>Pojďme se spojit, <br />budovat a uspět!</h1>
                 <div className="imageContainer" data-scroll data-scroll-speed={0.05}>
                     <Image src="/images/landing/background.png" alt="photo" fill sizes="true" />

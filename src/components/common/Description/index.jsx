@@ -32,7 +32,7 @@ const Paragraph = ({text}) => {
   const ref = useRef(null);
   const {scrollYProgress} = useScroll({
       target: ref,
-      offset: ['start 0.6', 'start 0.1']
+      offset: ['start 0.8', 'start 0.2']
   });
 
   // Split the text into lines using <br/> as the separator

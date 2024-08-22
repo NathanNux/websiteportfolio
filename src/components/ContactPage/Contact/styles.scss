@@ -1,4 +1,4 @@
-.mainContact {
+.mainContactIntro {
     display: flex;
     flex-direction: column;
     justify-content: top;
@@ -86,12 +86,13 @@
         }
 
     }
-    .header{
+    .headerIntro{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 80%;
         position: relative;
+        z-index: 1;
         h1{
             font-size: 5rem;
             font-weight: 500;
