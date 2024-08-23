@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { slideUp } from "@/components/anim";
 
-export default function ZoomParallax({src1, src2, src3, src4, src5, src6, src7, path, text}) {
+export default function ZoomParallax({src2, src3, src4, src5, src6, src7, path, text}) {
 
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({

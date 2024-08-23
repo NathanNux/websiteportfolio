@@ -6,63 +6,63 @@ import Lenis from "@studio-freight/lenis"
 
 const videos = [
     {
-        src: "/assets/a-footage/applesite.mp4",
+        src: "/assets/a-footage/applesite.webm",
         alt: "website_1"
     },
     {
-        src: "/assets/a-footage/3dpc.mp4",
+        src: "/assets/a-footage/3dpc.webm",
         alt: "website_2"
     },
     {
-        src: "/assets/a-footage/3dtshirt.mp4",
+        src: "/assets/a-footage/3dtshirt.webm",
         alt: "website_3"
     },
     {
-        src: "/assets/a-footage/bank.mp4",
+        src: "/assets/a-footage/bank.webm",
         alt: "website_4"
     },
     {
-        src: "/assets/a-footage/beginner-components-1.mp4",
+        src: "/assets/a-footage/beginner-components-1.webm",
         alt: "website_5"
     },
     {
-        src: "/assets/a-footage/beginner-components-2.mp4",
+        src: "/assets/a-footage/beginner-components-2.webm",
         alt: "website_6"
     },
     {
-        src: "/assets/a-footage/brainwave-site.mp4",
+        src: "/assets/a-footage/brainwave-site.webm",
         alt: "website_7"
     },
     {
-        src: "/assets/a-footage/denis-clone.mp4",
+        src: "/assets/a-footage/denis-clone.webm",
         alt: "website_8"
     },
     {
-        src: "/assets/a-footage/framerscroll.mp4",
+        src: "/assets/a-footage/framerscroll.webm",
         alt: "website_9"
     },
     {
-        src: "/assets/a-footage/gsap-all.mp4",
+        src: "/assets/a-footage/gsap-all.webm",
         alt: "website_10"
     },
     {
-        src: "/assets/a-footage/nft-site.mp4",
+        src: "/assets/a-footage/nft-site.webm",
         alt: "website_11"
     },
     {
-        src: "/assets/a-footage/smooth-scroll.mp4",
+        src: "/assets/a-footage/smooth-scroll.webm",
         alt: "website_12"
     },
     {
-        src: "/assets/b-footage/bc1.mp4",
+        src: "/assets/b-footage/bc1.webm",
         alt: "website_13"
     },
     {
-        src: "/assets/a-footage/windmill.mp4",
+        src: "/assets/a-footage/windmill.webm",
         alt: "website_14"
     },
     {
-        src: "/assets/b-footage/bc7.mp4",
+        src: "/assets/b-footage/bc7.webm",
         alt: "website_15"
     },
 ]
@@ -250,7 +250,7 @@ const Column = ({videos, images, y }) => {
                                     setIsLoaded(newIsLoaded)
                                 }}
                             >
-                                <source src={src} type="video/mp4"/>
+                                <source src={src} type="video/webm"/>
                             </video>
                         )}
                     </div>
