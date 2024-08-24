@@ -65,7 +65,7 @@ export default function Index() {
       />
       <motion.main variants={scale} initial="initial" animate='enter' className="imageContainer" data-scroll data-scroll-speed={0.1}>
         <Image 
-            src='/images/landing/7.jpg'
+            src='/images/landing/7.webp'
             alt='materials'
             fill
             sizes="true"
