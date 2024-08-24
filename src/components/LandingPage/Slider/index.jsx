@@ -4,130 +4,82 @@ import Image from "next/image"
 import { useScroll, useTransform, motion } from "framer-motion"
 import Lenis from "@studio-freight/lenis"
 
-const videos = [
-    {
-        src: "/assets/b-footage/bc1.webm",
-        alt: "website_1"
-    },
-    {
-        src: "/assets/a-footage/3dpc.webm",
-        alt: "website_2"
-    },
-    {
-        src: "/assets/a-footage/3dtshirt.webm",
-        alt: "website_3"
-    },
-    {
-        src: "/assets/a-footage/bank.webm",
-        alt: "website_4"
-    },
-    {
-        src: "/assets/a-footage/beginner-components-1.webm",
-        alt: "website_5"
-    },
-    {
-        src: "/assets/a-footage/beginner-components-2.webm",
-        alt: "website_6"
-    },
-    {
-        src:  "/assets/a-footage/denis-clone.webm",
-        alt: "website_7"
-    },
-    {
-        src: "/assets/a-footage/applesite.webm",
-        alt: "website_8"
-    },
-    {
-        src: "/assets/a-footage/framerscroll.webm",
-        alt: "website_9"
-    },
-    {
-        src: "/assets/a-footage/gsap-all.webm",
-        alt: "website_10"
-    },
-    {
-        src: "/assets/a-footage/nft-site.webm",
-        alt: "website_11"
-    },
-    {
-        src: "/assets/a-footage/smooth-scroll.webm",
-        alt: "website_12"
-    },
-    {
-        src: "/assets/a-footage/brainwave-site.webm",
-        alt: "website_13"
-    },
-    {
-        src: "/assets/a-footage/windmill.webm",
-        alt: "website_14"
-    },
-    {
-        src: "/assets/b-footage/bc7.webm",
-        alt: "website_15"
-    },
-]
-
-const images = [
-    {
-        src: "/assets/images/projects/3dtshirt.webp",
+const assets = [
+    {  
+        src: "/assets/images/projects/components.webp",
+        path: "/assets/b-footage/bc1.webm",
         alt: "website_1"
     },
     {
         src: "/assets/images/projects/3dpc.webp",
+        path: "/assets/a-footage/3dpc.webm",
         alt: "website_2"
     },
     {
-        src: "/assets/images/projects/apple-site.webp",
+        src: "/assets/images/projects/3dtshirt.webp",
+        path: "/assets/a-footage/3dtshirt.webm",
         alt: "website_3"
     },
     {
         src: "/assets/images/projects/bank.webp",
+        path: "/assets/a-footage/bank.webm",
         alt: "website_4"
     },
     {
         src: "/assets/images/projects/components.webp",
+        path: "/assets/a-footage/beginner-components-1.webm",
         alt: "website_5"
     },
     {
-        src: "/assets/images/projects/agency.webp",
+        src: "/assets/images/projects/components.webp",
+        path: "/assets/a-footage/beginner-components-2.webm",
         alt: "website_6"
     },
     {
-        src: "/assets/images/projects/brainwave.webp",
+        src: "/assets/images/projects/denisclone.webp",
+        path:  "/assets/a-footage/denis-clone.webm",
         alt: "website_7"
     },
     {
-        src: "/assets/images/projects/denisclone.webp",
+        src: "/assets/images/projects/apple-site.webp",
+        path: "/assets/a-footage/applesite.webm",
         alt: "website_8"
     },
     {
         src: "/assets/images/projects/framer.webp",
+        path: "/assets/a-footage/framerscroll.webm",
         alt: "website_9"
     },
     {
         src: "/assets/images/projects/components.webp",
+        path: "/assets/a-footage/gsap-all.webm",
         alt: "website_10"
     },
     {
         src: "/assets/images/projects/nft.webp",
+        path: "/assets/a-footage/nft-site.webm",
         alt: "website_11"
     },
     {
         src: "/assets/images/projects/smoothscroll.webp",
+        path: "/assets/a-footage/smooth-scroll.webm",
         alt: "website_12"
     },
     {
-        src: "/assets/images/projects/sushi.webp",
+        src: "/assets/images/projects/brainwave.webp",
+        path: "/assets/a-footage/brainwave-site.webm",
         alt: "website_13"
     },
     {
         src: "/assets/images/projects/3dwindmill.webp",
+        path: "/assets/a-footage/windmill.webm",
         alt: "website_14"
     },
     {
-        src: "/assets/images/projects/apple-site.webp",
+        src: "/assets/images/projects/components.webp",
+        path: "/assets/b-footage/bc7.webm",
         alt: "website_15"
-    }
+    },
 ]
 
 
@@ -135,8 +87,6 @@ export default function Index (){
     const [dimension, setDimension] = useState({width:0, height:0});
     const { height } = dimension
     const slider = useRef(null)
-    const sectionRef = useRef(null)
-    const [ isVisible, setIsVisible ] = useState(false)
 
     const { scrollYProgress } = useScroll({
         targer: slider,
@@ -170,96 +120,63 @@ export default function Index (){
         }
     }, [])
 
-    useEffect( () => {
-        const currentSection = sectionRef.current
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach( entry => {
-                    if(entry.isIntersecting) {
-                        setIsVisible(true)
-                    }
-                })
-            },
-            { threshold: 0.1 }
-        )
-
-        if (currentSection) {
-            observer.observe(currentSection); // Observe the column
-        }
-        return () => {
-            if (currentSection) {
-                observer.unobserve(currentSection);
-            }
-        };
-    }, [videos])
-
 
     return ( 
-        <section className="mainSlider" ref={sectionRef}>
+        <section className="mainSlider">
             <div className="body">
                 <div ref={slider} className="slider">
-                <Column videos={videos.slice(0,5)} images={images.slice(0,5)} y={y1} mainIsVisible={isVisible}/>
-                <Column videos={videos.slice(6,10)} images={images.slice(6, 10)} y={y2} mainIsVisible={isVisible}/>
-                <Column videos={videos.slice(11,15)} images={images.slice(11,15)} y={y3} mainIsVisible={isVisible}/>
-                <Column videos={videos.slice(0,5)} images={images.slice(0,5)} y={y4} mainIsVisible={isVisible}/>
-                <Column videos={videos.slice(6,10)} images={images.slice(6,10)} y={y5} mainIsVisible={isVisible}/>
+                    <Column assets={assets.slice(0,5)} y={y1} />
+                    <Column assets={assets.slice(5,10)} y={y2} />
+                    <Column assets={assets.slice(10,15)} y={y3} />
+                    <Column assets={assets.slice(0,5)} y={y4} />
+                    <Column assets={assets.slice(5,10)} y={y5} />
+                </div>
             </div>
-            </div>
-
-            
         </section>
     )
 }
 
-const Column = ({videos, images, y, mainIsVisible }) => {
-    const [ isLoaded, setIsLoaded ] = useState(videos.map(() => false))
+const Column = ({ assets, y }) => {
+    const [isLoaded, setIsLoaded] = useState(assets.map(() => false));
 
-    // this is created to minimise the video load time consuption
-    // observer function is ther to check every video if its in the viewport, if not, it will not load the video
-
+    // I have cut all of the observer function and the useEffect function, because it was too complicated
+    // this version now just waits to the videos to load with a 2 second delay and then displays them
+    // this will load each object video and image separetly, so the page will look better and smoother
     return (
-        <motion.section className="column" style={{y}}>
-            { !isLoaded && images.map((image, index) => {
-                const { src, alt } = image
+        <motion.section className="column" style={{ y }}>
+            {assets.map((asset, index) => {
+                const { src, alt, path } = asset;
                 return (
                     <div key={index} className="imageContainer">
-                        <Image 
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            preload="metadata"
+                            style={{ display: isLoaded[index] ? "block" : "none" }}
+                            onLoadedData={() => {
+                                // Set a timeout to delay marking the video as loaded
+                                setTimeout(() => {
+                                    setIsLoaded(currentLoaded => {
+                                        const newIsLoaded = [...currentLoaded];
+                                        newIsLoaded[index] = true;
+                                        return newIsLoaded;
+                                    });
+                                }, 2000); // 2-second delay
+                            }}
+                        >
+                            <source src={path} type="video/webm" />
+                        </video>
+                        {!isLoaded[index] && <Image
                             src={src}
                             alt={alt}
                             fill
                             sizes="true"
                             loading="lazy"
-                        />
+                        />}
                     </div>
-                )
-            })}
-            
-            {videos.map((video, index) => {
-                const { src } = video
-                return (
-                    <div key={index} className="imageContainer">
-                        {mainIsVisible && (
-                            <video 
-                                autoPlay 
-                                loop 
-                                muted
-                                preload="metadata"
-                                style={{ display: isLoaded ? "block" : "none"}}
-                                onLoadedData={ () => {
-                                    const newIsLoaded = [...isLoaded]
-                                    newIsLoaded[index] = true
-                                    setIsLoaded(newIsLoaded)
-                                }}
-                                // optimise the way the videos are loaded. If the video is not in the viewport, it will not load the video
-                                // or to load images while the vidoes will get loaded, that will look better
-                                // do the same in the section component
-                            >
-                                <source src={src} type="video/webm"/>
-                            </video>
-                        )}
-                    </div>
-                )
+                );
             })}
         </motion.section>
-    )
-}
+    );
+};
