@@ -1,18 +1,18 @@
 export const freeProjects = [
     {
-        src: '/images/landing/3.jpg',
+        src: '/images/landing/3.webp',
         alt: 'project1',
         title: 'E-Kurz: Má první webovka',
         href: '/'
     },
     {
-        src: '/images/landing/2.jpg',
+        src: '/images/landing/2.webp',
         alt: 'project2',
         title: 'E-Book: SEO Začátečník',
         href: '/'
     },
     {
-        src: '/images/landing/4.jpg',
+        src: '/images/landing/4.webp',
         alt: 'project3',
         title: 'E-Kurz: Vznik kvality online',
         href: '/'
