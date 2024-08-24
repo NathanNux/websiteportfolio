@@ -54,3 +54,30 @@ Be aware of GSAP scrollTrigger, look into this project, useLayoutEffect will not
 // WIP: Optimise all of the videos, using HEVC format and lov framerrate with lower res. 720p should do on smaller components, 2K might be a lot to load
 
 Use Video Tags Wisely: For self-hosted videos, use the <video> tag with attributes like preload="none" or preload="metadata" to control how much of the video is preloaded.
+
+Unhandled Runtime Error
+TypeError: Cannot read properties of null (reading 'material')
+
+Source
+src/components/ProjectsPage/Projects/Model/index.jsx (55:89) @ material
+
+  53 |         if(mesh.current && mesh.current.material) {
+  54 |             if(activeProject != null) {
+> 55 |                 animate(opacity, 1, { duration: 0.5, onUpdate: progress => mesh.current.material.uniforms.uAlpha.value = progress})
+     |                                                                                         ^
+  56 |                 mesh.current.material.uniforms.uAlpha.value = 1;
+  57 |                 mesh.current.material.uniforms.uTexture.value = textures[activeProject];
+  58 |             }
+
+  TypeError: Cannot read properties of null (reading 'setAttributeNS')
+
+Source
+src/components/common/Footer/index.jsx (39:18) @ setAttributeNS
+
+  37 |     const setPath = useCallback((progress) => {
+  38 |     const width = window.innerWidth * 0.7;
+> 39 |     path.current.setAttributeNS(null, "d", `M0 250 Q${width * x} ${250 + progress}, ${width} 250`);
+     |                  ^
+  40 |     }, []);
+  41 |
+  42 |   const lerp = (x, y, z) => x * (1 - z) + y * z;

@@ -51,6 +51,7 @@ export default function Section ({images, phrases, styles}) {
                                 <source src={image.path} type="video/mp4"/>
                             </video>
                         }
+                        {image.path && !isLoaded && <Image src={image.src} alt={image.alt} fill sizes="true"/>}
                     </div>
                 ))}
             </div>

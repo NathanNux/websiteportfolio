@@ -4,14 +4,18 @@ import { useRef, useLayoutEffect, useEffect, useState, useMemo } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { slideUp } from "@/components/anim";
+import { usePathname } from "next/navigation";
 
 export default function ZoomParallax({src2, src3, src4, src5, src6, src7, path, text}) {
 
     const ref = useRef(null);
+    const videoRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ['start start', 'end end']
     })
+    
+    const pathname = usePathname()
 
     const scale1 = useTransform(scrollYProgress, [0, 1], [1, 4]);
     const scale2 = useTransform(scrollYProgress, [0, 1], [1, 5]);
@@ -25,8 +29,6 @@ export default function ZoomParallax({src2, src3, src4, src5, src6, src7, path, 
     let xPercent = 0;
     let direction = -1;
     const [ isLoaded, setIsLoaded ] = useState(false)
-    const [ isVisible, setIsVisible ] = useState(false)
-    const columnRef = useRef(null)
 
     const videos = useMemo(() => 
         [
@@ -113,34 +115,55 @@ export default function ZoomParallax({src2, src3, src4, src5, src6, src7, path, 
       }
     }, [firstText, secondText]);
 
-    // we are again looping through the videos and checking if they are in the viewport, if they are, we are setting the isLoaded to true
+    useEffect(() => {
+        if(pathname === "/") {
+            const timer = setTimeout(() => {
+                setIsLoaded(true)
+            },5000)
 
+            return () => clearTimeout(timer)
+        } else {
+            const timer = setTimeout(() => {
+                setIsLoaded(true)
+            },500)
 
-    useEffect( () => {
+            return () => clearTimeout(timer)
+        }
+    }, [])
+
+    useEffect(() => {
+        const video = videoRef.current;
         const observer = new IntersectionObserver(
             (entries) => {
-                entries.forEach( entry => {
-                    if(entry.isIntersecting) {
-                        setIsVisible(true)
-                    }
-                })
-            },
-            { threshold: 0.1 }
-        )
-
-        if (columnRef.current) {
-            observer.observe(columnRef.current); // Observe the column
-        }
-        return () => {
-            if (columnRef.current) {
-                observer.unobserve(columnRef.current);
+                const [entry] = entries;
+                if(entry.isIntersecting) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            }, 
+            {
+                threshold: 0.25
             }
-        };
-    }, [pictures])
+        );
+
+        if(video) {
+            observer.observe(video);
+        }
+
+        return () => {
+            if(video){
+                video.pause();
+                observer.unobserve(video)
+            }
+        }
+    }, [videoRef])
+
+    // we are again looping through the videos and checking if they are in the viewport, if they are, we are setting the isLoaded to true
 
     return(
         <motion.section ref={ref} className="mainParallaxZoom" variants={slideUp} initial='initial' animate='enter'>
-            <div className="container" ref={columnRef}>
+            <div className="container">
                 {videos.map((video, i) => (
                     <motion.div
                         key={i}
@@ -148,13 +171,13 @@ export default function ZoomParallax({src2, src3, src4, src5, src6, src7, path, 
                         style={{ scale: video.scale }}
                     >
                         <div className="imageContainer">
-                            {isVisible && 
+                            {isLoaded && 
                                 <video
+                                    ref={videoRef}
                                     autoPlay
                                     loop
                                     muted
-                                    onLoadedData={ () => setIsLoaded(true)}
-                                    style={{ display: isLoaded ? "block" : "none"}}
+                                    style={{ display: "block"}}
                                 >
                                     <source src={video.path} type="video/mp4"/>
                                 </video>
