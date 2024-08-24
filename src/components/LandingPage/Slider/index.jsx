@@ -6,7 +6,7 @@ import Lenis from "@studio-freight/lenis"
 
 const videos = [
     {
-        src: "/assets/a-footage/applesite.webm",
+        src: "/assets/b-footage/bc1.webm",
         alt: "website_1"
     },
     {
@@ -30,11 +30,11 @@ const videos = [
         alt: "website_6"
     },
     {
-        src: "/assets/a-footage/brainwave-site.webm",
+        src:  "/assets/a-footage/denis-clone.webm",
         alt: "website_7"
     },
     {
-        src: "/assets/a-footage/denis-clone.webm",
+        src: "/assets/a-footage/applesite.webm",
         alt: "website_8"
     },
     {
@@ -54,7 +54,7 @@ const videos = [
         alt: "website_12"
     },
     {
-        src: "/assets/b-footage/bc1.webm",
+        src: "/assets/a-footage/brainwave-site.webm",
         alt: "website_13"
     },
     {
@@ -135,10 +135,14 @@ export default function Index (){
     const [dimension, setDimension] = useState({width:0, height:0});
     const { height } = dimension
     const slider = useRef(null)
+    const sectionRef = useRef(null)
+    const [ isVisible, setIsVisible ] = useState(false)
+
     const { scrollYProgress } = useScroll({
         targer: slider,
         offset: ['start end', 'end start' ] // when the anim will play (start on the container and end of the window (top, bottom) and then when i want to stop (bottom of the container, start of the window))
     })
+
     const y1 = useTransform(scrollYProgress, [ 0, 1], [ 0, height * 1.5])
     const y2 = useTransform(scrollYProgress, [ 0, 1], [ 0, height * 5.5])
     const y3 = useTransform(scrollYProgress, [ 0, 1], [ 0, height * 10])
@@ -166,35 +170,8 @@ export default function Index (){
         }
     }, [])
 
-
-    return ( 
-        <section className="mainSlider">
-            <div className="body">
-                <div ref={slider} className="slider">
-                <Column videos={videos.slice(0,5)} images={images.slice(0,5)} y={y1}/>
-                <Column videos={videos.slice(6,10)} images={images.slice(6, 10)} y={y2}/>
-                <Column videos={videos.slice(11,15)} images={images.slice(11,15)} y={y3}/>
-                <Column videos={videos.slice(0,5)} images={images.slice(0,5)} y={y4}/>
-                <Column videos={videos.slice(6,10)} images={images.slice(6,10)} y={y5}/>
-            </div>
-            </div>
-
-            
-        </section>
-    )
-}
-
-const Column = ({videos, images, y }) => {
-    const [ isLoaded, setIsLoaded ] = useState(videos.map(() => false))
-    const [ isVisible, setIsVisible ] = useState(false)
-    const columnRef = useRef(null)
-
-    // this is created to minimise the video load time consuption
-    // observer function is ther to check every video if its in the viewport, if not, it will not load the video
-
-
     useEffect( () => {
-        const currentColumn = columnRef.current
+        const currentSection = sectionRef.current
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach( entry => {
@@ -206,18 +183,42 @@ const Column = ({videos, images, y }) => {
             { threshold: 0.1 }
         )
 
-        if (currentColumn) {
-            observer.observe(currentColumn); // Observe the column
+        if (currentSection) {
+            observer.observe(currentSection); // Observe the column
         }
         return () => {
-            if (currentColumn) {
-                observer.unobserve(currentColumn);
+            if (currentSection) {
+                observer.unobserve(currentSection);
             }
         };
     }, [videos])
 
+
+    return ( 
+        <section className="mainSlider" ref={sectionRef}>
+            <div className="body">
+                <div ref={slider} className="slider">
+                <Column videos={videos.slice(0,5)} images={images.slice(0,5)} y={y1} mainIsVisible={isVisible}/>
+                <Column videos={videos.slice(6,10)} images={images.slice(6, 10)} y={y2} mainIsVisible={isVisible}/>
+                <Column videos={videos.slice(11,15)} images={images.slice(11,15)} y={y3} mainIsVisible={isVisible}/>
+                <Column videos={videos.slice(0,5)} images={images.slice(0,5)} y={y4} mainIsVisible={isVisible}/>
+                <Column videos={videos.slice(6,10)} images={images.slice(6,10)} y={y5} mainIsVisible={isVisible}/>
+            </div>
+            </div>
+
+            
+        </section>
+    )
+}
+
+const Column = ({videos, images, y, mainIsVisible }) => {
+    const [ isLoaded, setIsLoaded ] = useState(videos.map(() => false))
+
+    // this is created to minimise the video load time consuption
+    // observer function is ther to check every video if its in the viewport, if not, it will not load the video
+
     return (
-        <motion.section ref={columnRef} className="column" style={{y}}>
+        <motion.section className="column" style={{y}}>
             { !isLoaded && images.map((image, index) => {
                 const { src, alt } = image
                 return (
@@ -237,7 +238,7 @@ const Column = ({videos, images, y }) => {
                 const { src } = video
                 return (
                     <div key={index} className="imageContainer">
-                        {isVisible && (
+                        {mainIsVisible && (
                             <video 
                                 autoPlay 
                                 loop 
@@ -249,6 +250,9 @@ const Column = ({videos, images, y }) => {
                                     newIsLoaded[index] = true
                                     setIsLoaded(newIsLoaded)
                                 }}
+                                // optimise the way the videos are loaded. If the video is not in the viewport, it will not load the video
+                                // or to load images while the vidoes will get loaded, that will look better
+                                // do the same in the section component
                             >
                                 <source src={src} type="video/webm"/>
                             </video>
