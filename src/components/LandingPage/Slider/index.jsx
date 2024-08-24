@@ -138,42 +138,61 @@ export default function Index (){
 
 const Column = ({ assets, y }) => {
     const [isLoaded, setIsLoaded] = useState(assets.map(() => false));
+    const containerRefs = useRef([]);
 
     // I have cut all of the observer function and the useEffect function, because it was too complicated
     // this version now just waits to the videos to load with a 2 second delay and then displays them
     // this will load each object video and image separetly, so the page will look better and smoother
+
+    // it lags the main loading phase, need an observer useEffect
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const index  = containerRefs.current.indexOf(entry.target);
+                        if (index !== -1) {
+                            setTimeout(() => {
+                                setIsLoaded(currentLoaded => {
+                                    const newIsLoaded = [...currentLoaded];
+                                    newIsLoaded[index] = true;
+                                    return newIsLoaded;
+                                });
+                            }, 2000);
+                        }
+                    }
+                })
+            },
+            {
+                rootMargin: "0px",
+                threshold: 0.05
+            }
+        );
+
+        containerRefs.current.forEach((ref) => {
+            if(ref) observer.observe(ref);
+        });
+        return () => {
+            containerRefs.current.forEach((ref) => {
+                if(ref) observer.unobserve(ref);
+            });
+        }
+    },[assets])
+
     return (
         <motion.section className="column" style={{ y }}>
             {assets.map((asset, index) => {
                 const { src, alt, path } = asset;
                 return (
-                    <div key={index} className="imageContainer">
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            preload="metadata"
-                            style={{ display: isLoaded[index] ? "block" : "none" }}
-                            onLoadedData={() => {
-                                // Set a timeout to delay marking the video as loaded
-                                setTimeout(() => {
-                                    setIsLoaded(currentLoaded => {
-                                        const newIsLoaded = [...currentLoaded];
-                                        newIsLoaded[index] = true;
-                                        return newIsLoaded;
-                                    });
-                                }, 2000); // 2-second delay
-                            }}
-                        >
-                            <source src={path} type="video/webm" />
-                        </video>
-                        {!isLoaded[index] && <Image
-                            src={src}
-                            alt={alt}
-                            fill
-                            sizes="true"
-                            loading="lazy"
-                        />}
+                    <div ref={el => containerRefs.current[index] = el} key={index} className="imageContainer">
+                        {isLoaded[index] && (
+                            <video autoPlay loop muted preload="metadata" style={{ display: "block" }}>
+                                <source src={path} type="video/webm" />
+                            </video>
+                        )}
+                        {!isLoaded[index] && (
+                            <Image src={src} alt={alt} fill sizes="true" loading="lazy" />
+                        )}
                     </div>
                 );
             })}
