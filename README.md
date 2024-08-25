@@ -81,3 +81,54 @@ src/components/common/Footer/index.jsx (39:18) @ setAttributeNS
   40 |     }, []);
   41 |
   42 |   const lerp = (x, y, z) => x * (1 - z) + y * z;
+
+
+On phone there is starnge phenomenon I wasn't able to figure out. framer annimations and some of gsap anims are lagging on Power Saver Mode. When it's on nromal everything is fine and looks picture perfect. 
+
+Copilot after ton of reasearch said this: 
+
+Use the useReducedMotion Hook: Framer Motion supports the useReducedMotion hook, which respects the user's system preference for reduced motion. This can automatically adjust your animations for users who prefer less motion, which could correlate with those on power saver modes.
+
+this could be valiable solition but i need to finish the porfolio first for now. some scss on pphone does not look good and texts and my main photos are still nto there. 
+
+import { useEffect, useState } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+
+const PageCurveTransition = ({ children, routes, router, anim, isLoading, text }) => {
+    const [dimensions, setDimensions] = useState({});
+    const shouldReduceMotion = useReducedMotion(); // Using the hook
+
+    useEffect(() => {
+        function resize() {
+            setDimensions({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        }
+        resize();
+        window.addEventListener('resize', resize);
+        return () => {
+            window.removeEventListener('resize', resize);
+        };
+    }, []);
+
+    // Adjusting animation based on the shouldReduceMotion value
+    const adjustedAnim = shouldReduceMotion ? {} : anim(text);
+
+    return (
+        <div className="pageCurveTransition">
+            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className="background" />
+            <motion.p className="route" {...adjustedAnim} style={{ scale: isLoading ? 1 : 0 }}>
+                <span></span> {routes[router.pathname]}
+            </motion.p>
+            {dimensions.width != null && <SVG {...dimensions} />}
+            {children}
+        </div>
+    );
+};
+
+const SVG = ({ height, width }) => {
+    // SVG component implementation
+};
+
+export default PageCurveTransition;
