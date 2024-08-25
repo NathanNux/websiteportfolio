@@ -25,8 +25,6 @@
         .svgDiv {
             box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
             position: absolute;
-            width: 130%;
-            left: -15%;
             border-radius: 0% 0% 50% 50%;
             background-color: white;
             z-index: 1;
@@ -136,32 +134,36 @@
             position: relative;
             background-color: white;
             z-index: 2;
-
         
             .projects{
                 z-index: 2;
                 background-color: white;
             }
-            .cursor, .label{
-                width: 125px;
-                height: 125px;
-                border-radius: 50%;
-                background-color: #22272d;
-                color: white;
-                position: absolute;
-                z-index: 2;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.5em;
-                font-weight: 300;
-                pointer-events: none;
-            }
-            
-            .label{
-                background-color: transparent;
-            }
         
+        }
+    }
+}
+
+// Assume devices that can hover and have a fine pointer (e.g., mouse) are not touch devices
+@media (hover: hover) and (pointer: fine) {
+    .mainAllProjectsPage{
+        .svgContainer{
+            .svgDiv{
+                width: 130%;
+                left: -15%;
+            }
+        }
+    }
+}
+
+// For touch devices (which typically can't hover and have coarse pointers), allow vertical scrolling
+@media (hover: none) and (pointer: coarse) {
+    .mainAllProjectsPage{
+        .svgContainer{
+            .svgDiv{
+                width: 100%;
+                left: 0%;
+            }
         }
     }
 }

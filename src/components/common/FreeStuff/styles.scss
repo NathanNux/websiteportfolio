@@ -23,8 +23,6 @@
         .svgDiv {
             box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
             position: absolute;
-            width: 130%;
-            left: -15%;
             border-radius: 0% 0% 50% 50%;
             background-color: white;
             z-index: 1;
@@ -68,7 +66,6 @@
         color: white;
         position: absolute;
         z-index: 2;
-        display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.5em;
@@ -81,6 +78,37 @@
     }
 
 }
+
+// Assume devices that can hover and have a fine pointer (e.g., mouse) are not touch devices
+@media (hover: hover) and (pointer: fine) {
+    .mainFreeStuff{
+        .svgContainer{
+            .svgDiv{
+                width: 130%;
+                left: -15%;
+            }
+        }
+        .cursor, .label{
+            display: flex;
+        }
+    }
+}
+
+// For touch devices (which typically can't hover and have coarse pointers), allow vertical scrolling
+@media (hover: none) and (pointer: coarse) {
+    .mainFreeStuff{
+        .svgContainer{
+            .svgDiv{
+                width: 100%;
+                left: 0%;
+            }
+        }
+        .cursor, .label{
+            display: none;
+        }
+    }
+}
+   
 
 @media only screen and (max-width: 1250px) {
 

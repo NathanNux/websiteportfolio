@@ -1,12 +1,10 @@
 .landingAbout {
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    flex-direction: column;
     height: 100vh;
-    width: 100%;
-    margin: 0;
+    overflow: hidden;
+    z-index: 0;
+    width: 100vw;
 
     .sliderContainer {
         position: absolute;
@@ -33,16 +31,10 @@
             }
         }
     }
-
-    .background{
-        position: absolute;
+    img {
+        object-fit: cover;
         width: 100%;
         height: 100%;
-        img{
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
     }
 }
 
