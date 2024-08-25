@@ -2,12 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  margin: 0;
-  overflow: hidden;
-  font-family: "Inter" , sans-serif;
-  width: 100vw;
-  position: relative;
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    width: 100vw;
+    position: relative;
+    touch-action: auto;
+    -webkit-overflow-scrolling: touch;
+
+    //overflow: hidden; blocks touch scroll on mobile and tablets, won't scroll on mouse scroll it's fine and nice. 
+
+    // Assume devices that can hover and have a fine pointer (e.g., mouse) are not touch devices
+    @media (hover: hover) and (pointer: fine) {
+        overflow: hidden;
+    }
+
+    // For touch devices (which typically can't hover and have coarse pointers), do not set overflow
+    @media (hover: none) and (pointer: coarse) {
+        overflow: auto; // or you can just not set overflow here if you want the default behavior
+    }
 }
 
 // Laptops + PC
