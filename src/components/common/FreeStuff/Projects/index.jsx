@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Image from 'next/image';
 import { shade, textTranslate } from '@/components/anim';
 import { freeProjects } from '@/constants';
@@ -9,7 +9,27 @@ import { freeProjects } from '@/constants';
 export default function Projects () {
 
     const [selectedProject, setSelectedProject] = useState({isActive: false, index: 0});
-    
+    const [isLoaded, setIsLoaded] = useState(false);
+    const videoRefs = useRef([]);
+
+    const handleProjectInteraction = (index) => {
+        setSelectedProject({isActive: true, index});
+        // Play the video related to the project
+        const videoElement = videoRefs.current[index];
+        if (videoElement) {
+            videoElement.play();
+        } 
+    };
+
+    const handleProjectLeave = (index) => {
+        setSelectedProject({isActive: false, index});
+        // Stop the video related to the project
+        const videoElement = videoRefs.current[index];
+        if (videoElement) {
+            videoElement.pause(); // Pause the video
+            videoElement.currentTime = 0; // Optionally, reset the video to the start
+        }
+    };
 
     const getWords = (title, index) => {
         let words = [];
@@ -40,15 +60,16 @@ export default function Projects () {
             <div className="bodyFreeProjects">
                 {
                     freeProjects.map((project, index) => {
-                        const { title, src, alt, href } = project;
+                        const { title, src, alt, href, path } = project;
                         return (
                             <Link
                                 key={`l_${index}`} 
                                 href={href} 
                                 className="project"
                                 data-scroll data-scroll-speed={0.05 * (index + 1)}
-                                onMouseOver={() => {setSelectedProject({isActive: true, index})}} 
-                                onMouseLeave={() => {setSelectedProject({isActive: false, index})}} 
+                                onMouseOver={() => handleProjectInteraction(index)} 
+                                onTouchStart={() => handleProjectInteraction(index)}
+                                onMouseLeave={() => handleProjectLeave(index)}
                             >
                                 <motion.div
                                     variants={shade} 
@@ -61,6 +82,15 @@ export default function Projects () {
                                         sizes="true"
                                         loading='lazy'
                                     />
+                                    <video
+                                        ref={el => videoRefs.current[index] = el} // Assign ref to the video element
+                                        loop
+                                        muted
+                                        onLoadedData={() => setIsLoaded(true)}
+                                        style={{ display: isLoaded ? "block" : "none"}}
+                                    >
+                                        <source src={path} type="video/webm" />
+                                    </video>
                                 </motion.div>
                                 <motion.p>
                                     {getWords(title, index)}
@@ -71,5 +101,5 @@ export default function Projects () {
                 }
             </div>
         </section>
-    )
+    );
 }

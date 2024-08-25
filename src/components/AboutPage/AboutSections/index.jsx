@@ -2,22 +2,24 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
 import Section from '@/components/common/Sections'
-
 const sections = [
     {
         images: [
-            {
-                src:"/images/landing/parallaxsection/1.jpg",
-                alt: "A beautiful landscape"
+            {   
+                src:'/images/about/sections/main-Sketch-Low.webp',
+                alt: "A beautiful landscape",
+                app: "A beautiful landscape"
             },
             {
-                src:"/images/landing/parallax/6.jpg",
-                alt: "A beautiful landscape"
+                src:'/assets/images/slider-la/coding.webp',
+                path: '/assets/about-footage/finished-projects-footage.webm',
+                alt: "A beautiful landscape",
+                app: "A beautiful landscape"
             },
             {
-                src:"/images/landing/cactus.jpg",
+                src:"/images/about/sections/slider-code.webp",
                 alt: "A beautiful landscape"
-            }
+            },
         ],
         phrases:[
             {
@@ -30,17 +32,20 @@ const sections = [
     },
     {
         images: [
+            {   
+                src: "/images/about/sections/mid-Sketch-Low.webp",
+                alt: "A beautiful landscape",
+                app: "A beautiful landscape"
+            },
             {
-                src:"/images/landing/parallaxsection/1.jpg",
+                src:"/images/about/sections/bd-photo-1.webp",
                 alt: "A beautiful landscape"
             },
             {
-                src:"/images/landing/parallax/6.jpg",
-                alt: "A beautiful landscape"
-            },
-            {
-                src:"/images/landing/cactus.jpg",
-                alt: "A beautiful landscape"
+                path: '/assets/about-footage/archicad-drawing-session.webm',
+                src: "/images/about/sections/first-floor.webp",
+                alt: "A beautiful landscape",
+                app: 'A beautiful landscape'
             }
         ],
         phrases: [
@@ -55,16 +60,20 @@ const sections = [
     {
         images: [
             {
-                src:"/images/landing/parallaxsection/1.jpg",
+                src: "/images/about/sections/slider-code.webp",
                 alt: "A beautiful landscape"
+            },  
+            {   
+                path: 'assets/about-footage/programing-session-mid.webm',
+                src: "/assets/images/slider-la/performance.webp",
+                alt: "A beautiful landscape",
+                app: "A beautiful landscape"
             },
             {
-                src:"/images/landing/parallax/6.jpg",
-                alt: "A beautiful landscape"
-            },
-            {
-                src:"/images/landing/cactus.jpg",
-                alt: "A beautiful landscape"
+                src: "/assets/images/slider-la/seo.webp",
+                path: '/assets/a-footage/gsap-all.mp4',
+                alt: "A beautiful landscape",
+                app: 'A beautiful landscape'
             }
         ],
         phrases: [
@@ -77,7 +86,6 @@ const sections = [
         ]
     }
 ]
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
