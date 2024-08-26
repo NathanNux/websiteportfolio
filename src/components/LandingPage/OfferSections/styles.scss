@@ -5,7 +5,6 @@
         z-index: 1;
         background-color: #d7d7d7;
         padding: 15vh 0 0 0;
-        overflow: hidden;
         .main {
             display: flex;
             flex-direction: column;
@@ -86,8 +85,6 @@
                                 width: 100%;
                                 height: 100%;
                                 z-index: 4;
-                                pointer-events: none;
-                                overflow: hidden;
                                 cursor: none;
                                 pointer-events: none;
                             }
@@ -307,28 +304,35 @@
         }
     }
     
-    .svgContainer {
+    div {
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 100%;
-        margin: 0;
-        top: -1%;
-        .svgDiv {
-            box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
-            position: absolute;
-            height: 25550%;
-            border-radius: 0% 0% 50% 50%;
-            background-color: #d7d7d7;
-            z-index: -1;
-        }
+        width: 100vw;
+        .svgContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            margin: 0;
+            top: -1%;
+            .svgDiv {
+                box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
+                position: absolute;
+                height: 25550%;
+                border-radius: 0% 0% 50% 50%;
+                background-color: #d7d7d7;
+                z-index: -1;
+            }
+        }  
     }
 }
 
 // Assume devices that can hover and have a fine pointer (e.g., mouse) are not touch devices
 @media (hover: hover) and (pointer: fine) {
-    .mainFreeStuff{
+    .offersLanding{
         .svgContainer{
             .svgDiv{
                 width: 130%;
@@ -340,7 +344,7 @@
 
 // For touch devices (which typically can't hover and have coarse pointers), allow vertical scrolling
 @media (hover: none) and (pointer: coarse) {
-    .mainFreeStuff{
+    .offersLanding{
         .svgContainer{
             .svgDiv{
                 width: 100%;

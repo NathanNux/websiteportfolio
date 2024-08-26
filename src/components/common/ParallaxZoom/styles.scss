@@ -64,7 +64,6 @@
                     z-index: 2;
                     cursor: none;
                     pointer-events: none;
-                    overflow: hidden;
                 }
             }
 
@@ -348,7 +347,7 @@
         .bodySlider{
             .sliderContainer{ 
                 position: absolute;
-                top: 280vh;
+                top: 275vh;
                 .slider {
                     font-size: 9em;
     

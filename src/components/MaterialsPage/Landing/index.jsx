@@ -55,7 +55,7 @@ export default function Index() {
 
 
   return (
-    <motion.main variants={slideUp} initial="initial" animate='enter' className="landingMaterialsPage">
+    <motion.section variants={slideUp} initial="initial" animate='enter' className="landingMaterialsPage">
       <Image 
         src='/images/materials/background.webp'
         fill
@@ -63,7 +63,7 @@ export default function Index() {
         alt="background"
         priority
       />
-      <motion.main variants={scale} initial="initial" animate='enter' className="imageContainer" data-scroll data-scroll-speed={0.1}>
+      <motion.div variants={scale} initial="initial" animate='enter' className="imageContainerSide" data-scroll data-scroll-speed={0.1}>
         <Image 
             src='/images/landing/7.webp'
             alt='materials'
@@ -72,13 +72,13 @@ export default function Index() {
             priority
             //WIP: add here Images for Material Page
         />
-      </motion.main>
+      </motion.div>
       <div className="sliderContainer">
         <div ref={slider} className="slider">
           <p ref={firstText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
           <p ref={secondText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
         </div>
       </div>
-    </motion.main>
+    </motion.section>
   )
 }

@@ -7,10 +7,13 @@ export default function Body({links, selectedLink, setSelectedLink}) {
     const [isTouchDevice, setIsTouchDevice] = useState(false);
 
     useEffect(() => {
-        // Check for touch event handlers
-        const touchCapable = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
-        setIsTouchDevice(touchCapable);
+        // Instead of checking for touch capabilities, we'll use matchMedia to check for hover capabilities
+        // This assumes devices that can hover and have a fine pointer (e.g., mouse) are not touch devices
+        const match = window.matchMedia('(hover: hover) and (pointer: fine)');
+        setIsTouchDevice(!match.matches); // If the media query doesn't match, it's likely a touch device
     }, []);
+
+    console.log(isTouchDevice);
 
     const getChars = (word) => {
         let chars = [];
@@ -28,6 +31,14 @@ export default function Body({links, selectedLink, setSelectedLink}) {
         })
         return chars;
     }
+
+    const whichVariant = (index) => {
+        if(isTouchDevice) {
+            return {};
+        }
+
+        return selectedLink.isActive && selectedLink.index != index ? blur : {};
+    }
     
     return (
         <div className="bodyHeader">
@@ -38,7 +49,7 @@ export default function Body({links, selectedLink, setSelectedLink}) {
                     <motion.p 
                         onMouseOver={() => {setSelectedLink({isActive: true, index})}} 
                         onMouseLeave={() => {setSelectedLink({isActive: false, index})}} 
-                        variants={ isTouchDevice ? {} : {blur}} 
+                        variants={whichVariant(index)} 
                         animate={selectedLink.isActive && selectedLink.index != index ? "open" : "closed"}
                         >
                         {getChars(title)}

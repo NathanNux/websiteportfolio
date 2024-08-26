@@ -10,7 +10,10 @@
         color: #22272d;
         text-decoration: none;
         text-transform: uppercase;
+        cursor: pointer;
+        pointer-events: all;
         p{
+            cursor: pointer;
             margin: 0px;
             display: flex;
             overflow: hidden;

@@ -23,8 +23,8 @@ export const scale = {
         y: 100,
     },
     enter: {
-        width: '30vw',
-        height: '60vh',
+        width: `${60 * 0.625}vh`,
+        height: '50vh',
         y: 0,
         transition: {
             delay: 0.6,
