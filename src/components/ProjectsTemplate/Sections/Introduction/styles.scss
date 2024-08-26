@@ -128,6 +128,8 @@
 
 //WIP: think if it will not be better to in section use flex-direction: column and align-items: center to images and texts to put them separatelly. Could look much better. 
 // WIP: Check viewport horizontal and vertical sizes to adjust the sizes of the elements on phones, with bigger width it looks bit weird
+// WIP: fix video touch on touch devices. you can still open them and interact with them. not allowed on touch devices
+// WIP: in newest projects, button is too up below 450px width 
 
 @media only screen and (max-width: 1050px){
     .mainSectionIntroduction{

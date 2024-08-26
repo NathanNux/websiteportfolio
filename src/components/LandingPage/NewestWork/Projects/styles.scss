@@ -278,6 +278,7 @@
 // mobile viewports
 @media only screen and (max-width: 450px) and (max-height: 950px){
     .mainNewestProjects{
+        height: 75vh;
         padding: 1rem 2rem 3rem 2rem;
         ul{
             li{ 
@@ -307,7 +308,7 @@
 @media only screen and (max-width: 380px) and (max-height: 700px){
     .mainNewestProjects{
         padding: 1rem 2rem 3rem 2rem;
-        height: 70vh;
+        height: 75vh;
         ul{
             li{ 
 

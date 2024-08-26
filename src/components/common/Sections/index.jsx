@@ -43,6 +43,7 @@ export default function Section ({images, phrases, styles}) {
                         {isVisible && image.path && 
                             <video
                                 autoPlay
+                                playsInline
                                 loop
                                 muted
                                 onLoadedData={ () => setIsLoaded(true)}
