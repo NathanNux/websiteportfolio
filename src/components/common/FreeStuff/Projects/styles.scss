@@ -207,9 +207,10 @@
 @media only screen and (max-width: 500px){
     .bodyFreeProjects {
         flex-wrap: wrap;
+        gap: 5vh;
         .project {
-            width: calc(70vh * 0.625);
-            height: 70vh;
+            width: calc(50vh * 0.725);
+            height: 50vh;
             p{
                 span{
                     font-size: 2rem;

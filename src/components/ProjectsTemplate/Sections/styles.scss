@@ -55,3 +55,17 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .offersSectionMain{
+        .mainSections{
+            .main {
+                display: flex;
+                margin: 0;
+                width: 100vw;
+                min-height: 80vh;
+                padding: 30vh 0 0 0;
+            }
+        }
+    }
+}
