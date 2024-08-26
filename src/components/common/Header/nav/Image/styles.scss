@@ -41,4 +41,10 @@
     }
 }
 
+@media only screen and (max-width: 500px) and (max-height: 950px) {
+    .imageContainer{
+        display: none;
+    }
+}
+
 // for viewports of mobile devices and smaller screens like tablets
