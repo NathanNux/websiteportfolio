@@ -304,30 +304,25 @@
         }
     }
     
-    div {
+
+    .svgContainer {
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 100vw;
-        .svgContainer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 100%;
-            margin: 0;
-            top: -1%;
-            .svgDiv {
-                box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
-                position: absolute;
-                height: 25550%;
-                border-radius: 0% 0% 50% 50%;
-                background-color: #d7d7d7;
-                z-index: -1;
-            }
-        }  
-    }
+        width: 100%;
+        margin: 0;
+        top: -1%;
+        .svgDiv {
+            box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
+            position: absolute;
+            height: 25550%;
+            border-radius: 0% 0% 50% 50%;
+            background-color: #d7d7d7;
+            z-index: -1;
+        }
+    }  
+
 }
 
 // Assume devices that can hover and have a fine pointer (e.g., mouse) are not touch devices
