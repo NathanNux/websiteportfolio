@@ -14,7 +14,7 @@ export default function IconList({ selectedCategory}) {
     const [selectedProject, setSelectedProject] = useState({isActive: false, index: 0});
     const [modal, setModal] = useState(false)
     const [disableAnimation, setDisableAnimation] = useState(false);
-    const isPhoneDevice = useMediaQuery({ query: '(max-width: 450px) and (max-height: 950px)' });
+    const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
 
 
     const cursor = useRef(null); 
@@ -118,8 +118,8 @@ export default function IconList({ selectedCategory}) {
     },[modal]);
 
     useEffect(() => {
-        setDisableAnimation(isPhoneDevice);
-    }, [isPhoneDevice]);
+        setDisableAnimation(isTouchDevice);
+    }, [isTouchDevice]);
         
     return (
         <section className="mainIconList" ref={section}>

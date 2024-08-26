@@ -134,8 +134,8 @@
 @media only screen and (max-width: 1050px) and (min-height: 1000px){
     .bodyMobileView {
         .project {
-            width: calc(45vh * 0.625);
-            height: 45vh;
+            width: calc(35vh * 0.625);
+            height: 35vh;
             p{
                 gap: 0.5em;
                 span{
@@ -154,6 +154,7 @@
 
 @media only screen and (max-width: 900px) and (min-height: 1000px){
     .bodyMobileView {
+        flex-wrap: wrap;
         .project {
             width: calc(35vh * 0.625);
             height: 35vh;

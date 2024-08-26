@@ -139,7 +139,25 @@
 
 @media only screen and (max-width: 1050px){
     .mainMobileView {
-        height: 50vh;
+        height: 100vh;
+        padding: 5vh 0 10vh 0;
+    
+        .text{
+            h1{
+                font-size: 4rem;
+                font-weight: 700;
+            }
+            p{
+                font-size: 2rem;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .mainMobileView {
+        height: 120vh;
         padding: 5vh 0 10vh 0;
     
         .text{

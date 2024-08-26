@@ -12,7 +12,7 @@ export default function Projects () {
 
     const [modal, setModal] = useState(false)
     const [disableAnimation, setDisableAnimation] = useState(false);
-    const isPhoneDevice = useMediaQuery({ query: '(max-width: 450px) and (max-height: 950px)' });
+    const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
 
     const cursor = useRef(null); 
     const label = useRef(null);
@@ -139,10 +139,11 @@ export default function Projects () {
         }
     },[modal])
     useEffect(() => {
-        setDisableAnimation(isPhoneDevice);
-    }, [isPhoneDevice]);
+        setDisableAnimation(isTouchDevice);
+    }, [isTouchDevice]);
 
-
+    console.log ("disable anim", disableAnimation);
+    console.log("isTouchDevice", isTouchDevice);
 
     
     return (
