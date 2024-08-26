@@ -56,8 +56,23 @@
             display: flex;
             flex-wrap: wrap;
             overflow: hidden;
-            gap: 1em;
+            gap: 0.3em;
             max-width: 100%;
+            .titleText{
+                &:nth-of-type(1){
+                    font-weight: 700;
+                    color: #ff5959; 
+                    font-size: 3rem; 
+                    width: 100%;
+                    margin: 0;
+                }
+                &:nth-of-type(2){
+                    font-size: 2.5rem;
+                    font-weight: 300; 
+                    color: #fff;
+                    margin: 0;
+                }
+            }
             span{
                 font-size: 2.5rem;
                 font-weight: 300; 
@@ -66,13 +81,29 @@
                 &:nth-of-type(1) {
                     margin-right: 15rem;
                     font-weight: 700;
-                    color: #b9b9b9; 
+                    color: #ff5959; 
                     font-size: 3rem; 
                 }
             }
         }
     }
 }
+
+// For touch devices (which typically can't hover and have coarse pointers), allow vertical scrolling
+@media (hover: none) and (pointer: coarse) {
+    .bodyFreeProjects {
+
+        .project {
+    
+            &:hover {
+                div img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
 
 @media only screen and (max-width: 1750px){
     .bodyFreeProjects {
@@ -171,7 +202,6 @@
             }
         }
     }
-    
 }
 
 @media only screen and (max-width: 500px){

@@ -1,16 +1,19 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { shade, textTranslate } from '@/components/anim';
 import { freeProjects } from '@/constants';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Projects () {
 
     const [selectedProject, setSelectedProject] = useState({isActive: false, index: 0});
     const [isLoaded, setIsLoaded] = useState(false);
     const videoRefs = useRef([]);
+    const [disableAnimation, setDisableAnimation] = useState(false);
+    const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
 
     const handleProjectInteraction = (index) => {
         setSelectedProject({isActive: true, index});
@@ -54,6 +57,22 @@ export default function Projects () {
         });
         return words;
     }
+
+    useEffect(() => {
+        if(isTouchDevice) {
+            setDisableAnimation(true);
+        }
+    }, []);
+
+    const devidedTitle = (title) => {
+        const texts = title.split(":");
+
+        return texts.map((text, index) => (
+            <span key={`text_${index}`} className='titleText'>
+                {text}
+            </span>
+        ));
+    } 
     
     return (
         <section>
@@ -82,7 +101,8 @@ export default function Projects () {
                                         sizes="true"
                                         loading='lazy'
                                     />
-                                    <video
+                                    <div className='overlay'/>
+                                    {!disableAnimation && <video
                                         ref={el => videoRefs.current[index] = el} // Assign ref to the video element
                                         loop
                                         muted
@@ -90,10 +110,10 @@ export default function Projects () {
                                         style={{ display: isLoaded ? "block" : "none"}}
                                     >
                                         <source src={path} type="video/webm" />
-                                    </video>
+                                    </video>}
                                 </motion.div>
                                 <motion.p>
-                                    {getWords(title, index)}
+                                    {disableAnimation ? devidedTitle(title) : getWords(title, index)}
                                 </motion.p>
                             </Link>
                         );
