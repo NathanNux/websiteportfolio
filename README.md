@@ -51,7 +51,7 @@ Be aware of GSAP scrollTrigger, look into this project, useLayoutEffect will not
 
 
 
-// WIP: Optimise all of the videos, using HEVC format and lov framerrate with lower res. 720p should do on smaller components, 2K might be a lot to load
+// TYP: Optimise all of the videos, using HEVC format and lov framerrate with lower res. 720p should do on smaller components, 2K might be a lot to load
 
 Use Video Tags Wisely: For self-hosted videos, use the <video> tag with attributes like preload="none" or preload="metadata" to control how much of the video is preloaded.
 
