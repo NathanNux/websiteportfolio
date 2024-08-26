@@ -28,7 +28,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .imageContainer{
+    .imageContainerHeader{
         display: none;
     }
 }
@@ -36,13 +36,13 @@
 // tablets vertical
 
 @media only screen and (max-width: 1050px) and (min-height: 1000px) {
-    .imageContainer{
+    .imageContainerHeader{
         display: none;
     }
 }
 
 @media only screen and (max-width: 500px) and (max-height: 950px) {
-    .imageContainer{
+    .imageContainerHeader{
         display: none;
     }
 }
