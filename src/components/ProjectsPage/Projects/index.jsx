@@ -5,6 +5,7 @@ import { opacity, slideUp } from './anim';
 import dynamic from 'next/dynamic';
 import IconList from './IconList';
 import ButtonClick from '@/components/common/ClickButton/clickButton';
+import { useMediaQuery } from 'react-responsive';
 const Scene = dynamic(() => import('./Scene'), { ssr: false });
 
 export default function ProjectsList() {
@@ -12,6 +13,8 @@ export default function ProjectsList() {
     const [view, setView] = useState('list');
     const [ activeProject, setActiveProject ] = useState(null);
     const curve = useRef(null);
+    const [disableScene, setDisableScene] = useState(false);
+    const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
 
     const [ selectedCategory, setSelectedCategory ] = useState('all');
     
@@ -31,7 +34,10 @@ export default function ProjectsList() {
         if (window.matchMedia('(hover: none)').matches) {
             setView('icon')
         }
-    },[])
+        if (isTouchDevice) {
+            setDisableScene(true);
+        }
+    },[isTouchDevice])
 
     return (
         <motion.section className="mainAllProjectsPage" variants={slideUp} initial='initial' animate='enter'>
@@ -106,7 +112,7 @@ export default function ProjectsList() {
                                 <Projects setActiveProject={setActiveProject} selectedCategory={selectedCategory}/>
                             </div>
                         </div>
-                        <Scene activeProject={activeProject} containerRef={ref}/>
+                        {!disableScene && <Scene activeProject={activeProject} containerRef={ref}/>}
                     </motion.div>
                 )}
 

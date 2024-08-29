@@ -1,10 +1,19 @@
 import Projects from './Projects'
 import Scene from '@/components/LandingPage/NewestWork/Scene';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 export default function NewestWork () {
     const [ activeProject, setActiveProject ] = useState(null);
     const ref = useRef(null);
+    const [disableScene, setDisableScene] = useState(false);
+    const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
+
+    useEffect(() => {
+        if (isTouchDevice) {
+            setDisableScene(true);
+        }
+    }, [isTouchDevice]);
 
     return (
         <section className="mainNewestWork" ref={ref}>
@@ -14,7 +23,9 @@ export default function NewestWork () {
             <div className="section">
                 <Projects setActiveProject={setActiveProject}/>
             </div>
-            <Scene activeProject={activeProject} containerRef={ref}/>
+            { !disableScene && 
+                <Scene activeProject={activeProject} containerRef={ref}/>
+            }
         </section>
     );
 }

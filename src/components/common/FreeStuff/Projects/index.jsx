@@ -10,7 +10,6 @@ import { useMediaQuery } from 'react-responsive';
 export default function Projects () {
 
     const [selectedProject, setSelectedProject] = useState({isActive: false, index: 0});
-    const [isLoaded, setIsLoaded] = useState(false);
     const videoRefs = useRef([]);
     const [disableAnimation, setDisableAnimation] = useState(false);
     const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
@@ -106,8 +105,7 @@ export default function Projects () {
                                         ref={el => videoRefs.current[index] = el} // Assign ref to the video element
                                         loop
                                         muted
-                                        onLoadedData={() => setIsLoaded(true)}
-                                        style={{ display: isLoaded ? "block" : "none"}}
+                                        playsInline
                                     >
                                         <source src={path} type="video/webm" />
                                     </video>}
