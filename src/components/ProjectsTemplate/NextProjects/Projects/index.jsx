@@ -142,9 +142,6 @@ export default function Projects () {
         setDisableAnimation(isTouchDevice);
     }, [isTouchDevice]);
 
-    console.log ("disable anim", disableAnimation);
-    console.log("isTouchDevice", isTouchDevice);
-
     
     return (
         <section ref={section} className="mainNextProject">

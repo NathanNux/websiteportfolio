@@ -13,8 +13,6 @@ export default function Body({links, selectedLink, setSelectedLink}) {
         setIsTouchDevice(!match.matches); // If the media query doesn't match, it's likely a touch device
     }, []);
 
-    console.log(isTouchDevice);
-
     const getChars = (word) => {
         let chars = [];
         word.split("").forEach( (char, i) => {

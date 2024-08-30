@@ -52,7 +52,9 @@ body {
 
 // My mac is 1728 x 1117 and 1920 x 1080 setting still look good then we have 1536 x 864
 
-// WIP: Remove scenes entirelly when it is touchable screen. It is braking Safari on mobile.
+// WIP: use useEffect for hader svg to recalculate the width and height of the svg and the path. each time viewport size is changes. 
+// the same in the preloader svg.
+// WIP: Do last changes in services in about page. then description in landing and spot some issues in the scss responsive code.
 
 @layer base {
   :root {

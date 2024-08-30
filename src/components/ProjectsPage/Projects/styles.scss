@@ -421,7 +421,7 @@
             width: 100%;
             height: fit-content;
             position: relative;
-            top: 25vh;
+            top: 30vh;
             background-color: #fff;
     
             .mainIcon {
@@ -533,7 +533,7 @@
             width: 100%;
             height: fit-content;
             position: absolute;
-            top: 30vh;
+            top: 35vh;
             background-color: #fff;
     
             .mainIcon {
@@ -591,7 +591,7 @@
     
             .headerProjects {
                 display: flex;
-                justify-content: left;
+                justify-content: center;
                 align-items: center;
                 width: 100%;
     
@@ -613,7 +613,7 @@
                 justify-content: left;
                 align-items: center;
                 gap: 1em;
-                width: 100%;
+                width: 70%;
     
                 .buttons{
                     position: relative;

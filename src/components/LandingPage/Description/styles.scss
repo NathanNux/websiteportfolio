@@ -354,7 +354,7 @@
                     color: #22272d;
                     margin: 0px;
                     font-size: 1.8em;
-                    width: 90%; 
+                    width: 80%; 
                     padding-right: 5%;
 
                 }
@@ -413,8 +413,8 @@
                     text-align: center;
                     color: #22272d;
                     margin: 0px;
-                    font-size: 1.8em;
-                    width: 90%; 
+                    font-size: 1.5em;
+                    width: 80%; 
                     padding-right: 5%;
 
                 }
@@ -438,7 +438,7 @@
 }
 
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 950px) and (max-height: 500px){
     .descriptionLanding{
         padding: 0px 50px 100px 0px;
         .body{

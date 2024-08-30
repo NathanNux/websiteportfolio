@@ -9,9 +9,19 @@ export default function Preloader() {
     const [index, setIndex] = useState(0);
     const [dimension, setDimension] = useState({width: 0, height:0});
 
-    useEffect( () => {
-        setDimension({width: window.innerWidth, height: window.innerHeight})
-    }, [])
+    useEffect(() => {
+        function resize () {
+            setDimension({
+                width: window.innerWidth,
+                height: window.innerHeight
+            })
+        }
+        resize()
+        window.addEventListener('resize', resize);
+        return () => {
+            window.removeEventListener('resize', resize)
+        };
+    }, []);
 
     useEffect( () => {
         if(index == words.length - 1) return;
