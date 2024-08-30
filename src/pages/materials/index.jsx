@@ -9,17 +9,18 @@ import Header from "@/components/common/Header";
 import Landing from "@/components/MaterialsPage/Landing";
 import { useEffect, useState } from "react";
 
-
+//LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN IN ERAT LIGULA. VESTIBULUM ELEMENTUM EX ET TELLUS MALESUADA, QUIS CONSECTETUR ORCI CONSECTETUR. VESTIBULUM VOLUTPAT, EST SOLICITUDIN POSUERE CONGUE, AUGUE AUGUE DAPIBUS ENIM, A MAXIMUS NUNC EX EGET DUI. PRAESENT ID VENENATIS QUAM, A EFFICITUR LEO. QUISQUE MAURIS MAGNA, MOLLIS A PHARETRA SED, PLACERAT AUCTOR NISI. ETIAM BIBENDUM NEQUE SIT AMET MI TEMPUS, ID ULLAMCORPER URNA ULTRICIES. PELLENTESQUE VOLUTPAT MASSA AT TORTOR MATTIS, ID SAGITTIS EST FEUGIAT.
+//Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui. Praesent id venenatis quam, a efficitur leo. Quisque mauris magna, mollis a pharetra sed, placerat auctor nisi. Etiam bibendum neque sit amet mi tempus, id ullamcorper urna ultricies. Pellentesque volutpat massa at tortor mattis, id sagittis est feugiat.
 
 const phrases = [
   {
-      text: "Vím, že proces webových stránkej <span>je náročný a těžký, ale i drahý.</span> Doporučuji všem Vám s malými nebo začínajícími podniky začít sami."
+      text: "Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit. Proin</span> in erat ligula. Vestibulum elementum ex et tellus malesuada,"
   },
   {
-      text: "Ale abych Vám mohl pomoci alespoň nějak <span>od stovkách náročných hodin, ne-li tísíce</span> (v mém případě) při výtvory vašeho díla, mám pro Vás <span>tekuté zlato</span> z mé cesty vytváření skvělých webů."
+      text: "Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit. Proin in erat ligula.</span> Vestibulum elementum ex et tellus malesuada, quis <span>tekuté zlato</span> consectetur orci consectetur. Vestibulum"
   },
   {
-      text: "Abyste nedělali stejné chyby, kterých jsem se dopustil, <span>projdu společně s Vámi</span> každý krok za krokem <span>jednodychými postupy</span>, které Vám přinesou <span>skvělý začátek</span> už během <span>pár hodin práce, ne déle.</span>"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span>Proin in erat ligula.</span> Vestibulum elementum ex <span>et tellus malesuada</span>, quis consectetur <span>orci consectetur.</span> Vestibulum <span>volutpat, est sollicitudin</span>"
   }
 ]
 

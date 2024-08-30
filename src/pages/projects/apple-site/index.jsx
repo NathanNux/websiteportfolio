@@ -14,7 +14,7 @@ import Header from "@/components/common/Header";
 
 const description = [
   {
-      text: " BASKETBALISTY A <br/> STUDENTA ARCHITEKTURY <br/> AŽ PO <br/> WEBOVÉHO DESIGNERA <br/> s FULLSTACK PROFESÍ"
+      text: "LOREM IPSUM DOLOR <br/> SIT AMET, CONSECTETUR<br/> ADIPISCING <br/> ELIT. PROIN IN ERAT <br/> LIGULA. VESTIBULUM"
   },
 ];
 
@@ -51,10 +51,10 @@ const introductionImages = [
 
 const introductionPhrases = [
   {
-      text: "Design není jen o hezkých a přeplácaných animací a pestrých barvách.<br /><br /> Je to umění sdělit příběh, příběh o tom, kdo jste za čem si stojíte a co můžete přinést do zákazníkova života.<br /><br /> Srozumitelně, čistě a jasně"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><br /> Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum<br /><br /> volutpat, est sollicitudin"
   },
   {
-      text: "Každý projekt je testimoniálem mé dedikace, inovace a excelence"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in"
   }
 ]
 
@@ -96,10 +96,10 @@ const styleImages = [
 
 const stylePhrases = [
   {
-      text: "Je to sice težký a náročný proces vytvořit Parádní Nabídku, ale s mými jednoduchými a účinými systémy to zvládneme.<br /><br />Pomůžu vám s každým krokem k vytvoření  nabídky, která nastaví novou laťku nejenom pro Vás ale i pro vaše nové zákazníky."
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementumex et tellus malesuada, <br /><br />quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim,"
   },
   {
-      text: "A mé praktiky Vám i přenechám"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula."
   }
 ]
 

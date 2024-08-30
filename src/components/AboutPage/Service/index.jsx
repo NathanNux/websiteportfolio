@@ -54,17 +54,19 @@ const Service = ({title, content, index}) => {
 }
 
 const services = [
+    //LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN IN ERAT LIGULA. VESTIBULUM ELEMENTUM EX ET TELLUS MALESUADA, QUIS CONSECTETUR ORCI CONSECTETUR. VESTIBULUM VOLUTPAT, EST SOLICITUDIN POSUERE CONGUE, AUGUE AUGUE DAPIBUS ENIM, A MAXIMUS NUNC EX EGET DUI. PRAESENT ID VENENATIS QUAM, A EFFICITUR LEO. QUISQUE MAURIS MAGNA, MOLLIS A PHARETRA SED, PLACERAT AUCTOR NISI. ETIAM BIBENDUM NEQUE SIT AMET MI TEMPUS, ID ULLAMCORPER URNA ULTRICIES. PELLENTESQUE VOLUTPAT MASSA AT TORTOR MATTIS, ID SAGITTIS EST FEUGIAT.
+//Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui. Praesent id venenatis quam, a efficitur leo. Quisque mauris magna, mollis a pharetra sed, placerat auctor nisi. Etiam bibendum neque sit amet mi tempus, id ullamcorper urna ultricies. Pellentesque volutpat massa at tortor mattis, id sagittis est feugiat.
     {
         title: 'SEO | ne pouze managament, ale i analýza',
-        content: ' Správými praktiky, aby váš web byl co nejvýše na žebříčku. <br/><br/>A i konzultace a správa vašeho blogu,<br/> abyste se mohli pouze soustředit na to důležité, to co date vašim zákazníkům'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin <br/><br/>in erat ligula. Vestibulum elementum ex<br/>  et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat,'
     },
     {
         title: 'Vývoj Webu | od návrhu po realizaci',
-        content: 'Přijdu k vám a provnímám si Váš podnik. <br/><br/> To mi dá všechno co potřebuji Vám udělat autentický a unikátní Projekt.<br/> A i navázat nejen s Vámi dlouholetý vztahy s pořádnými benefity'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin <br/><br/>in erat ligula. Vestibulum elementum ex<br/>  et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat,'
     },
     {
         title: 'Prodeje | vytvoření vaši nebídky i s výzkumem',
-        content: 'Prodej je jedna z nedůležitějších aspektů Vůbec. <br/><br/> Vytvořím, umístím CTA a Vaši nabídku, pomůžu vám s průzkumem<br/> a vysvětlím Vám plán i strategii, pro ty Vaše nevyšší konverční poměry'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin <br/><br/>in erat ligula. Vestibulum elementum ex<br/>  et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat,'
     }
 ]
 

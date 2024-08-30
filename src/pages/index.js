@@ -23,13 +23,13 @@ import Header from "@/components/common/Header";
 
 const phrases = [
   {
-      text: "Vyvíjím a pracuji <span>jednoduše</span>.<br />To je <span>proč má práce</span> prostě funguje.<br />Nejsem ale jen<span> Designer a programátor</span><br /> ale i Architekt<span> takže dostanete celý balíček...</span>",
+    text: "Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit. Proin</span> in erat ligula. Vestibulum elementum ex et tellus malesuada,"
   },
   {
-      text: "Autentický desing, správné praktiky pro web,<br /> <span>SEO, Výzkum a materiály </span> společně s <br />pořádnými a ověřenými stystémy <span>Marketingu</span><br /> abyste byli opravdu <span>úspěšní</span> Online.",
+      text: "Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit. Proin in erat ligula.</span> Vestibulum elementum ex et tellus malesuada, quis <span>tekuté zlato</span> consectetur orci consectetur. Vestibulum"
   },
   {
-      text: "Ti, kdo chtějí vést <span>Orchestr</span>, se musí <span>obrátit</span> zády k davu.<br />Pojďte se spolu podívat, <span> co všechno</span> <br /> můžeme společne vybudovat <span>a není toho vůbec málo.</span>",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span>Proin in erat ligula.</span> Vestibulum elementum ex <span>et tellus malesuada</span>, quis consectetur <span>orci consectetur.</span> Vestibulum <span>volutpat, est sollicitudin</span>"
   }
 ]
 

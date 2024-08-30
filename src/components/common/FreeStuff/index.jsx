@@ -71,18 +71,21 @@ export default function FreeOffers ({text}) {
         }
     },[modal])
 
+                //LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN IN ERAT LIGULA. VESTIBULUM ELEMENTUM EX ET TELLUS MALESUADA, QUIS CONSECTETUR ORCI CONSECTETUR. VESTIBULUM VOLUTPAT, EST SOLICITUDIN POSUERE CONGUE, AUGUE AUGUE DAPIBUS ENIM, A MAXIMUS NUNC EX EGET DUI. PRAESENT ID VENENATIS QUAM, A EFFICITUR LEO. QUISQUE MAURIS MAGNA, MOLLIS A PHARETRA SED, PLACERAT AUCTOR NISI. ETIAM BIBENDUM NEQUE SIT AMET MI TEMPUS, ID ULLAMCORPER URNA ULTRICIES. PELLENTESQUE VOLUTPAT MASSA AT TORTOR MATTIS, ID SAGITTIS EST FEUGIAT.
+                //Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui. Praesent id venenatis quam, a efficitur leo. Quisque mauris magna, mollis a pharetra sed, placerat auctor nisi. Etiam bibendum neque sit amet mi tempus, id ullamcorper urna ultricies. Pellentesque volutpat massa at tortor mattis, id sagittis est feugiat.
     return (
         <section ref={section} className="mainFreeStuff">
             { text && <div className="text">
-                 <h1>Nejste si jisti?</h1>
-                <p>Vím, že proces webových stránkej je náročný a těžký, ale i drahý. 
-                    doporučuji všem Vám s malými nebo začínajícími podniky začít sami.<br /><br />
+                 <h1>LOREM IPSUM DOLOR?</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in 
+                    erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur<br /><br />
 
-                    Ale abych Vám mohl pomoci alespoň nějak od stovkách náročných hodin, ne-li tísíce (v mém případě) při výtvory vašeho díla, 
-                    mám pro Vás tekuté zlato z mé cesty vytváření skvělých webů.<br /><br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur
+                    orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue,<br /><br />
 
-                    Abyste nedělali stejné chyby, kterých jsem se dopustil,
-                    projdu společně s Vámi každý krok za krokem jednodychými postupy, které Vám přinesou skvělý začátek už během pár hodin práce, ne déle</p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat,</p>
             </div>}
 
             <div ref={projectsRef} className="projects">

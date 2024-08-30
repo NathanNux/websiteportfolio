@@ -14,24 +14,26 @@ import { useEffect, useState } from "react";
 
 const description = [
   {
-      text: "OD BASKETBALISTY A <br/> STUDENTA ARCHITEKTURY <br/> AŽ PO <br/> WEBOVÉHO DESIGNERA <br/> s FULLSTACK PROFESÍ"
+      text: "LOREM IPSUM DOLOR <br/> SIT AMET, CONSECTETUR<br/> ADIPISCING <br/> ELIT. PROIN IN ERAT <br/> LIGULA. VESTIBULUM"
   },
 ];
+//LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN IN ERAT LIGULA. VESTIBULUM ELEMENTUM EX ET TELLUS MALESUADA, QUIS CONSECTETUR ORCI CONSECTETUR. VESTIBULUM VOLUTPAT, EST SOLICITUDIN POSUERE CONGUE, AUGUE AUGUE DAPIBUS ENIM, A MAXIMUS NUNC EX EGET DUI. PRAESENT ID VENENATIS QUAM, A EFFICITUR LEO. QUISQUE MAURIS MAGNA, MOLLIS A PHARETRA SED, PLACERAT AUCTOR NISI. ETIAM BIBENDUM NEQUE SIT AMET MI TEMPUS, ID ULLAMCORPER URNA ULTRICIES. PELLENTESQUE VOLUTPAT MASSA AT TORTOR MATTIS, ID SAGITTIS EST FEUGIAT.
+//Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui. Praesent id venenatis quam, a efficitur leo. Quisque mauris magna, mollis a pharetra sed, placerat auctor nisi. Etiam bibendum neque sit amet mi tempus, id ullamcorper urna ultricies. Pellentesque volutpat massa at tortor mattis, id sagittis est feugiat.
 
 const phrase1 = [
   {
-      text: "S vybudovaným pohledem architekta a inženýra, <br/> mi umožňuje díky mému studiu se dívat na programování<br/> nejen z pohledu designu, a struktury"
+      text: "Lorem ipsum dolor sit amet, consectetur<br/> adipiscing elit. Proin in erat ligula. Vestibulum<br/> elementum ex et tellus malesuada, quis"
   },
 ];
 
 const phrase2 = [
   {
-      text: "ale pomohlo mi to i založit a <br/>poskládat řadu systémů,<br/> které prostě fungují."
+      text: "Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit.<br/> Proin in erat ligula."
   },
 ];
 const phrase3 = [
   {
-      text: "Vezměme to ale z počátku..."
+      text: "Proin in erat ligula...."
   },
 ];
 
