@@ -244,3 +244,38 @@
         }
     }
 }
+
+@media only screen and (max-width: 950px) and (max-height: 450px){
+    .footerHeader{
+        margin-top: 0px;
+        justify-content: end;
+        .info{
+            ul{
+                width: 100%;
+                li{
+                    p {
+                        font-size: 1.2em;
+                    }
+                    span{
+                        font-size: 0.8em;
+                    }
+                }
+                &:nth-of-type(2){
+                    display: none;
+                }
+            }
+        }
+        .terms {
+            margin-right: 10vw;
+            ul{
+                gap: 15px;
+                li{
+                    a{
+                        margin: 0;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+}

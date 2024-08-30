@@ -108,3 +108,27 @@
         }
     }
 }
+
+@media only screen and (max-width: 950px) and (max-height: 450px){
+    .phoneButton{
+        width: 250px;
+        height: 60px;
+        a{
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 950px) and (max-height: 400px){
+    .phoneButton{
+        width: 200px;
+        height: 60px;
+        a{
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

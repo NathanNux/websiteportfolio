@@ -276,5 +276,58 @@
     }  
 }
 
+@media only screen and (max-width: 950px) and (max-height: 450px){
+    .mainSlider {
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        .body{
+            padding: 2vw;
+            height: 175vh;
+            width: 300vw;
+            .slider{ 
+    
+                .column {
+                    width: 60vw;
+                    .imageContainer{ 
+                        width: 59vw;
+                        height: calc(59vw * 0.625);
+                        img{
+                            width: 59vw;
+                            height: calc(59vw * 0.725);
+                            object-fit: cover;
+                            border-radius: 10px;
+                        }
+                        
+                    }
+    
+                    &:nth-of-type(1) {
+                        top: -55%;
+                    }
+                    &:nth-of-type(2) {
+                        top: -60%;
+                    }
+                    &:nth-of-type(3) {
+                        top: -100%;
+                    }
+                    &:nth-of-type(4) {
+                        top: -100%;
+                    }
+                    &:nth-of-type(5) {
+                        top: -155%;
+                    }
+    
+                }
+            }  
+        }
+        
+    }  
+}
+
+
+
+
+
 
 

@@ -334,7 +334,7 @@
                 justify-content: center;
                 
                 .mask {
-                    scale: 0;
+                    display: none;
                 }
                 .bodyHidden {
                     padding: 100px 0px 0px 10%;
@@ -394,7 +394,7 @@
                 justify-content: center;
                 
                 .mask {
-                    scale: 0;
+                    display: none;
                 }
                 .bodyHidden {
                     padding: 100px 0px 0px 10%;
@@ -429,6 +429,46 @@
                         cursor: pointer;
                         overflow: hidden;
                         font-size: 1em;
+                    } 
+                }
+                
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 800px){
+    .descriptionLanding{
+        padding: 0px 50px 100px 0px;
+        .body{
+            gap: 10%;
+            .main { 
+                .mask {
+                    padding: 100px 50px 150px 100px;
+                    p{
+                        font-size: 1.2em;
+                    }
+                }
+                .bodyHidden { 
+                    padding: 100px 0px 0px 50px; 
+                    width: 100%;    
+                    p{
+                        font-size: 1.4em;
+                    }
+                }
+                
+            }
+            
+            .about {
+                .text {
+                    font-size: 1em;
+                }
+                div{
+                   .button{
+                        width: 130px;
+                        height: 130px;
+                        font-size: 0.8em;
                     } 
                 }
                 

@@ -435,3 +435,101 @@
         }
     }
 }
+
+@media only screen and (max-width: 950px) and (max-height: 450px) {
+    .mainParallaxZoom {
+        width: 100vw;
+        height: 300vh;
+    
+        .bodySlider{
+            .sliderContainer{ 
+                position: absolute;
+                top: 260vh;
+                .slider {
+                    font-size: 6em;
+    
+                    p {
+                        padding-right: 50px;
+                        color: #FF5508;
+                        font-weight: 600;
+                    }
+                    p:nth-of-type(2) {
+                        left: 100%;
+                        top: 0;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+       
+        .container {
+            .motionContainer {
+    
+                .imageContainer {
+                    width: 30vw;
+                    height: 20vw;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    video{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &:nth-of-type(1){
+                    z-index: 2;
+                }
+    
+                &:nth-of-type(2){
+                    .imageContainer{
+                        top: -40vh;
+                        left: 5vw;
+                        width: 35vw;
+                        height: calc(35vw * 0.625);
+                    }
+                }
+                &:nth-of-type(3){
+                    .imageContainer{
+                        top: -15vh;
+                        left: -40vw;
+                        width: calc(35vh * 0.825);
+                        height: 35vh;
+                    }
+                }
+                &:nth-of-type(4){
+                    .imageContainer{
+                        left: 35vw;
+                        top: -5%;
+                        width: 25vw;
+                        height: calc(25vw * 0.725);
+                    }
+                }
+                &:nth-of-type(5){
+                    .imageContainer{
+                        top: 35vh;
+                        left: 5vw;
+                        width: 20vw;
+                        height: calc(20vw * 0.725);
+                    }
+                }
+                &:nth-of-type(6){
+                    .imageContainer{
+                        top: 37.5vh;
+                        left: -27.5vw;
+                        width: 30vw;
+                        height: calc(30vw * 0.825);
+                    }
+                }
+                &:nth-of-type(7){
+                    .imageContainer{
+                        top: 22.5vh;
+                        left: 27.5vw;
+                        width: 20vw;
+                        height: calc(20vw * 0.825);
+                    }
+                }
+            }
+        }
+    }
+}

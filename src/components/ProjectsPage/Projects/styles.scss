@@ -563,3 +563,112 @@
     }
 }
 
+@media only screen and (max-width: 950px) and (max-height: 450px){
+    .mainAllProjectsPage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        background-color: #fff;
+        margin: 0;
+        z-index: 2;
+        position: relative;
+        overflow: visible;
+        padding: 40vh 0 20em 0;
+    
+        .barContainer{
+            position: absolute;
+            top: 40vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            gap: 1em;
+            width: 70%;
+            left: 15%;
+            z-index: 2;
+    
+            .headerProjects {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                width: 100%;
+    
+                p{
+                    position: relative;
+                    font-size: 2em;
+                    font-weight: 500;
+                    margin: 0;
+                    width: 70%;
+                    text-align: left;
+                    padding-bottom: 0.5rem;
+                    border-bottom: 1px solid #22272d;
+                    color: #22272d;
+                }
+            }
+            
+            .bar{
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 1em;
+                width: 100%;
+    
+                .buttons{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1em;
+                    z-index: 1;
+                    &:nth-of-type(2){
+                        display: none;
+                    }
+                }
+            }
+        }
+        .list{
+            display: none;
+        }
+       
+        .iconList{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            height: fit-content;
+            position: relative;
+            top: 25vh;
+            background-color: #fff;
+    
+            .mainIcon {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10em;
+                position: relative;
+                background-color: white;
+                z-index: 2;
+    
+            
+                .projects{
+                    z-index: 2;
+                    background-color: white;
+                    height: 100%;
+                    width: 100%;
+                }
+                .cursor, .label{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+

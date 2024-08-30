@@ -180,3 +180,37 @@
         }
     }
 }
+
+@media only screen and (max-width: 950px) and (max-height: 450px){
+    .landingPage{
+        .sliderContainer{
+            top: calc(100vh - 150px);
+            .slider{
+                font-size: 6em;
+            }
+        }
+        .description{
+            top: 30%;
+            left: 70%;
+            font-size: 1.6em;
+            font-weight: 400;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) and (max-height: 380px){
+    .landingPage{
+        .sliderContainer{
+            top: calc(100vh - 100px);
+            .slider{
+                font-size: 5em;
+            }
+        }
+        .description{
+            top: 40%;
+            left: 70%;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+    }
+}

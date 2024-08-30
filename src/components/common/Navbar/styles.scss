@@ -608,3 +608,207 @@
         } 
     }
 }
+
+@media only screen and (max-width: 950px) and (max-height: 500px) {
+    .navbarWhite{
+        overflow: hidden;
+        position: absolute;
+        display: flex;
+        z-index: 3;
+        left: 0;
+        color: white;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: 300;
+        box-sizing: border-box;
+        align-items: center;
+        font-weight: 500;
+        
+        .logo{
+            display: flex;
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            margin-top: 25px;
+            padding: 0 35px;
+    
+            cursor: pointer;
+            p{
+                margin: 0px;
+                transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+            }
+            .name{
+                display: flex;
+                position: relative;
+                overflow: hidden;
+                white-space: nowrap;
+                margin-left: 5px;
+                transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+                p{
+                    position: relative;
+                    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+                    &:nth-of-type(2){
+                        padding-left: 0.3em;
+                    }
+                    &:nth-of-type(3){
+                        position: absolute;
+                        left: 100px;
+                        padding-left: 0.8em;
+                    }
+                }
+            }
+            &:hover{
+                .name{
+                    padding-right: 5px;
+                    .codeBy{
+                        transform: translateX(-100%);
+                    }
+                    .dennis{
+                        transform: translateX(-50px);
+                    }
+                    .snellenberg{
+                        transform: translateX(-55px);
+                    }
+                }
+            }
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+            padding: 0 35px;
+    
+            .el{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                z-index: 3;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-right: 10px;
+                padding-left: 10px;
+                cursor: pointer;
+                .Link{
+                    text-decoration: none;
+                    font-size: 1em;
+                    color: white;
+                    z-index: 4;
+                    padding: 0.2em 0;
+                }
+                .indicator{
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    top: 40px;
+                    left: 50%;
+                    background-color: white;
+                    border-radius: 50%;
+                }
+            }
+            a{
+                cursor: pointer;
+            }
+        } 
+    }
+    
+    .navbarBlack{
+        overflow: hidden;
+        position: absolute;
+        display: flex;
+        z-index: 3;
+        left: 0;
+        color: black;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: 300;
+        box-sizing: border-box;
+        align-items: center;
+        font-weight: 500;
+        
+        .logo{
+            display: flex;
+            text-decoration: none;
+            color: #22272d;
+            font-size: 1em;
+            margin-top: 25px;
+            padding: 0 35px;
+    
+            cursor: pointer;
+            p{
+                margin: 0px;
+                transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+            }
+            .name{
+                display: flex;
+                position: relative;
+                overflow: hidden;
+                white-space: nowrap;
+                margin-left: 5px;
+                transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+                p{
+                    position: relative;
+                    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+                    &:nth-of-type(2){
+                        padding-left: 0.3em;
+                    }
+                    &:nth-of-type(3){
+                        position: absolute;
+                        left: 100px;
+                        padding-left: 0.8em;
+                    }
+                }
+            }
+            &:hover{
+                .name{
+                    padding-right: 5px;
+                    .codeBy{
+                        transform: translateX(-100%);
+                    }
+                    .dennis{
+                        transform: translateX(-50px);
+                    }
+                    .snellenberg{
+                        transform: translateX(-55px);
+                    }
+                }
+            }
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+            padding: 0 35px;
+    
+            .el{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                z-index: 3;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-right: 10px;
+                padding-left: 10px;
+                cursor: pointer;
+                .Link{
+                    text-decoration: none;
+                    font-size: 1em;
+                    color: #22272d;
+                    z-index: 4;
+                    padding: 0.2em 0;
+                }
+                .indicator{
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    top: 40px;
+                    left: 50%;
+                    background-color: #22272d;
+                    border-radius: 50%;
+                }
+            }
+            a{
+                cursor: pointer;
+            }
+        } 
+    }
+}

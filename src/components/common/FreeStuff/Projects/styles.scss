@@ -161,6 +161,21 @@
             height: 55vh;
             p{
                 gap: 0.5em;
+                .titleText{
+                    &:nth-of-type(1){
+                        font-weight: 700;
+                        color: #ff5959; 
+                        font-size: 2.8rem; 
+                        width: 100%;
+                        margin: 0;
+                    }
+                    &:nth-of-type(2){
+                        font-size: 2.2rem;
+                        font-weight: 300; 
+                        color: #fff;
+                        margin: 0;
+                    }
+                }
                 span{
                     font-size: 2rem;
                     font-weight: 300; 
@@ -187,6 +202,22 @@
             height: 50vh;
             p{
                 gap: 0.5em;
+
+                .titleText{
+                    &:nth-of-type(1){
+                        font-weight: 700;
+                        color: #ff5959; 
+                        font-size: 2.5rem; 
+                        width: 100%;
+                        margin: 0;
+                    }
+                    &:nth-of-type(2){
+                        font-size: 2rem;
+                        font-weight: 300; 
+                        color: #fff;
+                        margin: 0;
+                    }
+                }
                 span{
                     font-size: 1.8rem;
                     font-weight: 300; 
@@ -204,6 +235,46 @@
     }
 }
 
+@media only screen and (max-width: 950px) and (max-height: 500px){
+    .bodyFreeProjects {
+        flex-wrap: wrap;
+        gap: 15vh;
+        .project {
+            width: calc(50vw * 0.725);
+            height: 50vw;
+            p{
+                .titleText{
+                    &:nth-of-type(1){
+                        font-weight: 700;
+                        color: #ff5959; 
+                        font-size: 2.2rem; 
+                        width: 100%;
+                        margin: 0;
+                    }
+                    &:nth-of-type(2){
+                        font-size: 1.6rem;
+                        font-weight: 300; 
+                        color: #fff;
+                        margin: 0;
+                    }
+                }
+                span{
+                    font-size: 2rem;
+                    font-weight: 300; 
+                    color: #fff;
+                    margin: 0;
+                    &:nth-of-type(1) {
+                        margin-right: 15rem;
+                        font-weight: 700;
+                        color: #b9b9b9;  
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
 @media only screen and (max-width: 500px){
     .bodyFreeProjects {
         flex-wrap: wrap;
@@ -212,6 +283,21 @@
             width: calc(50vh * 0.725);
             height: 50vh;
             p{
+                .titleText{
+                    &:nth-of-type(1){
+                        font-weight: 700;
+                        color: #ff5959; 
+                        font-size: 2rem; 
+                        width: 100%;
+                        margin: 0;
+                    }
+                    &:nth-of-type(2){
+                        font-size: 1.5rem;
+                        font-weight: 300; 
+                        color: #fff;
+                        margin: 0;
+                    }
+                }
                 span{
                     font-size: 2rem;
                     font-weight: 300; 

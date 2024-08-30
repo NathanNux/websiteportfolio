@@ -334,3 +334,63 @@
     }
 }
 
+
+@media only screen and (max-width: 950px) and (max-height: 450px){
+    .mainNewestProjects{
+        height: 125vh;
+        padding: 2rem 10rem;
+        ul{
+            li{ 
+
+                a{
+                    padding: 1.4em;
+                    h2 {
+                        font-size: 2.2em;
+                    }
+                    p {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+        .button {
+            bottom: 0%;
+            .buttonLink{
+                width: 160px;
+                height: 80px;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) and (max-height: 380px){
+    .mainNewestProjects{
+        padding: 2rem 5rem;
+        height: 125vh;
+        ul{
+            li{ 
+
+                a{
+                    padding: 1.2em;
+                    h2 {
+                        font-size: 2.2em;
+                    }
+                    p {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+        .button {
+            bottom: 0;
+            .buttonLink{
+                width: 160px;
+                height: 80px;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+

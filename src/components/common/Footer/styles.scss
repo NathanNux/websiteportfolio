@@ -841,3 +841,102 @@
         }
     }
 }
+
+@media only screen and (max-width: 950px) and (max-height: 500px){
+    .mainFooter{
+        height: 120vh;
+        justify-content: center;
+        .animContainer{
+            top: 5vh;
+            width: 60%;
+            .head{
+                .imgContainer {
+                    height: 130px;
+                    width: 130px;
+                }
+                h1 {
+                    font-size: 2.5em;
+                }
+            }
+            .line {
+                left: 20%;
+                .button {
+                    top: -50px;
+                    right: 10%;
+                    .buttonLink{
+                        width: 120px;
+                        height: 120px;
+                        p{
+                            font-size: 1em;
+                        }
+                    }
+                }   
+                
+            }
+            .bottonContainer{
+                bottom: 10%;
+            }
+        }
+        .footer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            height: 20%;
+    
+            .time{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                p{
+                    font-size: 1rem;
+                    line-height: 1.5;
+                    color: #9f9689;
+                    margin: 0;
+                    span{
+                        margin-left: 0.8rem;
+                        font-size: 1.2rem;
+                        color: #22272d;
+                    }
+                    &:nth-of-type(2){
+                        display: none;
+                    }
+                }
+            }
+    
+            .socials{
+                line-height: 1.5;
+                width: 50%;
+                p{
+                    font-size: 1rem;
+                    color: #9f9689;
+                    margin: 0;
+                }
+                .icons{
+                    display: flex;
+                    gap: 0.5em;
+                    .links{
+                        display: flex;
+                        a{
+                            list-style: none;
+                            text-decoration: none;
+                            color: #22272d;
+                            margin-left: 0.8rem;
+                            font-size: 1.2rem;
+                            position: relative;
+                            .dot{
+                                position: absolute;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background-color: #22272d;
+                                left: calc(50% - 2.5px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

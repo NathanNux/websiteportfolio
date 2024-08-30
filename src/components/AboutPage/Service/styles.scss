@@ -710,7 +710,7 @@
 
 @media only screen and (max-width: 400px) and (max-height: 950px){
     .mainServiceAbout {
-        height: 250vh;
+        height: 300vh;
         .serviceContainer{
             .mainText{
                 position: absolute;
@@ -762,15 +762,15 @@
                         }
                     }
                     &:nth-of-type(1){
-                        top: -20%;
+                        top: -25%;
                         left: 10%;
                     }
                     &:nth-of-type(2){
-                        top: 5%;
+                        top: 0%;
                         right: 15%;
                     }
                     &:nth-of-type(3){
-                        top: 30%;
+                        top: 20%;
                         right: 10%;
                     }
                 }
@@ -779,7 +779,7 @@
                 width: 160px;
                 height: 160px;
                 position: absolute;
-                bottom: 0;
+                bottom: 15%;
                 right: 50%;
                 z-index: 2;
                 .buttonLink {
@@ -798,3 +798,95 @@
         } 
     }
 }
+
+@media only screen and (max-width: 950px) and (max-height: 500px){
+    .mainServiceAbout {
+        height: 300vh;
+        .serviceContainer{
+            .mainText{
+                position: absolute;
+                top: 10%;
+                left: 5%;
+                width: 90%;
+                p{
+                    font-size: 3em;
+                }
+            }
+            .services{
+                .contentContainer{
+                    position: absolute;
+                    width: 65%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1;
+                    .title{
+                        width: 100%;
+                        text-align: left;
+                        p{
+                            font-size: 1em;
+                            font-weight: 300;
+                            color: #22272d;
+                            margin: 0;
+                            padding-bottom: 0.5rem;
+                        }
+                    }
+                    .content{
+                        width: 100%;
+                        text-align: left;
+                        padding: 1em 2em;
+                        position: relative;
+                        .braker{
+                            position: absolute;
+                            width: 80%;
+                            height: 1px;
+                            background-color: #22272d;
+                            top: 2%;
+                        }
+                        p{
+                            font-size: 1.5em;
+                            font-weight: 400;
+                            color: #22272d;
+                            margin: 0;
+                        }
+                    }
+                    &:nth-of-type(1){
+                        top: -20%;
+                        left: 10%;
+                    }
+                    &:nth-of-type(2){
+                        top: 0;
+                        right: 15%;
+                    }
+                    &:nth-of-type(3){
+                        top: 20%;
+                        right: 10%;
+                    }
+                }
+            }
+            .button{
+                width: 160px;
+                height: 160px;
+                position: absolute;
+                bottom: 10%;
+                right: 50%;
+                z-index: 2;
+                .buttonLink {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-color: #22272d; 
+                    p{
+                        font-size: 1.5em;
+                        font-weight: 500;
+                        margin: 0;
+                        text-align: center;
+                    }
+                }
+            }
+        } 
+    }
+}
+

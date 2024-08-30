@@ -1,9 +1,10 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 import { useMousePosition } from '@/utils/useMousePosition';
 import ButtonLink from '@/components/common/LinkButton/linkButton';
 import { textOpacity, textSlideUp } from '@/components/anim';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Index () {
 
@@ -11,17 +12,27 @@ export default function Index () {
     const phraseHidden = 'Visuální desinger + Fullstack Dev, který má schopnosti a zkušenosti dělat díla, které (ještě) nebyla a nebudou nahrazena umělou inteligencí - Odvádím skvělou práci, když je cena stejně tak skvělá.'
     const description = useRef(null);
     const isInView = useInView(description)
+    
 
     const [ isHovered, setIsHovered ] = useState(false);
     const elRef = useRef(null);
     const { x, y } = useMousePosition(elRef);
     const size = isHovered ? 300 : 20;
 
+    const [disableScene, setDisableScene] = useState(false);
+    const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
+
+    useEffect(() => {
+        if (isTouchDevice) {
+            setDisableScene(true);
+        }
+    }, [isTouchDevice]);
+
     return (
         <section className="descriptionLanding" >
             <div className="body">
                 <div className="main" ref={elRef}>
-                    <motion.div className="mask" animate={{
+                    {!disableScene && <motion.div className="mask" animate={{
                         WebkitMaskPosition: `${x - (size / 2)}px ${y - (size / 2)}px`,
                         WebkitMaskSize: `${size}px`,
                         }}
@@ -30,7 +41,7 @@ export default function Index () {
                         <p onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}}>
                             {phraseHidden}
                         </p>
-                    </motion.div>
+                    </motion.div>}
                     <div className="bodyHidden">
                        <p>
                         {
