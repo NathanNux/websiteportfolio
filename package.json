@@ -16,7 +16,6 @@
     "@react-three/drei": "^9.106.0",
     "@react-three/fiber": "^8.16.7",
     "@studio-freight/lenis": "^1.0.42",
-    "autoprefixer": "^10.4.19",
     "axios": "^1.7.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -27,7 +26,6 @@
     "locomotive-scroll": "^5.0.0-beta.8",
     "lucide-react": "^0.400.0",
     "next": "14.2.4",
-    "postcss": "^8.4.39",
     "react": "^18",
     "react-calendly": "^4.3.1",
     "react-dom": "^18",
@@ -40,7 +38,10 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8.4.41"
   }
 }

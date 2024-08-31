@@ -1,5 +1,8 @@
 import Head from "next/head";
-import CurveTransition from "@/components/transition/CurveTransition";
+// import CurveTransition from "@/components/transition/CurveTransition";
+
+import dynamic from 'next/dynamic';
+const CurveTransition = dynamic(() => import('@/components/transition/CurveTransition'), { ssr: false });
 
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";

@@ -1,5 +1,9 @@
 import Head from "next/head";
-import CurveTransition from "@/components/transition/CurveTransition";
+// import CurveTransition from "@/components/transition/CurveTransition";
+
+import dynamic from 'next/dynamic';
+const CurveTransition = dynamic(() => import('@/components/transition/CurveTransition'), { ssr: false });
+
 import { useEffect, useState } from "react";
 import TopBar from "@/components/ProjectsTemplate/TopBar";
 import Description from "@/components/common/Description";
