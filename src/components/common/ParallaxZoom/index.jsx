@@ -198,6 +198,7 @@ export default function ZoomParallax({src2, src3, src4, src5, src6, src7, path, 
                                 alt={picture.alt}
                                 fill={true}
                                 sizes="true"
+                                priority={true}
                             />   
                         </div>
                     </motion.div>
