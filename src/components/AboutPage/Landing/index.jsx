@@ -57,10 +57,10 @@ export default function Index() {
     <motion.main variants={slideUp} initial="initial" animate='enter' className="landingAbout">
       <Image 
         src="/images/about/background.webp"
-        fill
+        fill={true}
         sizes="true"
         alt="background"
-        priority
+        priority={true}
       />
       <div className="sliderContainer">
         <div ref={slider} className="slider">

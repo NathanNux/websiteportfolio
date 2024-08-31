@@ -251,7 +251,7 @@ export default function Contact() {
             <div className="headerIntro">
                 <h1>Pojďme se spojit, <br />budovat a uspět!</h1>
                 <div className="imageContainer" data-scroll data-scroll-speed={0.05}>
-                    <Image src="/images/landing/background.webp" alt="photo" fill sizes="true" />
+                    <Image src="/images/landing/background.webp" alt="photo" fill={true} sizes="true" />
                 </div>
             </div>
             <div className="formContainer">

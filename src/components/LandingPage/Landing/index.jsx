@@ -60,10 +60,10 @@ export default function Index() {
     <motion.main variants={ delayAnim ? FirstSlideUp : slideUp } initial="initial" animate='enter' className="landingPage">
       <Image 
         src="/images/landing/background.webp"
-        fill
+        fill={true}
         sizes="true"
         alt="background"
-        priority
+        priority={true}
       />
       <div className="sliderContainer">
         <div ref={slider} className="slider">

@@ -156,7 +156,7 @@ export default function IconList({ selectedCategory}) {
                                                     <Image 
                                                         src={src} 
                                                         alt={alt} 
-                                                        fill
+                                                        fill={true}
                                                         sizes="true"
                                                     />
                                                 </div>

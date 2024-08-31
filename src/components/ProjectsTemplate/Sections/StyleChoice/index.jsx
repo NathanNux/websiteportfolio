@@ -14,7 +14,7 @@ export default function StyleChoice ({images, phrases}) {
             <div className="images">
                 {images.map((image, i) => (
                     <div key={i} className="imageContainer" data-scroll data-scroll-speed={0.05 * (i + 1)}>
-                        <Image src={image.src} alt={image.alt} fill sizes='true' />
+                        <Image src={image.src} alt={image.alt} fill={true} sizes='true' />
                     </div>
                 ))}
             </div>

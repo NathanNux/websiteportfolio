@@ -168,7 +168,7 @@ export default function Projects () {
                                     <Image 
                                         src={src} 
                                         alt={alt} 
-                                        fill
+                                        fill={true}
                                         sizes="true"
                                     />
                                 </motion.div>

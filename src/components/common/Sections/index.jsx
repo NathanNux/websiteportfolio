@@ -39,20 +39,20 @@ export default function Section ({images, phrases, styles}) {
             <div className="images" ref={columnRef}>
                 {images.map((image, i) => (
                     <div key={i} className="imageContainer" data-scroll data-scroll-speed={0.05 * (i + 1)}>
-                        {!image.path && <Image src={image.src} alt={image.alt} fill sizes="true"/>}
+                        {!image.path && <Image src={image.src} alt={image.alt} fill={true} sizes="true"/>}
                         {isVisible && image.path && 
                             <video
-                                autoPlay
-                                playsInline
-                                loop
-                                muted
+                                autoPlay={true}
+                                playsInline={true}
+                                loop={true}
+                                muted={true}
                                 onLoadedData={ () => setIsLoaded(true)}
                                 style={{ display: isLoaded ? "block" : "none"}}
                             >
                                 <source src={image.path} type="video/mp4"/>
                             </video>
                         }
-                        {image.path && !isLoaded && <Image src={image.src} alt={image.alt} fill sizes="true"/>}
+                        {image.path && !isLoaded && <Image src={image.src} alt={image.alt} fill={true} sizes="true"/>}
                     </div>
                 ))}
             </div>

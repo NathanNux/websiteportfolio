@@ -17,10 +17,10 @@ export default function Intro({src, phrase1, phrase2, phrase3}) {
         <motion.section ref={section} className="mainIntro" style={{y}} >
             <Image 
               src={src}
-              fill
+              fill={true}
               sizes="true"
               alt="background"
-              priority
+              priority={true}
             />
 
             <div className="textContainer">

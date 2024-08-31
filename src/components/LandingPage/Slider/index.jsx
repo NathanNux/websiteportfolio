@@ -186,12 +186,12 @@ const Column = ({ assets, y }) => {
                 return (
                     <div ref={el => containerRefs.current[index] = el} key={index} className="imageContainer">
                         {isLoaded[index] && (
-                            <video autoPlay playsInline loop muted preload="metadata" style={{ display: "block" }}>
+                            <video autoPlay={true} playsInline={true} loop={true} muted={true} preload="metadata" style={{ display: "block" }}>
                                 <source src={path} type="video/webm" />
                             </video>
                         )}
                         {!isLoaded[index] && (
-                            <Image src={src} alt={alt} fill sizes="true" loading="lazy" />
+                            <Image src={src} alt={alt} fill={true} sizes="true" loading="lazy" />
                         )}
                     </div>
                 );

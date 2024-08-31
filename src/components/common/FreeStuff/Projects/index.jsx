@@ -96,16 +96,16 @@ export default function Projects () {
                                     <Image 
                                         src={src} 
                                         alt={alt} 
-                                        fill
+                                        fill={true}
                                         sizes="true"
                                         loading='lazy'
                                     />
                                     <div className='overlay'/>
                                     {!disableAnimation && <video
                                         ref={el => videoRefs.current[index] = el} // Assign ref to the video element
-                                        loop
-                                        muted
-                                        playsInline
+                                        loop={true}
+                                        muted={true}
+                                        playsInline={true}
                                     >
                                         <source src={path} type="video/webm" />
                                     </video>}

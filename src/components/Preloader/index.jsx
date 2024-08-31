@@ -68,7 +68,7 @@ export default function Preloader() {
                 {dimension.width > 0 && 
                 <>
                     <motion.div variants={videoPath} initial="initial" exit="exit" className="videoContainer">
-                        <video src="/assets/preloader/0819.webm" autoPlay playsInline muted loop className="mainVideo" ></video>
+                        <video src="/assets/preloader/0819.webm" autoPlay={true} playsInline={true} muted={true} loop={true} className="mainVideo" ></video>
                     </motion.div>
                     <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>
                     <svg>
