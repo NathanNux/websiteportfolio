@@ -42,10 +42,10 @@ export default function Section ({images, phrases, styles}) {
                         {!image.path && <Image src={image.src} alt={image.alt} fill sizes="true"/>}
                         {isVisible && image.path && 
                             <video
-                                autoPlay
-                                playsInline
-                                loop
-                                muted
+                                autoPlay={true}
+                                playsInline={true}
+                                loop={true}
+                                muted={true}
                                 onLoadedData={ () => setIsLoaded(true)}
                                 style={{ display: isLoaded ? "block" : "none"}}
                             >

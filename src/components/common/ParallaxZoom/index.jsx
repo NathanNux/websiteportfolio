@@ -174,10 +174,10 @@ export default function ZoomParallax({src2, src3, src4, src5, src6, src7, path, 
                             {isLoaded && 
                                 <video
                                     ref={videoRef}
-                                    autoPlay
-                                    playsInline
-                                    loop
-                                    muted
+                                    autoPlay={true}
+                                    playsInline={true}
+                                    loop={true}
+                                    muted={true}
                                     style={{ display: "block"}}
                                 >
                                     <source src={video.path} type="video/mp4"/>

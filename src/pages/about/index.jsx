@@ -1,13 +1,11 @@
 import Head from "next/head";
-// import CurveTransition from "@/components/transition/CurveTransition";
+import CurveTransition from "@/components/transition/CurveTransition";
 import Landing from "@/components/AboutPage/Landing";
 import Services from "@/components/AboutPage/Service";
 import Intro from "@/components/common/Intro";
 import AboutSections from "@/components/AboutPage/AboutSections";
 import FreeOffers from "@/components/common/FreeStuff";
 import Description from "@/components/common/Description";
-import dynamic from 'next/dynamic';
-const CurveTransition = dynamic(() => import('@/components/transition/CurveTransition'), { ssr: false });
 
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";

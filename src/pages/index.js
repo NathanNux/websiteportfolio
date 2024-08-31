@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import CurveTransition from "@/components/transition/CurveTransition";
+import CurveTransition from "@/components/transition/CurveTransition";
 import Landing from '@/components/LandingPage/Landing';
 import Slider from "@/components/LandingPage/Slider";
 import NewestWork from "@/components/LandingPage/NewestWork";
@@ -11,7 +11,7 @@ import IntroText from "@/components/common/IntroText";
 import OfferSection from "@/components/LandingPage/OfferSections";
 import MainOffer from "@/components/LandingPage/MainOffer";
 import { AnimatePresence } from "framer-motion";
-// import Preloader from "@/components/Preloader";
+import Preloader from "@/components/Preloader";
 import { useLoad } from "@/context";
 import FreeOffers from "@/components/common/FreeStuff";
 import ZoomParallax from "@/components/common/ParallaxZoom";
@@ -19,10 +19,6 @@ import ZoomParallax from "@/components/common/ParallaxZoom";
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
-
-import dynamic from 'next/dynamic';
-const CurveTransition = dynamic(() => import('@/components/transition/CurveTransition'), { ssr: false });
-const Preloader = dynamic(() => import('@/components/Preloader'), { ssr: false });
 
 
 const phrases = [
