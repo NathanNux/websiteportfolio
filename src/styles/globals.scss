@@ -56,9 +56,6 @@ body {
 // the same in the preloader svg.
 // WIP: Do last changes in services in about page. then description in landing and spot some issues in the scss responsive code.
 
-// WIP: It has a lot of performance issues. Reconsider text anims to play only when in view.
-// WIP: Add sizes to images in the website to prevent layout shift.
-
 @layer base {
   :root {
     --background: 0 0% 100%;

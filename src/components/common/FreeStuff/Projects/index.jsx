@@ -103,9 +103,9 @@ export default function Projects () {
                                     <div className='overlay'/>
                                     {!disableAnimation && <video
                                         ref={el => videoRefs.current[index] = el} // Assign ref to the video element
-                                        loop={true}
-                                        muted={true}
-                                        playsInline={true}
+                                        loop
+                                        muted
+                                        playsInline
                                     >
                                         <source src={path} type="video/webm" />
                                     </video>}

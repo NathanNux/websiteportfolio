@@ -58,7 +58,7 @@ export default function Index() {
       <Image 
         src="/images/about/background.webp"
         fill
-        sizes="(max-width: 1920px) 1920px, 100vw"
+        sizes="true"
         alt="background"
         priority
       />
