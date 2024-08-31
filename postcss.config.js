@@ -2,6 +2,27 @@ module.exports = {
   plugins: [
     'tailwindcss',
     'autoprefixer',
+    ...(process.env.NODE_ENV === 'production'
+      ? [
+          [
+            '@fullhuman/postcss-purgecss',
+            {
+              content: [
+                './src/pages/**/*.{js,jsx,ts,tsx}',
+                './src/pages/*.{js,jsx,ts,tsx}',
+                './src/pages/projects/**/*.{js,jsx,ts,tsx}',
+                './src/components/**/*.{js,jsx,ts,tsx}',
+                './src/components/**/**/*.{js,jsx,ts,tsx}',
+                './src/components/**/**/**/*.{js,jsx,ts,tsx}',
+                './src/components/**/**/**/**/*.{js,jsx,ts,tsx}',
+                // Add other directories where you use Tailwind CSS or SCSS
+              ],
+              defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+              safelist: ['html', 'body'], // Adjust the safelist as needed
+            },
+          ],
+        ]
+      : []),
   ],
 };
 // this setup is for Next.js, but you can adjust it for other frameworks
