@@ -130,7 +130,7 @@ export default function Home() {
           src5='/assets/images/smooth-scroll/smooth-scroll5.webp' 
           src6='/assets/images/smooth-scroll/smooth-scroll-ip2.webp' 
           src7='/assets/images/smooth-scroll/color.webp' 
-          path='/assets/a-footage/smooth-scroll.mp4'
+          path='/assets/a-footage/smooth-scroll.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

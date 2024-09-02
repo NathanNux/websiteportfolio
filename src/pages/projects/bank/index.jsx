@@ -130,7 +130,7 @@ export default function Home() {
           src5='/assets/images/bank/bank5.webp' 
           src6='/assets/images/bank/bank-ip2.webp' 
           src7='/assets/images/bank/color.webp' 
-          path='/assets/a-footage/bank.mp4'
+          path='/assets/a-footage/bank.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

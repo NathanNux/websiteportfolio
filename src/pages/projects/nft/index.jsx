@@ -130,7 +130,7 @@ export default function Home() {
           src5='/assets/images/nft/nft5.webp' 
           src6='/assets/images/nft/nft-ip2.webp' 
           src7='/assets/images/nft/color.webp' 
-          path='/assets/a-footage/nft-site.mp4'
+          path='/assets/a-footage/nft-site.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

@@ -130,7 +130,7 @@ export default function Home() {
           src5='/assets/images/framer/ramer5.webp' 
           src6='/assets/images/framer/framer-ip2.webp' 
           src7='/assets/images/framer/color.webp' 
-          path='/assets/a-footage/framerscroll.mp4'
+          path='/assets/a-footage/framerscroll.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

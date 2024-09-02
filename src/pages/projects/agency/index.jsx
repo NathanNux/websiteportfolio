@@ -131,7 +131,7 @@ export default function Home() {
           src5='/assets/images/agency/agency5.webp' 
           src6='/assets/images/agency/agencyip2.webp' 
           src7='/assets/images/agency/color.webp' 
-          path='/assets/a-footage/agency.mp4'
+          path='/assets/a-footage/agency.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

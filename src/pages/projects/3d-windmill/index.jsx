@@ -129,7 +129,7 @@ export default function Home() {
           src5='/assets/images/3d-windmill/3dwind5.webp' 
           src6='/assets/images/3d-windmill/3dwindmillip2.webp' 
           src7='/assets/images/3d-windmill/color.webp' 
-          path='/assets/a-footage/windmill.mp4'
+          path='/assets/a-footage/windmill.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

@@ -138,7 +138,7 @@ export default function Home() {
           src5='/assets/images/3d-pc/3dpc5.webp' 
           src6='/assets/images/3d-pc/3dpcip2.webp' 
           src7='/assets/images/3d-pc/color.webp' 
-          path='/assets/a-footage/3dpc.mp4'
+          path='/assets/a-footage/3dpc.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

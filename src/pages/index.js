@@ -83,7 +83,7 @@ export default function Home() {
             src5='/assets/images/slider-la/color-pallet.webp' 
             src6='/assets/images/slider-la/offer.webp' 
             src7='/assets/images/slider-la/research.webp' 
-            path='/assets/images/slider-la/videos/main.mp4'
+            path='/assets/images/slider-la/videos/main.webm'
             text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
           />
           <OfferSection />

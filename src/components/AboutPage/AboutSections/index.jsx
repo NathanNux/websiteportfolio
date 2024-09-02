@@ -74,7 +74,7 @@ const sections = [
             },
             {
                 src: "/assets/images/slider-la/seo.webp",
-                path: '/assets/a-footage/gsap-all.mp4',
+                path: '/assets/a-footage/gsap-all.webm',
                 alt: "A beautiful landscape",
                 app: 'A beautiful landscape'
             }
@@ -190,7 +190,7 @@ export default function OfferSection () {
 //             },
 //             {
 //                 src: "/assets/images/slider-la/seo.webp",
-//                 path: '/assets/a-footage/gsap-all.mp4',
+//                 path: '/assets/a-footage/gsap-all.webm',
 //                 alt: "A beautiful landscape",
 //                 app: 'A beautiful landscape'
 //             }

@@ -130,7 +130,7 @@ export default function Home() {
           src5='/assets/images/brainwave/brainwave5.webp' 
           src6='/assets/images/brainwave/brainwaveip2.webp' 
           src7='/assets/images/brainwave/color.webp' 
-          path='/assets/a-footage/brainwave-site.mp4'
+          path='/assets/a-footage/brainwave-site.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

@@ -130,7 +130,7 @@ export default function Home() {
           src5='/assets/images/sushi/sushi5.webp' 
           src6='/assets/images/sushi/sushi-ip2.webp' 
           src7='/assets/images/sushi/color.webp' 
-          path='/assets/a-footage/sushi.mp4'
+          path='/assets/a-footage/sushi.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

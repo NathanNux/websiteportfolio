@@ -62,7 +62,7 @@ export default function Preloader() {
     return (
         <>
             <Head>
-                <link rel="preload" href="/assets/preloader/0819.mp4" type="video/mp4" />
+                <link rel="preload" href="/assets/preloader/0819.webm" type="video/webm" />
             </Head>
             <motion.div variants={slideUp} initial="initial" exit="exit" className="introductionPreloader">
                 {dimension.width > 0 && 

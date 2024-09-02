@@ -130,7 +130,7 @@ export default function Home() {
           src5='/assets/images/denis-clone/desnis-clone5.webp' 
           src6='/assets/images/denis-clone/denis-clone-ip2.webp' 
           src7='/assets/images/denis-clone/color.webp' 
-          path='/assets/a-footage/denis-clone.mp4'
+          path='/assets/a-footage/denis-clone.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

@@ -130,7 +130,7 @@ export default function Home() {
           src5='/assets/images/ecom/ecom5.webp' 
           src6='/assets/images/ecom/ecomip2.webp' 
           src7='/assets/images/ecom/color.webp' 
-          path='/assets/a-footage/ecomm.mp4'
+          path='/assets/a-footage/ecomm.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

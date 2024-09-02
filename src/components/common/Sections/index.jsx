@@ -49,7 +49,7 @@ export default function Section ({images, phrases, styles}) {
                                 onLoadedData={ () => setIsLoaded(true)}
                                 style={{ display: isLoaded ? "block" : "none"}}
                             >
-                                <source src={image.path} type="video/mp4"/>
+                                <source src={image.path} type="video/webm"/>
                             </video>
                         }
                         {image.path && !isLoaded && <Image src={image.src} alt={image.alt} fill={true} sizes="true"/>}

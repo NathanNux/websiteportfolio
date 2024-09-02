@@ -132,7 +132,7 @@ export default function Home() {
           src6='/assets/images/travel/travel-ip2.webp' 
           src7='/assets/images/travel/color.webp' 
           //Create a video for this project
-          path='/assets/a-footage/applesite.mp4'
+          path='/assets/a-footage/travel-site.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

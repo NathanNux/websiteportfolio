@@ -132,7 +132,7 @@ export default function Home() {
           src5='/assets/images/components/components5.webp' 
           src6='/assets/images/components/components-ip2.webp' 
           src7='/assets/images/components/color.webp' 
-          path='/assets/a-footage/beginner-components-1.mp4'
+          path='/assets/a-footage/beginner-components-1.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>

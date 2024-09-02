@@ -131,7 +131,7 @@ export default function Home() {
           src5='/assets/images/3d-tee/3dtee5.webp' 
           src6='/assets/images/3d-tee/3dteeip2.webp' 
           src7='/assets/images/3d-tee/color.webp' 
-          path='/assets/a-footage/3dtshirt.mp4'
+          path='/assets/a-footage/3dtshirt.webm'
           text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
         />
         <Description  description={description}/>
