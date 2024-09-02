@@ -5,6 +5,7 @@
     justify-content: center;
     background-color: #22272d;
     z-index: 5;
+    border-radius: 50px;
     .project {
         display: flex;
         flex-direction: column;
@@ -23,6 +24,7 @@
             height: 100%;
             z-index: 0;
             box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
 
             img {
                 width: 100%;
@@ -176,10 +178,11 @@
 
 @media only screen and (max-width: 450px) and (max-height: 950px){
     .bodyMobileView {
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 15vw;
         .project {
-            width: calc(35vh * 0.625);
-            height: 35vh;
+            width: calc(65vh * 0.625);
+            height: 65vh;
             p{
                 gap: 0.5em;
                 span{

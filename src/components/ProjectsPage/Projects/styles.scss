@@ -215,16 +215,9 @@
             
         }
         .iconList{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
             width: 100%;
             min-height: 10vh;
-            position: relative;
             top: 20vh;
-            background-color: #fff;
         }
         .list{
             padding: 15rem 0 0 0;
@@ -246,16 +239,9 @@
             
         }
         .iconList{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
             width: 100%;
             min-height: 10vh;
-            position: relative;
             top: 25vh;
-            background-color: #fff;
         }
         .list{
             top: 20vh;
@@ -278,16 +264,9 @@
             
         }
         .iconList{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
             width: 100%;
             min-height: 10vh;
-            position: relative;
             top: 15vh;
-            background-color: #fff;
         }
         .list{
             top: 25vh;
@@ -311,16 +290,9 @@
             
         }
         .iconList{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
             width: 100%;
             min-height: 10vh;
-            position: relative;
             top: 20vh;
-            background-color: #fff;
             div{
                 width: 100%;
                 display: flex;
@@ -344,63 +316,38 @@
 
 @media only screen and (max-width: 450px) and (max-height: 950px){
     .mainAllProjectsPage{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: top;
         align-items: center;
         height: fit-content;
-        background-color: #fff;
-        margin: 0;
-        z-index: 2;
-        position: relative;
         overflow: visible;
         padding: 0 0 20em 0;
     
         .barContainer{
-            position: absolute;
             top: 20vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             gap: 2em;
             width: 80%;
             left: 10%;
-            z-index: 2;
     
             .headerProjects {
-                display: flex;
                 justify-content: center;
-                align-items: center;
                 width: 100%;
     
                 p{
-                    position: relative;
                     font-size: 2em;
                     font-weight: 500;
-                    margin: 0;
                     width: 80%;
                     text-align: left;
                     padding-bottom: 0.5rem;
-                    border-bottom: 1px solid #22272d;
-                    color: #22272d;
                 }
             }
             
             .bar{
-                display: flex;
                 justify-content: center;
-                align-items: center;
                 gap: 1em;
                 width: 100%;
     
                 .buttons{
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     gap: 1em;
-                    z-index: 1;
                     &:nth-of-type(2){
                         display: none;
                     }
@@ -412,34 +359,17 @@
         }
        
         .iconList{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
             height: 100%;
             width: 100%;
             height: fit-content;
-            position: relative;
             top: 30vh;
-            background-color: #fff;
     
             .mainIcon {
                 height: 100%;
                 width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 gap: 10em;
-                position: relative;
-                background-color: white;
-                z-index: 2;
-    
             
                 .projects{
-                    z-index: 2;
-                    background-color: white;
                     height: 100%;
                     width: 100%;
                 }
@@ -454,65 +384,39 @@
 
 @media only screen and (max-width: 380px) and (max-height: 750px){
     .mainAllProjectsPage{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: top;
         height: fit-content;
-        background-color: #fff;
-        margin: 0;
         z-index: 2;
-        position: relative;
         overflow: visible;
         padding: 10vh 0 20em 0;
     
         .barContainer{
-            position: absolute;
             top: 30vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             gap: 1em;
             width: 90%;
             left: 5%;
-            z-index: 2;
-            padding: 0;
     
             .headerProjects {
-                display: flex;
                 justify-content: center;
-                align-items: center;
                 width: 100%;
                 padding: 0;
     
                 p{
-                    position: relative;
                     font-size: 1.6em;
                     font-weight: 400;
-                    margin: 0;
                     width: 80%;
                     text-align: left;
                     padding: 0 0 0.5rem 0;
-                    border-bottom: 1px solid #22272d;
-                    color: #22272d;
                 }
             }
             
             .bar{
-                display: flex;
                 justify-content: center;
-                align-items: center;
                 gap: 1em;
                 width: 100%;
     
                 .buttons{
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     gap: 1em;
-                    z-index: 1;
                     &:nth-of-type(2){
                         display: none;
                     }
@@ -524,34 +428,17 @@
         }
        
         .iconList{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
             height: 100%;
             width: 100%;
             height: fit-content;
-            position: absolute;
             top: 45vh;
-            background-color: #fff;
     
             .mainIcon {
                 height: 100%;
                 width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 gap: 10em;
-                position: relative;
-                background-color: white;
-                z-index: 2;
-    
             
                 .projects{
-                    z-index: 2;
-                    background-color: white;
                     height: 100%;
                     width: 100%;
                 }
@@ -565,63 +452,36 @@
 
 @media only screen and (max-width: 950px) and (max-height: 450px){
     .mainAllProjectsPage{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: top;
         height: fit-content;
-        background-color: #fff;
-        margin: 0;
-        z-index: 2;
-        position: relative;
         overflow: visible;
         padding: 40vh 0 20em 0;
     
         .barContainer{
-            position: absolute;
             top: 40vh;
-            display: flex;
             justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
             gap: 1em;
             width: 70%;
             left: 15%;
-            z-index: 2;
     
             .headerProjects {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 width: 100%;
     
                 p{
-                    position: relative;
                     font-size: 2em;
-                    font-weight: 500;
-                    margin: 0;
                     width: 70%;
                     text-align: left;
                     padding-bottom: 0.5rem;
-                    border-bottom: 1px solid #22272d;
-                    color: #22272d;
                 }
             }
             
             .bar{
-                display: flex;
                 justify-content: left;
-                align-items: center;
                 gap: 1em;
                 width: 70%;
     
                 .buttons{
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     gap: 1em;
-                    z-index: 1;
                     &:nth-of-type(2){
                         display: none;
                     }
@@ -633,34 +493,18 @@
         }
        
         .iconList{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
             height: 100%;
             width: 100%;
             height: fit-content;
-            position: relative;
             top: 25vh;
-            background-color: #fff;
     
             .mainIcon {
                 height: 100%;
                 width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 gap: 10em;
-                position: relative;
-                background-color: white;
-                z-index: 2;
     
             
                 .projects{
-                    z-index: 2;
-                    background-color: white;
                     height: 100%;
                     width: 100%;
                 }

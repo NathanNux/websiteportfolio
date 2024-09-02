@@ -146,20 +146,15 @@
 
 @media only screen and (max-width: 1050px) and (min-height: 1000px) {
     .mainParallaxZoom {
-        width: 100vw;
-        height: 300vh;
     
         .bodySlider{
             .sliderContainer{ 
-                position: absolute;
                 top: 270vh;
                 .slider {
                     font-size: 10em;
     
                     p {
                         padding-right: 50px;
-                        color: #FF5508;
-                        font-weight: 600;
                     }
                     p:nth-of-type(2) {
                         left: 100%;
@@ -249,20 +244,16 @@
     
         .bodySlider{
             .sliderContainer{ 
-                position: absolute;
                 top: 280vh;
                 .slider {
                     font-size: 9em;
     
                     p {
                         padding-right: 50px;
-                        color: #FF5508;
-                        font-weight: 600;
                     }
                     p:nth-of-type(2) {
                         left: 100%;
                         top: 0;
-                        font-weight: 500;
                     }
                 }
             }
@@ -341,25 +332,19 @@
 
 @media only screen and (max-width: 450px) and (max-height: 950px) {
     .mainParallaxZoom {
-        width: 100vw;
-        height: 300vh;
     
         .bodySlider{
             .sliderContainer{ 
-                position: absolute;
                 top: 275vh;
                 .slider {
                     font-size: 9em;
     
                     p {
                         padding-right: 50px;
-                        color: #FF5508;
-                        font-weight: 600;
                     }
                     p:nth-of-type(2) {
                         left: 100%;
                         top: 0;
-                        font-weight: 500;
                     }
                 }
             }
@@ -438,25 +423,19 @@
 
 @media only screen and (max-width: 950px) and (max-height: 450px) {
     .mainParallaxZoom {
-        width: 100vw;
-        height: 300vh;
     
         .bodySlider{
             .sliderContainer{ 
-                position: absolute;
                 top: 260vh;
                 .slider {
                     font-size: 6em;
     
                     p {
                         padding-right: 50px;
-                        color: #FF5508;
-                        font-weight: 600;
                     }
                     p:nth-of-type(2) {
                         left: 100%;
                         top: 0;
-                        font-weight: 500;
                     }
                 }
             }

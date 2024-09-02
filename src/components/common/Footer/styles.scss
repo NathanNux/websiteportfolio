@@ -581,23 +581,15 @@
             }
         }
         .footer{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             width: 90%;
             height: 20%;
     
             .time{
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 height: 100%;
                 gap: 1rem;
                 p{
                     font-size: 1rem;
                     line-height: 1.5;
-                    color: #9f9689;
-                    margin: 0;
                     span{
                         margin-left: 0.8rem;
                         font-size: 1.2rem;
@@ -610,29 +602,14 @@
                 line-height: 1.5;
                 p{
                     font-size: 1rem;
-                    color: #9f9689;
                     margin: 0;
                 }
                 .icons{
-                    display: flex;
                     gap: 0.5em;
                     .links{
-                        display: flex;
                         a{
-                            list-style: none;
-                            text-decoration: none;
-                            color: #22272d;
                             margin-left: 0.8rem;
                             font-size: 1.2rem;
-                            position: relative;
-                            .dot{
-                                position: absolute;
-                                width: 5px;
-                                height: 5px;
-                                border-radius: 50%;
-                                background-color: #22272d;
-                                left: calc(50% - 2.5px);
-                            }
                         }
                     }
                 }
@@ -677,26 +654,17 @@
             }
         }
         .footer{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             width: 90%;
             height: 20%;
     
             .time{
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 height: 100%;
                 p{
                     font-size: 1rem;
                     line-height: 1.5;
-                    color: #9f9689;
-                    margin: 0;
                     span{
                         margin-left: 0.8rem;
-                        font-size: 1.2rem;
-                        color: #22272d;
+                        font-size: 1.4rem;
                     }
                     &:nth-of-type(2){
                         display: none;
@@ -709,31 +677,15 @@
                 width: 35%;
                 p{
                     font-size: 1rem;
-                    color: #9f9689;
-                    margin: 0;
                 }
                 .icons{
-                    display: flex;
                     flex-wrap: wrap;
                     width: 100%;
                     gap: 0.2em;
                     .links{
-                        display: flex;
                         a{
-                            list-style: none;
-                            text-decoration: none;
-                            color: #22272d;
                             margin-left: 0.8rem;
-                            font-size: 1.2rem;
-                            position: relative;
-                            .dot{
-                                position: absolute;
-                                width: 5px;
-                                height: 5px;
-                                border-radius: 50%;
-                                background-color: #22272d;
-                                left: calc(50% - 2.5px);
-                            }
+                            font-size: 1.4rem;
                         }
                     }
                 }
@@ -777,26 +729,17 @@
             }
         }
         .footer{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             width: 90%;
             height: 20%;
     
             .time{
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 height: 100%;
                 p{
                     font-size: 1rem;
                     line-height: 1.5;
-                    color: #9f9689;
-                    margin: 0;
                     span{
                         margin-left: 0.8rem;
-                        font-size: 1.2rem;
-                        color: #22272d;
+                        font-size: 1.3rem;
                     }
                     &:nth-of-type(2){
                         display: none;
@@ -809,31 +752,15 @@
                 width: 35%;
                 p{
                     font-size: 1rem;
-                    color: #9f9689;
-                    margin: 0;
                 }
                 .icons{
-                    display: flex;
                     flex-wrap: wrap;
                     width: 100%;
                     gap: 0.2em;
                     .links{
-                        display: flex;
                         a{
-                            list-style: none;
-                            text-decoration: none;
-                            color: #22272d;
                             margin-left: 0.8rem;
-                            font-size: 1.2rem;
-                            position: relative;
-                            .dot{
-                                position: absolute;
-                                width: 5px;
-                                height: 5px;
-                                border-radius: 50%;
-                                background-color: #22272d;
-                                left: calc(50% - 2.5px);
-                            }
+                            font-size: 1.3rem;
                         }
                     }
                 }
@@ -878,26 +805,17 @@
             }
         }
         .footer{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             width: 90%;
             height: 20%;
     
             .time{
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 height: 100%;
                 p{
                     font-size: 1rem;
                     line-height: 1.5;
-                    color: #9f9689;
-                    margin: 0;
                     span{
                         margin-left: 0.8rem;
                         font-size: 1.2rem;
-                        color: #22272d;
                     }
                     &:nth-of-type(2){
                         display: none;
@@ -910,29 +828,14 @@
                 width: 50%;
                 p{
                     font-size: 1rem;
-                    color: #9f9689;
                     margin: 0;
                 }
                 .icons{
-                    display: flex;
                     gap: 0.5em;
                     .links{
-                        display: flex;
                         a{
-                            list-style: none;
-                            text-decoration: none;
-                            color: #22272d;
                             margin-left: 0.8rem;
                             font-size: 1.2rem;
-                            position: relative;
-                            .dot{
-                                position: absolute;
-                                width: 5px;
-                                height: 5px;
-                                border-radius: 50%;
-                                background-color: #22272d;
-                                left: calc(50% - 2.5px);
-                            }
                         }
                     }
                 }

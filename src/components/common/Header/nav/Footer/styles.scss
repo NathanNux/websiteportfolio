@@ -46,6 +46,11 @@
         display: flex;
         gap: 5px;
         text-decoration: none;
+        position: relative;
+        justify-content: center;
+        margin-right: 5vw;
+        width: 100%;
+        
 
         ul{
             display: flex;
@@ -215,11 +220,14 @@
         margin-top: 0px;
         justify-content: end;
         .info{
+            padding: 10px 0rem;
+            left: 5%;
+            width: 45%;
             ul{
                 width: 100%;
                 li{
                     p {
-                        font-size: 1.2em;
+                        font-size: 1em;
                     }
                     span{
                         font-size: 0.8em;
@@ -231,10 +239,10 @@
             }
         }
         .terms {
-            margin-right: 10vw;
+            margin-right: 5vw;
+            justify-content: end;
             ul{
                 gap: 15px;
-                flex-direction: column;
                 li{
                     a{
                         margin: 0;

@@ -13,16 +13,8 @@
 
 @media only screen and (max-width: 1750px) {
     .imageContainerHeader{
-        display: block;
         width: 32vw;
         height: calc(32vw * 0.625);
-        position: absolute;
-        right: 5%;
-        top: 20%;
-    
-        img{
-            object-fit: contain;
-        }
     }
     
 }

@@ -114,13 +114,9 @@
                 gap: 0.5em;
                 span{
                     font-size: 2.2rem;
-                    font-weight: 300; 
-                    color: #fff;
-                    margin: 0;
+
                     &:nth-of-type(1) {
                         margin-right: 15rem;
-                        font-weight: 700;
-                        color: #b9b9b9; 
                         font-size: 2.5rem; 
                     }
                 }
@@ -133,19 +129,15 @@
 @media only screen and (max-width: 1550px){
     .bodyFreeProjects {
         .project {
-            width: calc(65vh * 0.625);
-            height: 65vh;
+            width: calc(60vh * 0.625);
+            height: 60vh;
             p{
                 gap: 0.5em;
                 span{
                     font-size: 2.2rem;
-                    font-weight: 300; 
-                    color: #fff;
-                    margin: 0;
+
                     &:nth-of-type(1) {
                         margin-right: 10rem;
-                        font-weight: 700;
-                        color: #b9b9b9; 
                         font-size: 2.5rem; 
                     }
                 }
@@ -163,28 +155,16 @@
                 gap: 0.5em;
                 .titleText{
                     &:nth-of-type(1){
-                        font-weight: 700;
-                        color: #ff5959; 
                         font-size: 2.8rem; 
-                        width: 100%;
-                        margin: 0;
                     }
                     &:nth-of-type(2){
                         font-size: 2.2rem;
-                        font-weight: 300; 
-                        color: #fff;
-                        margin: 0;
                     }
                 }
                 span{
                     font-size: 2rem;
-                    font-weight: 300; 
-                    color: #fff;
-                    margin: 0;
                     &:nth-of-type(1) {
                         margin-right: 8rem;
-                        font-weight: 700;
-                        color: #b9b9b9; 
                         font-size: 2.5rem; 
                     }
                 }
@@ -205,28 +185,16 @@
 
                 .titleText{
                     &:nth-of-type(1){
-                        font-weight: 700;
-                        color: #ff5959; 
                         font-size: 2.5rem; 
-                        width: 100%;
-                        margin: 0;
                     }
                     &:nth-of-type(2){
                         font-size: 2rem;
-                        font-weight: 300; 
-                        color: #fff;
-                        margin: 0;
                     }
                 }
                 span{
                     font-size: 1.8rem;
-                    font-weight: 300; 
-                    color: #fff;
-                    margin: 0;
                     &:nth-of-type(1) {
                         margin-right: 8rem;
-                        font-weight: 700;
-                        color: #b9b9b9; 
                         font-size: 2rem; 
                     }
                 }
@@ -245,28 +213,16 @@
             p{
                 .titleText{
                     &:nth-of-type(1){
-                        font-weight: 700;
-                        color: #ff5959; 
                         font-size: 2.2rem; 
-                        width: 100%;
-                        margin: 0;
                     }
                     &:nth-of-type(2){
                         font-size: 1.6rem;
-                        font-weight: 300; 
-                        color: #fff;
-                        margin: 0;
                     }
                 }
                 span{
                     font-size: 2rem;
-                    font-weight: 300; 
-                    color: #fff;
-                    margin: 0;
                     &:nth-of-type(1) {
                         margin-right: 15rem;
-                        font-weight: 700;
-                        color: #b9b9b9;  
                     }
                 }
             }
@@ -280,33 +236,21 @@
         flex-wrap: wrap;
         gap: 5vh;
         .project {
-            width: calc(50vh * 0.725);
-            height: 50vh;
+            width: calc(55vh * 0.725);
+            height: 55vh;
             p{
                 .titleText{
                     &:nth-of-type(1){
-                        font-weight: 700;
-                        color: #ff5959; 
                         font-size: 2rem; 
-                        width: 100%;
-                        margin: 0;
                     }
                     &:nth-of-type(2){
                         font-size: 1.5rem;
-                        font-weight: 300; 
-                        color: #fff;
-                        margin: 0;
                     }
                 }
                 span{
                     font-size: 2rem;
-                    font-weight: 300; 
-                    color: #fff;
-                    margin: 0;
                     &:nth-of-type(1) {
                         margin-right: 15rem;
-                        font-weight: 700;
-                        color: #b9b9b9;  
                     }
                 }
             }
