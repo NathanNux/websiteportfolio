@@ -8,35 +8,35 @@ import Footer from './Footer';
 import Image from './Image';
 
 const links = [
-  //WIP: Add here the corresponding Images
+  //WIP: Add here the corresponding Images after photo shooting
   {
     title: "Domů",
     href: "/",
-    src: "landing/background.webp",
+    src: "main-page.webp",
     alt: "landingPage_Image"
   },
   {
     title: "O mně",
     href: "/about",
-    src: "landing/water.webp",
+    src: "aboutme-page.webp",
     alt: "aboutPage_Image"
   },
   {
     title: "Kontakt",
     href: "/contact",
-    src: "landing/tree.webp",
+    src: "contactme-page.webp",
     alt: "contactPage_Image"
   },
   {
     title: "Projekty",
     href: "/projects",
-    src: "landing/house.webp",
+    src: "projects-page.webp",
     alt: "projectsPage_Image"
   },
   {
     title: "Materiály",
     href: "/materials",
-    src: "landing/cactus.webp",
+    src: "materials-page.webp",
     alt: "materialsPage_Image"
   },
 ]

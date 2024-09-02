@@ -29,11 +29,12 @@
                     padding-left: 10px;
                     margin: 5px;
                     font-size: 1.5em;
+                    color: #22272d;
                 }
                 span{
                     text-transform: uppercase;
                     margin-right: 10px;
-                    color: #9f9689;
+                    color: #fff;
                     margin: 0;
                 }
             }
@@ -57,7 +58,7 @@
                 a{
                     font-size: 1.2em;
                     text-decoration: none;
-                    color: #22272d;
+                    color: #fff;
                     transition: all 0.3s ease-in-out;
     
                     &:hover {

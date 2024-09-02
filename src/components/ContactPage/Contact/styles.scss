@@ -701,9 +701,9 @@
         justify-content: top;
         align-items: center;
         width: 100%;
-        height: 150vh;
+        height: 180vh;
         position: relative;
-        padding: 5vh 0 10vh 0;
+        padding: 25vh 0 10vh 0;
         background-color: #fff;
         margin: 0;
         gap: 10vh;
@@ -964,9 +964,9 @@
         justify-content: top;
         align-items: center;
         width: 100%;
-        height: 150vh;
+        height: 180vh;
         position: relative;
-        padding: 5vh 0 10vh 0;
+        padding: 25vh 0 10vh 0;
         background-color: #fff;
         margin: 0;
         gap: 10vh;
@@ -1067,6 +1067,194 @@
                 position: relative;
                 width: 150px;
                 height: 150px;
+                border-radius: 50%;
+                right: 5%;
+                top: -5%;
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .formContainer{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            width: 90%;
+            gap: 5vw;
+    
+            .addInfo{
+                display: none;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                .buttonSubmit {
+                    position: relative;
+                    z-index: 2;
+                    cursor: pointer;
+                    .mainButton {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        width: 150px;
+                        height: 80px;
+                        border-radius: 50px;
+                        background-color: #22272d;
+                        overflow: hidden;
+                    
+                        .dot {
+                            width: 100%;
+                            height: 150%;
+                            scale: 1.2;
+                            background-color: #fb6b28;
+                            border-radius: 50%;
+                            z-index: 0;
+                        }
+                    
+                        .link {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                            list-style: none;
+                            text-decoration: none;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 100%;
+                            height: 100%;
+                            z-index: 1;
+                            p{
+                                padding: 0 2vh 0 2vh;
+                                margin: 0;
+                                font-size: 1em;
+                                font-weight: 400;
+                                color: #fff;
+                                font-family: 'Inter' , sans-serif;
+                                transition: color 0.3s cubic-bezier(0.26, 0, 0.72, 1);
+                                z-index: 2;
+                            }
+                        }
+                    
+                        &:hover {
+                            p{
+                                color: #22272d;
+                            }
+                        }
+                    }
+                }
+                .inputContainer{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    border-top: 1px solid #22272d;
+                    padding: 1rem 0;
+                    width: 100%;
+                    flex-direction: column;
+                    position: relative;
+                    
+                    textarea{
+                        width: 90%;
+                        padding: 1rem;
+                        border: none;
+                        font-size: 1rem;
+                        font-weight: 300;
+                        background-color: transparent;
+                        color: #6a6a6a;
+                        resize: none;
+                        height: 5rem;
+                        font-family: 'Inter' , sans-serif;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    .selectWrapper{
+                        width: 100%;
+                        position: relative;
+                    }
+                    
+                    input{
+                        width: 90%;
+                        padding: 1rem;
+                        border: none;
+                        font-size: 1rem;
+                        font-weight: 300;
+                        background-color: transparent;
+                        color: #6a6a6a;
+                        font-family: 'Inter' , sans-serif;
+    
+                        &:focus{
+                            outline: none;
+                        }  
+                    }
+                    .inputText{
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        width: 100%;
+                        p{
+                            font-size: 1.3rem;
+                            font-weight: 300;
+                            margin: 0;
+                            span {
+                                font-size: 1rem;
+                                font-weight: 300;
+                                color: #6a6a6a;
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) and (max-height: 750px) {
+    .mainContactIntro {
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: center;
+        width: 100%;
+        height: 200vh;
+        position: relative;
+        padding: 25vh 0 10vh 0;
+        background-color: #fff;
+        margin: 0;
+        gap: 10vh;
+        font-family: 'Inter' , sans-serif;
+        z-index: 2;
+        .headerIntro{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            position: relative;
+            flex-direction: column-reverse;
+            h1{
+                font-size: 2rem;
+                font-weight: 500;
+                color: #22272d;
+                margin: 0;
+            }
+            .imageContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 130px;
+                height: 130px;
                 border-radius: 50%;
                 right: 5%;
                 top: -5%;

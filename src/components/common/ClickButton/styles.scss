@@ -97,3 +97,16 @@
     }
     
 }
+
+@media only screen and (max-width: 500px) and (max-height: 950px){
+    .barButton{
+        height: 40px;
+        width: 80px;
+        .link{
+            p{
+                font-size: 0.9em;
+            }
+        }
+    }
+    
+}

@@ -1,6 +1,6 @@
 
 .header{
-    background-color: #d7d7d7;
+    background-color: #ae8b79;
     position: fixed;
     width: 100%;
     box-sizing: border-box;
@@ -35,7 +35,7 @@
 
         a{
             text-decoration: none;
-            color: #22272d;
+            color: #ae8b79;
             position: absolute;
             left: 0;
         }
@@ -57,7 +57,7 @@
             justify-content: center;
             gap: 8px;
             transition: background-color 0.3s, opacity 0.5s ease;
-            background-color: #d7d7d7;
+            background-color: #ae8b79;
             border-radius: 25px;
             padding: 15px 25px;
             position: absolute;
@@ -69,6 +69,7 @@
                 position: relative;
                 display: flex;
                 align-items: center;
+                color: #fff;
             }
 
             p{
@@ -87,7 +88,7 @@
                     content: "";
                     height: 1px;
                     width: 100%;
-                    background-color: #22272d;
+                    background-color: #fff;
                     position: relative;
                     display: block;
                     transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);

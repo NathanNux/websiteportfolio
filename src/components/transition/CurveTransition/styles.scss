@@ -128,12 +128,12 @@
     }
 }
 
-@media only screen and (max-width: 360px) and (max-height: 700px) {
+@media only screen and (max-width: 380px) and (max-height: 750px) {
     .pageCurveTransition{
         .route{
-            left: 50%;
-            right: 50%;
-            font-size: calc(2vw + 1.8em);
+            left: 15%;
+            right: 15%;
+            font-size: calc(1vw + 1.8em);
             z-index: 5;
             transform: translateX(-50% ) translateY(-50%);
             text-align: center;

@@ -103,6 +103,17 @@
     }
 }
 
+@media only screen and (max-width: 380px) and (max-height: 750px){
+    .landingAbout{
+        .sliderContainer{
+            top: calc(100vh - 200px);
+            .slider{
+                font-size: 9em;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 950px) and (max-height: 450px){
     .landingAbout{
         .sliderContainer{

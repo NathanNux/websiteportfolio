@@ -464,11 +464,11 @@
         z-index: 2;
         position: relative;
         overflow: visible;
-        padding: 0 0 20em 0;
+        padding: 10vh 0 20em 0;
     
         .barContainer{
             position: absolute;
-            top: 20vh;
+            top: 30vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -488,8 +488,8 @@
     
                 p{
                     position: relative;
-                    font-size: 2em;
-                    font-weight: 500;
+                    font-size: 1.6em;
+                    font-weight: 400;
                     margin: 0;
                     width: 80%;
                     text-align: left;
@@ -533,7 +533,7 @@
             width: 100%;
             height: fit-content;
             position: absolute;
-            top: 35vh;
+            top: 45vh;
             background-color: #fff;
     
             .mainIcon {

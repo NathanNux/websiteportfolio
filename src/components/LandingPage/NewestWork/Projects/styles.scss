@@ -304,8 +304,7 @@
         }
     }
 }
-
-@media only screen and (max-width: 380px) and (max-height: 700px){
+@media only screen and (max-width: 380px) and (max-height: 750px){
     .mainNewestProjects{
         padding: 1rem 2rem 3rem 2rem;
         height: 75vh;
@@ -329,6 +328,35 @@
                 width: 160px;
                 height: 80px;
                 font-size: 0.8em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) and (max-height: 700px){
+    .mainNewestProjects{
+        padding: 1rem 2rem 3rem 2rem;
+        height: 75vh;
+        ul{
+            li{ 
+
+                a{
+                    padding: 1.2em;
+                    h2 {
+                        font-size: 2em;
+                    }
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+        .button {
+            bottom: 0;
+            .buttonLink{
+                width: 140px;
+                height: 70px;
+                font-size: 0.7em;
             }
         }
     }

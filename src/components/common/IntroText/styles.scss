@@ -116,6 +116,19 @@
                 p{
                     width: 90%;
                     font-size: 2.2em;
+                    line-height: 1.5;
+                }
+            }
+    }
+}
+
+@media only screen and (max-width: 380px) and (max-height: 950px){
+    .mainIntroText{
+            .textContainer{
+                p{
+                    width: 90%;
+                    font-size: 2em;
+                    line-height: 1.5;
                 }
             }
     }

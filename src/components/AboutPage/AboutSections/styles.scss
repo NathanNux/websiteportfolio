@@ -1,10 +1,10 @@
 .offersAbout{
-    background-color: #d7d7d7;
+    background-color: #22272d;
     z-index: 2;
     padding-top: 15rem;
     .mainSections{
         z-index: 2;
-        background-color: #d7d7d7;
+        background-color: #22272d;
         overflow: hidden;
         .main {
             display: flex;
@@ -16,12 +16,12 @@
             height: 450vh;
             padding: 0vh 0 10vh 0;
             gap: 40vh;
-            background-color: #d7d7d7;
+            background-color: #22272d;
             z-index: 3;
 
             .sectionContainer{
                 font-size: 3rem;
-                background-color: #d7d7d7;
+                background-color: #22272d;
                 &:nth-of-type(1){
                     min-height: 125vh;
                     width: 100vw;
@@ -219,7 +219,7 @@
                     position: relative;
                     margin: 0;
                     z-index: 3;
-                    background-color: #d7d7d7;;
+                    background-color: #22272d;;
                     .text{
                         display: flex;
                         flex-direction: column;
@@ -327,7 +327,7 @@
             position: absolute;
             height: 25550%;
             border-radius: 0% 0% 50% 50%;
-            background-color: #d7d7d7;
+            background-color: #22272d;
             z-index: 2;
         }
     }
@@ -445,7 +445,7 @@
                 position: absolute;
                 height: 15550%;
                 border-radius: 0% 0% 50% 50%;
-                background-color: #d7d7d7;
+                background-color: #22272d;
                 z-index: 2;
             }
         }
@@ -460,7 +460,7 @@
     
                 .sectionContainer{
                     font-size: 2rem;
-                    background-color: #d7d7d7;
+                    background-color: #22272d;
                     &:nth-of-type(1){
                         .text{
                             p{
@@ -645,7 +645,7 @@
     
                 .sectionContainer{
                     font-size: 2rem;
-                    background-color: #d7d7d7;
+                    background-color: #22272d;
                     &:nth-of-type(1){
                         .text{
                             p{
@@ -827,16 +827,16 @@
     .offersAbout{
         .mainSections{
             .main {
-                height: 650vh;
+                height: 750vh;
                 gap: 0;
                 padding: 15vh 0 0 0;
                 .sectionContainer{
                     font-size: 1.8rem;
-                    background-color: #d7d7d7;
+                    background-color: #22272d;
                     flex-direction: column;
                     position: relative;
                     &:nth-of-type(1){
-                        min-height: 220vh;
+                        min-height: 250vh;
                         position: relative;
                         flex-direction: column;
                         .text{
@@ -870,7 +870,7 @@
                         }
                         .images{
                             overflow: hidden;
-                            top: 40vh; 
+                            top: 50vh; 
                             .imageContainer{
                                 &:nth-of-type(1){
                                     left: 5%;
@@ -900,7 +900,7 @@
                     }
         
                     &:nth-of-type(2){
-                        min-height: 220vh;
+                        min-height: 250vh;
                         position: relative;
                         flex-direction: column;
                         .text{ 
@@ -932,7 +932,7 @@
                         }
                         .images{
                             overflow: hidden;
-                            top: 25vh; 
+                            top: 45vh; 
                             .imageContainer{
                                 &:nth-of-type(1){
                                     left: 5%;
@@ -962,7 +962,7 @@
                     }
         
                     &:nth-of-type(3){
-                        min-height: 220vh;
+                        min-height: 250vh;
                         position: relative;
                         flex-direction: column;
                         .text{
@@ -995,7 +995,7 @@
                         }
                         .images{
                             overflow: hidden;
-                            top: 45vh; 
+                            top: 50vh; 
                             .imageContainer{
                                 &:nth-of-type(1){
                                     left: 5%;
@@ -1041,16 +1041,16 @@
     .offersAbout{
         .mainSections{
             .main {
-                height: 650vh;
-                gap: 0;
-                padding: 15vh 0 0 0;
+                height: 750vh;
+                gap: 20vh;
+                padding: 25vh 0 0 0;
                 .sectionContainer{
                     font-size: 1.8rem;
-                    background-color: #d7d7d7;
+                    background-color: #22272d;
                     flex-direction: column;
                     position: relative;
                     &:nth-of-type(1){
-                        min-height: 220vh;
+                        min-height: 250vh;
                         position: relative;
                         flex-direction: column;
                         .text{
@@ -1084,7 +1084,7 @@
                         }
                         .images{
                             overflow: hidden;
-                            top: 40vh; 
+                            top: 50vh; 
                             .imageContainer{
                                 &:nth-of-type(1){
                                     left: 5%;
@@ -1114,7 +1114,7 @@
                     }
         
                     &:nth-of-type(2){
-                        min-height: 220vh;
+                        min-height: 260vh;
                         position: relative;
                         flex-direction: column;
                         .text{ 
@@ -1146,7 +1146,7 @@
                         }
                         .images{
                             overflow: hidden;
-                            top: 25vh; 
+                            top: 45vh; 
                             .imageContainer{
                                 &:nth-of-type(1){
                                     left: 5%;
@@ -1176,7 +1176,7 @@
                     }
         
                     &:nth-of-type(3){
-                        min-height: 220vh;
+                        min-height: 260vh;
                         position: relative;
                         flex-direction: column;
                         .text{
@@ -1209,7 +1209,7 @@
                         }
                         .images{
                             overflow: hidden;
-                            top: 45vh; 
+                            top: 55vh; 
                             .imageContainer{
                                 &:nth-of-type(1){
                                     left: 5%;
@@ -1251,21 +1251,21 @@
     
 }
 
-@media only screen and (max-width: 380px) and (max-height: 950px){
+@media only screen and (max-width: 380px) and (max-height: 750px){
     .offersAbout{
         z-index: 5;
         .mainSections{
             .main {
-                height: 700vh;
-                gap: 20vh;
+                height: 850vh;
+                gap: 50vh;
                 padding: 0 0 10vh 0;
                 .sectionContainer{
-                    font-size: 1.8rem;
-                    background-color: #d7d7d7;
+                    font-size: 1.6rem;
+                    background-color: #22272d;
                     flex-direction: column;
                     position: relative;
                     &:nth-of-type(1){
-                        min-height: 240vh;
+                        min-height: 250vh;
                         position: relative;
                         flex-direction: column;
                         .text{
@@ -1332,7 +1332,7 @@
                     }
         
                     &:nth-of-type(2){
-                        min-height: 220vh;
+                        min-height: 250vh;
                         position: relative;
                         flex-direction: column;
                         .text{ 
@@ -1481,7 +1481,7 @@
                 padding: 5vh 0 0 0;
                 .sectionContainer{
                     font-size: 1.8rem;
-                    background-color: #d7d7d7;
+                    background-color: #22272d;
                     flex-direction: column;
                     position: relative;
                     &:nth-of-type(1){
@@ -1699,7 +1699,7 @@
                 padding: 5vh 0 0 0;
                 .sectionContainer{
                     font-size: 1.8rem;
-                    background-color: #d7d7d7;
+                    background-color: #22272d;
                     flex-direction: column;
                     position: relative;
                     &:nth-of-type(1){

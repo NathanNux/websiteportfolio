@@ -7,7 +7,7 @@ export default function Index({src, isActive, alt}) {
   return (
     <motion.div variants={opacity} initial="initial" animate={isActive ? "open" : "closed"} className="imageContainerHeader">
         <Image 
-        src={`/images/${src}`}
+        src={`/assets/header/${src}`}
         fill={true}
         sizes="true"
         alt={alt}

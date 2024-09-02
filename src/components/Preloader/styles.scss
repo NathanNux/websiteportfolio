@@ -36,7 +36,7 @@
     p{
         display: flex;
         color: #fff;
-        font-size: 42px;
+        font-size: calc(2vw + 1em);
         align-items: center;
         position: absolute;
         z-index: 2;
@@ -49,4 +49,22 @@
             margin-right: 10px;
         }
     }
+}
+
+@media only screen and (max-width: 1050px) and (min-height: 1000px) {
+    .introductionPreloader{
+        p{
+            font-size: calc(2vw + 1.8em);
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 380px) and (max-height: 800px) {
+    .introductionPreloader{
+        p{
+            font-size: calc(1vw + 1.8em);
+        }
+    }
+    
 }
