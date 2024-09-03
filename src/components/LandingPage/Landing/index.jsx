@@ -67,8 +67,8 @@ export default function Index() {
       />
       <div className="sliderContainer">
         <div ref={slider} className="slider">
-          <p ref={firstText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
-          <p ref={secondText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
+          <p ref={firstText}>Freelancer - Web Designer - Fullstack Dev - Freelancer - Web Designer - Fullstack Dev - Freelancer -</p>
+          <p ref={secondText}>Freelancer - Web Designer - Fullstack Dev - Freelancer - Web Designer -  Fullstack Dev - Freelancer -</p>
         </div>
       </div>
 

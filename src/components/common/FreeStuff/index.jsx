@@ -76,7 +76,7 @@ export default function FreeOffers ({text}) {
     return (
         <section ref={section} className="mainFreeStuff">
             { text && <div className="text">
-                 <h1>Chcete začít nejdříve sami?</h1>
+                 <h1>Chcete začít první sami?</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in 
                     erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur<br /><br />

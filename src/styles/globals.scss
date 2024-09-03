@@ -52,10 +52,8 @@ body {
 
 // My mac is 1728 x 1117 and 1920 x 1080 setting still look good then we have 1536 x 864
 
-// WIP: use useEffect for hader svg to recalculate the width and height of the svg and the path. each time viewport size is changes. 
-// the same in the preloader svg.
-// WIP: Do last changes in services in about page. then description in landing and spot some issues in the scss responsive code.
-
+// WIP: Create a new component for the landing page and add the styles here. 
+// the componennt is for summary of what they are getting from the ecosystem and whats the minimum budget I ask for.
 @layer base {
   :root {
     --background: 0 0% 100%;

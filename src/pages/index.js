@@ -23,13 +23,13 @@ import Header from "@/components/common/Header";
 
 const phrases = [
   {
-    text: "Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit. Proin</span> in erat ligula. Vestibulum elementum ex et tellus malesuada,"
+    text: "Webové stránky nejsou jen <span>obrázky, text a layout</span> Je do <span>důležitá zpráva</span>, kterou <span>chcete sdělit</span> svým novým a stávajícím zákazníkům."
   },
   {
-      text: "Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit. Proin in erat ligula.</span> Vestibulum elementum ex et tellus malesuada, quis <span>tekuté zlato</span> consectetur orci consectetur. Vestibulum"
+      text: "Nejsem tradiční: řekni si o něco míň a udělej o něco víc, typ člověk. <span> Poskytu Vám skutečnou hodnotu.</span> Protože miluju to, co dělám <span>a pevně věřím</span>, že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním a zlepšit Váš život. <span>To je to, co dělám. Dotáhnu to až do konce.</span>"
   },
   {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span>Proin in erat ligula.</span> Vestibulum elementum ex <span>et tellus malesuada</span>, quis consectetur <span>orci consectetur.</span> Vestibulum <span>volutpat, est sollicitudin</span>"
+      text: "Žádný poplatek za služby, žádný model předplatného. <span>Dostanete jednorázový balížek s celoživotními službami.</span> Vytvářím vztahy, ne obchodní dealy<span> Veřím v důvěru, ne v rychlý výdělek.</span> A jsem součástí celého procesu.<span> Zasloužíte si celý koláč,</span> ne jen jeho polovinu. <span>Jsem drahý, ale udělám věci tak, jak mají být</span>"
   }
 ]
 
@@ -84,7 +84,7 @@ export default function Home() {
             src6='/assets/images/slider-la/offer.webp' 
             src7='/assets/images/slider-la/research.webp' 
             path='/assets/images/slider-la/videos/main.webm'
-            text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
+            text='Originalita - Design - Nabídka - Prodeje -'
           />
           <OfferSection />
           <MainOffer />
