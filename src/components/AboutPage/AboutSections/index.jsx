@@ -26,10 +26,10 @@ const sections = [
         ],
         phrases:[
             {
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum <br /><br />elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus"
+                text: "Architetuře a lidskému vnímání se věnuji už přes půl dekády.<br /><br /> A to ne jenom díky učivu na střední a vysoký škole, ale i díky knihám od tich největších architektů svých dob, protože školní učivo mi prostě nestačilo."
             },
             {
-                text: "Lorem ipsum dolor sit amet, consectetur <br /><br />adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada,<br /> quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue,"
+                text: "Zároveň studováním životů těchto obrů <br /><br />mi dalo odhodlání a perspektivu, jak se<br />umělec může prosadit a najít v sobě tu duši, která ho dělá unikátním a nezaměnitelným."
             }
         ]
     },
@@ -53,10 +53,10 @@ const sections = [
         ],
         phrases: [
             {
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in <br /><br />erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere  <br /><br />congue, augue augue dapibus enim, a maximus nunc ex eget dui. Praesent id venenatis quam, a efficitur leo. Quisque mauris magna, mollis a"
+                text: "Od svých 14 let jsem se začal i učit o investování i makroekonomice.<br /><br /> I když to nesouvysí ani s web designem ani s architekturou, umění PRODEJE je prostě základ všeho v životě<br /><br /> A i přes to, že teď studuji 2 školy najednou, mám principy, které mi umožnují dělat všechny tyto věci najednou."
             },
             {
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. <br /><br />Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui."
+                text: "A ať si to z nás nikdo nechce kolikrát přiznat, zbydou po nás 2 věci: <br /><br />Naše Jméno a to jsme vybudovali pro ostatní<br /><br />Tím si nás svět pamatuje a to je to, co nás dělá nezapomenutelnými."
             }
         ]
     },
@@ -81,10 +81,10 @@ const sections = [
         ],
         phrases: [
             {
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum<br /> elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum <br /><br />volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui."
+                text: "Mým cílem je se věnovat náročným animacím pro výtvoření, unikátnost ale jednoduchost tvorby,<br /> kterou AI nikdy nebude schopno nahradit.<br /><br />Autenticita a vysoká úroveň kvality je to, co bude vždy mým cílem."
             },
             {
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula.<br /> Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. <br /><br />Vestibulum volutpat, est sollicitudin posuere<br />  congue, augue augue dapibus enim,"
+                text: "I když se nezdá, umět psát účinné texty a vytvořit skvělou nabídku<br /> je mnohem těžší než tohle vše.<br /><br />Jména jako Sabri Suby nebo<br />  Alex Hormozi <br /> mě naučily, jak dělat nabídky a texty, které pomáhají lidem a vaši firmě."
             }
         ]
     }

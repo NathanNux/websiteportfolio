@@ -57,16 +57,16 @@ const services = [
     //LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN IN ERAT LIGULA. VESTIBULUM ELEMENTUM EX ET TELLUS MALESUADA, QUIS CONSECTETUR ORCI CONSECTETUR. VESTIBULUM VOLUTPAT, EST SOLICITUDIN POSUERE CONGUE, AUGUE AUGUE DAPIBUS ENIM, A MAXIMUS NUNC EX EGET DUI. PRAESENT ID VENENATIS QUAM, A EFFICITUR LEO. QUISQUE MAURIS MAGNA, MOLLIS A PHARETRA SED, PLACERAT AUCTOR NISI. ETIAM BIBENDUM NEQUE SIT AMET MI TEMPUS, ID ULLAMCORPER URNA ULTRICIES. PELLENTESQUE VOLUTPAT MASSA AT TORTOR MATTIS, ID SAGITTIS EST FEUGIAT.
 //Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui. Praesent id venenatis quam, a efficitur leo. Quisque mauris magna, mollis a pharetra sed, placerat auctor nisi. Etiam bibendum neque sit amet mi tempus, id ullamcorper urna ultricies. Pellentesque volutpat massa at tortor mattis, id sagittis est feugiat.
     {
-        title: 'SEO | ne pouze managament, ale i analýza',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin <br/><br/>in erat ligula. Vestibulum elementum ex<br/>  et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat,'
+        title: 'Prodeje | vytvoření vaši nebídky i s výzkumem',
+        content: 'Ukážu Vám postupy a proč fungují, abychom mohli vytvořit nabídku, u které se budou vaši zákazníci cítit hloupě, když ji nepřijmou.<br/><br/> A budu se tomu věnovat, dokud nenajdu tu nejlepší variaci, která bude fungovat.'
     },
     {
         title: 'Vývoj Webu | od návrhu po realizaci',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin <br/><br/>in erat ligula. Vestibulum elementum ex<br/>  et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat,'
+        content: 'Vyvinu a vytvořím Vám autentickou a profesionální Online Vizitku.<br/><br/> Strávím s Vámi několik hodin, abych dostal pochopení jak funugujete o čem jste a co děláte.'
     },
     {
-        title: 'Prodeje | vytvoření vaši nebídky i s výzkumem',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin <br/><br/>in erat ligula. Vestibulum elementum ex<br/>  et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat,'
+        title: 'SEO | ne pouze managament, ale i analýza',
+        content: 'Všechnu údržbu webu a i týdenní nebo měsíční informace dělám Zdarma jako součástí mého ekosystému.<br/><br/> Za účelem zlepšení metrik vašeho webu alespoň nad 90% u všech kvalit.<br/><br/> Aby byl váš web rychlý a efektivní a vybraný internetovými prohlížeči.'
     }
 ]
 

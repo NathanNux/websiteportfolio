@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
 
 const description = [
   {
-      text: "LOREM IPSUM DOLOR <br/> SIT AMET, CONSECTETUR<br/> ADIPISCING <br/> ELIT. PROIN IN ERAT <br/> LIGULA. VESTIBULUM"
+      text: "JMENUJI SE <br/> MATĚJ FOREJT. <br/> JSEM MLADÝ, <br/> AMBICIÓZNÍ NOMAD.<br/>VĚŘÍM VE<br/> SKUTEČNOU<br/>HODNOTU TVORBY.<br/>"
   },
 ];
 //LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN IN ERAT LIGULA. VESTIBULUM ELEMENTUM EX ET TELLUS MALESUADA, QUIS CONSECTETUR ORCI CONSECTETUR. VESTIBULUM VOLUTPAT, EST SOLICITUDIN POSUERE CONGUE, AUGUE AUGUE DAPIBUS ENIM, A MAXIMUS NUNC EX EGET DUI. PRAESENT ID VENENATIS QUAM, A EFFICITUR LEO. QUISQUE MAURIS MAGNA, MOLLIS A PHARETRA SED, PLACERAT AUCTOR NISI. ETIAM BIBENDUM NEQUE SIT AMET MI TEMPUS, ID ULLAMCORPER URNA ULTRICIES. PELLENTESQUE VOLUTPAT MASSA AT TORTOR MATTIS, ID SAGITTIS EST FEUGIAT.
@@ -22,18 +22,18 @@ const description = [
 
 const phrase1 = [
   {
-      text: "Lorem ipsum dolor sit amet, consectetur<br/> adipiscing elit. Proin in erat ligula. Vestibulum<br/> elementum ex et tellus malesuada, quis"
+      text: "Už třetím rokem pracuji na webovém designu,<br/> psychologii, vnímání barev a sdělění příběhu, <br/>vždy s cílem vytvořit něco, co je nejen krásné,<br/> ale také funkční a efektivní."
   },
 ];
 
 const phrase2 = [
   {
-      text: "Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit.<br/> Proin in erat ligula."
+      text: "Cílem není vytvořit pouze webovky,<br/> ale celý ekosystém, <br/> který je založen na principech <br/> dobrého designu a uživatelského zážitku."
   },
 ];
 const phrase3 = [
   {
-      text: "Proin in erat ligula...."
+      text: "Tohle je můj Background...."
   },
 ];
 
