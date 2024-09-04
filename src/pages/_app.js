@@ -5,63 +5,41 @@ import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Head from "next/head";
-import * as Sentry from "@sentry/nextjs";
-import React from "react";
-
-// Custom Error Boundary Component
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    Sentry.captureException(error, { extra: errorInfo });
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <h1>Something went wrong.</h1>;
-    }
-
-    return this.props.children;
-  }
-}
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App({ Component, pageProps, router }) {
+
+  //now i need o put all the content inside the AnimatePresence component to make the animations work
+
   const pathname = usePathname();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
-    }, 1000);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }, 1000)
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [pathname]);
+        return () => {
+            clearTimeout(timer);
+        }
+    }, [pathname])
+
 
   return (
-    <LoadProvider>
-      <Head>
-        <meta name="description" content="Personal Portfolio Website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <title>Matěj Forejt</title>
-      </Head>
-      <ErrorBoundary>
-        <AnimatePresence mode="wait">
-          <Component key={router.route} {...pageProps} />
-        </AnimatePresence>
-      </ErrorBoundary>
-    </LoadProvider>
-  );
+  <LoadProvider>
+    <Head>
+    <meta name="description" content="Personal Portfolio Website" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/favicon.ico" />
+      <title>Matěj Forejt</title>
+    </Head>
+    <AnimatePresence mode="wait">
+      <Component key={router.route} {...pageProps} />
+      <Analytics mode={'production'} />
+    </AnimatePresence>
+  </LoadProvider>
+)
 }
