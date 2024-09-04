@@ -8,8 +8,13 @@ Sentry.init({
   dsn: "https://659be46249feb90f4f4f3c411366b514@o4506939951415296.ingest.us.sentry.io/4507894535487488",
 
   // Add optional integrations for additional features
+  // You can remove this option if you're not planning to use the Sentry Session Replay feature:
   integrations: [
-    Sentry.replayIntegration(),
+    Sentry.replayIntegration({
+      // Additional Replay configuration goes in here, for example:
+      maskAllText: true,
+      blockAllMedia: true,
+    }),
   ],
 
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
@@ -23,15 +28,6 @@ Sentry.init({
   // Define how likely Replay events are sampled when an error occurs.
   replaysOnErrorSampleRate: 1.0,
 
-  // You can remove this option if you're not planning to use the Sentry Session Replay feature:
-  integrations: [
-    Sentry.replayIntegration({
-      // Additional Replay configuration goes in here, for example:
-      maskAllText: true,
-      blockAllMedia: true,
-    }),
-  ],
-
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
-  debug: true,
+  debug: false,
 });
