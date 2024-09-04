@@ -5,7 +5,6 @@ import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Head from "next/head";
-import { Analytics } from "@vercel/analytics/react"
 
 export default function App({ Component, pageProps, router }) {
 
@@ -38,7 +37,6 @@ export default function App({ Component, pageProps, router }) {
     </Head>
     <AnimatePresence mode="wait">
       <Component key={router.route} {...pageProps} />
-      <Analytics mode={'production'} />
     </AnimatePresence>
   </LoadProvider>
 )
