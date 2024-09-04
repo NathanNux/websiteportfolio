@@ -5,8 +5,8 @@ import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Head from "next/head";
-import { Analytics } from "@vercel/analytics/react"; // Import the Analytics component
-import { SpeedInsights } from "@vercel/speed-insights/next"; // Import the SpeedInsights component
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function App({ Component, pageProps, router }) {
   const pathname = usePathname();
