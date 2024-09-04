@@ -5,11 +5,36 @@ import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Head from "next/head";
+import * as Sentry from "@sentry/nextjs";
+import React from "react";
+
+// Custom Error Boundary Component
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    Sentry.captureException(error, { extra: errorInfo });
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong.</h1>;
+    }
+
+    return this.props.children;
+  }
+}
 
 export default function App({ Component, pageProps, router }) {
   const pathname = usePathname();
 
-  // Now I need to put all the content inside the AnimatePresence component to make the animations work
   useEffect(() => {
     const timer = setTimeout(() => {
       window.scrollTo({
@@ -32,9 +57,11 @@ export default function App({ Component, pageProps, router }) {
         <link rel="icon" href="/favicon.ico" />
         <title>Matěj Forejt</title>
       </Head>
-      <AnimatePresence mode="wait">
-        <Component key={router.route} {...pageProps} />
-      </AnimatePresence>
+      <ErrorBoundary>
+        <AnimatePresence mode="wait">
+          <Component key={router.route} {...pageProps} />
+        </AnimatePresence>
+      </ErrorBoundary>
     </LoadProvider>
   );
 }
