@@ -23,13 +23,13 @@ import Header from "@/components/common/Header";
 
 const phrases = [
   {
-    text: "Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit. Proin</span> in erat ligula. Vestibulum elementum ex et tellus malesuada,"
+    text: "Webové stránky nejsou jen <span>obrázky, text a layout</span> Je do <span>důležitá zpráva</span>, kterou <span>chcete sdělit</span> svým novým a stávajícím zákazníkům."
   },
   {
-      text: "Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit. Proin in erat ligula.</span> Vestibulum elementum ex et tellus malesuada, quis <span>tekuté zlato</span> consectetur orci consectetur. Vestibulum"
+      text: "Nejsem tradiční: řekni si o něco míň a udělej o něco víc, typ člověk. <span> Poskytu Vám skutečnou hodnotu.</span> Protože miluju to, co dělám <span>a pevně věřím</span>, že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním a zlepšit Váš život. <span>To je to, co dělám. Dotáhnu to až do konce.</span>"
   },
   {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span>Proin in erat ligula.</span> Vestibulum elementum ex <span>et tellus malesuada</span>, quis consectetur <span>orci consectetur.</span> Vestibulum <span>volutpat, est sollicitudin</span>"
+      text: "Žádný poplatek za služby, žádný model předplatného. <span>Dostanete jednorázový balížek s celoživotními službami.</span> Vytvářím vztahy, ne obchodní dealy<span> Veřím v důvěru, ne v rychlý výdělek.</span> A jsem součástí celého procesu.<span> Zasloužíte si celý koláč,</span> ne jen jeho polovinu. <span>Jsem drahý, ale udělám věci tak, jak mají být</span>"
   }
 ]
 
@@ -38,8 +38,6 @@ export default function Home() {
   const { firstLoad, setFirstLoad } = useLoad();
 
   const [isLoading, setIsLoading] = useState(true);
-  // to always return to the top of the page when the page changes
-  // its easier to look for changes in the pathname then to look for changes in the router object
 
   useEffect( () => {
     (
@@ -84,7 +82,7 @@ export default function Home() {
             src6='/assets/images/slider-la/offer.webp' 
             src7='/assets/images/slider-la/research.webp' 
             path='/assets/images/slider-la/videos/main.webm'
-            text='Originalita - Skvělý Design - Skvělá Nabídka - Prodeje -'
+            text='Originalita - Design - Nabídka - Prodeje -'
           />
           <OfferSection />
           <MainOffer />
@@ -94,10 +92,3 @@ export default function Home() {
     </>
   );
 }
-
-
-// the issue seems like it is inisde the paralax zoom scss and the section css.
-// because the glitch is happening in the main page. then in the projects page it is not happening.
-// but is happening again in the projectstemplate page. but not in the material page
-// and small glitch is happening in about me page, which only has sections component, not parallazoom component
-
