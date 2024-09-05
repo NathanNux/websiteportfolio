@@ -13,8 +13,8 @@
     padding: 0;
 
     .toast {
-        transition: all 0.3s ease-in-out;
-        ol{
+        transition: opacity 0.3s ease-in-out;
+        ol {
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -31,7 +31,7 @@
             background-color: #bba28e;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
             z-index: 3;
-            li{
+            li {
                 margin: 0;
                 padding: 1rem 2rem;
                 display: flex;
@@ -40,41 +40,40 @@
                 border-radius: 25px;
                 align-items: center;
                 justify-content: center;
-                div{
+                div {
                     gap: 1rem;
                     display: block;
                     justify-content: center;
                     align-items: center;
-                    div{
+                    div {
                         padding: 0.2rem 0;
                     }
-                    &:nth-of-type(1){
+                    &:nth-of-type(1) {
                         font-size: 1.5rem;
                         font-weight: 500;
                         color: #22272d;
                     }
-                    &:nth-of-type(2){
+                    &:nth-of-type(2) {
                         font-size: 1.2rem;
                         color: #22272d;
                         font-weight: 300;
                     }
-
                 }
-                button{
+                button {
                     position: relative;
                     border: none;
                     background-color: transparent;
-                    transition: all 0.5s ease-in-out;
+                    transition: color 0.5s ease-in-out;
                     height: fit-content;
                     padding: 0.2rem;
                     border-radius: 10px;
-                    &:hover{
+                    &:hover {
                         cursor: pointer;
-                        svg{
+                        svg {
                             color: #6a6a6a;
                         }
                     }
-                    svg{
+                    svg {
                         position: relative;
                         width: 25px;
                         height: 25px;
@@ -84,7 +83,6 @@
                 }
             }
         }
-
     }
     
     .animContainer {

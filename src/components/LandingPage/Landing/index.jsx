@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { FirstSlideUp, slideUp } from '@/components/anim';
 import { useLoad } from '@/context';
+import { FirstSliderSlideUp, FirstTextSlideUp, SliderSlideUp, TextSlideUp } from './anim';
 
 export default function Index() {
   const firstText = useRef(null);
@@ -55,28 +56,32 @@ export default function Index() {
     }
   }, [firstText, secondText]);
 
-
+ // WIP: ADD THE slide up anim also for the slider and the text, then use it in the variants of the motion.main component and add the delayAnim to the useEffect and do that in all pages
+ // then use bigger image for the background and create parallax effect with the text and the slider
   return (
     <motion.main variants={ delayAnim ? FirstSlideUp : slideUp } initial="initial" animate='enter' className="landingPage">
-      <Image 
-        src="/images/landing/background.webp"
-        fill={true}
-        sizes='100vw'
-        alt="background"
-        priority={true}
-        quality={80}
-      />
-      <div className="sliderContainer">
+      <div className='backgroundDiv' data-scroll data-scroll-speed={-0.85}>
+        <Image 
+          src="/images/landing/background.webp"
+          fill={true}
+          sizes='100vw'
+          alt="background"
+          priority={true}
+          quality={80}
+        />
+      </div>
+
+      <motion.div variants={ delayAnim ? FirstSliderSlideUp: SliderSlideUp } initial="initial" animate='enter' className="sliderContainer">
         <div ref={slider} className="slider">
           <p ref={firstText}>Freelancer - Web Designer - Fullstack Dev - Freelancer - Web Designer - Fullstack Dev - Freelancer -</p>
           <p ref={secondText}>Freelancer - Web Designer - Fullstack Dev - Freelancer - Web Designer -  Fullstack Dev - Freelancer -</p>
         </div>
-      </div>
+      </motion.div>
 
-      <div data-scroll data-scroll-speed={0.08} className="description">
-            <p>Jmenuji se <br /> Matěj Forejt</p>
-            <p>Vítejte u mě v Centru</p>
-        </div>
+      <motion.div variants={ delayAnim ? FirstTextSlideUp : TextSlideUp } initial="initial" animate='enter' data-scroll data-scroll-speed={-0.15} className="description">
+          <p>Jmenuji se <br /> Matěj Forejt</p>
+          <p>Vítejte u mě v Centru</p>
+      </motion.div>
     </motion.main>
   )
 }

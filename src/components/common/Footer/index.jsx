@@ -1,5 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react"
-
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useScroll } from "framer-motion";
@@ -34,10 +33,10 @@ export default function Footer() {
     return date.toLocaleTimeString('en-US', options).replace('GMT+1', 'CET').replace('GMT+2', 'CEST');
   }
 
-    const setPath = useCallback((progress) => {
+  const setPath = useCallback((progress) => {
     const width = window.innerWidth * 0.7;
     path.current.setAttributeNS(null, "d", `M0 250 Q${width * x} ${250 + progress}, ${width} 250`);
-    }, []);
+  }, []);
 
   const lerp = (x, y, z) => x * (1 - z) + y * z;
 
@@ -75,27 +74,27 @@ export default function Footer() {
     progress = 0;
   };
 
-    useEffect(() => {
-        // Set initial path and delay
-        setPath(progress);
-        const delayTimeout = setTimeout(() => setDelay(true), 1000);
+  useEffect(() => {
+    // Set initial path and delay
+    setPath(progress);
+    const delayTimeout = setTimeout(() => setDelay(true), 1000);
 
-        // Update time string every minute
-        const updateTime = () => setTimeString(getTimeString());
-        const now = new Date();
-        const msUntilNextMinute = 60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
-        const timeoutId = setTimeout(() => {
-        updateTime();
-        const intervalId = setInterval(updateTime, 60000);
-        return () => clearInterval(intervalId);
-        }, msUntilNextMinute);
+    // Update time string every minute
+    const updateTime = () => setTimeString(getTimeString());
+    const now = new Date();
+    const msUntilNextMinute = 60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
+    const timeoutId = setTimeout(() => {
+      updateTime();
+      const intervalId = setInterval(updateTime, 60000);
+      return () => clearInterval(intervalId);
+    }, msUntilNextMinute);
 
-        // Cleanup function
-        return () => {
-        clearTimeout(delayTimeout);
-        clearTimeout(timeoutId);
-        };
-    }, [progress, setPath, setTimeString]);
+    // Cleanup function
+    return () => {
+      clearTimeout(delayTimeout);
+      clearTimeout(timeoutId);
+    };
+  }, [progress, setPath, setTimeString]);
 
   return (
     <motion.footer style={{ y }} className="mainFooter" ref={section}>
@@ -123,9 +122,9 @@ export default function Footer() {
                onMouseMove={handleMouseMove}
                onMouseLeave={handleMouseLeave}
           ></div>
-          <svg>
-            <path ref={path} />
-          </svg>
+          <motion.svg>
+            <motion.path ref={path} />
+          </motion.svg>
           <div data-scroll data-scroll-speed={0.1} className="button">
             <ButtonLink title='Kontaktujte mne' href='/contact' className="buttonLink" />
           </div>

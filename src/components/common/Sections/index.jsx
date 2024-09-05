@@ -39,7 +39,7 @@ export default function Section ({images, phrases, styles}) {
             <div className="images" ref={columnRef}>
                 {images.map((image, i) => (
                     <div key={i} className="imageContainer" data-scroll data-scroll-speed={0.05 * (i + 1)}>
-                        {!image.path && <Image src={image.src} alt={image.alt} fill={true} loading='lazy' quality={60} sizes="(min-width: 1050px)40vw, 60vh"/>}
+                        {!image.path && <Image src={image.src} alt={image.alt} fill={true} loading="lazy" quality={60} sizes="(min-width: 1050px)40vw, 60vh"/>}
                         {isVisible && image.path && 
                             <video
                                 autoPlay={true}
@@ -52,7 +52,7 @@ export default function Section ({images, phrases, styles}) {
                                 <source src={image.path} type="video/webm"/>
                             </video>
                         }
-                        {image.path && !isLoaded && <Image src={image.src} alt={image.alt} quality={60} loading='lazy' fill={true} sizes="(min-width: 1050px)40vw, 60vh"/>}
+                        {image.path && !isLoaded && <Image src={image.src} alt={image.alt} quality={60} loading="lazy" fill={true} sizes="(min-width: 1050px)40vw, 60vh"/>}
                     </div>
                 ))}
             </div>

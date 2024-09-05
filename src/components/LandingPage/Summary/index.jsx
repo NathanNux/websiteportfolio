@@ -29,7 +29,7 @@ export default function Summary ({images}) {
 
             <div className="budget">
                 <h1>Budget</h1>
-                <p>$2000</p>
+                <p>$3000</p>
             </div>
             <motion.div 
                 ref={curve}

@@ -38,6 +38,7 @@
         width: 100%;
         text-align: left;
         z-index: 5;
+        overflow: hidden;
         p{
             font-size: 2rem;
             font-weight: 300;
@@ -45,7 +46,7 @@
             margin: 0;
             width: 90%;
             span{
-                font-size: 5rem;
+                font-size: 4rem;
                 font-weight: 500;
                 color: #22272d;
                 margin: 0;
@@ -169,14 +170,14 @@
     }
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 500px){
     .summary {
         height: 300vh;
         padding: 5vh 0 10vh 0;
     
         .text{
             h1{
-                font-size: 4rem;
+                font-size: 3rem;
                 font-weight: 700;
             }
             p{

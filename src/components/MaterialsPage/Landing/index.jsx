@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { slideUp } from '@/components/anim';
 import { scale } from './anim';
+import { SliderSlideUp } from '@/components/LandingPage/Landing/anim';
 
 export default function Index() {
   const firstText = useRef(null);
@@ -56,14 +57,16 @@ export default function Index() {
 
   return (
     <motion.section variants={slideUp} initial="initial" animate='enter' className="landingMaterialsPage">
-      <Image 
-        src='/images/materials/background.webp'
-        fill={true}
-        sizes="100vw"
-        alt="background"
-        priority={true}
-        quality={80}
-      />
+      <div className='backgroundDiv' data-scroll data-scroll-speed={-0.65}>
+        <Image 
+          src='/images/materials/background.webp'
+          fill={true}
+          sizes="100vw"
+          alt="background"
+          priority={true}
+          quality={80}
+        />
+      </div>
       <motion.div variants={scale} initial="initial" animate='enter' className="imageContainerSide" data-scroll data-scroll-speed={0.1}>
         <Image 
             src='/images/landing/7.webp'
@@ -75,12 +78,12 @@ export default function Index() {
             //WIP: add here Images for Material Page
         />
       </motion.div>
-      <div className="sliderContainer">
+      <motion.div variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
         <div ref={slider} className="slider">
           <p ref={firstText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
           <p ref={secondText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
         </div>
-      </div>
+      </motion.div>
     </motion.section>
   )
 }

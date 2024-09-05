@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { slideUp } from '@/components/anim';
+import { SliderSlideUp } from '@/components/LandingPage/Landing/anim';
 
 export default function Index() {
   const firstText = useRef(null);
@@ -55,20 +56,23 @@ export default function Index() {
 
   return (
     <motion.main variants={slideUp} initial="initial" animate='enter' className="landingAbout">
-      <Image 
-        src="/images/about/background.webp"
-        fill={true}
-        sizes="100vw"
-        alt="background"
-        priority={true}
-        quality={80}
-      />
-      <div className="sliderContainer">
+      <div className='backgroundDiv' data-scroll data-scroll-speed={-0.85}>
+        <Image 
+          src="/images/about/background.webp"
+          fill={true}
+          sizes='100vw'
+          alt="background"
+          priority={true}
+          quality={80}
+        />
+      </div>
+      
+      <motion.div variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
         <div ref={slider} className="slider">
           <p ref={firstText}>Něco o Mě - Něco o Æther - Něco o Mě - Něco o Æther - Něco o Mě - Něco o Æther -</p>
           <p ref={secondText}>Něco o Mě - Něco o Æther - Něco o Mě - Něco o Æther - Něco o Mě - Něco o Æther -</p>
         </div>
-      </div>
+      </motion.div>
     </motion.main>
   )
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
+import { motion } from 'framer-motion';
 
 export default function Index({ isActive }) {
     const pathRef = useRef(null);
@@ -50,8 +51,8 @@ export default function Index({ isActive }) {
     //oterwise it will not work.
 
     return (
-        <svg className="svgCurveHeader">
-            <path ref={pathRef}></path>
-        </svg>
+        <motion.svg className="svgCurveHeader">
+            <motion.path ref={pathRef}></motion.path>
+        </motion.svg>
     )
 }
