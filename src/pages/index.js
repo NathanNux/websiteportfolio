@@ -19,6 +19,7 @@ import ZoomParallax from "@/components/common/ParallaxZoom";
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
+import Summary from "@/components/LandingPage/Summary";
 
 
 const phrases = [
@@ -29,7 +30,7 @@ const phrases = [
       text: "Nejsem tradiční: řekni si o něco míň a udělej o něco víc, typ člověk. <span> Poskytu Vám skutečnou hodnotu.</span> Protože miluju to, co dělám <span>a pevně věřím</span>, že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním a zlepšit Váš život. <span>To je to, co dělám. Dotáhnu to až do konce.</span>"
   },
   {
-      text: "Žádný poplatek za služby, žádný model předplatného. <span>Dostanete jednorázový balížek s celoživotními službami.</span> Vytvářím vztahy, ne obchodní dealy<span> Veřím v důvěru, ne v rychlý výdělek.</span> A jsem součástí celého procesu.<span> Zasloužíte si celý koláč,</span> ne jen jeho polovinu. <span>Jsem drahý, ale udělám věci tak, jak mají být</span>"
+      text: "Žádný poplatek za služby, žádný model předplatného. <span>Dostanete jednorázový balížek s celoživotními službami.</span> Vytvářím vztahy, ne obchodní dealy<span> Veřím v důvěru, ne v rychlý výdělek.</span> A jsem součástí celého procesu.<span> Zasloužíte si celý koláč,</span> ne jen jeho polovinu. <span>Jsem drahý, ale udělám věci tak, jak mají být.</span>"
   }
 ]
 
@@ -85,6 +86,8 @@ export default function Home() {
             text='Originalita - Design - Nabídka - Prodeje -'
           />
           <OfferSection />
+          {/* WIP: Create a summary component that sums up all of the points and the minimum budget */}
+          <Summary />
           <MainOffer />
           <FreeOffers text='1'/>
           <Footer />

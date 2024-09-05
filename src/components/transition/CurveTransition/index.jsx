@@ -40,65 +40,65 @@ const anim = (variants) => {
         variants,
         initial: 'initial',
         animate: 'enter',
-        exit: 'exit'
-    }
-}
+        exit: 'exit',
+    };
+};
 
-export default function CurveTransition({children}) {
+export default function CurveTransition({ children }) {
     const router = useRouter();
     const [dimensions, setDimensions] = useState({ width: null, height: null });
-    const { isLoading, setIsLoading } = useLoad();
-
-    // using function inside useEffect to avoid infinite loop of re-rendering the component
-    // when the window is resized
+    const { isLoading } = useLoad();
 
     useEffect(() => {
-        function resize () {
+        function resize() {
             setDimensions({
                 width: window.innerWidth,
-                height: window.innerHeight
-            })
+                height: window.innerHeight,
+            });
         }
-        resize()
+        resize();
         window.addEventListener('resize', resize);
         return () => {
-            window.removeEventListener('resize', resize)
+            window.removeEventListener('resize', resize);
         };
     }, []);
 
     return (
         <div className="pageCurveTransition">
-            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className="background"/>
-            <motion.p className="route" {...anim(text)} style={{scale: isLoading ? 1 : 0}}><span></span> {routes[router.pathname]}</motion.p>
-            {dimensions.width != null && <SVG {...dimensions} />}
+            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className="background" />
+            <motion.p className="route" {...anim(text)} style={{ scale: isLoading ? 1 : 0 }}>
+                <span></span> {routes[router.pathname]}
+            </motion.p>
+
+            {dimensions.width != null && <SVG {...dimensions} />} {/* Only render SVG when dimensions are ready */}
             {children}
         </div>
     );
 }
 
-
-
-const SVG = ({height, width}) => {
-
+const SVG = ({ height, width }) => {
     const initialPath = `
         M0 300 
-        Q${width/2} 0 ${width} 300
+        Q${width / 2} 0 ${width} 300
         L${width} ${height + 300}
-        Q${width/2} ${height + 600} 0 ${height + 300}
+        Q${width / 2} ${height + 600} 0 ${height + 300}
         L0 0
-    `
+    `;
 
     const targetPath = `
         M0 300
-        Q${width/2} 0 ${width} 300
+        Q${width / 2} 0 ${width} 300
         L${width} ${height}
-        Q${width/2} ${height} 0 ${height}
+        Q${width / 2} ${height} 0 ${height}
         L0 0
-    `
+    `;
 
     return (
-        <motion.svg {...anim(translate)}>
+        <motion.svg
+            {...anim(translate)}
+            style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: `calc(100% + 600px)` }} // Keep SVG dimensions stable
+        >
             <motion.path {...anim(curve(initialPath, targetPath))} />
         </motion.svg>
-    )
-}
+    );
+};

@@ -61,10 +61,10 @@ const sections = [
                 //LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN IN ERAT LIGULA. VESTIBULUM ELEMENTUM EX ET TELLUS MALESUADA, QUIS CONSECTETUR ORCI CONSECTETUR. VESTIBULUM VOLUTPAT, EST SOLICITUDIN POSUERE CONGUE, AUGUE AUGUE DAPIBUS ENIM, A MAXIMUS NUNC EX EGET DUI. PRAESENT ID VENENATIS QUAM, A EFFICITUR LEO. QUISQUE MAURIS MAGNA, MOLLIS A PHARETRA SED, PLACERAT AUCTOR NISI. ETIAM BIBENDUM NEQUE SIT AMET MI TEMPUS, ID ULLAMCORPER URNA ULTRICIES. PELLENTESQUE VOLUTPAT MASSA AT TORTOR MATTIS, ID SAGITTIS EST FEUGIAT.
                 //Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui. Praesent id venenatis quam, a efficitur leo. Quisque mauris magna, mollis a pharetra sed, placerat auctor nisi. Etiam bibendum neque sit amet mi tempus, id ullamcorper urna ultricies. Pellentesque volutpat massa at tortor mattis, id sagittis est feugiat.
 
-                text: "Nabízím jednorázový balík, který Vám dá všechno, co potřebujete, a dokonce i to, co ani nevíte, že potřebujete, protože to, co dělám, je až tak komplexní práce.<br /><br /> Věnoval jsem mému umění už tísíce hodin, abych věděl, co to stojí, o co jde a jak to vyrešit tou nejjednodušší cestou. Od toho si mě platíte."
+                text: "Nabízím jednorázový balík, který Vám dá všechno, co potřebujete, a dokonce i to, co ani nevíte, že potřebujete, protože to, co dělám, je až tak komplexní práce.<br /><br /> Věnoval jsem mému umění už tísíce hodin, abych věděl, co to stojí, o co jde a jak to vyrešit tou nejjednodušší cestou."
             },
             {
-                text: "A jsem natolik sebejistý v sám sobě, že jsem ochoten ztratit čas i pěníze a vrátit Vám peníze, pokud svou práci neodvedu tak dobře, jak vím, že ji umím odvést."
+                text: "A jsem si natolik jistý, že jsem ochoten ztratit čas i pěníze a i Vám vrátím peníze, pokud svou práci neodvedu tak dobře, jak vím, že ji umím odvést."
             }
         ]
     },
@@ -92,10 +92,10 @@ const sections = [
                 //LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN IN ERAT LIGULA. VESTIBULUM ELEMENTUM EX ET TELLUS MALESUADA, QUIS CONSECTETUR ORCI CONSECTETUR. VESTIBULUM VOLUTPAT, EST SOLICITUDIN POSUERE CONGUE, AUGUE AUGUE DAPIBUS ENIM, A MAXIMUS NUNC EX EGET DUI. PRAESENT ID VENENATIS QUAM, A EFFICITUR LEO. QUISQUE MAURIS MAGNA, MOLLIS A PHARETRA SED, PLACERAT AUCTOR NISI. ETIAM BIBENDUM NEQUE SIT AMET MI TEMPUS, ID ULLAMCORPER URNA ULTRICIES. PELLENTESQUE VOLUTPAT MASSA AT TORTOR MATTIS, ID SAGITTIS EST FEUGIAT.
                 //Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui. Praesent id venenatis quam, a efficitur leo. Quisque mauris magna, mollis a pharetra sed, placerat auctor nisi. Etiam bibendum neque sit amet mi tempus, id ullamcorper urna ultricies. Pellentesque volutpat massa at tortor mattis, id sagittis est feugiat.
 
-                text: "Buud s Vámi spolupracovat na vytvoření neodolatelné nabídky, u které se budou vaši zákazníci cítít hloupě když ji nevezmou.<br /><br /> Taky Vám ukážu důležité kroky o tom, jak takovou nabídku vytvořit<br /><br /> Systém, který je intuitivní, přímočarý a snadno použitelný."
+                text: "Budu s Vámi spolupracovat na vytvoření neodolatelné nabídky, u které se budou vaši zákazníci cítít hloupě když ji nevezmou.<br /><br /> Taky Vám ukážu důležité kroky o tom, jak takovou nabídku vytvořit:<br /><br /> Systém, který je intuitivní, přímočarý a snadno použitelný."
             },
             {
-                text: "Mé weby jsou size hezké, ale bude to pro vás Náklad, když nebudete mít nabídku, bez ni nic neprodáte.<br /><br /> Nerad poskutuji jen SEO nebo jen Web Design, je to celý ekosystém, který dělá velký vlny."
+                text: "Mé weby jsou size hezké, ale bude to pro vás Náklad, když nebudete mít nabídku. Bez ni nic neprodáte.<br /><br /> Nechci dělat jen SEO nebo jen Web Design, ale celý ekosystém."
             }
         ]
     }

@@ -1,0 +1,98 @@
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { textTranslate } from '@/components/anim';
+import { useMediaQuery } from 'react-responsive';
+
+const cards = [
+    {
+        title: "Web Design",
+        points: [
+            {
+
+            }
+        ]
+    },
+    {
+        title: "SEO Optimization",
+    },
+    {
+        title: "Marketing Offer",
+    },
+];
+
+export default function Points() {
+    const [selectedProject, setSelectedProject] = useState({ isActive: false, index: 0 });
+    const [disableAnimation, setDisableAnimation] = useState(false);
+    const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
+
+
+    console.log(selectedProject);
+
+    const getWords = (title, index) => {
+        let words = [];
+        title.split(" ").forEach((word, i) => {
+            words.push(
+                <motion.span
+                    custom={[i * 0.02, (title.split(" ").length - i) * 0.01]}
+                    animate={
+                        selectedProject.isActive && selectedProject.index === index
+                            ? 'enter'
+                            : 'exit'
+                    }
+                    variants={textTranslate}
+                    key={word + i}
+                >
+                    {word}
+                </motion.span>
+            );
+            // Add a space after each word except the last one
+            if (i < title.split(" ").length - 1) {
+                words.push(' ');
+            }
+        });
+        console.log('Words for title:', title, words);
+        return words;
+    };
+
+    const splitText = (text) => {
+        return text.split(' ').map((word, index) => (
+            <span key={index} className='splitTitle'>{word}</span>
+        ));
+    };
+
+    useEffect(() => {
+        if (isTouchDevice) {
+            setDisableAnimation(true);
+        }
+    }, [selectedProject]);
+
+    return (
+        <section>
+            <div className="bodySummary">
+                {cards.map((card, index) => {
+                    const { title } = card;
+                    return (
+                        <div
+                            key={`l_${title}`}
+                            className="card"
+                            data-scroll
+                            data-scroll-speed={0.05 * (index + 1)}
+                            onMouseOver={() => {
+                                console.log('Mouse over:', index);
+                                setSelectedProject({ isActive: true, index });
+                            }}
+                            onMouseLeave={() => {
+                                console.log('Mouse leave:', index);
+                                setSelectedProject({ isActive: false, index });
+                            }}
+                        >
+                            <motion.p className='title'>
+                                {disableAnimation ? splitText(title) : getWords(title, index)}
+                            </motion.p>
+                        </div>
+                    );
+                })}
+            </div>
+        </section>
+    );
+}

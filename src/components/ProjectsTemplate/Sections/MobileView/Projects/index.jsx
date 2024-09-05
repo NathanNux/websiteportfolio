@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { textTranslate } from '@/components/anim';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Projects ({photos}) {
 
     const [selectedProject, setSelectedProject] = useState({isActive: false, index: 0});
+    const [disableAnimation, setDisableAnimation] = useState(false);
+    const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
 
     const getWords = (title, index) => {
         let words = [];
@@ -31,6 +34,18 @@ export default function Projects ({photos}) {
         });
         return words;
     }
+
+    const splitText = (text) => {
+        return text.split(' ').map((word, index) => (
+            <span key={index} className='splitTitle'>{word}</span>
+        ));
+    };
+
+    useEffect(() => {
+        if (isTouchDevice) {
+            setDisableAnimation(true);
+        }
+    }, [selectedProject]);
     
     return (
         <section>
@@ -56,7 +71,7 @@ export default function Projects ({photos}) {
                                     />
                                 </motion.div>
                                 <motion.p>
-                                    {getWords(title, index)}
+                                    { disableAnimation ? splitText(title) : getWords(title, index)}
                                 </motion.p>
                             </div>
                         );
