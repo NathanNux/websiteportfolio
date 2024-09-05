@@ -27,10 +27,10 @@ const phrases = [
     text: "Webové stránky nejsou jen <span>obrázky, text a layout</span> Je do <span>důležitá zpráva</span>, kterou <span>chcete sdělit</span> svým novým a stávajícím zákazníkům."
   },
   {
-      text: "Nejsem tradiční: řekni si o něco míň a udělej o něco víc, typ člověk. <span> Poskytu Vám skutečnou hodnotu.</span> Protože miluju to, co dělám <span>a pevně věřím</span>, že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním a zlepšit Váš život. <span>To je to, co dělám. Dotáhnu to až do konce.</span>"
+      text: "Nejsem tradiční: řekni si o něco míň a udělej o něco víc, typ člověk. <span>Poskytu Vám skutečnou hodnotu.</span> Protože miluju to, co dělám <span>a pevně věřím</span>, že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním a zlepšit Váš život. <span>To je to, co dělám. Dotáhnu to až do konce.</span>"
   },
   {
-      text: "Žádný poplatek za služby, žádný model předplatného. <span>Dostanete jednorázový balížek s celoživotními službami.</span> Vytvářím vztahy, ne obchodní dealy<span> Veřím v důvěru, ne v rychlý výdělek.</span> A jsem součástí celého procesu.<span> Zasloužíte si celý koláč,</span> ne jen jeho polovinu. <span>Jsem drahý, ale udělám věci tak, jak mají být.</span>"
+      text: "Žádný poplatek za služby, žádný model předplatného. <span>Dostanete jednorázový balížek s celoživotními službami.</span> Vytvářím vztahy, ne obchodní dealy.<span> Veřím v důvěru, ne v rychlý výdělek.</span> A jsem součástí celého procesu.<span> Zasloužíte si celý koláč,</span> ne jen jeho polovinu. <span>Jsem drahý, ale udělám věci tak, jak mají být.</span>"
   }
 ]
 

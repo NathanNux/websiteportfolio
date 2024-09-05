@@ -191,7 +191,7 @@ const Column = ({ assets, y }) => {
                             </video>
                         )}
                         {!isLoaded[index] && (
-                            <Image src={src} alt={alt} fill={true} sizes="true" loading="lazy" />
+                            <Image src={src} alt={alt} fill={true} sizes="(min-width: 500px) 35vw, 40vh" quality={60} loading="lazy" />
                         )}
                     </div>
                 );

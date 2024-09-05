@@ -97,8 +97,9 @@ export default function Projects () {
                                         src={src} 
                                         alt={alt} 
                                         fill={true}
-                                        sizes="true"
+                                        sizes="(min-width: 500px) 47.125vh, 39.875vh"
                                         loading='lazy'
+                                        quality={60}
                                     />
                                     <div className='overlay'/>
                                     {!disableAnimation && <video

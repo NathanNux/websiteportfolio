@@ -30,11 +30,9 @@
                     height: calc(40vw * 0.825);
                     overflow: hidden;
                     position: relative; //this needs to be there, otherwise the Image will try 
+                    border-radius: 10px;
                     img{
-                        width: 40vw;
-                        height: calc(40vw * 0.825);
                         object-fit: cover;
-                        border-radius: 10px;
                         z-index: 1;
                     }
 
@@ -127,18 +125,15 @@
                         height: calc(50vw * 0.825);
                         overflow: hidden;
                         position: relative; //this needs to be there, otherwise the Image will try 
+                        border-radius: 10px;
                         img{
-                            width: 40vw;
-                            height: calc(40vw * 0.825);
                             object-fit: cover;
-                            border-radius: 10px;
                         }
     
                         video{
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
-                            border-radius: 10px;
                             position: absolute;
                         }
                         
@@ -186,18 +181,15 @@
                         height: calc(65vw * 0.725);
                         overflow: hidden;
                         position: relative; //this needs to be there, otherwise the Image will try 
+                        border-radius: 10px;
                         img{
-                            width: 40vw;
-                            height: calc(40vw * 0.825);
                             object-fit: cover;
-                            border-radius: 10px;
                         }
     
                         video{
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
-                            border-radius: 10px;
                             position: absolute;
                         }
                         
@@ -244,11 +236,9 @@
                     .imageContainer{ 
                         width: 50vh;
                         height: calc(50vh * 0.825);
+                        border-radius: 10px;
                         img{
-                            width: 40vw;
-                            height: calc(40vw * 0.825);
                             object-fit: cover;
-                            border-radius: 10px;
                         }
                         
                     }
@@ -293,11 +283,9 @@
                     .imageContainer{ 
                         width: 59vw;
                         height: calc(59vw * 0.625);
+                        border-radius: 10px;
                         img{
-                            width: 59vw;
-                            height: calc(59vw * 0.725);
                             object-fit: cover;
-                            border-radius: 10px;
                         }
                         
                     }

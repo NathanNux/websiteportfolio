@@ -67,7 +67,9 @@ export default function Projects ({photos}) {
                                         src={src} 
                                         alt={alt} 
                                         fill={true}
-                                        sizes="true"
+                                        sizes="(min-width: 500px) 35vw, (min-width: 1050px) 40vh, (min-width: 1250px) 45vh, 40vh"
+                                        quality={60}
+                                        loading="lazy"
                                     />
                                 </motion.div>
                                 <motion.p>

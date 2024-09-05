@@ -64,11 +64,6 @@ export default function Preloader() {
 
     return (
         <>
-            {/* Preloading the video to avoid layout shifts */}
-            <Head>
-                <link rel="preload" href="/assets/preloader/0819.webm" type="video/webm" />
-            </Head>
-
             {/* Main preloader wrapper with fixed dimensions to avoid layout shifts */}
             <motion.div
                 variants={slideUp}

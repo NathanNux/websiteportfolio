@@ -26,8 +26,6 @@ export default function Points() {
     const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
 
 
-    console.log(selectedProject);
-
     const getWords = (title, index) => {
         let words = [];
         title.split(" ").forEach((word, i) => {
@@ -50,7 +48,6 @@ export default function Points() {
                 words.push(' ');
             }
         });
-        console.log('Words for title:', title, words);
         return words;
     };
 
@@ -78,11 +75,9 @@ export default function Points() {
                             data-scroll
                             data-scroll-speed={0.05 * (index + 1)}
                             onMouseOver={() => {
-                                console.log('Mouse over:', index);
                                 setSelectedProject({ isActive: true, index });
                             }}
                             onMouseLeave={() => {
-                                console.log('Mouse leave:', index);
                                 setSelectedProject({ isActive: false, index });
                             }}
                         >

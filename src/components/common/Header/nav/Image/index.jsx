@@ -9,9 +9,10 @@ export default function Index({src, isActive, alt}) {
         <Image 
         src={`/assets/header/${src}`}
         fill={true}
-        sizes="true"
+        sizes="(min-width: 1750px) 30vw, 32vw"
         alt={alt}
         loading='lazy'
+        quality={50}
         />
     </motion.div>
   )

@@ -157,7 +157,9 @@ export default function IconList({ selectedCategory}) {
                                                         src={src} 
                                                         alt={alt} 
                                                         fill={true}
-                                                        sizes="true"
+                                                        sizes="(min-width: 500px) 50vh, (min-width: 950px) 40vw, (min-width: 1350px) 35vh, 80vw"
+                                                        quality={60}
+                                                        loading="lazy"
                                                     />
                                                 </div>
                                             </motion.div>

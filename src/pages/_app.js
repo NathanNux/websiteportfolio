@@ -30,7 +30,7 @@ export default function App({ Component, pageProps, router }) {
   return (
   <LoadProvider>
     <Head>
-    <meta name="description" content="Personal Portfolio Website" />
+      <meta name="description" content="Personal Portfolio Website" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
       <title>Matěj Forejt</title>

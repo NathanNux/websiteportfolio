@@ -61,9 +61,10 @@ export default function Index() {
       <Image 
         src="/images/landing/background.webp"
         fill={true}
-        sizes="true"
+        sizes='100vw'
         alt="background"
         priority={true}
+        quality={80}
       />
       <div className="sliderContainer">
         <div ref={slider} className="slider">

@@ -18,9 +18,10 @@ export default function Intro({src, phrase1, phrase2, phrase3}) {
             <Image 
               src={src}
               fill={true}
-              sizes="true"
+              sizes="100vw"
               alt="background"
               priority={true}
+              quality={80}
             />
 
             <div className="textContainer">
