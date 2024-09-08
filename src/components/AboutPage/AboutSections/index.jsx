@@ -53,10 +53,10 @@ const sections = [
         ],
         phrases: [
             {
-                text: "Od svých 14 let jsem se začal i učit o investování i makroekonomice.<br /><br /> I když to nesouvysí ani s web designem ani s architekturou, umění PRODEJE je prostě základ všeho v životě<br /><br /> A i přes to, že teď studuji 2 školy najednou, mám principy, které mi umožnují dělat všechny tyto věci najednou."
+                text: "Od svých 14 let se učím o investování i makroekonomii.<br /><br /> I když to nesouvysí ani s web designem ani s architekturou, umění PRODEJE je prostě základ všeho v životě<br /><br /> A i přes to, že teď studuji 2 školy najednou, mám principy, které mi umožňují dělat všechny tyto věci najednou a stíhat je."
             },
             {
-                text: "A ať si to z nás nikdo nechce kolikrát přiznat, zbydou po nás 2 věci: <br /><br />Naše Jméno a to jsme vybudovali pro ostatní<br /><br />Tím si nás svět pamatuje a to je to, co nás dělá nezapomenutelnými."
+                text: "A ať si to z nás nikdo nechceme přiznat, zbydou po nás 2 věci: <br /><br />Naše Jméno a to jsme vybudovali pro ostatní.<br /><br />Tím si nás svět pamatuje a to je to, co nás dělá nezapomenutelnými."
             }
         ]
     },
@@ -81,10 +81,10 @@ const sections = [
         ],
         phrases: [
             {
-                text: "Mým cílem je se věnovat náročným animacím pro výtvoření, unikátnost ale jednoduchost tvorby,<br /> kterou AI nikdy nebude schopno nahradit.<br /><br />Autenticita a vysoká úroveň kvality je to, co bude vždy mým cílem."
+                text: "Mým cílem je se věnovat náročným animacím pro výtvoření, unikátnosti ale jednoduchosti tvorby,<br /> kterou AI nikdy nebude schopno nahradit.<br /><br />Autenticita a vysoká úroveň kvality je to, co bude vždy mým cílem."
             },
             {
-                text: "I když se nezdá, umět psát účinné texty a vytvořit skvělou nabídku<br /> je mnohem těžší než tohle vše.<br /><br />Jména jako Sabri Suby nebo<br />  Alex Hormozi <br /> mě naučily, jak dělat nabídky a texty, které pomáhají lidem a vaši firmě."
+                text: "I když se nezdá, umět psát účinné texty a vytvořit skvělou nabídku<br /> je mnohem těžší než tohle vše.<br /><br />Jména jako Sabri Suby nebo<br />  Alex Hormozi <br />mě naučily, jak dělat nabídky a texty, které pomáhají lidem a firem růst."
             }
         ]
     }

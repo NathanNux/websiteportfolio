@@ -24,13 +24,13 @@ import Summary from "@/components/LandingPage/Summary";
 
 const phrases = [
   {
-    text: "Webové stránky nejsou jen <span>obrázky, text a layout</span> Je do <span>důležitá zpráva</span>, kterou <span>chcete sdělit</span> svým novým a stávajícím zákazníkům."
+    text: "Webové stránky nejsou jen<span>obrázky, text a layout.</span>Jde o<span>důležitou zprávu,</span>kterou <span>chcete sdělit</span> svým novým a stávajícím zákazníkům."
   },
   {
-      text: "Nejsem tradiční: řekni si o něco míň a udělej o něco víc, typ člověk. <span>Poskytu Vám skutečnou hodnotu.</span> Protože miluju to, co dělám <span>a pevně věřím</span>, že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním a zlepšit Váš život. <span>To je to, co dělám. Dotáhnu to až do konce.</span>"
+      text: "<span>Nejsem tradiční:</span>řekni si o něco míň a udělej o něco víc, typ člověka. Tohle prostě nedělám.<span>Poskytu Vám skutečnou hodnotu.</span>Protože miluju to, co dělám<span>a pevně věřím,</span>že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním<span>a zlepšit Váš život.</span>"
   },
   {
-      text: "Žádný poplatek za služby, žádný model předplatného. <span>Dostanete jednorázový balížek s celoživotními službami.</span> Vytvářím vztahy, ne obchodní dealy.<span> Věřím v důvěru, ne v rychlý výdělek.</span> A jsem součástí celého procesu. <span>Jsem drahý, ale udělám věci tak, jak mají být.</span>"
+      text: "Žádný poplatek za služby, žádný model předplatného.<span>Dostanete jednorázový balížek s celoživotními službami.</span>Vytvářím vztahy, ne obchodní dealy.<span>Věřím v důvěru, ne v rychlý výdělek.</span>A jsem součástí celého procesu. <span>Jsem drahý, ale udělám věci tak, jak mají být.</span>"
   }
 ]
 
