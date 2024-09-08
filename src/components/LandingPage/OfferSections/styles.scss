@@ -768,14 +768,14 @@
     .offersLanding{
         .mainSections{
             .main {
-                height: 700vh;
-                gap: 10vh;
+                height: 780vh;
+                gap: 20vh;
                 padding: 0 0 0 0;
                 .sectionContainer{
                     font-size: 2em;
                     &:nth-of-type(1){
                         flex-direction: column;
-                        min-height: 220vh;
+                        min-height: 240vh;
                         position: relative;
                         .text{
                             height: 100%;
@@ -787,7 +787,7 @@
 
                                 &:nth-of-type(1){
                                     position: absolute;
-                                    top: 0;
+                                    top: -5%;
                                     left: 0;
                                     width: 90vw;
                                     height: 50vh;
@@ -836,14 +836,14 @@
                     }
     
                     &:nth-of-type(2){
-                        min-height: 220vh;
+                        min-height: 240vh;
                         .text{
                             height: 100%;                            
                             p{
                                 font-weight: 500;
                                 color: #FF5508;
                                 &:nth-of-type(1){
-                                    top: 0%;
+                                    top: -5%;
                                     right: 0;
                                     width: 90vw;
                                     height: 50vh;
@@ -894,12 +894,12 @@
                     }
     
                     &:nth-of-type(3){
-                        min-height: 220vh;
+                        min-height: 240vh;
                         .text{
                             height: 100%;
                             p{
                                 &:nth-of-type(1){
-                                    top: 0;
+                                    top: -10%;
                                     left: 0;
                                     width: 90vw;
                                     height: 50vh;
@@ -910,7 +910,7 @@
                                     text-align: center;
                                 }
                                 &:nth-of-type(2){
-                                    bottom: 15%;
+                                    bottom: 0%;
                                     margin-bottom: 5vh;
                                     width: 80vw;
                                     text-align: center;
@@ -967,7 +967,7 @@
     .offersLanding{
         .mainSections{
             .main {
-                height: 800vh;
+                height: 820vh;
                 gap: 0;
                 padding: 10vh 0 0 0;
                 .sectionContainer{
@@ -981,7 +981,7 @@
                             position: relative;
                             p{
                                 &:nth-of-type(1){
-                                    top: 0;
+                                    top: -5%;
                                     left: 0;
                                     width: 90vw;
                                     height: 50vh;
@@ -991,7 +991,7 @@
                                     margin-left: 5vw;
                                 }
                                 &:nth-of-type(2){
-                                    bottom: 20%;
+                                    bottom: 10%;
                                     width: 100vw;
                                     text-align: center;
                                     
@@ -1038,7 +1038,7 @@
                             
                             p{
                                 &:nth-of-type(1){
-                                    top: 0%;
+                                    top: -5%;
                                     right: 0;
                                     width: 90vw;
                                     height: 50vh;
@@ -1050,7 +1050,7 @@
                                 }
                                 &:nth-of-type(2){
                                     position: absolute;
-                                    bottom: 20%;
+                                    bottom: 5%;
                                     width: 80vw;
                                     text-align: center;
                                     
@@ -1091,14 +1091,14 @@
     
                     &:nth-of-type(3){
                         flex-direction: column;
-                        min-height: 270vh;
+                        min-height: 280vh;
                         position: relative;
                         .text{
                             height: 100%;
                             position: relative;
                             p{
                                 &:nth-of-type(1){
-                                    top: 0;
+                                    top: -5%;
                                     left: 0;
                                     width: 90vw;
                                     height: 50vh;
@@ -1110,7 +1110,7 @@
                                 }
                                 &:nth-of-type(2){
                                     position: absolute;
-                                    bottom: 15%;
+                                    bottom: 5%;
                                     margin-bottom: 5vh;
                                     width: 80vw;
                                     text-align: center;

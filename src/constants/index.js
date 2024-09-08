@@ -3,24 +3,70 @@ export const freeProjects = [
         src: '/images/landing/3.webp',
         path: '/assets/free-projects/comming-soon.webm',
         alt: 'project1',
-        title: 'E-Kurz: Má první webovka',
+        title: 'E-Kurz: První webovky',
         href: '/'
     },
     {
         src: '/images/landing/2.webp',
         path: '/assets/free-projects/comming-soon.webm',
         alt: 'project2',
-        title: 'E-Book: SEO Začátečník',
+        title: 'E-Kurz: SEO Začátečník',
         href: '/'
     },
     {
         src: '/images/landing/4.webp',
         path: '/assets/free-projects/comming-soon.webm',
         alt: 'project3',
-        title: 'E-Kurz: Vznik kvality online',
+        title: 'E-Book: Vytvoření nabídky',
         href: '/'
     }
 ]
+
+export const cards = [
+    {
+        title: "Web Design",
+        points: [
+            "Autentický, Profesionální Design",
+            "Aktualizování obsahu zdarma",
+            "Pokročilé animace s rychlostí načítání",
+            "Nejpřístupnější hosting s doménou",
+            "2-4 měsíce dodací lhůta",
+        ],
+        text: 'Při nesplnění:',
+        quarentees: [
+            "Vám vrátím 10% z ceny",
+            "A 20% slevu na další práci na webu",
+        ],
+    },
+    {
+        title: "SEO Optimization",
+        points: [
+            "Keyword výzkum a správné praktiky",
+            "Ac, BP a SEO nad 90% ohodnocení",
+            "Týden./Měs. zpráva výkonu vašich stránek",
+            "Principy pro zvýšení organické návštěvnosti",
+        ],
+        text: 'Při nesplnění:',
+        quarentees: [
+            "Měsíc mých služeb zdarma dokud nebude výsledek",
+            "A vrátím Vám 10% z ceny",
+        ],
+    },
+    {
+        title: "Marketing Offer",
+        points: [
+            "Principy při výzkumu a tvorbě nabídky",
+            "Vytvoření samotné nabádky, která prodává",
+            "Zlepšení prodejů a zisku na vašem webu za 3 měsíce",
+            "První 3 měsíce konzulací zdarma",
+        ],
+        text: 'Při nesplnění:',
+        quarentees: [
+            "Vám vrátím 10% z ceny",
+            "Měsíc mých služeb zdarma dokud nebude výsledek",
+        ],
+    },
+];
 
 
 export const NewestProjects = [

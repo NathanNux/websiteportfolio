@@ -8,6 +8,7 @@
     cursor: pointer;
     position: relative;
     .card {
+        padding: 4rem 2rem 2rem 2rem;
         display: flex;
         flex-direction: column;
         width: calc(60vh * 0.625);
@@ -16,23 +17,29 @@
         position: relative;
         background-color: #22272d;
         border-radius: 50px;
+        align-items: left;
         .title{
             position: absolute;
             color: #fff;
             text-align: left;
             left: 5%;
-            bottom: 10%;
+            bottom: 5%;
             z-index: 1;
             margin: 0;
             display: flex;
             flex-wrap: wrap;
             overflow: hidden;
             max-width: 100%;
+            border-top: #ff5100 1px solid;
+            padding: 1rem 0 0 0;
+            width: 90%;
+            text-align: center;
             .splitTitle{
                 font-size: 3rem;
                 font-weight: 300; 
                 color: #fff;
                 margin: 0;
+                text-align: center;
                 &:nth-of-type(1) {
                     font-weight: 700;
                     color: #ff5100;  
@@ -43,6 +50,7 @@
                 font-weight: 300; 
                 color: #fff;
                 margin: 0;
+                text-align: center;
                 &:nth-of-type(1) {
                     font-weight: 700;
                     color: #ff5100;  
@@ -52,6 +60,41 @@
                 font-weight: 700;
                 color: #ff5100;  
             }
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 0 0.5rem;
+            list-style: none;
+
+            li{
+                display: flex;
+                align-items: center;
+                gap: 0.1rem;
+                .dot{
+                    min-width: 15px;
+                    min-height: 15px;
+                    background-color: #ff5100;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 0.5em;
+                }
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        }
+        .devider{
+            width: 60%;
+            font-size: 2em;
+            color: #ff5100;
+            text-align: left;
+            margin: 0;
+            padding: 1em 1em 0 1em;
         }
     }
 }
@@ -75,15 +118,14 @@
 @media only screen and (max-width: 1550px) {
     .bodySummary {
         .card {
-            p{
-                gap: 0.6em;
+            width: calc(70vh * 0.625);
+            height: 70vh;
+            .title{
+                .splitTitle{
+                    font-size: 2rem;
+                }
                 span{
-                    font-size: 2.6rem;
-                    font-weight: 300; 
-                    &:nth-of-type(1) {
-                        margin-right: 15rem;
-                        font-weight: 700;
-                    }
+                    font-size: 2.2rem;
                 }
             }
         }
@@ -93,15 +135,14 @@
 @media only screen and (max-width: 1450px) {
     .bodySummary {
         .card {
-            p{
-                gap: 0.5em;
+            width: calc(70vh * 0.625);
+            height: 70vh;
+            .title{
+                .splitTitle{
+                    font-size: 2rem;
+                }
                 span{
-                    font-size: 2.4rem;
-                    font-weight: 300; 
-                    &:nth-of-type(1) {
-                        margin-right: 15rem;
-                        font-weight: 700;
-                    }
+                    font-size: 2.2rem;
                 }
             }
         }
@@ -111,17 +152,14 @@
 @media only screen and (max-width: 1050px) {
     .bodySummary {
         .card {
-            width: calc(60vh * 0.625);
-            height: 60vh;
-            p{
-                gap: 0.5em;
+            width: calc(70vh * 0.625);
+            height: 70vh;
+            .title{
+                .splitTitle{
+                    font-size: 2rem;
+                }
                 span{
-                    font-size: 2.4rem;
-                    font-weight: 300; 
-                    &:nth-of-type(1) {
-                        margin-right: 15rem;
-                        font-weight: 700;
-                    }
+                    font-size: 2.2rem;
                 }
             }
         }
@@ -130,18 +168,16 @@
 
 @media only screen and (max-width: 1050px) and (min-height: 1000px){
     .bodySummary {
+        flex-wrap: wrap;
         .card {
-            width: calc(35vh * 0.625);
-            height: 35vh;
-            p{
-                gap: 0.5em;
+            width: calc(65vh * 0.625);
+            height: 65vh;
+            .title{
+                .splitTitle{
+                    font-size: 3.5rem;
+                }
                 span{
-                    font-size: 2.4rem;
-                    font-weight: 300; 
-                    &:nth-of-type(1) {
-                        margin-right: 15rem;
-                        font-weight: 700;
-                    }
+                    font-size: 3.5rem;
                 }
             }
         }
@@ -153,17 +189,14 @@
     .bodySummary {
         flex-wrap: wrap;
         .card {
-            width: calc(35vh * 0.625);
-            height: 35vh;
-            p{
-                gap: 0.5em;
+            width: calc(70vh * 0.625);
+            height: 70vh;
+            .title{
+                .splitTitle{
+                    font-size: 3rem;
+                }
                 span{
-                    font-size: 2.4rem;
-                    font-weight: 300; 
-                    &:nth-of-type(1) {
-                        margin-right: 15rem;
-                        font-weight: 700;
-                    }
+                    font-size: 3rem;
                 }
             }
         }
@@ -177,15 +210,12 @@
         .card {
             width: calc(65vh * 0.625);
             height: 65vh;
-            p{
-                gap: 0.5em;
+            .title{
+                .splitTitle{
+                    font-size: 2.2rem;
+                }
                 span{
-                    font-size: 2.4rem;
-                    font-weight: 300; 
-                    &:nth-of-type(1) {
-                        margin-right: 15rem;
-                        font-weight: 700;
-                    }
+                    font-size: 2.2rem;
                 }
             }
         }

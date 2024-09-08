@@ -30,14 +30,13 @@ const phrases = [
       text: "Nejsem tradiční: řekni si o něco míň a udělej o něco víc, typ člověk. <span>Poskytu Vám skutečnou hodnotu.</span> Protože miluju to, co dělám <span>a pevně věřím</span>, že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním a zlepšit Váš život. <span>To je to, co dělám. Dotáhnu to až do konce.</span>"
   },
   {
-      text: "Žádný poplatek za služby, žádný model předplatného. <span>Dostanete jednorázový balížek s celoživotními službami.</span> Vytvářím vztahy, ne obchodní dealy.<span> Veřím v důvěru, ne v rychlý výdělek.</span> A jsem součástí celého procesu.<span> Zasloužíte si celý koláč,</span> ne jen jeho polovinu. <span>Jsem drahý, ale udělám věci tak, jak mají být.</span>"
+      text: "Žádný poplatek za služby, žádný model předplatného. <span>Dostanete jednorázový balížek s celoživotními službami.</span> Vytvářím vztahy, ne obchodní dealy.<span> Věřím v důvěru, ne v rychlý výdělek.</span> A jsem součástí celého procesu. <span>Jsem drahý, ale udělám věci tak, jak mají být.</span>"
   }
 ]
 
 export default function Home() {
-
+  const [isActive, setIsActive] = useState(false);
   const { firstLoad, setFirstLoad } = useLoad();
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect( () => {
@@ -63,8 +62,8 @@ export default function Home() {
         <meta name="description" content="Main Landing Page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-        <Header />
-        <Navbar />
+        <Header isActive={isActive} setIsActive={setIsActive}/>
+        <Navbar isActive={isActive} setIsActive={setIsActive}/>
         <AnimatePresence wait>
           {firstLoad && <Preloader key="preloader"/>}
         </AnimatePresence>

@@ -18,6 +18,7 @@ export default function Summary ({images}) {
 
     return (
         <section ref={section} className="summary">
+          <div className="backgroundSummary"/>
             <div className="text">
                 <Paragraph text="Co Všechno Dostanete...."/>
             </div>
@@ -29,7 +30,7 @@ export default function Summary ({images}) {
 
             <div className="budget">
                 <h1>Budget</h1>
-                <p>$3000</p>
+                <p>$2000 - $4000</p>
             </div>
             <motion.div 
                 ref={curve}

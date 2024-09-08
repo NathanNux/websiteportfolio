@@ -14,20 +14,19 @@ import { useEffect, useState } from "react";
 
 const phrases = [
   {
-      text: "Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit. Proin</span> in erat ligula. Vestibulum elementum ex et tellus malesuada,"
+      text: "Za své 2 roky zkušeností a téměř <span>3000 hodin</span> jsem dal dohormady ekostystém složený z <span>principů</span>,které zahrnují <span>dobrý design</span>,<span>uživatelský zážitek</span> a <span>neodolatelnou obchodní nabídku</span>."
   },
   {
-      text: "Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit. Proin in erat ligula.</span> Vestibulum elementum ex et tellus malesuada, quis <span>tekuté zlato</span> consectetur orci consectetur. Vestibulum"
+      text: "Jsem si moc dobře vědom kolik <span>času, píle, chyb a drahých omylů</span> stojí mít výkonný a effektivní ekosystém ve všech těchto aspektů.<span>Plánuji proto,</span> pro všechny, kteří začínají, dát tyhle zkušenosti <span>ven mezi Vás.</span> S cenou vašeho času."
   },
   {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span>Proin in erat ligula.</span> Vestibulum elementum ex <span>et tellus malesuada</span>, quis consectetur <span>orci consectetur.</span> Vestibulum <span>volutpat, est sollicitudin</span>"
+      text: "Jediný od Vás chci,<span> je vaše důvěra a čas, který budete věnovat</span> sledováním a čtěním mých budoucích materiálů.<span>Dejte mi tak ještě čas,</span>abych Vám mohl přinést <span>to nejjednodušší a nejefektivnější zároveň.</span> Pěkně těžká kombinace,<span>ale vím že to nebude za dlouho.</span>"
   }
 ]
 
 export default function Home() {
+  const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  // to always return to the top of the page when the page changes
-  // its easier to look for changes in the pathname then to look for changes in the router object
 
   useEffect( () => {
     (
@@ -54,8 +53,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Navbar />
+      <Header isActive={isActive} setIsActive={setIsActive}/>
+      <Navbar isActive={isActive} setIsActive={setIsActive}/>
       <CurveTransition>
         <div className="page">
           <Landing />

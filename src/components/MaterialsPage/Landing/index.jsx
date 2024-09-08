@@ -80,8 +80,8 @@ export default function Index() {
       </motion.div>
       <motion.div variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
         <div ref={slider} className="slider">
-          <p ref={firstText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
-          <p ref={secondText}>Freelance Web Designer - Freelance Fullstack Dev - Freelance Web Designer - Freelance Fullstack Dev -</p>
+          <p ref={firstText}>Materiály - Zkušenosti - Pro Vás - Materiály - Zkušenosti - Pro Vás -</p>
+          <p ref={secondText}>Materiály - Zkušenosti - Pro Vás - Materiály - Zkušenosti - Pro Vás -</p>
         </div>
       </motion.div>
     </motion.section>

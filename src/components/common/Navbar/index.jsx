@@ -6,7 +6,7 @@ import { scale } from "../../anim";
 import { navbarLinks } from "@/constants";
 
 
-export default function Index () {
+export default function Index ({ isActive, setIsActive }) {
   const container = useRef(null)
   const pathname = usePathname();
   const [delayedPathname, setDelayedPathname] = useState(pathname);
@@ -47,6 +47,10 @@ export default function Index () {
                 <motion.div variants={scale} initial='initial' animate={active === i ? (hoveredIndex !== null && hoveredIndex !== i ? 'exit' : 'enter') : (hoveredIndex === i ? 'enter' : 'exit')} className="indicator"></motion.div>
               </div>
             ))}
+            <div className="elMenu" onClick={() => {setIsActive(!isActive)}}>
+              <div className="indicatorMenu"></div>
+              <p className="LinkMenu">Menu</p>
+            </div>
         </div>
     </nav>
   )

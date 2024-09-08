@@ -2,29 +2,12 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { textTranslate } from '@/components/anim';
 import { useMediaQuery } from 'react-responsive';
-
-const cards = [
-    {
-        title: "Web Design",
-        points: [
-            {
-
-            }
-        ]
-    },
-    {
-        title: "SEO Optimization",
-    },
-    {
-        title: "Marketing Offer",
-    },
-];
+import { cards } from '@/constants';
 
 export default function Points() {
     const [selectedProject, setSelectedProject] = useState({ isActive: false, index: 0 });
     const [disableAnimation, setDisableAnimation] = useState(false);
     const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
-
 
     const getWords = (title, index) => {
         let words = [];
@@ -61,16 +44,18 @@ export default function Points() {
         if (isTouchDevice) {
             setDisableAnimation(true);
         }
-    }, [selectedProject]);
+    }, [isTouchDevice]);
+
+    // WIP: might do a on scroll anim individual points text in the cards to make it more interesting
 
     return (
         <section>
             <div className="bodySummary">
                 {cards.map((card, index) => {
-                    const { title } = card;
+                    const { title, points, quarentees, text } = card;
                     return (
                         <div
-                            key={`l_${title}`}
+                            key={`card_${index}`}
                             className="card"
                             data-scroll
                             data-scroll-speed={0.05 * (index + 1)}
@@ -81,6 +66,23 @@ export default function Points() {
                                 setSelectedProject({ isActive: false, index });
                             }}
                         >
+                            <ul>
+                                {points.map((point, pointIndex) => (
+                                    <li key={`point_${pointIndex}`}>
+                                        <div className='dot'/>
+                                        <p>{point}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                            <p className='devider'>{text}</p>
+                            <ul>
+                                {quarentees.map((quarentee, quarenteeIndex) => (
+                                    <li key={`point_${quarenteeIndex}`}>
+                                        <div className='dot'/>
+                                        <p>{quarentee}</p>
+                                    </li>
+                                ))}
+                            </ul>
                             <motion.p className='title'>
                                 {disableAnimation ? splitText(title) : getWords(title, index)}
                             </motion.p>

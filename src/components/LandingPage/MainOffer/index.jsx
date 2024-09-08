@@ -36,7 +36,7 @@ export default function MainOffer () {
             </div>
             
             <div className="textSales" data-scroll data-scroll-speed={0.1}>
-                <p>A když má práce nesplní Vaše požadavky, <br/> vrátím Vám všechny peníze do poslední kačky.<br/> A nechám Vám navíc celý projekt zdarma. <br/><br/> <span > Bez žádných otázek.</span></p>
+                <p>Proč tak málo projektů ročně?<br/> Protože Vám chci dát opravdovou hodnotu z toho,<br/> co umím a to bez žádných limitací. <br/><br/> <span > Kvalita před kvantitou</span></p>
             </div>
             {/* WIP: Corrent the text here, make it different */}
         </div>

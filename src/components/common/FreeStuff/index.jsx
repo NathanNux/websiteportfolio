@@ -78,14 +78,17 @@ export default function FreeOffers ({text}) {
             { text && <div className="text">
                  <h1>Chcete začít nejdříve sami?</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in 
-                    erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur<br /><br />
+                    Plánuji do budoucnu Vám všech, kteří začínají, nebo jsem mimo váš rozpočet, nabídnout hlavní části mého umění zdarma.
+                    <br /><br />
+                    Jelikož si uvědomuji, jak moc náročný a těžký to je.
+                    <br /><br />
+                    Předám Vám proto mé hlavní principy, které mužete vuyžít nejen v tomto průmyslu, ale i kdekoliv jinde.
+                    <br /><br />
+                    Jsou to totiž fixní principy, které se mi osvědčily být nejeffektivnějšími a zárověň nejjednodušími na použití.
+                    <br /><br />
+                    A zabere Vám to opravdu frakci času, který jsem tomu věnoval já skrze chyby a pokusy.
 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur
-                    orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue,<br /><br />
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat,</p>
+                </p>
             </div>}
 
             <div ref={projectsRef} className="projects">

@@ -33,7 +33,7 @@ export default function App({ Component, pageProps, router }) {
       <meta name="description" content="Personal Portfolio Website" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
-      <title>Matěj Forejt</title>
+      <title>Matěj Forejt - Freelancer</title>
     </Head>
     <AnimatePresence mode="wait">
       <Component key={router.route} {...pageProps} />

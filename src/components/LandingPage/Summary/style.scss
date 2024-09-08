@@ -53,6 +53,13 @@
             }
         }
     }
+    .backgroundSummary{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        background-color: #fff;
+    }
 
     .budget{
         display: flex;
@@ -65,9 +72,15 @@
         background-color: #fff;
         z-index: 6;
         h1{
-            font-size: 4rem;
+            font-size: 3.5em;
             font-weight: 700;
             color: #22272d;
+            margin: 0;
+        }
+        p{
+            font-size: 2.5em;
+            font-weight: 400;
+            color: #ff5100;
             margin: 0;
         }
     }
@@ -108,9 +121,11 @@
         padding: 35vh 0 10vh 0;
     
         .text{
-            span{
-                font-size: 3rem;
-                font-weight: 700;
+            p{
+                font-size: 2em;
+                span{
+                    font-size: 2.5em;
+                }
             }
         }
     }
@@ -118,17 +133,15 @@
 
 @media only screen and (max-width: 1550px){
     .summary {
-        height: 75vh;
+        height: 130vh;
         padding: 15vh 0 10vh 0;
     
         .text{
-            h1{
-                font-size: 4rem;
-                font-weight: 700;
-            }
             p{
                 font-size: 2rem;
-                font-weight: 300;
+                span{
+                    font-size: 3.6rem;
+                }
             }
         }
     }
@@ -136,17 +149,15 @@
 
 @media only screen and (max-width: 1450px){
     .summary {
-        height: 75vh;
+        height: 140vh;
         padding: 15vh 0 10vh 0;
     
         .text{
-            h1{
-                font-size: 4rem;
-                font-weight: 700;
-            }
             p{
                 font-size: 2rem;
-                font-weight: 300;
+                span{
+                    font-size: 3.5rem;
+                }
             }
         }
     }
@@ -154,17 +165,31 @@
 
 @media only screen and (max-width: 1050px){
     .summary {
-        height: 100vh;
+        height: 150vh;
         padding: 5vh 0 10vh 0;
     
         .text{
-            h1{
-                font-size: 4rem;
-                font-weight: 700;
-            }
             p{
                 font-size: 2rem;
-                font-weight: 300;
+                span{
+                    font-size: 3.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1050px) and (min-height: 1000px){
+    .summary {
+        height: 300vh;
+        padding: 5vh 0 10vh 0;
+    
+        .text{
+            p{
+                font-size: 2rem;
+                span{
+                    font-size: 3.2rem;
+                }
             }
         }
     }
@@ -172,17 +197,15 @@
 
 @media only screen and (max-width: 500px){
     .summary {
-        height: 300vh;
+        height: 340vh;
         padding: 5vh 0 10vh 0;
     
         .text{
-            h1{
-                font-size: 3rem;
-                font-weight: 700;
-            }
             p{
                 font-size: 2rem;
-                font-weight: 300;
+                span{
+                    font-size: 3rem;
+                }
             }
         }
     }
@@ -194,13 +217,11 @@
         padding: 5vh 0 10vh 0;
     
         .text{
-            h1{
-                font-size: 4rem;
-                font-weight: 700;
-            }
             p{
                 font-size: 2rem;
-                font-weight: 300;
+                span{
+                    font-size: 3.5rem;
+                }
             }
         }
     }

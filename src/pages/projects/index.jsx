@@ -8,10 +8,8 @@ import Header from "@/components/common/Header";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-
+  const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  // to always return to the top of the page when the page changes
-  // its easier to look for changes in the pathname then to look for changes in the router object
 
   useEffect( () => {
     (
@@ -37,8 +35,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Navbar />
+      <Header isActive={isActive} setIsActive={setIsActive}/>
+      <Navbar isActive={isActive} setIsActive={setIsActive}/>
       <CurveTransition>
         <div className="page">
           <Projects />
