@@ -7,7 +7,7 @@ import Header from "@/components/common/Header";
 
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 
