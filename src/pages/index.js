@@ -61,6 +61,7 @@ export default function Home() {
 
   //WIP: if I will have the nerves to do it, I will create a custom hook for disabling the scroll
   // rest is in the Obsidian notes 
+  // It is done using this, its simple, but wont work for the transition. I might need to use the same but with new global state
   
   return (
     <>
