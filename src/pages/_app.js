@@ -12,19 +12,20 @@ export default function App({ Component, pageProps, router }) {
 
   const pathname = usePathname();
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'smooth'
-            });
-        }, 1000)
+  useEffect(() => {
+      const timer = setTimeout(() => {
+          window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+          });
+      }, 1000)
 
-        return () => {
-            clearTimeout(timer);
-        }
-    }, [pathname])
+      return () => {
+          clearTimeout(timer);
+      }
+  }, [pathname])
+
 
 
   return (

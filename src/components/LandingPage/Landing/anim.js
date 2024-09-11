@@ -4,7 +4,7 @@ export const SliderSlideUp = {
     },
     enter: {
         paddingTop: '0vh',
-        transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 0.6 }
+        transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1], delay: 0.6 }
     }
 }
 
@@ -14,7 +14,7 @@ export const FirstSliderSlideUp = {
     },
     enter: {
         paddingTop: '0vh',
-        transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 2.5 }
+        transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1], delay: 0.65 }
     }
 }
 
@@ -24,7 +24,7 @@ export const TextSlideUp = {
     },
     enter: {
         paddingTop: '0vh',
-        transition: {duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 0.65}
+        transition: {duration: 0.5, ease: [0.33, 1, 0.68, 1], delay: 0.65}
     }
 } 
 
@@ -34,6 +34,6 @@ export const FirstTextSlideUp = {
     },
     enter: {
         paddingTop: '0vh',
-        transition: {duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 2.5}
+        transition: {duration: 0.5, ease: [0.33, 1, 0.68, 1], delay: 0.55}
     }
 } 
