@@ -20,6 +20,8 @@ import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 import Summary from "@/components/LandingPage/Summary";
+import CookieBanner from "@/components/Cookies/Banner";
+import ManageModem from "@/components/Cookies/ManageModem";
 
 
 const phrases = [
@@ -38,6 +40,9 @@ export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const { firstLoad, setFirstLoad } = useLoad();
   const [isLoading, setIsLoading] = useState(true);
+  const {isVisible, setIsVisible} = useLoad(true);
+  const [modem, setModem] = useState(false);
+  const [ isSaved, setIsSaved ] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -59,9 +64,6 @@ export default function Home() {
     }
   }, [firstLoad]);
 
-  //WIP: if I will have the nerves to do it, I will create a custom hook for disabling the scroll
-  // rest is in the Obsidian notes 
-  // It is done using this, its simple, but wont work for the transition. I might need to use the same but with new global state
   
   return (
     <>
@@ -74,7 +76,9 @@ export default function Home() {
         <AnimatePresence wait>
           {firstLoad && <Preloader key="preloader"/>}
         </AnimatePresence>
-      <CurveTransition>
+        {isVisible && <CookieBanner isSaved={isSaved} setIsSaved={setIsSaved} setIsVisible={setIsVisible} setModem={setModem} />}
+        {isVisible && <ManageModem modem={modem} setModem={setModem} setIsSaved={setIsSaved} setIsVisible={setIsVisible} />}
+        <CurveTransition>
         {!firstLoad &&<div>
           <Landing />
           <Description />

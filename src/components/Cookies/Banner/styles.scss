@@ -1,0 +1,97 @@
+.banner{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 20%;
+    height: 20%;
+    background-color: #22272d;
+    z-index: 15;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 50px;
+    box-shadow: #22272d 0px 0px 15px 5px;
+    
+    .banner__content{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+        width: 100%;
+        overflow: hidden;
+        .banner__header{
+            display: flex;
+            justify-content: space-between;
+            .banner__title{
+                font-size: 1.2rem;
+                font-weight: 500;
+                padding: 0 1rem 1rem 1rem;
+                margin: 0;
+            }   
+            .banner__burger{
+                width: 22.5px;
+                position: relative;
+                padding: 0 0 1rem 0;
+                margin-top: 0.6rem;
+                margin-right: 1rem;
+                cursor: pointer;
+    
+                &::after, &::before{
+                    content: "";
+                    height: 1px;
+                    width: 100%;
+                    background-color: #fff;
+                    position: relative;
+                    display: block;
+                    cursor: pointer;
+                    transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+                }
+    
+                &::after{
+                    transform: rotate(45deg);
+                    top: -1px;
+                }
+    
+                &::before{
+                    transform: rotate(-45deg);
+                    top: 1px;
+                }
+            }
+
+            &:hover{
+                .banner__burger::after, .banner__burger::before{
+                    background-color: #fb6b28;
+                }
+            }
+        }
+        
+        .banner__text{
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 0 1rem 1rem 1rem;
+        }
+        .banner__buttons{
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            z-index: 900;
+
+            .banner__buttons__first{
+                display: flex;
+                gap: 1rem;
+                z-index: 999;
+            }
+            .banner__buttons__second{
+                display: flex;
+                gap: 1rem;
+                z-index: 999;
+            }
+        }
+    }
+}

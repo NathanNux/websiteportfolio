@@ -10,6 +10,8 @@ export function LoadProvider({ children }) {
     const [ firstLoad, setFirstLoad ] = useState(true);
     const [ delayAnim, setDelayAnim ] = useState(true);
     const [ isLoading, setIsLoading ] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+
     const pathname = usePathname();
 
     useEffect(() => {
@@ -35,7 +37,7 @@ export function LoadProvider({ children }) {
     }, [pathname]);
 
     return (
-        <LoadContext.Provider value={{ firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading }}>
+        <LoadContext.Provider value={{ firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading, isVisible, setIsVisible }}>
             {children}
         </LoadContext.Provider>
     );
@@ -46,6 +48,6 @@ export function useLoad() {
     if(context === undefined) {
         throw new Error('useLoad must be used within a LoadProvider');
     }
-    const { firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading } = context;
-    return { firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading };
+    const { firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading, isVisible, setIsVisible } = context;
+    return { firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading, isVisible, setIsVisible };
 }

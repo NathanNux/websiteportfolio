@@ -1,0 +1,161 @@
+.modem {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+
+  .modem__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    z-index: 1001;
+  }
+
+  .modem__content {
+    z-index: 1002;
+    width: 30%;
+    height: 30%;
+    color: #fff;
+
+    .modem__text {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.5;
+      text-align: left;
+      width: 100%;
+      overflow: hidden;
+
+      a {
+        color: #fb6b28;
+        text-decoration: none;
+      }
+    }
+
+    .modem__header {
+      display: flex;
+      justify-content: space-between;
+      height: 20%;
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 500;
+        padding: 0 0 1rem 0rem;
+        margin: 0;
+      }
+
+      .modem__burger {
+        width: 32.5px;
+        position: relative;
+        padding: 0 0 1rem 0;
+        margin-top: 0.6rem;
+        margin-right: 1rem;
+        cursor: pointer;
+
+        &::after,
+        &::before {
+          content: "";
+          height: 1px;
+          width: 100%;
+          background-color: #fff;
+          position: relative;
+          display: block;
+          cursor: pointer;
+          transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+          top: -1px;
+        }
+
+        &::before {
+          transform: rotate(-45deg);
+          top: 1px;
+        }
+      }
+
+      &:hover {
+        .modem__burger::after,
+        .modem__burger::before {
+          background-color: #fb6b28;
+        }
+      }
+    }
+
+    .modem__checkboxes {
+      .modem__checkbox {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+
+        input[type="checkbox"] {
+          display: none;
+
+          & + label {
+            position: relative;
+            padding-left: 50px;
+            cursor: pointer;
+            user-select: none;
+            font-size: 1.2rem;
+
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              background-color: #22272d;
+              border: 2px solid #fb6b28;
+              transition: background-color 0.3s, border-color 0.3s;
+            }
+
+            &::after {
+              content: "⛌";
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%) scale(0);
+              width: 25px;
+              height: 25px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fb6b28;
+              font-size: 18px;
+              transition: transform 0.3s;
+            }
+          }
+
+          &:checked + label::before {
+            background-color: #fb6b28;
+            border-color: #fb6b28;
+          }
+
+          &:checked + label::after {
+            transform: translateY(-50%) scale(1);
+          }
+        }
+
+        label {
+          font-size: 1rem;
+          font-weight: 300;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .modem__buttons {
+      padding: 2rem 2rem;
+    }
+  }
+}
