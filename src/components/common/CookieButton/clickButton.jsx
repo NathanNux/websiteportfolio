@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { scale } from "@/components/anim";
 
-export default function ButtonClick({ title, onClick, currentView, filterCategory, trigger, svgPaths }) {
+export default function ButtonClick({ title, onClick, currentView, filterCategory, trigger }) {
     const [isHovered, setIsHovered] = useState(false);
     const [active, setActive] = useState(false);
 

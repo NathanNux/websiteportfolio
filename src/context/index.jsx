@@ -12,6 +12,10 @@ export function LoadProvider({ children }) {
     const [ isLoading, setIsLoading ] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const [ isHomeCountry, setIsHomeCountry ] = useState(false);
+    const [ isSaved, setIsSaved ] = useState(false);
+    const [modem, setModem] = useState(false);
+
+
 
     const pathname = usePathname();
 
@@ -38,7 +42,7 @@ export function LoadProvider({ children }) {
     }, [pathname]);
 
     return (
-        <LoadContext.Provider value={{ firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading, isVisible, setIsVisible, isHomeCountry, setIsHomeCountry }}>
+        <LoadContext.Provider value={{ firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading, isVisible, setIsVisible, isHomeCountry, setIsHomeCountry, isSaved, setIsSaved, modem, setModem }}>
             {children}
         </LoadContext.Provider>
     );
@@ -49,6 +53,6 @@ export function useLoad() {
     if(context === undefined) {
         throw new Error('useLoad must be used within a LoadProvider');
     }
-    const { firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading, isVisible, setIsVisible, isHomeCountry, setIsHomeCountry } = context;
-    return { firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading, isVisible, setIsVisible, isHomeCountry, setIsHomeCountry };
+    const { firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading, isVisible, setIsVisible, isHomeCountry, setIsHomeCountry, isSaved, setIsSaved, modem, setModem } = context;
+    return { firstLoad, setFirstLoad, delayAnim, setDelayAnim, isLoading, setIsLoading, isVisible, setIsVisible, isHomeCountry, setIsHomeCountry, isSaved, setIsSaved, modem, setModem };
 }

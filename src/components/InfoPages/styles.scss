@@ -1,3 +1,4 @@
+// Base styles
 .info__page {
     display: flex;
     justify-content: center;
@@ -7,12 +8,11 @@
     background-color: #fff;
     font-size: 1.5rem;
     font-weight: 300;
-    text-align: left;
-    padding: 15rem 10rem 0rem 5rem;
+    padding: 15rem 0 0 0;
     z-index: 5;
     position: relative;
 
-    .info__content{
+    .info__content {
         display: flex;
         justify-content: center;
         min-height: 100vh;
@@ -20,44 +20,71 @@
         font-size: 1.5rem;
         font-weight: 300;
         text-align: left;
-        gap: 10rem;
+        gap: 2rem;
         position: relative;
         background-color: #fff;
         z-index: 5;
+
         .info__block__main {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 65%;
+            width: 70%;
             height: 100%;
             gap: 5rem;
+            padding: 0 10rem 0 2rem;
+
+            .info__block__cookies {
+                display: flex;
+                width: 100%;
+                justify-content: left;
+                align-items: center;
+                gap: 2rem;
+                padding-bottom: 5em;
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+                .info__block__cookies__text {
+                    font-size: 0.8em;
+                    line-height: 1.5;
+                    font-weight: 300;
+                    color: #22272d;
+                }
+            }
+
             .info__block__addInfo {
-                padding: 5em 0;
+                padding: 5em 0 0 0;
                 font-size: 1.5rem;
                 line-height: 1.5;
                 font-weight: 300;
                 margin-bottom: 1rem;
                 color: #22272d;
-    
-                a{
+                margin: 0;
+
+                a {
                     color: #fb6b28;
                     text-decoration: none;
-                    transition: opacity 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Apply transition to opacity */
+                    transition: opacity 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
                 }
-                a:hover{
+
+                a:hover {
                     opacity: 0.6;
                 }
             }
-    
+
             .info__block__section {
                 text-align: left;
+
                 h2 {
                     font-size: 3rem;
                     font-weight: 500;
                     margin-bottom: 1rem;
                     color: #fb6b28;
                 }
+
                 p {
                     font-size: 1.5rem;
                     line-height: 1.5;
@@ -67,10 +94,11 @@
                 }
             }
         }
-    
+
         .info__page__navbar {
             width: 20%;
             padding: 2rem 0 10em 0;
+
             .info__page__stickyBar {
                 width: 100%;
                 height: fit-content;
@@ -82,36 +110,41 @@
                 justify-content: center;
                 padding: 2rem;
                 border-radius: 25%;
+
                 h3 {
                     font-size: 2.5rem;
                     font-weight: 500;
-                    padding: 1rem 0 1rem 0;
+                    padding: 1rem 0;
                     color: #fb6b28;
                     text-align: left;
                     margin: 0;
                     width: 80%;
                 }
-                ul {
+
+                .info__page__ul {
                     position: relative;
                     display: flex;
                     flex-direction: column;
                     padding: 0;
                     margin: 0;
-                    li {
+
+                    .info__page__li {
                         text-decoration: none;
                         list-style: none;
                         display: flex;
                         align-items: center;
                         position: relative;
                         padding: 0.2em 0;
-                        transition: all 0.3s ease; /* Apply transition to li */
+                        transition: all 0.3s ease;
+
                         .info__page__dot {
                             width: 1rem;
                             height: 1rem;
                             background-color: #22272d;
                             border-radius: 50%;
-                            transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Apply transition to background-color */
+                            transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                         }
+
                         a {
                             color: #22272d;
                             font-size: 1.5rem;
@@ -120,13 +153,15 @@
                             text-decoration: none;
                             margin: 0;
                             padding: 0 1rem;
-                            transition: opacity 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Apply transition to opacity */
+                            transition: opacity 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
                         }
                     }
+
                     li:hover {
                         .info__page__dot, a {
                             opacity: 0.6;
                         }
+
                         .info__page__dot {
                             background-color: #fb6b28;
                         }
@@ -144,6 +179,7 @@
         width: 100%;
         margin: 0;
         bottom: 0;
+
         .svgDiv {
             box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
             position: absolute;
@@ -155,25 +191,314 @@
     }
 }
 
-// Assume devices that can hover and have a fine pointer (e.g., mouse) are not touch devices
+// Media queries
 @media (hover: hover) and (pointer: fine) {
-    .info__page{
-        .svgContainer{
-            .svgDiv{
-                width: 130%;
-                left: -15%;
+    .info__page .svgContainer .svgDiv {
+        width: 130%;
+        left: -15%;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .info__page .svgContainer .svgDiv {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .info__page {
+        .info__content {
+            .info__block__main {
+                width: 65%;
+
+                .info__block__cookies p {
+                    font-size: 1rem;
+                }
+
+                .info__block__cookies .info__block__cookies__text {
+                    font-size: 0.6em;
+                }
+
+                .info__block__addInfo {
+                    font-size: 1.2rem;
+                }
+
+                .info__block__section h2 {
+                    font-size: 2.5rem;
+                }
+
+                .info__block__section p {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .info__page__navbar .info__page__stickyBar {
+                h3 {
+                    font-size: 2rem;
+                    width: 70%;
+                }
+
+                .info__page__ul .info__page__li {
+                    .info__page__dot {
+                        width: 0.8rem;
+                        height: 0.8rem;
+                    }
+
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
             }
         }
     }
 }
 
-// For touch devices (which typically can't hover and have coarse pointers), allow vertical scrolling
-@media (hover: none) and (pointer: coarse) {
-    .info__page{
-        .svgContainer{
-            .svgDiv{
-                width: 100%;
-                left: 0%;
+@media only screen and (max-width: 1050px) {
+    .info__page {
+        .info__content {
+            .info__block__main {
+                width: 65%;
+                padding: 0 3rem 0 2rem;
+
+                .info__block__cookies p {
+                    font-size: 1rem;
+                }
+
+                .info__block__cookies .info__block__cookies__text {
+                    font-size: 0.6em;
+                }
+
+                .info__block__addInfo {
+                    font-size: 1.2rem;
+                }
+
+                .info__block__section h2 {
+                    font-size: 2.5rem;
+                }
+
+                .info__block__section p {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .info__page__navbar .info__page__stickyBar {
+                h3 {
+                    font-size: 2rem;
+                    width: 70%;
+                }
+
+                .info__page__ul .info__page__li {
+                    .info__page__dot {
+                        width: 0.8rem;
+                        height: 0.8rem;
+                    }
+
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .info__page {
+        .info__content {
+            .info__block__main {
+                width: 55%;
+                padding: 0 3rem 0 2rem;
+
+                .info__block__cookies p {
+                    font-size: 1rem;
+                }
+
+                .info__block__cookies .info__block__cookies__text {
+                    font-size: 0.6em;
+                }
+
+                .info__block__addInfo {
+                    font-size: 1.2rem;
+                }
+
+                .info__block__section h2 {
+                    font-size: 2.5rem;
+                }
+
+                .info__block__section p {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .info__page__navbar {
+                width: 25%;
+
+                .info__page__stickyBar h3 {
+                    font-size: 2rem;
+                    width: 70%;
+                }
+
+                .info__page__ul .info__page__li {
+                    .info__page__dot {
+                        width: 0.8rem;
+                        height: 0.8rem;
+                    }
+
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .info__page {
+        .info__content {
+            .info__block__main {
+                width: 55%;
+                padding: 0 3rem 0 2rem;
+
+                .info__block__cookies p {
+                    font-size: 1rem;
+                }
+
+                .info__block__cookies .info__block__cookies__text {
+                    font-size: 0.6em;
+                }
+
+                .info__block__addInfo {
+                    font-size: 1.2rem;
+                }
+
+                .info__block__section h2 {
+                    font-size: 2.5rem;
+                }
+
+                .info__block__section p {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .info__page__navbar {
+                width: 30%;
+
+                .info__page__stickyBar h3 {
+                    font-size: 2rem;
+                    width: 70%;
+                }
+
+                .info__page__ul .info__page__li {
+                    .info__page__dot {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                    }
+
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 950px) and (max-height: 500px) {
+    .info__page {
+        .info__content {
+            .info__block__main {
+                width: 55%;
+                padding: 0 3rem 0 2rem;
+
+                .info__block__cookies p {
+                    font-size: 1rem;
+                }
+
+                .info__block__cookies .info__block__cookies__text {
+                    font-size: 0.6em;
+                }
+
+                .info__block__addInfo {
+                    font-size: 1.2rem;
+                }
+
+                .info__block__section h2 {
+                    font-size: 2.5rem;
+                }
+
+                .info__block__section p {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .info__page__navbar {
+                width: 30%;
+                padding: 2rem 0 5em 0;
+
+                .info__page__stickyBar {
+                    padding: 1rem 2rem;
+                    top: 5%;
+
+                    h3 {
+                        font-size: 2rem;
+                        width: 70%;
+                    }
+
+                    .info__page__ul .info__page__li {
+                        .info__page__dot {
+                            width: 0.5rem;
+                            height: 0.5rem;
+                        }
+
+                        a {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .info__page {
+        .info__content {
+            text-align: center;
+
+            .info__block__main {
+                text-align: center;
+                width: 90%;
+                padding: 0 3rem 0 2rem;
+
+                .info__block__cookies p {
+                    font-size: 0.8rem;
+                }
+
+                .info__block__cookies .info__block__cookies__text {
+                    font-size: 1.2rem;
+                }
+
+                .info__block__addInfo {
+                    font-size: 1.5rem;
+                }
+
+                .info__block__section {
+                    text-align: center;
+
+                    h2 {
+                        font-size: 3rem;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            .info__page__navbar {
+                display: none;
             }
         }
     }

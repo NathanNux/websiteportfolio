@@ -7,9 +7,17 @@ import { useLoad } from '@/context';
 
 export default function CookieBanner({ isSaved, setIsSaved, setModem, setIsVisible }) {
   const [isEU, setIsEU] = useState(false);
-  const { isHomeCountry } = useLoad()
+  const { isHomeCountry } = useLoad();
 
   useEffect(() => {
+    // Check if the user has already accepted cookies
+    const cookieAccepted = Cookies.get('cookieAccepted');
+    if (cookieAccepted === 'true') {
+      setIsSaved(true);
+      setIsVisible(false);
+      return;
+    }
+
     const checkLocation = async () => {
       try {
         const response = await axios.get('https://ipapi.co/json/');

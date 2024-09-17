@@ -23,16 +23,14 @@ import Summary from "@/components/LandingPage/Summary";
 import CookieBanner from "@/components/Cookies/Banner";
 import ManageModem from "@/components/Cookies/ManageModem";
 import useGetLocation from "@/utils/useGetLocation";
-import { text } from "@/components/transition/CurveTransition/animations";
-
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const { firstLoad, setFirstLoad } = useLoad();
   const [isLoading, setIsLoading] = useState(true);
   const {isVisible, setIsVisible} = useLoad(true);
-  const [modem, setModem] = useState(false);
-  const [ isSaved, setIsSaved ] = useState(false);
+  const {modem, setModem} = useLoad();
+  const { isSaved, setIsSaved } = useLoad();
 
   useGetLocation();
   const { isHomeCountry } = useLoad();
