@@ -1,5 +1,7 @@
 import Projects from './Projects'
 import Scene from '@/components/LandingPage/NewestWork/Scene';
+import { useLoad } from '@/context';
+import useGetLocation from '@/utils/useGetLocation';
 import { useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
@@ -8,6 +10,9 @@ export default function NewestWork () {
     const ref = useRef(null);
     const [disableScene, setDisableScene] = useState(false);
     const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
+
+    useGetLocation();
+    const { isHomeCountry } = useLoad();
 
     useEffect(() => {
         if (isTouchDevice) {
@@ -18,7 +23,7 @@ export default function NewestWork () {
     return (
         <section className="mainNewestWork" ref={ref}>
             <div className="title">
-                <p>Mé nejnovější | Projekty</p>
+                <p>{ isHomeCountry ? "Mé Nejnovější | Projekty" : "My Newest | Projects"}</p>
             </div>
             <div className="section">
                 <Projects setActiveProject={setActiveProject}/>

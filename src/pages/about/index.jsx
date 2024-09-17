@@ -11,14 +11,7 @@ import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 import { useEffect, useState } from "react";
-
-const description = [
-  {
-      text: "JMENUJI SE <br/> MATĚJ FOREJT. <br/> JSEM MLADÝ, <br/> AMBICIÓZNÍ NOMAD.<br/>VĚŘÍM VE<br/> SKUTEČNOU<br/>HODNOTU TVORBY.<br/>"
-  },
-];
-//LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN IN ERAT LIGULA. VESTIBULUM ELEMENTUM EX ET TELLUS MALESUADA, QUIS CONSECTETUR ORCI CONSECTETUR. VESTIBULUM VOLUTPAT, EST SOLICITUDIN POSUERE CONGUE, AUGUE AUGUE DAPIBUS ENIM, A MAXIMUS NUNC EX EGET DUI. PRAESENT ID VENENATIS QUAM, A EFFICITUR LEO. QUISQUE MAURIS MAGNA, MOLLIS A PHARETRA SED, PLACERAT AUCTOR NISI. ETIAM BIBENDUM NEQUE SIT AMET MI TEMPUS, ID ULLAMCORPER URNA ULTRICIES. PELLENTESQUE VOLUTPAT MASSA AT TORTOR MATTIS, ID SAGITTIS EST FEUGIAT.
-//Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui. Praesent id venenatis quam, a efficitur leo. Quisque mauris magna, mollis a pharetra sed, placerat auctor nisi. Etiam bibendum neque sit amet mi tempus, id ullamcorper urna ultricies. Pellentesque volutpat massa at tortor mattis, id sagittis est feugiat.
+import { useLoad } from "@/context";
 
 const phrase1 = [
   {
@@ -38,9 +31,34 @@ const phrase3 = [
 ];
 
 export default function Home() {
-  const phrases = [phrase1, phrase2, phrase3];
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
+  const { isHomeCountry } = useLoad();
+
+  const description = [
+    {
+        text: isHomeCountry ? "JMENUJI SE <br/> MATĚJ FOREJT. <br/> JSEM MLADÝ, <br/> AMBICIÓZNÍ NOMAD.<br/>VĚŘÍM VE<br/> SKUTEČNOU<br/>HODNOTU TVORBY.<br/>" : "MY NAME IS <br/> MATĚJ FOREJT. <br/> I'M A YOUNG, <br/> AMBITIOUS NOMAD.<br/>I BELIEVE IN<br/> THE REAL<br/>VALUE OF CREATION.<br/>"
+    },
+  ];
+
+  const phrase1 = [
+    {
+        text: isHomeCountry ?  "Už třetím rokem pracuji na webovém designu,<br/> psychologii, vnímání barev a sdělění příběhu, <br/>vždy s cílem vytvořit něco, co je nejen krásné,<br/> ale také funkční a efektivní." : "It is the third year that I have been working on web design,<br/> psychology, color perception and storytelling, <br/> always with the aim of creating something that is not only beautiful,<br/> but also functional and effective."
+    },
+  ];
+  
+  const phrase2 = [
+    {
+        text: isHomeCountry ?  "Cílem není vytvořit pouze webovky,<br/> ale celý ekosystém, <br/> který je založen na principech <br/> dobrého designu a uživatelského zážitku." : "The goal is not just to create websites,<br/> but a whole ecosystem, <br/> based on the principles of <br/> good design and user experience."
+    },
+  ];
+  const phrase3 = [
+    {
+        text:  isHomeCountry ? "Tohle je můj Background...." : "This is my Background...."
+    },
+  ];
+  
 
   useEffect( () => {
     (

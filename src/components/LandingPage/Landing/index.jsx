@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { FirstSlideUp, slideUp } from '@/components/anim';
 import { useLoad } from '@/context';
 import { FirstSliderSlideUp, FirstTextSlideUp, SliderSlideUp, TextSlideUp } from './anim';
+import useGetLocation from '@/utils/useGetLocation';
 
 export default function Index() {
   const firstText = useRef(null);
@@ -13,6 +14,9 @@ export default function Index() {
   const slider = useRef(null);
   let xPercent = 0;
   let direction = useRef(-1);
+
+  useGetLocation();
+  const { isHomeCountry } = useLoad();
 
   const { delayAnim, setDelayAnim } = useLoad();
 
@@ -56,8 +60,6 @@ export default function Index() {
     }
   }, [firstText, secondText]);
 
- // WIP: ADD THE slide up anim also for the slider and the text, then use it in the variants of the motion.main component and add the delayAnim to the useEffect and do that in all pages
- // then use bigger image for the background and create parallax effect with the text and the slider
   return (
     <motion.main variants={ delayAnim ? FirstSlideUp : slideUp } initial="initial" animate='enter' className="landingPage">
       <div className='backgroundDiv' data-scroll data-scroll-speed={-0.85}>
@@ -79,8 +81,8 @@ export default function Index() {
       </motion.div>
 
       <motion.div variants={ delayAnim ? FirstTextSlideUp : TextSlideUp } initial="initial" animate='enter' data-scroll data-scroll-speed={-0.15} className="description">
-          <p>Jmenuji se <br /> Matěj Forejt</p>
-          <p>Vítejte u mě v Centru</p>
+          <p> {isHomeCountry ?  "Jmenuji se" : "Name's"} <br /> Matěj Forejt</p>
+          <p>{ isHomeCountry ?  "Vítejte u mě v Centru" : "Welcome at my Center"}</p>
       </motion.div>
     </motion.main>
   )

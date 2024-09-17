@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { slideUp } from '@/components/anim';
 import { SliderSlideUp } from '@/components/LandingPage/Landing/anim';
+import { useLoad } from '@/context';
 
 export default function Index() {
   const firstText = useRef(null);
@@ -12,6 +13,10 @@ export default function Index() {
   const slider = useRef(null);
   let xPercent = 0;
   let direction = useRef(-1);
+
+  const { isHomeCountry } = useLoad();
+
+  const landingText = isHomeCountry ?  "Něco o Mě - Něco o Æther - Něco o Mě - Něco o Æther - Něco o Mě - Něco o Æther -" : "Something about Me - Something about Æther - Something about Me - Something about Æther - Something about Me - Something about Æther -";
 
   useEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
@@ -69,8 +74,8 @@ export default function Index() {
       
       <motion.div variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
         <div ref={slider} className="slider">
-          <p ref={firstText}>Něco o Mě - Něco o Æther - Něco o Mě - Něco o Æther - Něco o Mě - Něco o Æther -</p>
-          <p ref={secondText}>Něco o Mě - Něco o Æther - Něco o Mě - Něco o Æther - Něco o Mě - Něco o Æther -</p>
+          <p ref={firstText}>{landingText}</p>
+          <p ref={secondText}>{landingText}</p>
         </div>
       </motion.div>
     </motion.main>

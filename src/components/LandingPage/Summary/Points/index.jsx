@@ -2,12 +2,14 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { textTranslate } from '@/components/anim';
 import { useMediaQuery } from 'react-responsive';
-import { cards } from '@/constants';
+import { cards, cardsEN } from '@/constants';
+import { useLoad } from '@/context';
 
 export default function Points() {
     const [selectedProject, setSelectedProject] = useState({ isActive: false, index: 0 });
     const [disableAnimation, setDisableAnimation] = useState(false);
     const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
+    const { isHomeCountry } = useLoad();
 
     const getWords = (title, index) => {
         let words = [];
@@ -51,44 +53,87 @@ export default function Points() {
     return (
         <section>
             <div className="bodySummary">
-                {cards.map((card, index) => {
-                    const { title, points, quarentees, text } = card;
-                    return (
-                        <div
-                            key={`card_${index}`}
-                            className="card"
-                            data-scroll
-                            data-scroll-speed={0.05 * (index + 1)}
-                            onMouseOver={() => {
-                                setSelectedProject({ isActive: true, index });
-                            }}
-                            onMouseLeave={() => {
-                                setSelectedProject({ isActive: false, index });
-                            }}
-                        >
-                            <ul>
-                                {points.map((point, pointIndex) => (
-                                    <li key={`point_${pointIndex}`}>
-                                        <div className='dot'/>
-                                        <p>{point}</p>
-                                    </li>
-                                ))}
-                            </ul>
-                            <p className='devider'>{text}</p>
-                            <ul>
-                                {quarentees.map((quarentee, quarenteeIndex) => (
-                                    <li key={`point_${quarenteeIndex}`}>
-                                        <div className='dot'/>
-                                        <p>{quarentee}</p>
-                                    </li>
-                                ))}
-                            </ul>
-                            <motion.p className='title'>
-                                {disableAnimation ? splitText(title) : getWords(title, index)}
-                            </motion.p>
-                        </div>
-                    );
-                })}
+                { isHomeCountry ?
+                    (
+                        cards.map((card, index) => {
+                            const { title, points, quarentees, text } = card;
+                            return (
+                                <div
+                                    key={`card_${index}`}
+                                    className="card"
+                                    data-scroll
+                                    data-scroll-speed={0.05 * (index + 1)}
+                                    onMouseOver={() => {
+                                        setSelectedProject({ isActive: true, index });
+                                    }}
+                                    onMouseLeave={() => {
+                                        setSelectedProject({ isActive: false, index });
+                                    }}
+                                >
+                                    <ul>
+                                        {points.map((point, pointIndex) => (
+                                            <li key={`point_${pointIndex}`}>
+                                                <div className='dot'/>
+                                                <p>{point}</p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <p className='devider'>{text}</p>
+                                    <ul>
+                                        {quarentees.map((quarentee, quarenteeIndex) => (
+                                            <li key={`point_${quarenteeIndex}`}>
+                                                <div className='dot'/>
+                                                <p>{quarentee}</p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <motion.p className='title'>
+                                        {disableAnimation ? splitText(title) : getWords(title, index)}
+                                    </motion.p>
+                                </div>
+                            );
+                        })
+                    ) : (
+                        cardsEN.map((card, index) => {
+                            const { title, points, quarentees, text } = card;
+                            return (
+                                <div
+                                    key={`card_${index}`}
+                                    className="card"
+                                    data-scroll
+                                    data-scroll-speed={0.05 * (index + 1)}
+                                    onMouseOver={() => {
+                                        setSelectedProject({ isActive: true, index });
+                                    }}
+                                    onMouseLeave={() => {
+                                        setSelectedProject({ isActive: false, index });
+                                    }}
+                                >
+                                    <ul>
+                                        {points.map((point, pointIndex) => (
+                                            <li key={`point_${pointIndex}`}>
+                                                <div className='dot'/>
+                                                <p>{point}</p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <p className='devider'>{text}</p>
+                                    <ul>
+                                        {quarentees.map((quarentee, quarenteeIndex) => (
+                                            <li key={`point_${quarenteeIndex}`}>
+                                                <div className='dot'/>
+                                                <p>{quarentee}</p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <motion.p className='title'>
+                                        {disableAnimation ? splitText(title) : getWords(title, index)}
+                                    </motion.p>
+                                </div>
+                            );
+                        }) 
+                    )
+                }
             </div>
         </section>
     );

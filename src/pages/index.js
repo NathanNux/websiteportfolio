@@ -22,19 +22,9 @@ import Header from "@/components/common/Header";
 import Summary from "@/components/LandingPage/Summary";
 import CookieBanner from "@/components/Cookies/Banner";
 import ManageModem from "@/components/Cookies/ManageModem";
+import useGetLocation from "@/utils/useGetLocation";
+import { text } from "@/components/transition/CurveTransition/animations";
 
-
-const phrases = [
-  {
-    text: "Webové stránky nejsou jen<span>obrázky, text a layout.</span>Jde o<span>důležitou zprávu,</span>kterou <span>chcete sdělit</span> svým novým a stávajícím zákazníkům."
-  },
-  {
-      text: "<span>Nejsem tradiční:</span>řekni si o něco míň a udělej o něco víc, typ člověka. Tohle prostě nedělám.<span>Poskytu Vám skutečnou hodnotu.</span>Protože miluju to, co dělám<span>a pevně věřím,</span>že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním<span>a zlepšit Váš život.</span>"
-  },
-  {
-      text: "Žádný poplatek za služby, žádný model předplatného.<span>Dostanete jednorázový balížek s celoživotními službami.</span>Vytvářím vztahy, ne obchodní dealy.<span>Věřím v důvěru, ne v rychlý výdělek.</span>A jsem součástí celého procesu. <span>Jsem drahý, ale udělám věci tak, jak mají být.</span>"
-  }
-]
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
@@ -43,6 +33,31 @@ export default function Home() {
   const {isVisible, setIsVisible} = useLoad(true);
   const [modem, setModem] = useState(false);
   const [ isSaved, setIsSaved ] = useState(false);
+
+  useGetLocation();
+  const { isHomeCountry } = useLoad();
+
+  const phrases = [
+    {
+      text: isHomeCountry
+        ? "Webové stránky nejsou jen<span>obrázky, text a layout.</span>Jde o<span>důležitou zprávu,</span>kterou <span>chcete sdělit</span> svým novým a stávajícím zákazníkům."
+        : "Websites are not just<span>images, text, and layout.</span>It's about<span>an important message</span>you want to <span>convey</span> to your new and existing customers."
+    },
+    {
+      text: isHomeCountry
+        ? "<span>Nejsem tradiční:</span>řekni si o něco míň a udělej o něco víc, typ člověka. Tohle prostě nedělám.<span>Poskytu Vám skutečnou hodnotu.</span>Protože miluju to, co dělám<span>a pevně věřím,</span>že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním<span>a zlepšit Váš život.</span>"
+        : "<span>I'm not traditional:</span>ask for a little less and do a little more, type of person. I just don't do that.<span>I provide real value.</span>Because I love what I do<span>and firmly believe</span>that my ecosystem will help you accelerate your business<span>and improve your life.</span>"
+    },
+    {
+      text: isHomeCountry
+        ? "Žádný poplatek za služby, žádný model předplatného.<span>Dostanete jednorázový balížek s celoživotními službami.</span>Vytvářím vztahy, ne obchodní dealy.<span>Věřím v důvěru, ne v rychlý výdělek.</span>A jsem součástí celého procesu. <span>Jsem drahý, ale udělám věci tak, jak mají být.</span>"
+        : "No service fee, no subscription model.<span>You get a one-time package with lifetime services.</span>I build relationships, not business deals.<span>I believe in trust, not quick profit.</span>And I'm part of the whole process. <span>I'm expensive, but I do things the way they should be done.</span>"
+    }
+  ];
+
+  const landingText = isHomeCountry 
+  ? 'Originalita - Design - Nabídka - Prodeje -' 
+  : 'Authenticity - Design - Offer - Sales -';
 
   useEffect(() => {
     setTimeout(() => {
@@ -64,7 +79,7 @@ export default function Home() {
     }
   }, [firstLoad]);
 
-  
+
   return (
     <>
       <Head>
@@ -94,7 +109,7 @@ export default function Home() {
             src6='/assets/images/slider-la/offer.webp' 
             src7='/assets/images/slider-la/research.webp' 
             path='/assets/images/slider-la/videos/main.webm'
-            text='Originalita - Design - Nabídka - Prodeje -'
+            text={landingText}
           />
           <OfferSection />
           <Summary />

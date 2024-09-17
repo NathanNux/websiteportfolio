@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Head from "next/head";
+import useGetLocation from "@/utils/useGetLocation";
 
 export default function App({ Component, pageProps, router }) {
 

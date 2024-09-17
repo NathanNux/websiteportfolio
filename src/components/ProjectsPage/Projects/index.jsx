@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import IconList from './IconList';
 import ButtonClick from '@/components/common/ClickButton/clickButton';
 import { useMediaQuery } from 'react-responsive';
+import { useLoad } from '@/context';
 const Scene = dynamic(() => import('./Scene'), { ssr: false });
 
 export default function ProjectsList() {
@@ -15,6 +16,8 @@ export default function ProjectsList() {
     const curve = useRef(null);
     const [disableScene, setDisableScene] = useState(false);
     const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
+
+    const { isHomeCountry } = useLoad();
 
     const [ selectedCategory, setSelectedCategory ] = useState('all');
     
@@ -44,14 +47,14 @@ export default function ProjectsList() {
             <div className="barContainer">
                 
                 <div className="headerProjects">
-                    <p>Všechny projekty</p>
+                    <p>{ isHomeCountry ? "Všechny projekty" : "All My Projects"}</p>
                 </div>
                
                 <div className="bar">
                     <div className="buttons">
-                        <ButtonClick title='Všechny' onClick={() => setSelectedCategory('all')} trigger='all' currentView={view} filterCategory={selectedCategory}/>
-                        <ButtonClick title='Aplikace' onClick={() => setSelectedCategory('app')} trigger='app' currentView={view} filterCategory={selectedCategory}/>
-                        <ButtonClick title='Webovky' onClick={() => setSelectedCategory('web')} trigger='web' currentView={view} filterCategory={selectedCategory}/>
+                        <ButtonClick title={ isHomeCountry ? 'Všechny' : "All"} onClick={() => setSelectedCategory('all')} trigger='all' currentView={view} filterCategory={selectedCategory}/>
+                        <ButtonClick title={isHomeCountry ? 'Aplikace' : "Apps"} onClick={() => setSelectedCategory('app')} trigger='app' currentView={view} filterCategory={selectedCategory}/>
+                        <ButtonClick title={isHomeCountry ? 'Webovky' : "Websites"} onClick={() => setSelectedCategory('web')} trigger='web' currentView={view} filterCategory={selectedCategory}/>
                     </div>
 
                     <div className="buttons">

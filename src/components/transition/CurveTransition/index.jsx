@@ -35,6 +35,36 @@ const routes = {
 
 }
 
+
+const routesEN = {
+    '/': 'Home',
+    '/about': 'About',
+    '/projects': 'Projects',
+    '/contact': 'Contact',
+    '/materials': 'Materials',
+    '/ochrana-osobnich-udaju': 'Privacy Policy',
+    '/cookies': 'Cookies',
+    '/projects/components': 'Components',
+    '/projects/blog': 'Blog',
+    '/projects/agency': 'Agency',
+    '/projects/bank': 'Bank',
+    '/projects/car-app': 'Car Rental',
+    '/projects/travel': 'Travel Website',
+    '/projects/e-comm': 'E-commerce',
+    '/projects/sushi': 'Sushi Restaurant',
+    '/projects/smooth-scroll': 'Smooth Scroll',
+    '/projects/restaurant': 'Restaurant',
+    '/projects/nft': 'NFT Marketplace',
+    '/projects/framer': 'Framer Website',
+    '/projects/denis-clone': 'Portfolio DS',
+    '/projects/brainwave': 'Brainwave',
+    '/projects/3d-pc': '3D Portfolio',
+    '/projects/3d-tee': '3D T-shirt',
+    '/projects/3d-windmill': '3D Windmill',
+    '/projects/apple-site': 'Apple Website',
+
+}
+
 const anim = (variants) => {
     return {
         variants,
@@ -48,6 +78,8 @@ export default function CurveTransition({ children }) {
     const router = useRouter();
     const [dimensions, setDimensions] = useState({ width: null, height: null });
     const { isLoading } = useLoad();
+
+    const { isHomeCountry } = useLoad();
 
     useEffect(() => {
         function resize() {
@@ -67,7 +99,7 @@ export default function CurveTransition({ children }) {
         <div className="pageCurveTransition">
             <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className="background" />
             <motion.p className="route" {...anim(text)} style={{ scale: isLoading ? 1 : 0 }}>
-                <span></span> {routes[router.pathname]}
+                <span></span> {isHomeCountry ? routes[router.pathname] : routesEN[router.pathname]}
             </motion.p>
 
             {dimensions.width != null && <SVG {...dimensions} />} {/* Only render SVG when dimensions are ready */}

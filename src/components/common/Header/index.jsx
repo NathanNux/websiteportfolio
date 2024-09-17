@@ -6,12 +6,14 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Curve from './nav/Curve';
 import { useMediaQuery } from 'react-responsive';
+import { useLoad } from '@/context';
 
 
 export default function Index({ isActive, setIsActive }) {
     const isTouchDevice = useMediaQuery({ query: '(max-width: 500px) and (max-height: 950px)' });
     const [disableAnimation, setDisableAnimation] = useState(false);
     const navbar = useRef(null);
+    const { isHomeCountry } = useLoad();
 
     // WIP: could pass menu action to open and close the menu to the navbar component and create a button to open and close the menu there as well.
 
@@ -57,7 +59,7 @@ export default function Index({ isActive, setIsActive }) {
                         <div className={`burger ${isActive ? "burgerActive" : ""}`}></div>
                         <div className="label">
                             <motion.p variants={opacity} animate={!isActive ? "open" : "closed"}>Menu</motion.p>
-                            <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>Close</motion.p>
+                            <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>{ isHomeCountry ? "Zavřít" : "Close"}</motion.p>
                         </div>
                     </div>
                 </div>

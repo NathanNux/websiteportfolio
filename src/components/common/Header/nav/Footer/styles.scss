@@ -30,9 +30,13 @@
                     margin: 5px;
                     font-size: 1.5em;
                     color: #22272d;
+                    span{
+                        margin-right: 10px;
+                        color: #22272d;
+                        margin: 0;
+                    }
                 }
                 span{
-                    text-transform: uppercase;
                     margin-right: 10px;
                     color: #fff;
                     margin: 0;

@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import gsap from "gsap";
 import { scaleAnim } from "@/components/anim";
+import { useLoad } from "@/context";
 
 export default function FreeOffers ({text}) {
     const [modal, setModal] = useState(false)
@@ -13,6 +14,8 @@ export default function FreeOffers ({text}) {
     const section = useRef(null);
     const projectsRef = useRef(null);
     const curve = useRef(null);
+
+    const { isHomeCountry } = useLoad();
 
     const { scrollYProgress } = useScroll({
         target: curve,
@@ -76,17 +79,17 @@ export default function FreeOffers ({text}) {
     return (
         <section ref={section} className="mainFreeStuff">
             { text && <div className="text">
-                 <h1>Chcete začít nejdříve sami?</h1>
+                 <h1>{ isHomeCountry ? "Chcete začít nejdříve sami?" : "Wanna start first?"}</h1>
                 <p>
-                    Plánuji do budoucnu Vám všech, kteří začínají, nebo jsem mimo váš rozpočet, nabídnout hlavní části mého umění zdarma.
+                    { isHomeCountry ? "Plánuji do budoucnu Vám všech, kteří začínají, nebo jsem mimo váš rozpočet, nabídnout hlavní části mého umění zdarma." : "I plan to offer in the future to all of you who are starting out, or I'm out of your budget, the main parts of my art for free."}
                     <br /><br />
-                    Jelikož si uvědomuji, jak moc náročný a těžký to je.
+                    {isHomeCountry ? "Jelikož si uvědomuji, jak moc náročný a těžký to je." : "Because I realize how demanding and difficult it is."}
                     <br /><br />
-                    Předám Vám proto mé hlavní principy, které mužete vuyžít nejen v tomto průmyslu, ale i kdekoliv jinde.
+                    { isHomeCountry ? "Předám Vám proto mé hlavní principy, které mužete vuyžít nejen v tomto průmyslu, ale i kdekoliv jinde." : "I will therefore pass on to you my main principles, which you can use not only in this industry, but also anywhere else."}
                     <br /><br />
-                    Jsou to totiž fixní principy, které se mi osvědčily být nejeffektivnějšími a zárověň nejjednodušími na použití.
+                    { isHomeCountry ? "Jsou to totiž fixní principy, které se mi osvědčily být nejeffektivnějšími a zárověň nejjednodušími na použití." : "These are fixed principles that have proven to be the most effective and at the same time the simplest to use."}
                     <br /><br />
-                    A zabere Vám to opravdu frakci času, který jsem tomu věnoval já skrze chyby a pokusy.
+                    { isHomeCountry ?  "A zabere Vám to opravdu frakci času, který jsem tomu věnoval já skrze chyby a pokusy." : "And it will take you really a fraction of the time I spent on it through mistakes and trials."}
 
                 </p>
             </div>}
@@ -97,7 +100,7 @@ export default function FreeOffers ({text}) {
 
             <motion.div ref={cursor} className="cursor" variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
             <motion.div ref={label} className="label" variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
-                <p>Získat</p>
+                <p>{ isHomeCountry ?  "Získat" : "Obtain"}</p>
             </motion.div>
 
             <motion.div 

@@ -2,16 +2,20 @@ import React, { Fragment, useEffect, useRef, useState } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion';
 import ButtonLink from '@/components/common/LinkButton/linkButton';
 import CountdownTimer from './Timer';
-
-const phrase1 = [
-    {
-        text: "Můj čas je limitovaný, a mohu přinést tu nejlepší kvalitu <br/> jen pár z Vás každým rokem. <br/><br/>Kontaktujte mě proto hned teď. Je možný, že se na Vás potom, <br/> co odejdete, už nedostane."
-    },
-];
+import { useLoad } from '@/context';
 
 
 export default function MainOffer () {
   const [ delay, setDelay ] = useState(false);
+  const { isHomeCountry } = useLoad();
+
+  const phrase1 = [
+    {
+        text: isHomeCountry 
+        ? "Můj čas je limitovaný, a mohu přinést tu nejlepší kvalitu <br/> jen pár z Vás každým rokem. <br/><br/>Kontaktujte mě proto hned teď. Je možný, že se na Vás potom, <br/> co odejdete, už nedostane."
+        : "My time is limited, and I can bring the best quality to only a few of you every year. <br/><br/>Contact me right now. It is possible that after you leave, <br/> I won't be available anymore."
+    },
+];
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,8 +31,8 @@ export default function MainOffer () {
             ))}
         </div>
         <div className="description">
-            <p data-scroll data-scroll-speed={0.1} className="maintext">Mohu přijmout ještě<br/><span className="specialSpan">3</span><br/><span>Nové klienty</span></p>
-            <p className="dateY">Do roku 2025</p>
+            <p data-scroll data-scroll-speed={0.1} className="maintext">{ isHomeCountry ? "Mohu přijmout ještě" : "I can take in"}<br/><span className="specialSpan">1</span><br/><span>{isHomeCountry ? "Nového Klienta" : "New Client"}</span></p>
+            <p className="dateY">{ isHomeCountry ? "Do roku 2025" : "Untill 2025"}</p>
             {/* there was an issue with the time on the server side and client side -> weren't same*/}
            { delay && <CountdownTimer targetDate="2024-12-31T23:59:59"/>}
             <div data-scroll data-scroll-speed={0.1} className="buttonContainer">
@@ -36,7 +40,7 @@ export default function MainOffer () {
             </div>
             
             <div className="textSales" data-scroll data-scroll-speed={0.1}>
-                <p>Proč tak málo projektů ročně?<br/> Protože Vám chci dát opravdovou hodnotu z toho,<br/> co umím a to bez žádných limitací. <br/><br/> <span > Kvalita před kvantitou</span></p>
+                <p>{ isHomeCountry ? "Proč tak málo projektů ročně?" : "Why such a small number?"}<br/> { isHomeCountry ?"Protože Vám chci dát opravdovou hodnotu z toho," : "Because I want to give you a true value"}<br/> { isHomeCountry ? "co umím a to bez žádných limitací." : "of what I can do without any limitation"} <br/><br/> <span > { isHomeCountry ? "Kvalita před kvantitou" : "Quality over Quantity"}</span></p>
             </div>
             {/* WIP: Corrent the text here, make it different */}
         </div>

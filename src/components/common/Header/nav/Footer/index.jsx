@@ -1,39 +1,59 @@
+import { useLoad } from '@/context';
 import { translate } from '../../anim';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import TimeComponent from '@/components/common/TimeComponent';
 
 export default function Footer() {
-    const date = new Date();
-    const options = { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Europe/Prague', timeZoneName: 'short' };
-    let timeString = date.toLocaleTimeString('en-US', options);
-
-    // Replace GMT+1 with CET and GMT+2 with CEST / copilot
-    timeString = timeString.replace('GMT+1', 'CET').replace('GMT+2', 'CEST');
-
+    const { isHomeCountry } = useLoad()
     return (
         <section className="footerHeader">
             <div className="info">
                <ul>
-                    <motion.li 
-                        custom={[0.3, 0]} 
-                        variants={translate} initial="initial" 
-                        animate="enter" 
-                        exit="exit"
-                    >
-                        <span>Verze</span>
-                        <p> 2024 © Edice</p>
-                    </motion.li>
+                    { isHomeCountry ? (
+                        <motion.li 
+                            custom={[0.3, 0]} 
+                            variants={translate} initial="initial" 
+                            animate="enter" 
+                            exit="exit"
+                        >
+                            <span>Verze:</span>
+                            <p> 2024 © Edice</p>
+                        </motion.li>
+                    ) : (
+                        <motion.li 
+                            custom={[0.3, 0]} 
+                            variants={translate} initial="initial" 
+                            animate="enter" 
+                            exit="exit"
+                        >
+                            <span>Version:</span>
+                            <p> 24 © Edition</p>
+                        </motion.li>
+                    )}
                 </ul>
                 <ul>
-                    <motion.li  
-                        custom={[0.3, 0]} 
-                        variants={translate} initial="initial" 
-                        animate="enter" 
-                        exit="exit"
-                    >   
-                        <span>Místní čas:</span>
-                        <p>{timeString}</p>                    
-                    </motion.li>
+                    { isHomeCountry ? (
+                        <motion.li  
+                            custom={[0.3, 0]} 
+                            variants={translate} initial="initial" 
+                            animate="enter" 
+                            exit="exit"
+                        >   
+                            <span>Místní čas:</span>
+                            <p><TimeComponent isHomeCountry={isHomeCountry} /></p>                    
+                        </motion.li>
+                    ) : (
+                        <motion.li  
+                            custom={[0.3, 0]} 
+                            variants={translate} initial="initial" 
+                            animate="enter" 
+                            exit="exit"
+                        >   
+                            <span>Current time:</span>
+                            <p><TimeComponent isHomeCountry={isHomeCountry} /></p>                    
+                        </motion.li>
+                    )}
                 </ul> 
             </div>
             <div className="terms">

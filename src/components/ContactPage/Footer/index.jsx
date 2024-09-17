@@ -4,46 +4,13 @@ import Link from "next/link";
 import { scale } from "@/components/anim";
 import { motion } from "framer-motion";
 import { footerLinks } from "@/constants";
+import { useLoad } from "@/context";
+import TimeComponent from "@/components/common/TimeComponent";
 
 export default function Footer () {
-
-    const [timeString, setTimeString] = useState(getTimeString());
-    const [ isHovered, setIsHovered ] = useState(null);
+    const [ isHovered, setIsHovered ] = useState(null)
     const [ delay, setDelay ] = useState(false);
-
-    function getTimeString() {
-        const date = new Date();
-        const options = { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Europe/Prague', timeZoneName: 'short' };
-        let time = date.toLocaleTimeString('en-US', options);
-        return time.replace('GMT+1', 'CET').replace('GMT+2', 'CEST');
-    }
-
-    useEffect(() => {
-        // Function to update time immediately
-        const updateTime = () => {
-            setTimeString(getTimeString());
-        };
-
-        // Calculate the remaining time until the next minute
-        const now = new Date();
-        const msUntilNextMinute = 60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
-
-        // Update time immediately for the first time
-        updateTime();
-
-        // Set a timeout to update the time at the start of the next minute
-        const timeoutId = setTimeout(() => {
-            updateTime();
-            // After the first update, continue updating every minute
-            const intervalId = setInterval(updateTime, 60000);
-
-            // Cleanup function to clear the interval and timeout when the component unmounts
-            return () => {
-                clearInterval(intervalId);
-                clearTimeout(timeoutId);
-            };
-        }, msUntilNextMinute);
-    }, []);
+    const { isHomeCountry } = useLoad();
 
     useEffect(() => {
         setTimeout(() => {
@@ -55,17 +22,24 @@ export default function Footer () {
         <footer className="mainFooterr">
             <div className="footer">
                 <div className="time">
+                    { isHomeCountry ? (
+                        <p>
+                            Verze:<br />
+                            <span>2024 © Edice</span>
+                        </p>
+                    ) : (
+                        <p>
+                            Version:<br />
+                            <span>2024 © Edition</span>
+                        </p>
+                    )}
                     <p>
-                        Verze<br />
-                        <span>2024 © Edice</span>
-                    </p>
-                    <p>
-                        Místní čas<br />
-                        { delay &&<span>{timeString}</span>}
+                        { isHomeCountry ? "Místní čas" : "Current time"}<br />
+                        {delay && <TimeComponent isHomeCountry={isHomeCountry} />}
                     </p>
                 </div>
                 <div className="socials">
-                    <p>Socky</p>
+                    <p>{ isHomeCountry ? "Socky" : "Socials"}</p>
                     <div className="icons">
                         {footerLinks.map(({ title, href }, i) => (
                             <div className="links" key={i} onMouseEnter={() => setIsHovered(i)} onMouseLeave={() => setIsHovered(null)}>

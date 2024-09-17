@@ -3,16 +3,28 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Cookies from 'js-cookie';
 import axios from 'axios';
+import { useLoad } from '@/context';
 
 export default function CookieBanner({ isSaved, setIsSaved, setModem, setIsVisible }) {
   const [isEU, setIsEU] = useState(false);
+  const { isHomeCountry } = useLoad()
 
   useEffect(() => {
     const checkLocation = async () => {
       try {
         const response = await axios.get('https://ipapi.co/json/');
         const { country_code } = response.data;
-        const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'];
+        // look at all countries with GDPR in EU and not in EU and with similar laws, like asia, canada etc.
+        const euCountries = [
+          'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB', // GDPR countries
+          'CH', // Switzerland
+          'BH', 'IL', 'QA', 'TR', // Middle East
+          'KE', 'MU', 'NG', 'ZA', 'UG', // Africa
+          'JP', 'KR', // Asia
+          'NZ', // Oceania
+          'AR', 'BR', 'UY', // South America
+          'CA' // North America
+        ];        
         setIsEU(euCountries.includes(country_code));
       } catch (error) {
         console.log('Error happened when detecting location:', error);
@@ -87,16 +99,16 @@ export default function CookieBanner({ isSaved, setIsSaved, setModem, setIsVisib
               <div className="banner__burger" onClick={() => setIsVisible(false)} />
             </div>
             <p className="banner__text">
-              Tento web používá soubory cookie k zajištění správné funkčnosti a zlepšení uživatelského zážitku.
+              { isHomeCountry ? "Tento web používá soubory cookie k zajištění správné funkčnosti a zlepšení uživatelského zážitku." : "This site is using cookies to ensure correct functionality and improve the user experience."}
             </p>
             <div className="banner__buttons">
               <div className="banner__buttons__first">
-                <CookieClick title="Přijmout" trigger="prijmout" onClick={handleAccept} />
-                <CookieClick title="Zamítnout" trigger="zamitnout" onClick={handleDecline} />
+                <CookieClick title={ isHomeCountry ? "Přijmout" : "Accept"} trigger="prijmout" onClick={handleAccept} />
+                <CookieClick title={ isHomeCountry ? "Zamítnout" : "Deny"} trigger="zamitnout" onClick={handleDecline} />
               </div>
               {isEU && (
                 <div className="banner__buttons__second">
-                  <CookieClick title="Nastavit" trigger="nastavit" onClick={handleSettings} />
+                  <CookieClick title={ isHomeCountry ? "Nastavit" : "Settings"} trigger="nastavit" onClick={handleSettings} />
                 </div>
               )}
             </div>

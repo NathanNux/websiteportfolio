@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { shade, textTranslate } from '@/components/anim';
-import { freeProjects } from '@/constants';
+import { freeProjects, freeProjectsEN } from '@/constants';
 import { useMediaQuery } from 'react-responsive';
+import { useLoad } from '@/context';
 
 export default function Projects () {
 
@@ -13,6 +14,7 @@ export default function Projects () {
     const videoRefs = useRef([]);
     const [disableAnimation, setDisableAnimation] = useState(false);
     const isTouchDevice = useMediaQuery({ query: '(hover: none) and (pointer: coarse)' });
+    const { isHomeCountry } = useLoad();
 
     const handleProjectInteraction = (index) => {
         setSelectedProject({isActive: true, index});
@@ -76,47 +78,90 @@ export default function Projects () {
     return (
         <section>
             <div className="bodyFreeProjects">
-                {
-                    freeProjects.map((project, index) => {
-                        const { title, src, alt, href, path } = project;
-                        return (
-                            <Link
-                                key={`l_${index}`} 
-                                href={href} 
-                                className="project"
-                                data-scroll data-scroll-speed={0.05 * (index + 1)}
-                                onMouseOver={() => handleProjectInteraction(index)} 
-                                onTouchStart={() => handleProjectInteraction(index)}
-                                onMouseLeave={() => handleProjectLeave(index)}
-                            >
-                                <motion.div
-                                    variants={shade} 
-                                    animate={selectedProject.isActive && selectedProject.index != index ? "open" : "closed"}
+                { isHomeCountry ? 
+                    (
+                        freeProjects.map((project, index) => {
+                            const { title, src, alt, href, path } = project;
+                            return (
+                                <Link
+                                    key={`l_${index}`} 
+                                    href={href} 
+                                    className="project"
+                                    data-scroll data-scroll-speed={0.05 * (index + 1)}
+                                    onMouseOver={() => handleProjectInteraction(index)} 
+                                    onTouchStart={() => handleProjectInteraction(index)}
+                                    onMouseLeave={() => handleProjectLeave(index)}
                                 >
-                                    <Image 
-                                        src={src} 
-                                        alt={alt} 
-                                        fill={true}
-                                        sizes="(min-width: 500px) 47.125vh, 39.875vh"
-                                        loading='lazy'
-                                        quality={60}
-                                    />
-                                    <div className='overlay'/>
-                                    {!disableAnimation && <video
-                                        ref={el => videoRefs.current[index] = el} // Assign ref to the video element
-                                        loop={true}
-                                        muted={true}
-                                        playsInline={true}
+                                    <motion.div
+                                        variants={shade} 
+                                        animate={selectedProject.isActive && selectedProject.index != index ? "open" : "closed"}
                                     >
-                                        <source src={path} type="video/webm" />
-                                    </video>}
-                                </motion.div>
-                                <motion.p>
-                                    {disableAnimation ? devidedTitle(title) : getWords(title, index)}
-                                </motion.p>
-                            </Link>
-                        );
-                    })
+                                        <Image 
+                                            src={src} 
+                                            alt={alt} 
+                                            fill={true}
+                                            sizes="(min-width: 500px) 47.125vh, 39.875vh"
+                                            loading='lazy'
+                                            quality={60}
+                                        />
+                                        <div className='overlay'/>
+                                        {!disableAnimation && <video
+                                            ref={el => videoRefs.current[index] = el} // Assign ref to the video element
+                                            loop={true}
+                                            muted={true}
+                                            playsInline={true}
+                                        >
+                                            <source src={path} type="video/webm" />
+                                        </video>}
+                                    </motion.div>
+                                    <motion.p>
+                                        {disableAnimation ? devidedTitle(title) : getWords(title, index)}
+                                    </motion.p>
+                                </Link>
+                            );
+                        })
+                    ) : (
+                        freeProjectsEN.map((project, index) => {
+                            const { title, src, alt, href, path } = project;
+                            return (
+                                <Link
+                                    key={`l_${index}`} 
+                                    href={href} 
+                                    className="project"
+                                    data-scroll data-scroll-speed={0.05 * (index + 1)}
+                                    onMouseOver={() => handleProjectInteraction(index)} 
+                                    onTouchStart={() => handleProjectInteraction(index)}
+                                    onMouseLeave={() => handleProjectLeave(index)}
+                                >
+                                    <motion.div
+                                        variants={shade} 
+                                        animate={selectedProject.isActive && selectedProject.index != index ? "open" : "closed"}
+                                    >
+                                        <Image 
+                                            src={src} 
+                                            alt={alt} 
+                                            fill={true}
+                                            sizes="(min-width: 500px) 47.125vh, 39.875vh"
+                                            loading='lazy'
+                                            quality={60}
+                                        />
+                                        <div className='overlay'/>
+                                        {!disableAnimation && <video
+                                            ref={el => videoRefs.current[index] = el} // Assign ref to the video element
+                                            loop={true}
+                                            muted={true}
+                                            playsInline={true}
+                                        >
+                                            <source src={path} type="video/webm" />
+                                        </video>}
+                                    </motion.div>
+                                    <motion.p>
+                                        {disableAnimation ? devidedTitle(title) : getWords(title, index)}
+                                    </motion.p>
+                                </Link>
+                            );
+                        })
+                    )
                 }
             </div>
         </section>

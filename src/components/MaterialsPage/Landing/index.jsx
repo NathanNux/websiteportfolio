@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { slideUp } from '@/components/anim';
 import { scale } from './anim';
 import { SliderSlideUp } from '@/components/LandingPage/Landing/anim';
+import { useLoad } from '@/context';
 
 export default function Index() {
   const firstText = useRef(null);
@@ -13,6 +14,9 @@ export default function Index() {
   const slider = useRef(null);
   let xPercent = 0;
   let direction = useRef(-1);
+  const { isHomeCountry } = useLoad();
+
+  const landingText = isHomeCountry ? "Materiály - Zkušenosti - Pro Vás - Materiály - Zkušenosti - Pro Vás -" : "Materials - Experience - For You - Materials - Experience - For You -";
 
   useEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
@@ -80,8 +84,8 @@ export default function Index() {
       </motion.div>
       <motion.div variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
         <div ref={slider} className="slider">
-          <p ref={firstText}>Materiály - Zkušenosti - Pro Vás - Materiály - Zkušenosti - Pro Vás -</p>
-          <p ref={secondText}>Materiály - Zkušenosti - Pro Vás - Materiály - Zkušenosti - Pro Vás -</p>
+          <p ref={firstText}>{landingText}</p>
+          <p ref={secondText}>{landingText}</p>
         </div>
       </motion.div>
     </motion.section>

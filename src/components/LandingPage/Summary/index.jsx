@@ -1,11 +1,14 @@
 import { Fragment, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Points from "./Points";
+import { useLoad } from "@/context";
 
 export default function Summary ({images}) {
     const section = useRef(null);
     const projectsRef = useRef(null);
     const curve = useRef(null);
+
+    const { isHomeCountry } = useLoad();
 
     const { scrollYProgress } = useScroll({
         target: curve,
@@ -20,7 +23,7 @@ export default function Summary ({images}) {
         <section ref={section} className="summary">
           <div className="backgroundSummary"/>
             <div className="text">
-                <Paragraph text="Co Všechno Dostanete...."/>
+                <Paragraph text={ isHomeCountry ? "Co přesně dostanete...." : "What exactly will you get...."}/>
             </div>
 
 
@@ -29,8 +32,8 @@ export default function Summary ({images}) {
             </div>
 
             <div className="budget">
-                <h1>Budget</h1>
-                <p>$2000 - $4000</p>
+                <h1>{ isHomeCountry ? "Rozpočet" : "Budget"}</h1>
+                <p>{ isHomeCountry ? "60 000 - 80 000 ,-" :"$2000 - $4000"}</p>
             </div>
             <motion.div 
                 ref={curve}

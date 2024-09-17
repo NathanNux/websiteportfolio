@@ -4,20 +4,23 @@ import { InlineWidget } from 'react-calendly';
 import { useScroll, useTransform } from 'framer-motion';
 import { Fragment, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useLoad } from '@/context';
 
-
-const phrase = [
-    {
-        text: "Vyberte si termín, který mám volný a Vám vyhovuje. "
-    },
-];
 
 export default function Calendly() {
+
+    const { isHomeCountry } = useLoad();
+
+    const phrase = [
+      {
+          text: isHomeCountry ? "Vyberte si termín, který mám volný a Vám vyhovuje." : "Choose a date that is free and suits you."
+      },
+  ];
 
     return (
         <section className="mainCalendly">
             <div className="text">
-                <h2>Chcete se spojit<br/> hned? </h2> 
+                <h2>{ isHomeCountry ? "Chcete se spojit" : "Do you want to"}<br/> { isHomeCountry ? "hned?" : "get in touch now?"} </h2> 
                 <div className="firstText">
                     {phrase.map((phrase, i) => (
                         <Paragraph key={i} text={phrase.text} />

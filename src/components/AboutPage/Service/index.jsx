@@ -3,9 +3,32 @@ import { Fragment, useRef } from "react";
 import { motion } from "framer-motion";
 
 import ButtonLink from "@/components/common/LinkButton/linkButton";
+import { useLoad } from "@/context";
 
 
 export default function Services() {
+    const { isHomeCountry } = useLoad();
+
+    const services = [
+        {
+            title: isHomeCountry ? 'Prodeje | vytvoření vaši nebídky i s výzkumem' : 'Sales | creating your offer with research',
+            content: isHomeCountry ? 'Ukážu Vám postupy a proč fungují, abychom mohli vytvořit nabídku, u které se budou vaši zákazníci cítit hloupě, když ji nepřijmou.<br/><br/> A budu se tomu věnovat, dokud nenajdu tu nejlepší variaci, která bude fungovat.' : 'I will show you the principles and why they work, so we can create an offer that will make your customers feel stupid if they don\'t accept it.<br/><br/> And I will focus on it until I find the best variation that will work.'
+        },
+        {
+            title: isHomeCountry ? 'Vývoj Webu | od návrhu po realizaci' : 'Web Development | from design to implementation',
+            content: isHomeCountry ? 'Vyvinu a vytvořím Vám autentickou a profesionální Online Vizitku.<br/><br/> Strávím s Vámi několik hodin, abych dostal pochopení jak funugujete o čem jste a co děláte.' : 'I will develop and create you an authentic and professional Online Business Card.<br/><br/> And spend a few hours with you to get an understanding of how you work, what you are about and what you do.'
+        },
+        {
+            title: isHomeCountry ? 'SEO | ne pouze managament, ale i analýza' : 'SEO | not only management, but also analysis',
+            content: isHomeCountry ? 'Všechnu údržbu webu a i týdenní nebo měsíční informace dělám Zdarma jako součástí mého ekosystému.<br/><br/> Za účelem zlepšení metrik vašeho webu alespoň nad 90% 3 hlavních kvalit. Pouze perfektní kvalita je dostatečná.<br/><br/> Aby byl váš web rychlý a efektivní a vybraný internetovými prohlížeči.' : 'I do all the website maintenance and weekly or monthly report for Free as part of my ecosystem.<br/><br/> And have your website metrics atleast at 90% in all 3 main qualities. Only the perfect quality is good enough.<br/><br/> So your website is fast and effective and chosen by internet browsers.'
+        }
+    ]
+    
+    const header1 = [
+        {
+            text: isHomeCountry ? "Mohu Vám pomoci s..." : "I can help you with..."
+        },
+    ];
 
     return (
         <section className="mainServiceAbout">
@@ -53,28 +76,6 @@ const Service = ({title, content, index}) => {
     )
 }
 
-const services = [
-    //LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN IN ERAT LIGULA. VESTIBULUM ELEMENTUM EX ET TELLUS MALESUADA, QUIS CONSECTETUR ORCI CONSECTETUR. VESTIBULUM VOLUTPAT, EST SOLICITUDIN POSUERE CONGUE, AUGUE AUGUE DAPIBUS ENIM, A MAXIMUS NUNC EX EGET DUI. PRAESENT ID VENENATIS QUAM, A EFFICITUR LEO. QUISQUE MAURIS MAGNA, MOLLIS A PHARETRA SED, PLACERAT AUCTOR NISI. ETIAM BIBENDUM NEQUE SIT AMET MI TEMPUS, ID ULLAMCORPER URNA ULTRICIES. PELLENTESQUE VOLUTPAT MASSA AT TORTOR MATTIS, ID SAGITTIS EST FEUGIAT.
-//Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in erat ligula. Vestibulum elementum ex et tellus malesuada, quis consectetur orci consectetur. Vestibulum volutpat, est sollicitudin posuere congue, augue augue dapibus enim, a maximus nunc ex eget dui. Praesent id venenatis quam, a efficitur leo. Quisque mauris magna, mollis a pharetra sed, placerat auctor nisi. Etiam bibendum neque sit amet mi tempus, id ullamcorper urna ultricies. Pellentesque volutpat massa at tortor mattis, id sagittis est feugiat.
-    {
-        title: 'Prodeje | vytvoření vaši nebídky i s výzkumem',
-        content: 'Ukážu Vám postupy a proč fungují, abychom mohli vytvořit nabídku, u které se budou vaši zákazníci cítit hloupě, když ji nepřijmou.<br/><br/> A budu se tomu věnovat, dokud nenajdu tu nejlepší variaci, která bude fungovat.'
-    },
-    {
-        title: 'Vývoj Webu | od návrhu po realizaci',
-        content: 'Vyvinu a vytvořím Vám autentickou a profesionální Online Vizitku.<br/><br/> Strávím s Vámi několik hodin, abych dostal pochopení jak funugujete o čem jste a co děláte.'
-    },
-    {
-        title: 'SEO | ne pouze managament, ale i analýza',
-        content: 'Všechnu údržbu webu a i týdenní nebo měsíční informace dělám Zdarma jako součástí mého ekosystému.<br/><br/> Za účelem zlepšení metrik vašeho webu alespoň nad 90% u všech kvalit.<br/><br/> Aby byl váš web rychlý a efektivní a vybraný internetovými prohlížeči.'
-    }
-]
-
-const header1 = [
-    {
-        text: "Mohu Vám pomoci s..."
-    },
-];
 
 // useTransform cannot be in callback function, because it is not a hook, need to create a new component
 const CharSpan = ({char, index, totalLenght, scrollYProgress}) => {

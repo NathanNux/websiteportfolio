@@ -8,9 +8,14 @@ import { Toaster } from "../../ui/toaster";
 import PhoneButton from "../PhoneButton/phoneButton";
 import { scale } from "../../anim";
 import { footerLinks } from "@/constants";
+import { useLoad } from "@/context";
+
+import dynamic from 'next/dynamic';
+const TimeComponent = dynamic(() => import('../TimeComponent'), { ssr: false });
+
+
 
 export default function Footer() {
-  const [timeString, setTimeString] = useState(getTimeString());
   const [isHovered, setIsHovered] = useState(null);
   const [delay, setDelay] = useState(false);
   const path = useRef(null);
@@ -20,18 +25,14 @@ export default function Footer() {
   let reqId = null;
   const section = useRef(null);
 
+  const { isHomeCountry } = useLoad();
+
   const { scrollYProgress } = useScroll({
     target: section,
     offset: ['start end', 'end end'],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
-
-  function getTimeString() {
-    const date = new Date();
-    const options = { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Europe/Prague', timeZoneName: 'short' };
-    return date.toLocaleTimeString('en-US', options).replace('GMT+1', 'CET').replace('GMT+2', 'CEST');
-  }
 
   const setPath = useCallback((progress) => {
     const width = window.innerWidth * 0.7;
@@ -79,22 +80,9 @@ export default function Footer() {
     setPath(progress);
     const delayTimeout = setTimeout(() => setDelay(true), 1000);
 
-    // Update time string every minute
-    const updateTime = () => setTimeString(getTimeString());
-    const now = new Date();
-    const msUntilNextMinute = 60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
-    const timeoutId = setTimeout(() => {
-      updateTime();
-      const intervalId = setInterval(updateTime, 60000);
-      return () => clearInterval(intervalId);
-    }, msUntilNextMinute);
-
     // Cleanup function
-    return () => {
-      clearTimeout(delayTimeout);
-      clearTimeout(timeoutId);
-    };
-  }, [progress, setPath, setTimeString]);
+    return () => clearTimeout(delayTimeout);
+  }, [progress, setPath]);
 
   return (
     <motion.footer style={{ y }} className="mainFooter" ref={section}>
@@ -113,7 +101,7 @@ export default function Footer() {
               quality={20}
             />
           </div>
-          <h1 data-scroll data-scroll-speed={0.001}>Pojďme se <br /> spojit</h1>
+          <h1 data-scroll data-scroll-speed={0.001}>{ isHomeCountry ? "Pojďme se ": "Let's Work"}<br /> { isHomeCountry ? "spojit": "Together"}</h1>
         </div>
 
         <div className="line">
@@ -126,7 +114,7 @@ export default function Footer() {
             <motion.path ref={path} />
           </motion.svg>
           <div data-scroll data-scroll-speed={0.1} className="button">
-            <ButtonLink title='Kontaktujte mne' href='/contact' className="buttonLink" />
+            <ButtonLink title={ isHomeCountry ? 'Kontaktujte mne' : "Get in Touch"} href='/contact' className="buttonLink" />
           </div>
         </div>
 
@@ -139,17 +127,24 @@ export default function Footer() {
 
       <div className="footer">
         <div className="time">
+          { isHomeCountry ? ( 
+            <p>
+              Verze:<br />
+              <span>2024 © Edice</span>
+            </p>
+          ) : (
+            <p>
+              Version:<br />
+              <span>2024 © Edition</span>
+            </p>
+          )}
           <p>
-            Verze<br />
-            <span>2024 © Edice</span>
-          </p>
-          <p>
-            Místní čas<br />
-            {delay && <span>{timeString}</span>}
+           { isHomeCountry ? "Místní čas" : "Current Time"}<br />
+            {delay && <TimeComponent isHomeCountry={isHomeCountry} />}
           </p>
         </div>
         <div className="socials">
-          <p>Socky</p>
+          <p>{ isHomeCountry ? "Socky" : "Socials"}</p>
           <div className="icons">
             {footerLinks.map(({ title, href }, i) => (
               <div className="links" key={i} onMouseEnter={() => setIsHovered(i)} onMouseLeave={() => setIsHovered(null)}>
