@@ -94,7 +94,7 @@ export default function Home() {
         {isVisible && <CookieBanner isSaved={isSaved} setIsSaved={setIsSaved} setIsVisible={setIsVisible} setModem={setModem} />}
         {isVisible && <ManageModem modem={modem} setModem={setModem} setIsSaved={setIsSaved} setIsVisible={setIsVisible} />}
         <CurveTransition>
-        {!firstLoad &&<div>
+        {!firstLoad &&<div className="page">
           <Landing />
           <Description />
           <Slider />

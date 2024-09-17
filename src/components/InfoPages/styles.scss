@@ -1,0 +1,180 @@
+.info__page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+    padding: 15rem 10rem 0rem 5rem;
+    z-index: 5;
+    position: relative;
+
+    .info__content{
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100vw;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: left;
+        gap: 10rem;
+        position: relative;
+        background-color: #fff;
+        z-index: 5;
+        .info__block__main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 65%;
+            height: 100%;
+            gap: 5rem;
+            .info__block__addInfo {
+                padding: 5em 0;
+                font-size: 1.5rem;
+                line-height: 1.5;
+                font-weight: 300;
+                margin-bottom: 1rem;
+                color: #22272d;
+    
+                a{
+                    color: #fb6b28;
+                    text-decoration: none;
+                    transition: opacity 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Apply transition to opacity */
+                }
+                a:hover{
+                    opacity: 0.6;
+                }
+            }
+    
+            .info__block__section {
+                text-align: left;
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                    color: #fb6b28;
+                }
+                p {
+                    font-size: 1.5rem;
+                    line-height: 1.5;
+                    font-weight: 300;
+                    margin-bottom: 1rem;
+                    color: #22272d;
+                }
+            }
+        }
+    
+        .info__page__navbar {
+            width: 20%;
+            padding: 2rem 0 10em 0;
+            .info__page__stickyBar {
+                width: 100%;
+                height: fit-content;
+                position: sticky;
+                top: 15%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                border-radius: 25%;
+                h3 {
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    padding: 1rem 0 1rem 0;
+                    color: #fb6b28;
+                    text-align: left;
+                    margin: 0;
+                    width: 80%;
+                }
+                ul {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        text-decoration: none;
+                        list-style: none;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        padding: 0.2em 0;
+                        transition: all 0.3s ease; /* Apply transition to li */
+                        .info__page__dot {
+                            width: 1rem;
+                            height: 1rem;
+                            background-color: #22272d;
+                            border-radius: 50%;
+                            transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Apply transition to background-color */
+                        }
+                        a {
+                            color: #22272d;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            margin-bottom: 1rem;
+                            text-decoration: none;
+                            margin: 0;
+                            padding: 0 1rem;
+                            transition: opacity 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Apply transition to opacity */
+                        }
+                    }
+                    li:hover {
+                        .info__page__dot, a {
+                            opacity: 0.6;
+                        }
+                        .info__page__dot {
+                            background-color: #fb6b28;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .svgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        bottom: 0;
+        .svgDiv {
+            box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
+            position: absolute;
+            height: 8550%;
+            border-radius: 0% 0% 50% 50%;
+            background-color: #fff;
+            z-index: 1;
+        }
+    }
+}
+
+// Assume devices that can hover and have a fine pointer (e.g., mouse) are not touch devices
+@media (hover: hover) and (pointer: fine) {
+    .info__page{
+        .svgContainer{
+            .svgDiv{
+                width: 130%;
+                left: -15%;
+            }
+        }
+    }
+}
+
+// For touch devices (which typically can't hover and have coarse pointers), allow vertical scrolling
+@media (hover: none) and (pointer: coarse) {
+    .info__page{
+        .svgContainer{
+            .svgDiv{
+                width: 100%;
+                left: 0%;
+            }
+        }
+    }
+}

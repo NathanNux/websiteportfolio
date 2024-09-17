@@ -58,7 +58,7 @@ export default function CookieBanner({ isSaved, setIsSaved, setModem, setIsVisib
       opacity: 0,
       scale: 0,
       transition: {
-        duration: 1.2,
+        duration: 1,
         ease: [0.76, 0, 0.24, 1],
       },
     },
@@ -99,7 +99,7 @@ export default function CookieBanner({ isSaved, setIsSaved, setModem, setIsVisib
               <div className="banner__burger" onClick={() => setIsVisible(false)} />
             </div>
             <p className="banner__text">
-              { isHomeCountry ? "Tento web používá soubory cookie k zajištění správné funkčnosti a zlepšení uživatelského zážitku." : "This site is using cookies to ensure correct functionality and improve the user experience."}
+              { isHomeCountry ? "Tyto webové stránky používají soubory cookie ke zlepšení uživatelského zážitku. Používáním našich webových stránek souhlasíte se všemi soubory cookie v souladu s našimi zásadami používání souborů cookie." : "This site uses cookies to improve user experience. By using our website you consent to all cookies in accordance with our Cookie Policy." }
             </p>
             <div className="banner__buttons">
               <div className="banner__buttons__first">

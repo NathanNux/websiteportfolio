@@ -3,6 +3,7 @@ import Cookies from 'js-cookie';
 import CookieClick from '@/components/common/CookieButton/clickButton';
 import { motion, AnimatePresence, delay } from 'framer-motion';
 import { useLoad } from '@/context';
+import Link from 'next/link';
 
 export default function CookieSettingsModal({ modem, setModem, setIsVisible, setIsSaved }) {
   const [performance, setPerformance] = useState(false);
@@ -86,7 +87,7 @@ export default function CookieSettingsModal({ modem, setModem, setIsVisible, set
                     </div>
                     <p className="modem__text">
                     { isHomeCountry ? "Nastavte si cookies, které chcete povolit. Více se dočtete o našich cookies na naši" : "Choose what cookies you allow us to use. You can read more about our cookies in our"}{' '}
-                    <a href="/cookies">{ isHomeCountry ? "cookies stránce" :"cookie policy"}</a>.
+                    <Link href="/cookies">{ isHomeCountry ? "cookies stránce" :"cookie policy"}</Link>.
                     </p>
                     <div className="modem__checkboxes">
                     <div className="modem__checkbox">
