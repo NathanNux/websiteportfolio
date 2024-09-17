@@ -104,7 +104,7 @@ export default function CookieBanner({ isSaved, setIsSaved, setModem, setIsVisib
           <motion.div className="banner__content">
             <div className="banner__header">
               <h3 className="banner__title">Cookies</h3>
-              <div className="banner__burger" onClick={() => setIsVisible(false)} />
+              <div className="banner__burger" onClick={handleDecline} />
             </div>
             <p className="banner__text">
               { isHomeCountry ? "Tyto webové stránky používají soubory cookie ke zlepšení uživatelského zážitku. Používáním našich webových stránek souhlasíte se všemi soubory cookie v souladu s našimi zásadami používání souborů cookie." : "This site uses cookies to improve user experience. By using our website you consent to all cookies in accordance with our Cookie Policy." }
