@@ -11,7 +11,6 @@ import InfoPages from "@/components/InfoPages";
 import LandingInfo from "@/components/InfoPages/Landing";
 import LandingImage from '../../../public/images/info-pages/privacy.jpg'
 
-// import { usePathname } from "next/navigation";
 
 
 const inter = Inter({ subsets: ["latin"] });
