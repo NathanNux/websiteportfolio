@@ -42,7 +42,6 @@ export default function Home() {
       <Head>
         <meta name="description" content="Privacy policy info page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive}/>
       <Navbar isActive={isActive} setIsActive={setIsActive}/>

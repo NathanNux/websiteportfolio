@@ -8,6 +8,7 @@ import { useLoad } from '@/context';
 
 const routes = {
     '/': 'Domov',
+    '/404' : 'Stránka nenalezena',
     '/about': 'O mně',
     '/projects': 'Projekty',
     '/contact': 'Kontakt',
@@ -38,6 +39,7 @@ const routes = {
 
 const routesEN = {
     '/': 'Home',
+    '/404' : 'Page Not found',
     '/about': 'About',
     '/projects': 'Projects',
     '/contact': 'Contact',

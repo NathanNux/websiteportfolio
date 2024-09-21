@@ -77,11 +77,11 @@ export default function Home() {
     }
   }, [firstLoad]);
 
-
+  // WIP: Create a 404 page for the website
   return (
     <>
       <Head>
-        <meta name="description" content="Main Landing Page" />
+        <meta name="description" content="Main landing page with main offer, showcase of newest projects and all links to other pages." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
         <Header isActive={isActive} setIsActive={setIsActive}/>

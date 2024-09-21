@@ -47,9 +47,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta name="description" content="Matials page I have to offer the public" />
+        <meta name="description" content="Matials page I have to offer to the public, free e-book and e-courses links." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive}/>
       <Navbar isActive={isActive} setIsActive={setIsActive}/>

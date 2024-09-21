@@ -1,17 +1,11 @@
 import Head from "next/head";
 import CurveTransition from "@/components/transition/CurveTransition";
-import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
-import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
-import InfoPages from "@/components/InfoPages";
-import LandingInfo from "@/components/InfoPages/Landing";
-import LandingImage from '../../../public/images/info-pages/cookies.jpg';
 import ManageModem from "@/components/Cookies/ManageModem";
 import { useLoad } from "@/context";
-
-const inter = Inter({ subsets: ["latin"] });
+import NotFoundPage from "@/components/404";
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
@@ -41,14 +35,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive} />
-      <Navbar isActive={isActive} setIsActive={setIsActive} />\
-      {isVisible && <ManageModem modem={modem} setModem={setModem} setIsSaved={setIsSaved} setIsVisible={setIsVisible} />}
+      <Navbar isActive={isActive} setIsActive={setIsActive} />
       <CurveTransition>
         <div className="page">
-          <LandingInfo landingText={landingText} src={LandingImage} />
-          <InfoPages />
+            <NotFoundPage />
         </div>
-        <Footer />
       </CurveTransition>
     </>
   );
