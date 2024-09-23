@@ -590,14 +590,14 @@ export const navbarLinksEN = [
 export const footerLinks = [
     {
         title: 'LinkedIn',
-        href: '/',
+        href: 'https://www.linkedin.com/in/mat%C4%9Bj-forejt-aba4a0221/',
     },
     {
         title: 'Facebook',
-        href: '/',
+        href: 'https://www.facebook.com/forejt.matej/',
     },
     {
         title: 'Instagram',
-        href: '/',
+        href: 'https://www.instagram.com/aether_matejforejt/',
     }
 ]

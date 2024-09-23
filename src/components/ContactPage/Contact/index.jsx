@@ -223,7 +223,12 @@ export default function Contact() {
         }
         // handle form submission here
         try {
-            const response = await axios.post('/api/contact', formState);
+            if(isHomeCountry) {
+                const response = await axios.post('/api/contact', formState)
+            } else {
+                const response = await axios.post('/api/contactEN', formState)
+            }
+
             console.log(response.data);
             toast({
                 title: isHomeCountry ? 'Úspěch' : 'Success',
@@ -329,13 +334,13 @@ export default function Contact() {
                     </div>
                     <div className="info">
                         <h2>{ isHomeCountry ? "Sociální sítě" : "My Socials"}</h2>
-                        <Link href="/">LinkedIn</Link>
-                        <Link href="/">Facebook</Link>
-                        <Link href="/">Instagram</Link>
+                        <Link href="https://www.linkedin.com/in/mat%C4%9Bj-forejt-aba4a0221/">LinkedIn</Link>
+                        <Link href="https://www.facebook.com/forejt.matej/">Facebook</Link>
+                        <Link href="https://www.instagram.com/aether_matejforejt/">Instagram</Link>
                     </div>
                     <div className="info">
                         <h2>{ isHomeCountry ? "Ocenění (V budoucnu)" : "Awards (In future)"}</h2>
-                        <Link href="/">Awwwards</Link>
+                        <Link href="https://www.awwwards.com/">Awwwards</Link>
                     </div>
                 </div>
             </div>
