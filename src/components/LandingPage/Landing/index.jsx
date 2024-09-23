@@ -8,7 +8,7 @@ import { useLoad } from '@/context';
 import { FirstSliderSlideUp, FirstTextSlideUp, SliderSlideUp, TextSlideUp } from './anim';
 import useGetLocation from '@/utils/useGetLocation';
 
-export default function Index() {
+export default function Index({ src }) {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -64,7 +64,7 @@ export default function Index() {
     <motion.main variants={ delayAnim ? FirstSlideUp : slideUp } initial="initial" animate='enter' className="landingPage">
       <div className='backgroundDiv' data-scroll data-scroll-speed={-0.85}>
         <Image 
-          src="/images/landing/background.webp"
+          src={src}
           fill={true}
           sizes='100vw'
           alt="background"

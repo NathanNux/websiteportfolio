@@ -8,6 +8,7 @@ body {
     width: 100vw;
     position: relative;
     touch-action: auto;
+    pointer-events: all;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden; // Prevent horizontal scrolling
 

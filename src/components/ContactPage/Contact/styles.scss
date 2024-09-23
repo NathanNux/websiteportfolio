@@ -112,7 +112,9 @@
             bottom: -15%;
             overflow: hidden;
             img{
-                object-fit: cover;
+                scale: 1.5;
+                object-fit: contain;
+                transform: translateY(10%);
             }
         }
     }

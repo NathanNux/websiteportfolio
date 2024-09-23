@@ -9,7 +9,7 @@ import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
 import InfoPages from "@/components/InfoPages";
 import LandingInfo from "@/components/InfoPages/Landing";
-import LandingImage from '../../../public/images/info-pages/privacy.jpg'
+import LandingImage from '../../../public/images/info-pages/privacy.jpg';
 
 
 

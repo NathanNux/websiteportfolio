@@ -73,13 +73,12 @@ export default function Index() {
       </div>
       <motion.div variants={scale} initial="initial" animate='enter' className="imageContainerSide" data-scroll data-scroll-speed={0.1}>
         <Image 
-            src='/images/landing/7.webp'
-            alt='materials'
-            fill={true}
-            sizes="37.5vh"
-            priority={true}
-            quality={60}
-            //WIP: add here Images for Material Page
+          src='/images/done/materials.webp'
+          alt='materials'
+          fill={true}
+          sizes="37.5vh"
+          priority={true}
+          quality={60}
         />
       </motion.div>
       <motion.div variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">

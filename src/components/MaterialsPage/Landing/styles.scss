@@ -10,8 +10,9 @@
 
     .imageContainerSide{
         position: relative;
-
+        border-radius: 10%;
         img{ 
+            border-radius: 15%;
             object-fit: cover;
         }
     }

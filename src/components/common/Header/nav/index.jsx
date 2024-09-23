@@ -20,36 +20,34 @@ export default function Index() {
     {
       title: isHomeCountry ? "Domů" : "Home",
       href: "/",
-      src:  isHomeCountry ? "main-page.webp" : "main-page.webp",
+      src:  isHomeCountry ? "mainPage.webp" : "mainPageEN.webp",
       alt: "landingPage_Image"
     },
     {
       title: isHomeCountry ? "O mně" : "About",
       href: "/about",
-      src: isHomeCountry ? "aboutme-page.webp" : "aboutme-page.webp",
+      src: isHomeCountry ? "aboutpage.webp" : "aboutpageEN.webp",
       alt: "aboutPage_Image"
     },
     {
       title: isHomeCountry ? "Kontakt" : "Contact",
       href: "/contact",
-      src: isHomeCountry ? "contactme-page.webp" : "contactme-page.webp",
+      src: isHomeCountry ? "contactPage.webp" : "contactPageEN.webp",
       alt: "contactPage_Image"
     },
     {
       title: isHomeCountry ? "Projekty" : "Projects",
       href: "/projects",
-      src: isHomeCountry ? "projects-page.webp" : "projects-page.webp",
+      src: isHomeCountry ? "projectsPage.webp" : "projectsPageEN.webp",
       alt: "projectsPage_Image"
     },
     {
       title: isHomeCountry ? "Materiály" : "Materials",
       href: "/materials",
-      src:  isHomeCountry ? "materials-page.webp" : "materials-page.webp",
+      src:  isHomeCountry ? "materialsPage.webp" : "materialsPageEN.webp",
       alt: "materialsPage_Image"
     },
   ]
-  // WIP: Show different images isHomeCountry is true or false
-
 
   return (
     <motion.div variants={height} initial="initial" animate="enter" exit="exit" className={styles.nav}>

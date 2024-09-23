@@ -4,8 +4,6 @@ import Landing from '@/components/LandingPage/Landing';
 import Slider from "@/components/LandingPage/Slider";
 import NewestWork from "@/components/LandingPage/NewestWork";
 import Description from "@/components/LandingPage/Description";
-
-
 import { useEffect, useState } from "react";
 import IntroText from "@/components/common/IntroText";
 import OfferSection from "@/components/LandingPage/OfferSections";
@@ -15,7 +13,6 @@ import Preloader from "@/components/Preloader";
 import { useLoad } from "@/context";
 import FreeOffers from "@/components/common/FreeStuff";
 import ZoomParallax from "@/components/common/ParallaxZoom";
-
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
@@ -23,17 +20,18 @@ import Summary from "@/components/LandingPage/Summary";
 import CookieBanner from "@/components/Cookies/Banner";
 import ManageModem from "@/components/Cookies/ManageModem";
 import useGetLocation from "@/utils/useGetLocation";
+import LaningImage from '../../public/images/done/main.webp';
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const { firstLoad, setFirstLoad } = useLoad();
   const [isLoading, setIsLoading] = useState(true);
-  const {isVisible, setIsVisible} = useLoad(true);
-  const {modem, setModem} = useLoad();
-  const { isSaved, setIsSaved } = useLoad();
+  const { isVisible, setIsVisible } = useLoad(true);
+  const { modem, setModem } = useLoad();
+  const { isSaved, setIsSaved, isHomeCountry } = useLoad();
 
+  // Call the useGetLocation hook
   useGetLocation();
-  const { isHomeCountry } = useLoad();
 
   const phrases = [
     {
@@ -77,7 +75,6 @@ export default function Home() {
     }
   }, [firstLoad]);
 
-  // WIP: Create a 404 page for the website
   return (
     <>
       <Head>
@@ -93,18 +90,18 @@ export default function Home() {
         {isVisible && <ManageModem modem={modem} setModem={setModem} setIsSaved={setIsSaved} setIsVisible={setIsVisible} />}
         <CurveTransition>
         {!firstLoad &&<div className="page">
-          <Landing />
+          <Landing src={LaningImage}/>
           <Description />
           <Slider />
           <NewestWork />
           <IntroText phrases={phrases}/>
           <ZoomParallax 
             src1='/assets/images/projects/components.webp' 
-            src2='/assets/images/slider-la/seo.webp' 
+            src2='/images/done/authentic.webp' 
             src3='/assets/images/slider-la/coding.webp' 
             src4='/assets/images/slider-la/performance.webp' 
             src5='/assets/images/slider-la/color-pallet.webp' 
-            src6='/assets/images/slider-la/offer.webp' 
+            src6='/images/done/story.webp' 
             src7='/assets/images/slider-la/research.webp' 
             path='/assets/images/slider-la/videos/main.webm'
             text={landingText}

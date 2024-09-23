@@ -15,13 +15,13 @@ export default function NotFoundPage() {
   const [isHovered, setIsHovered] = useState(null);
   const [delay, setDelay] = useState(false);
   const path = useRef(null);
+  const { isHomeCountry } = useLoad();
+
   let progress = 0;
   let x = 0.5;
   let time = Math.PI / 2;
   let reqId = null;
   const section = useRef(null);
-
-  const { isHomeCountry } = useLoad();
 
   const { scrollYProgress } = useScroll({
     target: section,
@@ -87,12 +87,12 @@ export default function NotFoundPage() {
         <div className="head">
           <div className="imgContainer" data-scroll data-scroll-speed={0.002}>
             <Image
-              src="/images/landing/background.webp"
+              src="/images/done/small.webp"
               alt="photo"
               fill={true}
               sizes="(max-width: 500px) 25vw, (max-width: 950px) 20vw, (max-width: 1350px) 15vw, 10vw"
               loading="lazy"
-              quality={20}
+              quality={100}
             />
           </div>
           <h1 data-scroll data-scroll-speed={0.001}>{ isHomeCountry ? "404; Stránka": "404; Page is not"}<br /> { isHomeCountry ? "Stránka není ve schránce":  "in the directory"}</h1>

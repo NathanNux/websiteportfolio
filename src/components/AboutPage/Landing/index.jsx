@@ -7,7 +7,7 @@ import { slideUp } from '@/components/anim';
 import { SliderSlideUp } from '@/components/LandingPage/Landing/anim';
 import { useLoad } from '@/context';
 
-export default function Index() {
+export default function Index({ src }) {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -63,7 +63,7 @@ export default function Index() {
     <motion.main variants={slideUp} initial="initial" animate='enter' className="landingAbout">
       <div className='backgroundDiv' data-scroll data-scroll-speed={-0.85}>
         <Image 
-          src="/images/about/background.webp"
+          src={src}
           fill={true}
           sizes='100vw'
           alt="background"

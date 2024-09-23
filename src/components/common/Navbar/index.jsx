@@ -11,7 +11,7 @@ export default function Index ({ isActive, setIsActive }) {
   const container = useRef(null)
   const pathname = usePathname();
   const [delayedPathname, setDelayedPathname] = useState(pathname);
-  const isContactPage = delayedPathname === '/contact' || delayedPathname.startsWith('/projects');
+  const isContactPage = delayedPathname === '/contact' || delayedPathname === "/about" || delayedPathname.startsWith('/projects');
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [ active, setActive ] = useState(null);
 

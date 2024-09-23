@@ -93,12 +93,12 @@ export default function Footer() {
         <div className="head">
           <div className="imgContainer" data-scroll data-scroll-speed={0.002}>
             <Image
-              src="/images/landing/background.webp"
+              src="/images/done/small.webp"
               alt="photo"
               fill={true}
               sizes="(max-width: 500px) 25vw, (max-width: 950px) 20vw, (max-width: 1350px) 15vw, 10vw"
               loading="lazy"
-              quality={20}
+              quality={100}
             />
           </div>
           <h1 data-scroll data-scroll-speed={0.001}>{ isHomeCountry ? "Pojďme se ": "Let's Work"}<br /> { isHomeCountry ? "spojit": "Together"}</h1>

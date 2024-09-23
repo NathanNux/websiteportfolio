@@ -19,7 +19,7 @@ export default function OfferSection () {
         {
             images: [
                 {   
-                    src:'/images/about/sections/main-Sketch-Low.webp',
+                    src:'/images/done/casual.webp',
                     alt: "A beautiful landscape",
                     app: "A beautiful landscape"
                 },
@@ -30,7 +30,7 @@ export default function OfferSection () {
                     app: "A beautiful landscape"
                 },
                 {
-                    src:"/images/about/sections/slider-code.webp",
+                    src:"/images/about/sections/main-Sketch-Low.webp",
                     alt: "A beautiful landscape"
                 },
             ],
@@ -46,7 +46,7 @@ export default function OfferSection () {
         {
             images: [
                 {   
-                    src: "/images/about/sections/mid-Sketch-Low.webp",
+                    src: "/images/done/chill.webp",
                     alt: "A beautiful landscape",
                     app: "A beautiful landscape"
                 },
@@ -73,8 +73,10 @@ export default function OfferSection () {
         {
             images: [
                 {
-                    src: "/images/about/sections/slider-code.webp",
-                    alt: "A beautiful landscape"
+                    src: "/assets/images/slider-la/seo.webp",
+                    path: '/assets/a-footage/gsap-all.webm',
+                    alt: "A beautiful landscape",
+                    app: 'A beautiful landscape'
                 },  
                 {   
                     path: 'assets/about-footage/programing-session-mid.webm',
@@ -83,10 +85,8 @@ export default function OfferSection () {
                     app: "A beautiful landscape"
                 },
                 {
-                    src: "/assets/images/slider-la/seo.webp",
-                    path: '/assets/a-footage/gsap-all.webm',
-                    alt: "A beautiful landscape",
-                    app: 'A beautiful landscape'
+                    src: "/images/done/thoughts.webp",
+                    alt: "A beautiful landscape"
                 }
             ],
             phrases: [
@@ -94,7 +94,7 @@ export default function OfferSection () {
                     text: isHomeCountry ? "Mým cílem je se věnovat náročným animacím pro výtvoření, unikátnosti ale jednoduchosti tvorby,<br /> kterou AI nikdy nebude schopno nahradit.<br /><br />Autenticita a vysoká úroveň kvality je to, co bude vždy mým cílem." : "My goal is to create complex animations for creation, uniqueness but simplicity of creation,<br /> which AI will never be able to replace.<br /><br />Authenticity and high quality is what will always be my goal."
                 },
                 {
-                    text: isHomeCountry ? "I když se nezdá, umět psát účinné texty a vytvořit skvělou nabídku<br /> je mnohem těžší než tohle vše.<br /><br />Jména jako Sabri Suby nebo<br />  Alex Hormozi <br />mě naučily, jak dělat nabídky a texty, které pomáhají lidem a firem růst." : "Although it may not seem so, knowing how to write effective texts and create a great offer<br /> is much harder than all this.<br /><br />Names like Sabri Suby or<br />  Alex Hormozi <br />taught me how to make offers and texts that help people and companies grow."
+                    text: isHomeCountry ? "I když se nezdá, umět psát účinné texty a vytvořit skvělou nabídku<br /> je mnohem těžší než tohle vše.<br /><br />Jména jako Sabri Suby nebo<br />  Alex Hormozi <br />mě naučily, jak dělat nabídky a texty, které pomáhají lidem a firem růst." : "Although it may not seem so, knowing how to write effective<br /> texts and create a great offer is much harder than all this.<br /><br />Names like Sabri Suby or<br />  Alex Hormozi <br />taught me how to make offers and texts that help people and companies grow."
                 }
             ]
         }

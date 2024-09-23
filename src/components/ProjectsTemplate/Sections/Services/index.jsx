@@ -5,15 +5,15 @@ export default function Design () {
 
     const images = [
         {
-            src:"/images/landing/parallaxsection/1.jpg",
+            src:"/images/landing/parallaxsection/1.webp",
             alt: "A beautiful landscape"
         },
         {
-            src:"/images/landing/parallax/6.jpg",
+            src:"/images/landing/parallax/6.webp",
             alt: "A beautiful landscape"
         },
         {
-            src:"/images/landing/cactus.jpg",
+            src:"/images/landing/cactus.webp",
             alt: "A beautiful landscape"
         }
     ]

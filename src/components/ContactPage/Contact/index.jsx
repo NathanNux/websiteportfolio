@@ -253,7 +253,7 @@ export default function Contact() {
             <div className="headerIntro">
                 <h1>{ isHomeCountry ? "Pojďme se Spojit," : "Let's Connect, "} <br />{ isHomeCountry ? "Budovat a Uspět!" : "Build and Succeed!"}</h1>
                 <div className="imageContainer" data-scroll data-scroll-speed={0.05}>
-                    <Image src="/images/landing/background.webp" alt="photo" quality={20} loading='lazy' fill={true} sizes="(max-width: 1350px) 15vh, (max-width: 950px) 20vw, (max-width: 500px) 20vw, 10vw" />
+                    <Image src="/images/done/small.webp" alt="photo" quality={100} loading='lazy' fill={true} sizes="(max-width: 1350px) 15vh, (max-width: 950px) 20vw, (max-width: 500px) 20vw, 10vw" />
                 </div>
             </div>
             <div className="formContainer">

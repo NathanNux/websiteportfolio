@@ -12,23 +12,9 @@ import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 import { useEffect, useState } from "react";
 import { useLoad } from "@/context";
+import LaningImage from '../../../public/images/done/about.webp';
+import IntroImage from '../../../public/images/done/story.webp';
 
-const phrase1 = [
-  {
-      text: "Už třetím rokem pracuji na webovém designu,<br/> psychologii, vnímání barev a sdělění příběhu, <br/>vždy s cílem vytvořit něco, co je nejen krásné,<br/> ale také funkční a efektivní."
-  },
-];
-
-const phrase2 = [
-  {
-      text: "Cílem není vytvořit pouze webovky,<br/> ale celý ekosystém, <br/> který je založen na principech <br/> dobrého designu a uživatelského zážitku."
-  },
-];
-const phrase3 = [
-  {
-      text: "Tohle je můj Background...."
-  },
-];
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
@@ -87,9 +73,9 @@ export default function Home() {
       <Navbar isActive={isActive} setIsActive={setIsActive}/>
       <CurveTransition>
         <div className="page">
-          <Landing />
+          <Landing src={LaningImage}/>
           <Description  description={description}/>
-          <Intro phrase1={phrase1} phrase2={phrase2} phrase3={phrase3} src='/images/about/intro.webp'/>
+          <Intro phrase1={phrase1} phrase2={phrase2} phrase3={phrase3} src={IntroImage}/>
           <AboutSections />
           <Services />
           <FreeOffers text='1'/> 
