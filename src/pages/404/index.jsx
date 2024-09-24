@@ -3,15 +3,11 @@ import CurveTransition from "@/components/transition/CurveTransition";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 import { useEffect, useState } from "react";
-import ManageModem from "@/components/Cookies/ManageModem";
-import { useLoad } from "@/context";
 import NotFoundPage from "@/components/404";
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const landingText = "Cookies - Cookies - Cookies - Cookies -"; 
-  const { isVisible, modem, setModem, setIsSaved, setIsVisible } = useLoad();
 
   useEffect(() => {
     (async () => {
