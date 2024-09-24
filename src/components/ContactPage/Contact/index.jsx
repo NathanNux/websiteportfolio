@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
-
 import Image from 'next/image';
 import Link from 'next/link';
 import Select from 'react-select';
@@ -27,7 +25,7 @@ export default function Contact() {
 
     const options = [
         {
-            value:  isHomeCountry ? 'Celý Balíček' : 'Full Package', label: isHomeCountry ? 'Celý Balíček' : "Full Package"
+            value: isHomeCountry ? 'Celý Balíček' : 'Full Package', label: isHomeCountry ? 'Celý Balíček' : "Full Package"
         },
         {
             value: 'SEO', label: 'SEO'
@@ -41,11 +39,11 @@ export default function Contact() {
         {
             value: 'Re-design', label: 'Re-design'
         }
-    ]
+    ];
 
     useEffect(() => {
         const generateStyles = () => {
-            return{
+            return {
                 control: (provided, state) => ({
                     ...provided,
                     background: 'transparent',
@@ -55,10 +53,9 @@ export default function Contact() {
                     fontFamily: 'Inter',
                     boxShadow: state.isFocused ? 0 : 0,
                     "&:hover": {
-                    border: 'none',
+                        border: 'none',
                     }
                 }),
-                
                 multiValueRemove: (provided) => ({
                     ...provided,
                     display: 'flex',
@@ -75,20 +72,17 @@ export default function Contact() {
                         height: '20px'
                     }
                 }),
-        
                 valueContainer: (provided) => ({
                     ...provided,
                     padding: '0',
                 }),
-        
                 input: (provided) => ({
                     ...provided,
                     color: '#6a6a6a',
                     fontSize: '1.5rem',
                     fontFamily: 'Inter',
-                    fontWeight: '300',  
+                    fontWeight: '300',
                 }),
-        
                 clearIndicator: (provided) => ({
                     ...provided,
                     display: 'flex',
@@ -110,21 +104,18 @@ export default function Contact() {
                     fontWeight: '300',
                     opacity: '0.7',
                 }),
-        
                 multiValue: (provided) => ({
                     ...provided,
                     background: '#f1f1f1',
                     borderRadius: '25px',
                     padding: '0.05rem 0.5rem',
                 }),
-        
                 multiValueLabel: (provided) => ({
                     ...provided,
                     color: '#6a6a6a',
                     fontSize: '1.5rem',
                     margin: '0',
                 }),
-        
                 dropdownIndicator: (provided) => ({
                     ...provided,
                     display: 'flex',
@@ -138,14 +129,12 @@ export default function Contact() {
                         height: '20px'
                     }
                 }),
-                
                 indicatorSeparator: (provided) => ({
                     ...provided,
                     backgroundColor: '#6a6a6a',
                     opacity: '1',
-                    width: '0.5px', 
+                    width: '0.5px',
                 }),
-        
                 menu: (provided) => ({
                     backgroundColor: 'rgba(0, 0, 0, 0.05)',
                     borderRadius: '25px',
@@ -153,13 +142,11 @@ export default function Contact() {
                     fontSize: '1.5rem',
                     color: '#6a6a6a',
                 }),
-        
                 option: (provided) => ({
                     ...provided,
                     borderRadius: '25px',
                 }),
-
-            }
+            };
         };
         setCustomStyles(generateStyles());
     }, []);
@@ -181,54 +168,54 @@ export default function Contact() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if(formState.name.length === 0){
+        if (formState.name.length === 0) {
             toast({
                 title: isHomeCountry ? 'Doplňte jméno' : 'Fill in your name',
                 description: isHomeCountry ? 'Prosím, vyplňte Vaše jméno.' : 'Please, fill in your name.',
                 status: 'error',
                 duration: 3000,
                 isClosable: true,
-            })
+            });
             return;
         }
-        if(formState.companyName.length === 0){
+        if (formState.companyName.length === 0) {
             toast({
                 title: isHomeCountry ? 'Doplňte jméno firmy' : 'Fill in your company name',
                 description: isHomeCountry ? 'Prosím, vyplňte jméno Vaší firmy.' : 'Please, fill in your company name.',
                 status: 'error',
                 duration: 3000,
                 isClosable: true,
-            })
+            });
             return;
         }
-        if(formState.email.length === 0){
+        if (formState.email.length === 0) {
             toast({
                 title: isHomeCountry ? 'Doplňte email' : 'Fill in your email',
                 description: isHomeCountry ? 'Prosím, vyplňte Váš email.' : 'Please, fill in your email.',
                 status: 'error',
                 duration: 3000,
                 isClosable: true,
-            })
+            });
             return;
         }
-        if(formState.services.length === 0){
+        if (formState.services.length === 0) {
             toast({
                 title: isHomeCountry ? 'Vyberte službu' : 'Choose a service',
                 description: isHomeCountry ? 'Prosím, vyberte službu, kterou chcete.' : 'Please, choose a service you want.',
                 status: 'error',
                 duration: 3000,
                 isClosable: true,
-            })
+            });
             return;
         }
         // handle form submission here
         try {
-            if(isHomeCountry) {
-                const response = await axios.post('/api/contact', formState)
-            } else {
-                const response = await axios.post('/api/contactEN', formState)
-            }
-
+            const endpoint = isHomeCountry ? 'https://centrumservers.com/portfolio' : 'https://centrumservers.com/portfolioEN';
+            const response = await axios.post(endpoint, formState, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
             console.log(response.data);
             toast({
                 title: isHomeCountry ? 'Úspěch' : 'Success',
@@ -236,8 +223,7 @@ export default function Contact() {
                 status: 'success',
                 duration: 5000,
                 isClosable: true,
-            
-            })
+            });
         } catch (error) {
             console.error(error);
             toast({
@@ -246,7 +232,7 @@ export default function Contact() {
                 status: 'error',
                 duration: 5000,
                 isClosable: true,
-            })
+            });
         }
     };
 
@@ -347,6 +333,7 @@ export default function Contact() {
         </motion.section>
     )
 }
+
 const Button =({ title, onClick }) => {
     const [ isHovered, setIsHovered ] = useState(false);
     return (
@@ -358,3 +345,4 @@ const Button =({ title, onClick }) => {
         </div>
     )
 }
+

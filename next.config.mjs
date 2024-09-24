@@ -8,6 +8,9 @@ const nextConfig = {
     includePaths: [path.join(process.cwd(), 'styles')],
   },
   output: 'export',
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
