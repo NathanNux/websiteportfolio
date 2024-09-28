@@ -10,6 +10,10 @@ import { useEffect, useState } from "react";
 import InfoPages from "@/components/InfoPages";
 import LandingInfo from "@/components/InfoPages/Landing";
 import LandingImage from '../../../public/images/info-pages/privacy.jpg';
+import useGetLocation from "@/utils/useGetLocation";
+import CookieBanner from "@/components/Cookies/Banner";
+import ManageModem from "@/components/Cookies/ManageModem";
+import { useLoad } from "@/context";
 
 
 
@@ -19,6 +23,9 @@ export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const landingText = "Privacy Policy - Privacy Policy - Privacy Policy - Privacy Policy -"; 
+  const { isVisible, isSaved, setIsSaved, modem, setModem, setIsVisible } = useLoad();
+  // Call the useGetLocation hook
+  useGetLocation();
 
   useEffect( () => {
     (
@@ -45,6 +52,8 @@ export default function Home() {
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive}/>
       <Navbar isActive={isActive} setIsActive={setIsActive}/>
+      {isVisible && <CookieBanner isSaved={isSaved} setIsSaved={setIsSaved} setIsVisible={setIsVisible} setModem={setModem} />}
+      {isVisible && <ManageModem modem={modem} setModem={setModem} setIsSaved={setIsSaved} setIsVisible={setIsVisible} />}
       <CurveTransition>
         <div className="page">
           <LandingInfo landingText={landingText} src={LandingImage}/>

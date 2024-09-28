@@ -4,10 +4,17 @@ import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 import { useEffect, useState } from "react";
 import NotFoundPage from "@/components/404";
+import useGetLocation from "@/utils/useGetLocation";
+import { useLoad } from "@/context";
+import CookieBanner from "@/components/Cookies/Banner";
+import ManageModem from "@/components/Cookies/ManageModem";
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const { isVisible, modem, setModem, isSaved, setIsSaved, setIsVisible } = useLoad();
+  // Call the useGetLocation hook
+  useGetLocation();
 
   useEffect(() => {
     (async () => {
@@ -32,6 +39,8 @@ export default function Home() {
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive} />
       <Navbar isActive={isActive} setIsActive={setIsActive} />
+      {isVisible && <CookieBanner isSaved={isSaved} setIsSaved={setIsSaved} setIsVisible={setIsVisible} setModem={setModem} />}
+      {isVisible && <ManageModem modem={modem} setModem={setModem} setIsSaved={setIsSaved} setIsVisible={setIsVisible} />}
       <CurveTransition>
         <div className="page">
             <NotFoundPage />

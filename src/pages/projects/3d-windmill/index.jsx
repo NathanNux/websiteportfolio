@@ -12,6 +12,11 @@ import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 
+import useGetLocation from "@/utils/useGetLocation";
+import CookieBanner from "@/components/Cookies/Banner";
+import ManageModem from "@/components/Cookies/ManageModem";
+import { useLoad } from "@/context";
+
 const description = [
   {
       text: "LOREM IPSUM DOLOR <br/> SIT AMET, CONSECTETUR<br/> ADIPISCING <br/> ELIT. PROIN IN ERAT <br/> LIGULA. VESTIBULUM"
@@ -91,6 +96,9 @@ const stylePhrases = [
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const { isVisible, isSaved, setIsSaved, modem, setModem, setIsVisible } = useLoad();
+  // Call the useGetLocation hook
+  useGetLocation();
 
   useEffect( () => {
     (
@@ -116,6 +124,8 @@ export default function Home() {
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive}/>
       <Navbar isActive={isActive} setIsActive={setIsActive}/>
+      {isVisible && <CookieBanner isSaved={isSaved} setIsSaved={setIsSaved} setIsVisible={setIsVisible} setModem={setModem} />}
+      {isVisible && <ManageModem modem={modem} setModem={setModem} setIsSaved={setIsSaved} setIsVisible={setIsVisible} />}
       <CurveTransition>
         <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
         <ZoomParallax 

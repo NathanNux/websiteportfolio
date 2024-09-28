@@ -7,9 +7,17 @@ import Navbar from "@/components/common/Navbar";
 import Header from "@/components/common/Header";
 import { useEffect, useState } from "react";
 
+import useGetLocation from "@/utils/useGetLocation";
+import CookieBanner from "@/components/Cookies/Banner";
+import ManageModem from "@/components/Cookies/ManageModem";
+import { useLoad } from "@/context";
+
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const { isVisible, isSaved, setIsSaved, modem, setModem, setIsVisible } = useLoad();
+  // Call the useGetLocation hook
+  useGetLocation();
 
   useEffect( () => {
     (
@@ -35,6 +43,8 @@ export default function Home() {
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive}/>
       <Navbar isActive={isActive} setIsActive={setIsActive}/>
+      {isVisible && <CookieBanner isSaved={isSaved} setIsSaved={setIsSaved} setIsVisible={setIsVisible} setModem={setModem} />}
+      {isVisible && <ManageModem modem={modem} setModem={setModem} setIsSaved={setIsSaved} setIsVisible={setIsVisible} />}
       <CurveTransition>
         <div className="page">
           <Projects />

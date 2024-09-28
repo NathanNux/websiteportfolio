@@ -10,6 +10,7 @@ import LandingInfo from "@/components/InfoPages/Landing";
 import LandingImage from '../../../public/images/info-pages/cookies.jpg';
 import ManageModem from "@/components/Cookies/ManageModem";
 import { useLoad } from "@/context";
+import useGetLocation from "@/utils/useGetLocation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,8 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const landingText = "Cookies - Cookies - Cookies - Cookies -"; 
   const { isVisible, modem, setModem, setIsSaved, setIsVisible } = useLoad();
+  // Call the useGetLocation hook
+  useGetLocation();
 
   useEffect(() => {
     (async () => {
@@ -41,7 +44,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive} />
-      <Navbar isActive={isActive} setIsActive={setIsActive} />\
+      <Navbar isActive={isActive} setIsActive={setIsActive} />
       {isVisible && <ManageModem modem={modem} setModem={setModem} setIsSaved={setIsSaved} setIsVisible={setIsVisible} />}
       <CurveTransition>
         <div className="page">

@@ -24,11 +24,9 @@ import LaningImage from '../../public/images/done/main.webp';
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
-  const { firstLoad, setFirstLoad } = useLoad();
   const [isLoading, setIsLoading] = useState(true);
   const { isVisible, setIsVisible } = useLoad(true);
-  const { modem, setModem } = useLoad();
-  const { isSaved, setIsSaved, isHomeCountry } = useLoad();
+  const { isSaved, setIsSaved, isHomeCountry, firstLoad, setFirstLoad, modem, setModem } = useLoad();
 
   // Call the useGetLocation hook
   useGetLocation();
