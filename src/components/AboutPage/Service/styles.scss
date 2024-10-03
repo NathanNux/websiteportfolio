@@ -11,11 +11,13 @@ $bg-color: #fff;
     height: 200vh;
     z-index: 1;
     position: relative;
-    padding: 5rem 0;
+    padding: 5vh 0;
 
     .serviceContainer {
         width: 100%;
         height: 100%;
+        z-index: 2;
+        background-color: #fff;
 
         .mainText {
             position: absolute;
@@ -116,6 +118,49 @@ $bg-color: #fff;
                     margin: 0;
                     text-align: center;
                 }
+            }
+        }
+    }
+    .svgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+
+        .svgDiv {
+            box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
+            position: absolute;
+            width: 100%;
+            height: 100%; /* Ensure it has some height */
+            border-radius: 0% 0% 50% 50%;
+            background-color: white;
+            z-index: 1;
+        }
+    }
+}
+
+// Assume devices that can hover and have a fine pointer (e.g., mouse) are not touch devices
+@media (hover: hover) and (pointer: fine) {
+    .mainServiceAbout {
+        .svgContainer {
+            .svgDiv {
+                width: 130%;
+                left: -15%;
+            }
+        }
+    }
+}
+
+// For touch devices (which typically can't hover and have coarse pointers), allow vertical scrolling
+@media (hover: none) and (pointer: coarse) {
+    .mainServiceAbout {
+        .svgContainer {
+            .svgDiv {
+                width: 100%;
+                left: 0%;
             }
         }
     }

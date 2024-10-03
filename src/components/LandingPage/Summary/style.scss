@@ -1,15 +1,15 @@
 .summary {
-    height: 120vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5em;
-    padding: 35vh 0 10vh 0;
+    gap: 6em;
+    padding: 35vh 0 0vh 0;
     position: relative;
     background-color: #fff;
-    z-index: 0;
+    z-index: 3;
 
     .svgContainer {
         display: flex;
@@ -34,7 +34,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1em;
         width: 100%;
         text-align: left;
         z-index: 5;
@@ -44,12 +43,12 @@
             font-weight: 300;
             color: #22272d;
             margin: 0;
+            padding: 5rem;
             width: 90%;
             span{
                 font-size: 4rem;
                 font-weight: 500;
                 color: #22272d;
-                margin: 0;
             }
         }
     }
@@ -67,7 +66,8 @@
         align-items: center;
         justify-content: center;
         gap: 1em;
-        width: 80%;
+        width: 100vw;
+        height: 15vh;
         text-align: center;
         background-color: #fff;
         z-index: 6;
@@ -76,12 +76,14 @@
             font-weight: 700;
             color: #22272d;
             margin: 0;
+            z-index: 6;
         }
         p{
             font-size: 2.5em;
             font-weight: 400;
             color: #ff5100;
             margin: 0;
+            z-index: 6;
         }
     }
 
@@ -117,12 +119,12 @@
 
 @media only screen and (max-width: 1750px){
     .summary {
-        height: 120vh;
-        padding: 35vh 0 10vh 0;
+        height: 100vh;
+        padding: 45vh 0 0vh 0;
     
         .text{
             p{
-                font-size: 2em;
+                font-size: 2.5em;
                 span{
                     font-size: 2.5em;
                 }
@@ -133,8 +135,8 @@
 
 @media only screen and (max-width: 1550px){
     .summary {
-        height: 130vh;
-        padding: 15vh 0 10vh 0;
+        height: 110vh;
+        padding: 35vh 0 10vh 0;
     
         .text{
             p{
@@ -149,8 +151,8 @@
 
 @media only screen and (max-width: 1450px){
     .summary {
-        height: 140vh;
-        padding: 15vh 0 10vh 0;
+        height: 110vh;
+        padding: 25vh 0 10vh 0;
     
         .text{
             p{
@@ -165,7 +167,7 @@
 
 @media only screen and (max-width: 1050px){
     .summary {
-        height: 150vh;
+        height: 120vh;
         padding: 5vh 0 10vh 0;
     
         .text{
@@ -181,7 +183,7 @@
 
 @media only screen and (max-width: 1050px) and (min-height: 1000px){
     .summary {
-        height: 300vh;
+        height: 250vh;
         padding: 5vh 0 10vh 0;
     
         .text{

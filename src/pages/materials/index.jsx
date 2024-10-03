@@ -23,15 +23,32 @@ export default function Home() {
 
   const phrases = [
     {
-        text: isHomeCountry ? "Za své 2 roky zkušeností a téměř <span>3000 hodin</span> jsem dal dohormady ekostystém složený z <span>principů</span>,které zahrnují <span>dobrý design</span>,<span>uživatelský zážitek</span> a <span>neodolatelnou obchodní nabídku</span>." : "In my 2 years of experience and almost <span>3000 hours</span> I have put together an ecosystem consisting of <span>principles</span> that include <span>good design</span>, <span>user experience</span> and <span>an irresistible business offer</span>."
+        text: isHomeCountry 
+        ? "<span>Začínáte s omezenými prostředky?</span> Žádný strach—mám pro vás jednoduchý a účinný systém, který vám dám zdarma, <span>ať už jste na úplném začátku nebo si zrovna teď nemůžete dovolit moje služby.</span> Tento návod vás dostane do akce rychle."
+        : "<span>Starting with limited resources?</span> Don't worry—I've got you covered. I've crafted a simple, effective framework that I'm giving away for free,<span> whether you're just beginning or I don't quite fit your budget right now.</span> This guide will get you up and running fast."
     },
     {
-        text: isHomeCountry ? "Jsem si moc dobře vědom kolik <span>času, píle, chyb a drahých omylů</span> stojí mít výkonný a effektivní ekosystém ve všech těchto aspektů.<span>Plánuji proto,</span> pro všechny, kteří začínají, dát tyhle zkušenosti <span>ven mezi Vás.</span> S cenou vašeho času." : "I am very well aware of how much <span>time, effort, mistakes and expensive mistakes</span> it costs to have a powerful and effective ecosystem in all these aspects.<span>Therefore, I plan,</span> for all those who are starting out, to give these experiences <span>out among you.</span> With the price of your time."
+        text: isHomeCountry 
+        ? "<span>Nejlepší část?</span> Nemusíte na to být sami.<span> S více než 3000 hodinami zkušeností</span> jsem vytvořil systém, který zvládne ty největší překážky—od tvorby designu, správy webu až po vylepšení vaší nabídky.<span> Naučím vás strategie, které fungují.</span>"
+        : "<span>The best part?</span> You don't have to figure it out on your own.<span> With 3000+ hours of experience under my belt,</span> I've honed a system that tackles the biggest roadblocks you'll face—whether it's designing, managing your site, or refining your offer.<span> I'll teach you the strategies that make things click.</span>"
     },
     {
-        text: isHomeCountry ? "Jediný od Vás chci,<span> je vaše důvěra a čas, který budete věnovat</span> sledováním a čtěním mých budoucích materiálů.<span>Dejte mi tak ještě čas,</span>abych Vám mohl přinést <span>to nejjednodušší a nejefektivnější zároveň.</span> Pěkně těžká kombinace,<span>ale vím že to nebude za dlouho.</span>" : "All I ask of you,<span> is your trust and the time you will spend</span> watching and reading my future materials.<span>Give me some more time,</span> so I can bring you <span>the simplest and most effective at the same time.</span> A pretty tough combination,<span> but I know it won't be long.</span>"
+        text: isHomeCountry 
+        ? "<span>Naučím vás osvědčené principy—jak postavit funkční web během jednoho týdne s pouhými 14 hodinami soustředěné práce.</span> Tyto metody fungují v jakémkoli oboru, takže můžete přestat tápat a rychle začít dosahovat výsledků."
+        : "<span>You'll learn the core principles I've mastered over time—how to build a website in as little as one week with just 14 hours of dedicated effort.</span> These methods apply across industries, so you can skip the guesswork and start seeing results faster."
+    },
+    {
+        text: isHomeCountry 
+        ? "<span>Ale tady je háček:</span> To bude vyžadovat vaši plnou pozornost.<span> Pokud jste připraveni zjednodušit si cestu a efektivně vyřešit problémy,</span> pojďme to zvládnout společně. Nejde jen o správné provedení, ale o to, aby se vaše online přítomnost stala nástrojem pro úspěch.<span> Jste připraveni jednat?</span>"
+        : "<span>But here's the catch:</span> This will require your commitment.<span> If you're ready to simplify your journey and solve your issues efficiently,</span> let's make it happen together. This isn't just about getting it right; it's about transforming your online presence into a powerful tool for success.<span>Are you ready to take action?</span>"
+    },
+    {
+        text: isHomeCountry 
+        ? "<span>Poslouchejte:</span> pokud chcete mít přístup k mým novým materiálům a sledovat můj další obsah,<span> sledujte mě na sociálních sítích.</span> Brzy budu mít vše připravené a můžete se těšit na opravdovou hodnotu.<span> Věřte mi, nechcete si nechat ujít, co přijde!</span>"
+        : "<span>Listen up:</span> if you want to stay in the loop for my upcoming content,<span> follow me on social media.</span> I'll have it ready soon, and you can count on me to deliver serious value.<span> Trust me, you won't want to miss what's coming!</span>"
     }
-  ]
+  ];
+
 
   useEffect( () => {
     (

@@ -84,7 +84,7 @@ const Paragraph = ({ text }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start 0.45', 'start 0.1'],
+    offset: ['start 0.65', 'start 0.3'],
   });
 
   return (

@@ -19,30 +19,31 @@ export default function Summary ({images}) {
 
 
 
-    return (
-        <section ref={section} className="summary">
-          <div className="backgroundSummary"/>
-            <div className="text">
-                <Paragraph text={ isHomeCountry ? "Co přesně dostanete...." : "What exactly will you get...."}/>
-            </div>
+  return (
+    <section ref={section} className="summary">
+      <div className="backgroundSummary">
+        <div className="text">
+            <Paragraph text={ isHomeCountry ? "Takže shrnuto: co dostanete..." : "So In short, you'll get..."}/>
+        </div>
 
 
-            <div ref={projectsRef} className="points">
-                <Points photos={images}/>
-            </div>
+        <div ref={projectsRef} className="points">
+            <Points photos={images}/>
+        </div>
 
-            <div className="budget">
-                <h1>{ isHomeCountry ? "Rozpočet" : "Budget"}</h1>
-                <p>{ isHomeCountry ? "60 000 - 80 000 ,-" :"$2000 - $4000"}</p>
-            </div>
-            <motion.div 
-                ref={curve}
-                className="svgContainer"
-            >
-                <motion.div style={{height}}  className="svgDiv"></motion.div>
-            </motion.div>
-        </section>
-    )
+        <div className="budget">
+            <h1>{ isHomeCountry ? "Rozpočet" : "Budget"}</h1>
+            <p>{ isHomeCountry ? "60 000 - 120 000 ,-" :"$3000 - $6000"}</p>
+        </div>
+        <motion.div 
+            ref={curve}
+            className="svgContainer"
+        >
+            <motion.div style={{height}}  className="svgDiv"></motion.div>
+        </motion.div>
+      </div>
+    </section>
+  )
 }
 
 // useTransform cannot be in callback function, because it is not a hook, need to create a new component

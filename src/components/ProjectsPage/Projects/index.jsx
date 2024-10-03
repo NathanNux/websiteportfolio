@@ -2,12 +2,11 @@ import Projects from './Projects'
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useScroll, useTransform} from 'framer-motion';
 import { opacity, slideUp } from './anim';
-import dynamic from 'next/dynamic';
 import IconList from './IconList';
 import ButtonClick from '@/components/common/ClickButton/clickButton';
 import { useMediaQuery } from 'react-responsive';
 import { useLoad } from '@/context';
-const Scene = dynamic(() => import('./Scene'), { ssr: false });
+import Scene from './Scene';
 
 export default function ProjectsList() {
     const ref = useRef(null);

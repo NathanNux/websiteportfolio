@@ -1,34 +1,41 @@
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import { Fragment, useRef } from "react";
-import { motion } from "framer-motion";
-
 import ButtonLink from "@/components/common/LinkButton/linkButton";
 import { useLoad } from "@/context";
 
 
 export default function Services() {
     const { isHomeCountry } = useLoad();
+    const curve = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+      target: curve,
+      offset: ['start end', 'end start']
+    });
+  
+    const height = useTransform(scrollYProgress, [0, 1], [800, 0]);
 
     const services = [
         {
-            title: isHomeCountry ? 'Prodeje | vytvoření vaši nebídky i s výzkumem' : 'Sales | creating your offer with research',
-            content: isHomeCountry ? 'Ukážu Vám postupy a proč fungují, abychom mohli vytvořit nabídku, u které se budou vaši zákazníci cítit hloupě, když ji nepřijmou.<br/><br/> A budu se tomu věnovat, dokud nenajdu tu nejlepší variaci, která bude fungovat.' : 'I will show you the principles and why they work, so we can create an offer that will make your customers feel stupid if they don\'t accept it.<br/><br/> And I will focus on it until I find the best variation that will work.'
+            title: isHomeCountry ? 'Prodeje | Tvorba neodolatelné nabídky s výzkumem' : 'Sales | Crafting an Irresistible Offer with Research',
+            content: isHomeCountry ? 'Provedu vás postupy, které skutečně fungují, abychom vytvořili nabídku, u které vaši zákazníci budou mít pocit, že by byli hloupí, kdyby ji odmítli.<br/><br/> A budu se tomu věnovat, dokud nenajdu tu nejlepší verzi, která bude přinášet výsledky.' : "I'll guide you through the strategies that actually work so we can craft an offer your customers will feel foolish to turn down.<br/><br/> I won't stop until we land on the winning variation that drives results."
         },
         {
-            title: isHomeCountry ? 'Vývoj Webu | od návrhu po realizaci' : 'Web Development | from design to implementation',
-            content: isHomeCountry ? 'Vyvinu a vytvořím Vám autentickou a profesionální Online Vizitku.<br/><br/> Strávím s Vámi několik hodin, abych dostal pochopení jak funugujete o čem jste a co děláte.' : 'I will develop and create you an authentic and professional Online Business Card.<br/><br/> And spend a few hours with you to get an understanding of how you work, what you are about and what you do.'
+            title: isHomeCountry ? 'Vývoj Webu | Od nápadu po hotový produkt' : 'Web Development | From Concept to Completion',
+            content: isHomeCountry ? 'Navrhnu a vytvořím vám autentický, profesionální web, který bude reprezentovat to, kdo jste a co děláte.<br/><br/> Strávím s vámi potřebný čas, abych opravdu pochopil vaši značku a potřeby.' : "I'll design and build an authentic, professional website that truly reflects who you are and what you do.<br/><br/> I'll spend the necessary time with you to fully understand your brand and needs."
         },
         {
-            title: isHomeCountry ? 'SEO | ne pouze managament, ale i analýza' : 'SEO | not only management, but also analysis',
-            content: isHomeCountry ? 'Všechnu údržbu webu a i týdenní nebo měsíční informace dělám Zdarma jako součástí mého ekosystému.<br/><br/> Za účelem zlepšení metrik vašeho webu alespoň nad 90% 3 hlavních kvalit. Pouze perfektní kvalita je dostatečná.<br/><br/> Aby byl váš web rychlý a efektivní a vybraný internetovými prohlížeči.' : 'I do all the website maintenance and weekly or monthly report for Free as part of my ecosystem.<br/><br/> And have your website metrics atleast at 90% in all 3 main qualities. Only the perfect quality is good enough.<br/><br/> So your website is fast and effective and chosen by internet browsers.'
+            title: isHomeCountry ? 'SEO | Nejen správa, ale i detailní analýza' : 'SEO | More Than Just Management – Detailed Analysis Included',
+            content: isHomeCountry ? 'Veškerou údržbu a reporty ohledně webu dostanete jako součást mého ekosystému Zdarma.<br/><br/> Zajistím, aby vaše metriky byly alespoň na 90 % ve třech klíčových oblastech. Dokonalost je standard.' : "You'll get all site maintenance and reports free as part of my ecosystem.<br/><br/> I'll ensure your website metrics hit at least 90% in all three key areas. Excellence is the baseline."
         }
     ]
     
     const header1 = [
         {
-            text: isHomeCountry ? "Mohu Vám pomoci s..." : "I can help you with..."
-        },
+            text: isHomeCountry ? "Mohu Vám pomoci s..." : "Here's How I Can Help..."
+        }
     ];
+    
 
     return (
         <section className="mainServiceAbout">
@@ -49,6 +56,9 @@ export default function Services() {
                     <ButtonLink title='Spojme se' href='/contact' className="buttonLink"/>
                 </div>
             </div>
+            <motion.div ref={curve} className="svgContainer">
+                <motion.div style={{ height }} className="svgDiv"></motion.div>
+            </motion.div>
         </section>
     )
 }

@@ -17,88 +17,100 @@ export default function OfferSection () {
 
     const sections = [
         {
-            images: [
-                {   
-                    src:'/images/done/casual.webp',
-                    alt: "A beautiful landscape",
-                    app: "A beautiful landscape"
-                },
-                {
-                    src:'/assets/images/slider-la/coding.webp',
-                    path: '/assets/about-footage/finished-projects-footage.webm',
-                    alt: "A beautiful landscape",
-                    app: "A beautiful landscape"
-                },
-                {
-                    src:"/images/about/sections/main-Sketch-Low.webp",
-                    alt: "A beautiful landscape"
-                },
-            ],
-            phrases:[
-                {
-                    text: isHomeCountry ? "Architetuře a lidskému vnímání se věnuji už přes půl dekády.<br /><br /> A to ne jenom díky učivu na střední a vysoký škole, ale i díky knihám od tich největších architektů svých dob, protože školní učivo mi prostě nestačilo." : "I have been studying architecture and human perception for over half a decade.<br /><br /> And not only thanks to the curriculum at high school and university, but also thanks to books from the greatest architects of their time, because the school curriculum was simply not enough for me."
-                },
-                {
-                    text: isHomeCountry ? "Zároveň studováním životů těchto obrů <br /><br />mi dalo odhodlání a perspektivu, jak se<br />umělec může prosadit a najít v sobě tu duši, která ho dělá unikátním a nezaměnitelným." : "At the same time, studying the lives of these giants <br /><br />gave me determination and perspective on how an artist can succeed and find in himself the soul that makes him unique and unforgettable."
-                }
-            ]
+          images: [
+            {
+              src:'/images/done/casual.webp',
+              alt: "A beautiful landscape",
+              app: "A beautiful landscape"
+            },
+            {
+              src:'/assets/images/slider-la/coding.webp',
+              path: '/assets/about-footage/finished-projects-footage.webm',
+              alt: "A beautiful landscape",
+              app: "A beautiful landscape"
+            },
+            {
+              src:"/images/about/sections/main-Sketch-Low.webp",
+              alt: "A beautiful landscape"
+            },
+          ],
+          phrases:[
+            {
+              text: isHomeCountry
+                ? "Architektura a lidské vnímání mě přitahují už více než pět let.<br /><br /> Nejen díky škole, ale hlavně díky knihám od největších architektů historie. Škola mi prostě nestačila."
+                : "I've been fascinated by architecture and human perception for over half a decade.<br /><br /> Not just through formal education, but also from diving deep into books by the greatest architects in history. School alone was never enough for me."
+            },
+            {
+              text: isHomeCountry
+                ? "Studium života těchto velikánů mi otevřelo oči. Naučil jsem se, jak prorazit a najít v sobě tu esenci, která tě dělá jedinečným a nezapomenutelným."
+                : "Studying the lives of these giants gave me the drive and a fresh perspective on how to stand out and find that unique spark that makes you truly unforgettable."
+            }
+          ]
         },
         {
-            images: [
-                {   
-                    src: "/images/done/chill.webp",
-                    alt: "A beautiful landscape",
-                    app: "A beautiful landscape"
-                },
-                {
-                    src:"/images/about/sections/bd-photo-1.webp",
-                    alt: "A beautiful landscape"
-                },
-                {
-                    path: '/assets/about-footage/archicad-drawing-session.webm',
-                    src: "/images/about/sections/first-floor.webp",
-                    alt: "A beautiful landscape",
-                    app: 'A beautiful landscape'
-                }
-            ],
-            phrases: [
-                {
-                    text: isHomeCountry ? "Od svých 14 let se učím o investování i makroekonomii.<br /><br /> I když to nesouvysí ani s web designem ani s architekturou, umění PRODEJE je prostě základ všeho v životě<br /><br /> A i přes to, že teď studuji 2 školy najednou, mám principy, které mi umožňují dělat všechny tyto věci najednou a stíhat je." : "Since I was 14, I have been learning about investing and macroeconomics.<br /><br /> Although it has nothing to do with web design or architecture, the art of SALES is simply the basis of everything in life.<br /><br /> And even though I am now studying 2 schools at once, I have principles that allow me to do all these things at once and keep up with them."
-                },
-                {
-                    text: isHomeCountry ? "A ať si to z nás nikdo nechceme přiznat, zbydou po nás 2 věci: <br /><br />Naše Jméno a to jsme vybudovali pro ostatní.<br /><br />Tím si nás svět pamatuje a to je to, co nás dělá nezapomenutelnými." : "And let's not admit it, there are 2 things left of us: <br /><br />Our Name and what we have built for others.<br /><br />That's how the world remembers us and that's what makes us unforgettable."
-                }
-            ]
+          images: [
+            {
+              src: "/images/done/chill.webp",
+              alt: "A beautiful landscape",
+              app: "A beautiful landscape"
+            },
+            {
+              src:"/images/about/sections/bd-photo-1.webp",
+              alt: "A beautiful landscape"
+            },
+            {
+              path: '/assets/about-footage/archicad-drawing-session.webm',
+              src: "/images/about/sections/first-floor.webp",
+              alt: "A beautiful landscape",
+              app: 'A beautiful landscape'
+            }
+          ],
+          phrases: [
+            {
+              text: isHomeCountry
+                ? "Od 14 let se věnuji investicím a makroekonomii.<br /><br /> I když to nesouvisí přímo s web designem nebo architekturou, umění prodeje je základem úspěchu.<br /><br /> I když studuji dvě školy najednou, díky zavedeným principům zvládám všechno."
+                : "Since the age of 14, I’ve been learning about investing and macroeconomics.<br /><br /> While it doesn’t directly tie into web design or architecture, the art of sales is the foundation of success.<br /><br /> Even though I’m juggling two schools, I’ve developed principles that allow me to handle everything."
+            },
+            {
+              text: isHomeCountry
+                ? "Po každém z nás zůstanou dvě věci: naše jméno a to, co jsme vybudovali pro druhé.<br /><br /> To je to, co po nás svět bude pamatovat a co nás činí nezapomenutelnými."
+                : "We leave behind two things: our Name and what we’ve built for others.<br /><br /> That’s how the world remembers us. That’s what makes us unforgettable."
+            }
+          ]
         },
         {
-            images: [
-                {
-                    src: "/assets/images/slider-la/seo.webp",
-                    path: '/assets/a-footage/gsap-all.webm',
-                    alt: "A beautiful landscape",
-                    app: 'A beautiful landscape'
-                },  
-                {   
-                    path: 'assets/about-footage/programing-session-mid.webm',
-                    src: "/assets/images/slider-la/performance.webp",
-                    alt: "A beautiful landscape",
-                    app: "A beautiful landscape"
-                },
-                {
-                    src: "/images/done/thoughts.webp",
-                    alt: "A beautiful landscape"
-                }
-            ],
-            phrases: [
-                {
-                    text: isHomeCountry ? "Mým cílem je se věnovat náročným animacím pro výtvoření, unikátnosti ale jednoduchosti tvorby,<br /> kterou AI nikdy nebude schopno nahradit.<br /><br />Autenticita a vysoká úroveň kvality je to, co bude vždy mým cílem." : "My goal is to create complex animations for creation, uniqueness but simplicity of creation,<br /> which AI will never be able to replace.<br /><br />Authenticity and high quality is what will always be my goal."
-                },
-                {
-                    text: isHomeCountry ? "I když se nezdá, umět psát účinné texty a vytvořit skvělou nabídku<br /> je mnohem těžší než tohle vše.<br /><br />Jména jako Sabri Suby nebo<br />  Alex Hormozi <br />mě naučily, jak dělat nabídky a texty, které pomáhají lidem a firem růst." : "Although it may not seem so, knowing how to write effective<br /> texts and create a great offer is much harder than all this.<br /><br />Names like Sabri Suby or<br />  Alex Hormozi <br />taught me how to make offers and texts that help people and companies grow."
-                }
-            ]
+          images: [
+            {
+              src: "/assets/images/slider-la/seo.webp",
+              path: '/assets/a-footage/gsap-all.webm',
+              alt: "A beautiful landscape",
+              app: 'A beautiful landscape'
+            },
+            {
+              path: 'assets/about-footage/programing-session-mid.webm',
+              src: "/assets/images/slider-la/performance.webp",
+              alt: "A beautiful landscape",
+              app: "A beautiful landscape"
+            },
+            {
+              src: "/images/done/thoughts.webp",
+              alt: "A beautiful landscape"
+            }
+          ],
+          phrases: [
+            {
+              text: isHomeCountry
+                ? "Mým cílem je vytvářet složité animace, které přináší jedinečnost a jednoduchost tvorby.<br /> To je něco, co AI nikdy nebude schopno nahradit.<br /><br /> Autenticita a vysoká kvalita jsou mé priority."
+                : "My goal is to create intricate animations that bring both uniqueness and simplicity to the creative process.<br /> This is something AI will never fully replicate.<br /><br /> Authenticity and high quality will always be my goals."
+            },
+            {
+              text: isHomeCountry
+                ? "Psaní efektivních textů a tvorba skvělých nabídek je často náročnější než samotná technická práce.<br /><br /> Jména jako Sabri Suby a Alex Hormozi mě naučily, jak tvořit nabídky, které pomáhají růst firmám i jednotlivcům."
+                : "Writing effective copy and crafting great offers is often tougher than any technical work.<br /><br /> Influencers like Sabri Suby and Alex Hormozi have taught me how to create offers and content that help people and companies grow."
+            }
+          ]
         }
-    ]
+    ];      
 
 
 

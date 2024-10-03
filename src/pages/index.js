@@ -34,19 +34,24 @@ export default function Home() {
   const phrases = [
     {
       text: isHomeCountry
-        ? "Webové stránky nejsou jen<span>obrázky, text a layout.</span>Jde o<span>důležitou zprávu,</span>kterou <span>chcete sdělit</span> svým novým a stávajícím zákazníkům."
-        : "Websites are not just<span>images, text, and layout.</span>It's about<span>an important message</span>you want to <span>convey</span> to your new and existing customers."
+        ? "<span>Pojďme si to říct na rovinu:</span>Vytvořit špičkovou digitální prezentaci<span> není něco, co byste mohli zvládnout za jeden víkend.</span> Osvojení designových principů, behaviorální psychologie a technických dovedností,<span> které lidi nutí reagovat, zabere přes 3 000 hodin.</span> Věřte mi, ten čas jsem už investoval – a to za předpokladu,<span> že na to máte cit.</span> A pokud ho nemáte? Tak hodně štěstí při metodě pokus-omyl.<span> A věřte mi, budete ho potřebovat.</span>"
+        : "<span>Let's Talk Real:</span> Building a top-notch digital presence<span> isn't something you can just “figure out” on a weekend.</span> It takes over 3,000 hours to master design principles, behavioral psychology, and the technical ins and outs<span> that make people _want_ to engage.</span> <br /> Trust me, I've already put in that time—<span>and that's if you have an eye for it. If you don't?</span> Well, good luck with trial and error.<span> And I mean it. Good luck.</span>"
     },
     {
       text: isHomeCountry
-        ? "<span>Nejsem tradiční:</span>řekni si o něco míň a udělej o něco víc, typ člověka. Tohle prostě nedělám.<span>Poskytu Vám skutečnou hodnotu.</span>Protože miluju to, co dělám<span>a pevně věřím,</span>že můj ekosystém Vám pomůžou nabrat otáčky s vašim podnikáním<span>a zlepšit Váš život.</span>"
-        : "<span>I'm not traditional:</span>ask for a little less and do a little more, type of person. I just don't do that.<span>I provide real value.</span>Because I love what I do<span>and firmly believe</span>that my ecosystem will help you accelerate your business<span>and improve your life.</span>"
+        ? "<span>A teď to hlavní:</span> Můžete to zkusit sami.<span> Ale zamyslete se—kolik času si ceníte? Vynásobte to 3 000 = To je minimální investice.</span> A to nemluvím o ztracených prodejích kvůli průměrnému designu, chaotickému rozvržení nebo slabé strategii.<span> Chcete opravdu riskovat své podnikání jen na náhodu?</span>"
+        : "<span>And here's the kicker:</span> You could try to DIY it.<span> But take a second to think—how much do you value your time?</span><br /> Multiply that by 3,000 =<span> That's what you'd burn on this, _minimum_.</span> Not to mention the lost sales from a subpar design, confusing layout, or lackluster strategy.<span>Do you really want to risk your business on guesswork?</span>"
     },
     {
       text: isHomeCountry
-        ? "Žádný poplatek za služby, žádný model předplatného.<span>Dostanete jednorázový balížek s celoživotními službami.</span>Vytvářím vztahy, ne obchodní dealy.<span>Věřím v důvěru, ne v rychlý výdělek.</span>A jsem součástí celého procesu. <span>Jsem drahý, ale udělám věci tak, jak mají být.</span>"
-        : "No service fee, no subscription model.<span>You get a one-time package with lifetime services.</span>I build relationships, not business deals.<span>I believe in trust, not quick profit.</span>And I'm part of the whole process. <span>I'm expensive, but I do things the way they should be done.</span>"
-    }
+        ? "<span>Ten kód jsem už prolomil</span>—můj tříčlenný tým a já se soustředíme na to,<span> jak to udělat správně hned napoprvé.</span> Nejenže tvoříme designy. Vytváříme <span>kompletní digitální ekosystémy</span>, které nejen dobře vypadají, ale jsou postavené tak, aby fungovaly.<span> Postaráme se o vše:</span> design, rozvržení, cookies, GDPR, obsah, animace, hosting a SEO. A samozřejmě o nabídku... <span>Pokud tuhle část zanedbáte, vaše firma každý den přichází o peníze.</span> To zní děsivě, že jo?"
+        : "<span>I've already cracked the code</span>—my 3-person team and I are laser-focused on doing it right from the start.<span>We don't just design</span>. We build complete digital ecosystems that don't just look good—<span>they're built to perform.</span><br /><span>We handle it all:</span> design, layout, cookies, GDPR compliance, messaging, animations, hosting, and SEO.<span> And don't forget the offer...</span> Miss that one, and your business is <span>leaking money every single day</span>. Sounds awful, right? "
+    },
+    {
+      text: isHomeCountry
+        ? "<span>A teď pozor, design je jen začátek.</span> Web není jen o tom, jak vypadá. Jde o vytvoření ekosystému, který se spojí s vaším publikem,<span> zaujme je a přemění je na loajální zákazníky.</span> Souhlasí se mnou, že webová stránka <span>musí nejen dobře vypadat, ale hlavně přinášet výsledky?</span>"
+        : "<span>And listen, design is just the tip of the iceberg</span>. Building a website is about more than just looking good.<br /> It's about<span> creating a digital ecosystem</span>—one that connects with your audience, engages them,<span> and converts them into loyal customers.</span> Website is not just about looking good but about <span>getting results, agree? </span>"
+    },
   ];
 
   const landingText = isHomeCountry 
@@ -107,7 +112,7 @@ export default function Home() {
           <OfferSection />
           <Summary />
           <MainOffer />
-          <FreeOffers text='1'/>
+          {/* <FreeOffers text='1'/> */}
           <Footer />
         </div>}
       </CurveTransition>

@@ -1,21 +1,33 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import ButtonLink from '@/components/common/LinkButton/linkButton';
 import CountdownTimer from './Timer';
 import { useLoad } from '@/context';
 
-
-export default function MainOffer () {
-  const [ delay, setDelay ] = useState(false);
+export default function MainOffer() {
+  const [delay, setDelay] = useState(false);
   const { isHomeCountry } = useLoad();
+  const curve = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: curve,
+    offset: ['start end', 'end start']
+  });
+
+  const height = useTransform(scrollYProgress, [0, 1], [800, 0]);
 
   const phrase1 = [
     {
-        text: isHomeCountry 
-        ? "Můj čas je limitovaný, a mohu přinést tu nejlepší kvalitu <br/> jen pár z Vás každým rokem. <br/><br/>Kontaktujte mě proto hned teď. Je možný, že se na Vás potom, <br/> co odejdete, už nedostane."
-        : "My time is limited, and I can bring the best quality to only a few of you every year. <br/><br/>Contact me right now. It is possible that after you leave, <br/> I won't be available anymore."
+      text: isHomeCountry
+        ? "Finální nabídka - Berte, nebo nechte být"
+        : "Final Offer—Take It or Leave It"
     },
-];
+    {
+      text: isHomeCountry
+        ? "Nepracuji s každým. Pokud nejste vážně odhodlaní růst, tohle není pro vás. Spolupracuji s těmi, kteří se nebojí dělat zásadní kroky. Pokud jste to vy, skvěle. Jsem připraven, kdykoliv budete vy."
+        : "I don't work with everyone. If you're not serious about growing your business, this isn't for you. I work with action-takers, businesses ready to make serious moves. If that's you, great. I'm ready when you are."
+    },
+  ];
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,28 +36,51 @@ export default function MainOffer () {
   }, []);
 
   return (
-    <section className="mainOffer">
+    <section className="mainOffer__page">
+      <div className='main__container'>
         <div className="textContainer" data-scroll data-scroll-speed={0.4}>
-            {phrase1.map((phrase, i) => (
-                <Paragraph key={i} text={phrase.text} />
-            ))}
+          {phrase1.map((phrase, i) => (
+            <Paragraph key={i} text={phrase.text} />
+          ))}
         </div>
         <div className="description">
-            <p data-scroll data-scroll-speed={0.1} className="maintext">{ isHomeCountry ? "Mohu přijmout ještě" : "I can take in"}<br/><span className="specialSpan">1</span><br/><span>{isHomeCountry ? "Nového Klienta" : "New Client"}</span></p>
-            <p className="dateY">{ isHomeCountry ? "Do roku 2025" : "Untill 2025"}</p>
-            {/* there was an issue with the time on the server side and client side -> weren't same*/}
-           { delay && <CountdownTimer targetDate="2024-12-31T23:59:59"/>}
-            <div data-scroll data-scroll-speed={0.1} className="buttonContainer">
-              <ButtonLink title='Chci se Spojit Ihned' href='/contact' className="button"/>
-            </div>
-            
-            <div className="textSales" data-scroll data-scroll-speed={0.1}>
-                <p>{ isHomeCountry ? "Proč tak málo projektů ročně?" : "Why such a small number?"}<br/> { isHomeCountry ?"Protože Vám chci dát opravdovou hodnotu z toho," : "Because I want to give you a true value"}<br/> { isHomeCountry ? "co umím a to bez žádných limitací." : "of what I can do without any limitation"} <br/><br/> <span > { isHomeCountry ? "Kvalita před kvantitou" : "Quality over Quantity"}</span></p>
-            </div>
-            {/* WIP: Corrent the text here, make it different */}
+          <p data-scroll data-scroll-speed={0.1} className="maintext">
+            {isHomeCountry ? "Ale mám už jenom" : "But I've only got"}
+            <br />
+            <span className="specialSpan">1 {isHomeCountry ? "Místo" : "Spot"}</span>
+            <br />
+            <span>
+              {isHomeCountry
+                ? "než budu mít plný kalendář. Jakmile je plný, budete muset čekat celý rok, než dostanete další šanci."
+                : "left before my calendar's full. Once I'm booked, you're going to have to wait full year to get another shot."}
+            </span>
+          </p>
+          {delay && <CountdownTimer targetDate="2024-12-31T23:59:59" />}
+          <p className="dateY">{isHomeCountry ? "Tak se zeptejte:" : "So ask yourself:"}</p>
+          <p className="dateY">{isHomeCountry ? "Jak dlouho ještě budete odkládat svůj růst?" : "how much longer are you going to delay your growth?"}</p>
+          <p className="text__button">{isHomeCountry ? "Klikněte níže a zajistěte si své místo a pojďme na to." : "Click below to lock in your spot, and let's get to work. "}</p>
+          <div data-scroll data-scroll-speed={0.1} className="buttonContainer">
+            <ButtonLink title={isHomeCountry ? 'Spojit se hned' : "Let's Connect Now"} href='/contact' className="button" />
+          </div>
+          <div className="textSales" data-scroll data-scroll-speed={0.1}>
+            <p>
+              {isHomeCountry ? "Stále váháte?" : "Still thinking?"}
+              <br />
+              {isHomeCountry ? "Každá minuta, kterou strávíte přemýšlením, je další prodej, který vám uniká." : "Every minute you spend debating is another sale slipping away."}
+              <br />
+              <br />
+              <span>{isHomeCountry ? "Jak dlouho to ještě budete nechat být?" : "How long are you going to let that happen?"}</span>
+            </p>
+          </div>
         </div>
+      </div>
+        
+
+      <motion.div ref={curve} className="svgContainer">
+        <motion.div style={{ height }} className="svgDiv"></motion.div>
+      </motion.div>
     </section>
-  )
+  );
 }
 
 const CharSpan = ({ char, index, totalLength, scrollYProgress, className }) => {
@@ -59,7 +94,7 @@ const Paragraph = ({ text }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start 0.5', 'start 0.25']
+    offset: ['start 0.6', 'start 0.45']
   });
 
   const lines = text.split('<br/>');
@@ -71,19 +106,18 @@ const Paragraph = ({ text }) => {
           {line.split('<span>').map((part, partIndex) => {
             if (partIndex % 2 === 0) {
               return [...part].map((char, charIndex) => (
-                <CharSpan 
-                  key={`${lineIndex}-${charIndex}`} 
-                  char={char} 
-                  index={charIndex} 
-                  totalLength={part.length} 
+                <CharSpan
+                  key={`${lineIndex}-${charIndex}`}
+                  char={char}
+                  index={charIndex}
+                  totalLength={part.length}
                   scrollYProgress={scrollYProgress}
-                  // remember to apply correct key and don't forget about the return
                 />
               ));
             } else {
               const spanPart = part.split('</span>')[0];
               return [...spanPart].map((char, charIndex) => (
-                <CharSpan 
+                <CharSpan
                   key={`${lineIndex}-${charIndex}`}
                   char={char}
                   index={charIndex}

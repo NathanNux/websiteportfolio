@@ -63,15 +63,22 @@ export default function Section ({images, phrases, styles}) {
 const TextWithBr = ({ text }) => {
     // Split the text into lines using <br /> as the separator
     const lines = text.split('<br />');
-  
+
     return (
-      <>
-        {lines.map((line, i) => (
-          <Fragment key={i}>
-            {line}
-            {i < lines.length - 1 && <br />}
-          </Fragment>
-        ))}
-      </>
+        <>
+            {lines.map((line, i) => {
+                const parts = line.split(/<span>|<\/span>/);
+                return (
+                    <Fragment key={i}>
+                        {parts.map((part, j) => (
+                            <Fragment key={j}>
+                                {j % 2 === 0 ? part : <span>{part}</span>}
+                            </Fragment>
+                        ))}
+                        {i < lines.length - 1 && <br />}
+                    </Fragment>
+                );
+            })}
+        </>
     );
-  };
+};

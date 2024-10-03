@@ -29,26 +29,36 @@ export default function Home() {
 
   const description = [
     {
-        text: isHomeCountry ? "JMENUJI SE <br/> MATĚJ FOREJT. <br/> JSEM MLADÝ, <br/> AMBICIÓZNÍ NOMAD.<br/>VĚŘÍM VE<br/> SKUTEČNOU<br/>HODNOTU TVORBY.<br/>" : "MY NAME IS <br/> MATĚJ FOREJT. <br/> I'M A YOUNG, <br/> AMBITIOUS NOMAD.<br/>I BELIEVE IN<br/> THE REAL<br/>VALUE OF CREATION.<br/>"
+      text: isHomeCountry
+        ? "ARCHITEKT, <br/> DŘEVOSTAVAŘ, <br/> PROGRAMÁTOR, <br/> DESGINER.<br/> VĚŘÍM VE SKUTEČNOU <br/> HODNOTU TVORBY.<br/>"
+        : "ARCHITECT, <br/> WOOD ENGINEER, <br/> PROGRAMER, <br/> DESIGNER.<br/> I BELIEVE IN THE <br/> REAL VALUE <br/> OF CREATION.<br/>"
     },
   ];
-
+  
   const phrase1 = [
     {
-        text: isHomeCountry ?  "Už třetím rokem pracuji na webovém designu,<br/> psychologii, vnímání barev a sdělění příběhu, <br/>vždy s cílem vytvořit něco, co je nejen krásné,<br/> ale také funkční a efektivní." : "It is the third year that I have been working on web design,<br/> psychology, color perception and storytelling, <br/> always with the aim of creating something that is not only beautiful,<br/> but also functional and effective."
+      text: isHomeCountry
+        ? "Už třetím rokem se věnuji webovému designu,<br/> psychologii, vnímání barev a vyprávění příběhů.<br/> Tvořím projekty, které jsou nejen krásné,<br/> ale také účinné a funkční."
+        : "For three years, I’ve been working on web design,<br/> psychology, color perception, and storytelling.<br/> I create projects that aren’t just beautiful,<br/> but also functional and effective."
     },
   ];
   
   const phrase2 = [
     {
-        text: isHomeCountry ?  "Cílem není vytvořit pouze webovky,<br/> ale celý ekosystém, <br/> který je založen na principech <br/> dobrého designu a uživatelského zážitku." : "The goal is not just to create websites,<br/> but a whole ecosystem, <br/> based on the principles of <br/> good design and user experience."
+      text: isHomeCountry
+        ? "Cílem není jen tvořit webové stránky,<br/> ale celý ekosystém,<br/> který stojí na principech<br/> kvalitního designu a uživatelského zážitku."
+        : "The goal isn't just to create websites,<br/> but to build a whole ecosystem<br/> based on solid design principles<br/> and user experience."
     },
   ];
+  
   const phrase3 = [
     {
-        text:  isHomeCountry ? "Tohle je můj Background...." : "This is my Background...."
+      text: isHomeCountry
+        ? "Tohle je můj příběh...."
+        : "This is my story...."
     },
   ];
+  
   
 
   useEffect( () => {
@@ -85,7 +95,7 @@ export default function Home() {
           <Intro phrase1={phrase1} phrase2={phrase2} phrase3={phrase3} src={IntroImage}/>
           <AboutSections />
           <Services />
-          <FreeOffers text='1'/> 
+          {/* <FreeOffers text='1'/>  */}
           <Footer />
         </div>
       </CurveTransition>

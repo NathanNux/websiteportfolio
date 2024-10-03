@@ -1,104 +1,187 @@
-.mainOffer {
+.mainOffer__page {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
-    width: 100%;
-    margin: 0;
-    height: fit-content;
-    padding: 5rem 0 25rem 0;
-    z-index: 1;
-    .textContainer{
-        padding: 0 0 25vh 0;
-        position: relative;
-        p{
-            text-align: center;
-            line-height: 1.5;
-            color: #22272d;
-            max-width: 80vw;
-            font-size: 3em;
-            font-weight: 300;
-            margin: 0;
-            padding: 5em 0 0em 0;
-        }
-    }
-    .description{
+    position: relative;
+    width: 100vw;
+    height: 175vh;
+    z-index: 2;
+    background-color: #fff;
+    padding: 25vh 0 15vh 0;
+
+    .main__container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        row-gap: 2vh;
-        font-family: 'Inter', sans-serif;
-        .specialSpan{
-            font-weight: 800;
-            font-size: 3em;
-            color: #ff5100;
-        }
-        .dateY{
-            font-size: 2em;
-            font-weight: 400;
-            color: #ff5100;
-        }
-        .maintext{
-            font-size: 2em;
-            font-weight: 400;
-            color: #22272d;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        background-color: #fff;
+        padding: 15vh 0 35vh 0;
+
+        .textContainer {
+            padding: 25vh 0 35vh 0;
             position: relative;
-            span{
-                &:nth-of-type(1){
-                    font-size: 5em;
-                    font-weight: 800;
-                    color: #ff5100;
-                }
-                &:nth-of-type(2){
-                    font-weight: 300;
-                }
-            }
-        }
-        .buttonContainer{
-            position: relative;
-            .button{
-                height: 100px;
-                width: 200px;
-                background-color: #22272d;
-                border-radius: 50px;
-                p{
-                    font-size: 1.5rem;
-                    margin: 0;
-                    font-weight: 400;
-                    font-family: 'Inter', sans-serif;
-                }
-            }
-        }
-        p{
-            text-align: center;
-            margin: 0;
-        }
-        .textSales{
-            position: relative;
-            padding-top: -5vh;
-            p{
-                font-size: 2em;
-                line-height: 1.2;
+            width: 70vw;
+            p {
                 text-align: center;
+                line-height: 1.5;
+                color: #22272d;
+                max-width: 80vw;
+                font-size: 3em;
                 font-weight: 300;
-                span{
-                    font-weight: 500;
-                    font-size: 1.2em;
-                    color: #ff5100;
+                margin: 0;
+                padding: 2em 0 0em 0;
+            }
+        }
+
+        .description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Inter', sans-serif;
+            gap: 1rem;
+
+            .specialSpan {
+                font-weight: 800;
+                font-size: 3em;
+                color: #ff5100;
+            }
+
+            .dateY {
+                font-size: 2em;
+                font-weight: 400;
+                margin-bottom: 0.5rem;
+                color: #ff5100;
+
+                &:nth-of-type(4) {
+                    margin-bottom: 1rem;
                 }
+            }
+
+            .text__button {
+                font-size: 1.5em;
+                font-weight: 400;
+                color: #22272d;
+            }
+
+            .maintext {
+                font-size: 2em;
+                font-weight: 400;
+                color: #22272d;
+                position: relative;
+                width: 60%;
+                padding: 0 0 5vh 0;
+
+                span {
+                    &:nth-of-type(1) {
+                        font-size: 3em;
+                        font-weight: 800;
+                        color: #ff5100;
+                    }
+
+                    &:nth-of-type(2) {
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            .buttonContainer {
+                position: relative;
+                padding: 5vh 0 0 0;
+
+                .button {
+                    height: 100px;
+                    width: 200px;
+                    background-color: #22272d;
+                    border-radius: 50px;
+
+                    p {
+                        font-size: 1.5rem;
+                        margin: 0;
+                        font-weight: 400;
+                        font-family: 'Inter', sans-serif;
+                    }
+                }
+            }
+
+            p {
+                text-align: center;
+                margin: 0;
+            }
+
+            .textSales {
+                position: relative;
+                padding-top: -5vh;
+
+                p {
+                    font-size: 2em;
+                    line-height: 1.2;
+                    text-align: center;
+                    font-weight: 300;
+
+                    span {
+                        font-weight: 500;
+                        font-size: 1.2em;
+                        color: #ff5100;
+                    }
+                }
+            }
+        }
+    }
+
+    .svgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+
+        .svgDiv {
+            box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.75);
+            position: absolute;
+            width: 100%;
+            height: 100%; /* Ensure it has some height */
+            border-radius: 0% 0% 50% 50%;
+            background-color: white;
+            z-index: 1;
+        }
+    }
+}
+
+// Assume devices that can hover and have a fine pointer (e.g., mouse) are not touch devices
+@media (hover: hover) and (pointer: fine) {
+    .mainOffer__page {
+        .svgContainer {
+            .svgDiv {
+                width: 130%;
+                left: -15%;
             }
         }
     }
 }
 
+// For touch devices (which typically can't hover and have coarse pointers), allow vertical scrolling
+@media (hover: none) and (pointer: coarse) {
+    .mainOffer__page {
+        .svgContainer {
+            .svgDiv {
+                width: 100%;
+                left: 0%;
+            }
+        }
+    }
+}
 
-
-@media only screen and (max-width: 1750px){
+@media only screen and (max-width: 1750px) {
     .mainOffer {
-        .textContainer{
-            p{
+        .textContainer {
+            p {
                 max-width: 70vw;
                 font-size: 2.8em;
             }
@@ -106,10 +189,10 @@
     }
 }
 
-@media only screen and (max-width: 1550px){
+@media only screen and (max-width: 1550px) {
     .mainOffer {
-        .textContainer{
-            p{
+        .textContainer {
+            p {
                 max-width: 70vw;
                 font-size: 2.6em;
             }
@@ -117,10 +200,10 @@
     }
 }
 
-@media only screen and (max-width: 1450px){
+@media only screen and (max-width: 1450px) {
     .mainOffer {
-        .textContainer{
-            p{
+        .textContainer {
+            p {
                 max-width: 70vw;
                 font-size: 2.5em;
             }
@@ -128,48 +211,48 @@
     }
 }
 
-@media only screen and (max-width: 1000px) and (min-height: 600px){
+@media only screen and (max-width: 1000px) and (min-height: 600px) {
     .mainOffer {
-        .textContainer{
+        .textContainer {
             padding: 0 0 25vh 0;
-            p{
+            p {
                 text-align: center;
                 max-width: 70vw;
                 font-size: 2.2em;
                 padding: 5em 0 0em 0;
             }
         }
-        .description{
-            .specialSpan{
+        .description {
+            .specialSpan {
                 font-size: 2.2em;
             }
-            .dateY{
+            .dateY {
                 font-size: 1.5em;
             }
-            .maintext{
+            .maintext {
                 font-size: 1.5em;
-                span{
-                    &:nth-of-type(1){
+                span {
+                    &:nth-of-type(1) {
                         font-size: 3.5em;
                     }
-                    &:nth-of-type(2){
+                    &:nth-of-type(2) {
                         font-weight: 300;
                     }
                 }
             }
-            .buttonContainer{
-                .button{
+            .buttonContainer {
+                .button {
                     height: 70px;
                     width: 150px;
-                    p{
+                    p {
                         font-size: 1.2rem;
                     }
                 }
             }
-            .textSales{
-                p{
+            .textSales {
+                p {
                     font-size: 1.5em;
-                    span{
+                    span {
                         font-size: 1em;
                     }
                 }
@@ -179,48 +262,48 @@
 }
 
 // mobile version
-@media only screen and (max-width: 450px) and (max-height: 950px){
+@media only screen and (max-width: 450px) and (max-height: 950px) {
     .mainOffer {
         width: 90%;
         padding-left: 5%;
-        .textContainer{
-            p{
+        .textContainer {
+            p {
                 text-align: center;
                 max-width: 90vw;
                 font-size: 1.8em;
             }
         }
-        .description{
-            .specialSpan{
+        .description {
+            .specialSpan {
                 font-size: 2.2em;
             }
-            .dateY{
+            .dateY {
                 font-size: 2em;
             }
-            .maintext{
+            .maintext {
                 font-size: 2em;
-                span{
-                    &:nth-of-type(1){
+                span {
+                    &:nth-of-type(1) {
                         font-size: 4em;
                     }
-                    &:nth-of-type(2){
+                    &:nth-of-type(2) {
                         font-weight: 300;
                     }
                 }
             }
-            .buttonContainer{
-                .button{
+            .buttonContainer {
+                .button {
                     height: 80px;
                     width: 160px;
-                    p{
+                    p {
                         font-size: 1.2rem;
                     }
                 }
             }
-            .textSales{
-                p{
+            .textSales {
+                p {
                     font-size: 1.5em;
-                    span{
+                    span {
                         font-size: 1em;
                     }
                 }
@@ -229,49 +312,48 @@
     }
 }
 
-@media only screen and (max-width: 950px) and (max-height: 450px){
+@media only screen and (max-width: 950px) and (max-height: 450px) {
     .mainOffer {
         width: 90%;
         padding-left: 5%;
-        .textContainer{
-            p{
+        .textContainer {
+            p {
                 text-align: center;
                 max-width: 70vw;
                 font-size: 2em;
             }
         }
-        .description{
-
-            .specialSpan{
+        .description {
+            .specialSpan {
                 font-size: 2.2em;
             }
-            .dateY{
+            .dateY {
                 font-size: 2em;
             }
-            .maintext{
+            .maintext {
                 font-size: 2em;
-                span{
-                    &:nth-of-type(1){
+                span {
+                    &:nth-of-type(1) {
                         font-size: 4em;
                     }
-                    &:nth-of-type(2){
+                    &:nth-of-type(2) {
                         font-weight: 300;
                     }
                 }
             }
-            .buttonContainer{
-                .button{
+            .buttonContainer {
+                .button {
                     height: 80px;
                     width: 160px;
-                    p{
+                    p {
                         font-size: 1.2rem;
                     }
                 }
             }
-            .textSales{
-                p{
+            .textSales {
+                p {
                     font-size: 2em;
-                    span{
+                    span {
                         font-size: 1em;
                     }
                 }
@@ -279,4 +361,3 @@
         }
     }
 }
-
