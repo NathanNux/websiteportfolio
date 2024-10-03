@@ -108,7 +108,7 @@ export default function OfferSection() {
       phrases: [
         {
           text: isHomeCountry
-            ? "<span>Tady je to, kde to velká většina lidí vezme za špatný konec:</span><br /><br /><span> Mnoho agentur Vám předá web za více než 4 000 dolarů a pak zmizí.</span> Ale skutečné náklady nekončí.<br /><br /><span> Chcete aktualizace? To je za příplatek. Chcete správu? Měsíční poplatky.</span> Ročně můžete snadno platit 12 až 26 tísíc jen za základní údržbu — 120 až 260 tisíc za jednu dekádu, a to pokud vše půjde hladce.<br /><br /><span> A to nepočítáme původní cenu webu.</span> Nepomeňte, myslíme tu dlouhodobě - dakády."
+            ? "<span>Tady je to, kde to velká většina lidí vezme za špatný konec:</span><br /><br /><span> Mnoho agentur Vám předá web za více než 80 tisíc a pak zmizí.</span> Ale skutečné náklady nekončí.<br /><br /><span> Chcete aktualizace? To je za příplatek. Chcete správu? Měsíční poplatky.</span> Ročně můžete snadno platit 12 až 26 tísíc jen za základní údržbu — 120 až 260 tisíc za jednu dekádu, a to pokud vše půjde hladce.<br /><br /><span> A to nepočítáme původní cenu webu.</span> Nepomeňte, myslíme tu dlouhodobě - dakády."
             : "<span>Here's the reality checker:</span><br /><br /><span> Many agencies hand over a website charging well over $4K and vanish</span>, but the real cost doesn't stop there.<br /><br /><span> Want updates? That's extra. Want management? Monthly fees.</span> You could easily be paying $600-$2000 a year just for basic upkeep—$6,000 to $20,000 over a decade, and that's if everything goes smoothly. <br /><br /><span> Not counting the original price you paid when you got started.</span> Remember, we are here for the long run - decades."
         },
         {

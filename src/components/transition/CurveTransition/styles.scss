@@ -1,6 +1,6 @@
-.pageCurveTransition{
-    z-index: 10000;;
-    svg, .background{
+.pageCurveTransition {
+    z-index: 10000;
+    svg, .background {
         position: fixed;
         height: calc(100vh + 600px);
         pointer-events: none;
@@ -8,32 +8,31 @@
         left: 0;
         top: 0;
         z-index: 10008;
-        
     }
-    svg{
-        path{
+    svg {
+        path {
             fill: #22272d;
         }
     }
-    .background{
+    .background {
         background-color: #22272d;
         transition: opacity 0s linear 0.1s;
     }
-    .route{
+    .route {
         position: fixed;
         left: 30%;
         right: 30%;
         top: 50%;
         color: #fb6b28;
         font-size: calc(2vw + 1em);
-        z-index: 10009;
-        transform: translateX(-50% ) translateY(-50%);
+        z-index: 10009; /* Ensure it is above other elements */
+        transform: translateX(-50%) translateY(-50%);
         text-align: center;
         margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        span{
+        span {
             display: block;
             width: 10px;
             height: 10px;
@@ -45,8 +44,8 @@
 }
 
 @media only screen and (max-width: 1750px) {
-    .pageCurveTransition{
-        .route{
+    .pageCurveTransition {
+        .route {
             left: 30%;
             right: 30%;
         }
@@ -54,23 +53,22 @@
 }
 
 @media only screen and (max-width: 1050px) and (min-height: 1000px) {
-    .pageCurveTransition{
-        .route{
+    .pageCurveTransition {
+        .route {
             left: 30%;
             right: 30%;
             font-size: calc(2vw + 1.8em);
-            z-index: 9;
-            transform: translateX(-50% ) translateY(-50%);
+            z-index: 10009; /* Ensure it is above other elements */
+            transform: translateX(-50%) translateY(-50%);
             text-align: center;
             margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            span{
+            span {
                 display: block;
                 width: 10px;
                 height: 10px;
-                background-color: white;
                 border-radius: 50%;
                 margin-right: 10px;
             }
@@ -79,23 +77,22 @@
 }
 
 @media only screen and (max-width: 900px) and (min-height: 800px) {
-    .pageCurveTransition{
-        .route{
+    .pageCurveTransition {
+        .route {
             left: 30%;
             right: 30%;
             font-size: calc(2vw + 1.8em);
-            z-index: 9;
-            transform: translateX(-50% ) translateY(-50%);
+            z-index: 10009; /* Ensure it is above other elements */
+            transform: translateX(-50%) translateY(-50%);
             text-align: center;
             margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            span{
+            span {
                 display: block;
                 width: 12px;
                 height: 12px;
-                background-color: white;
                 border-radius: 50%;
                 margin-right: 10px;
             }
@@ -104,23 +101,22 @@
 }
 
 @media only screen and (max-width: 450px) and (max-height: 950px) {
-    .pageCurveTransition{
-        .route{
+    .pageCurveTransition {
+        .route {
             left: 15%;
             right: 15%;
             font-size: calc(2vw + 1.8em);
-            z-index: 9;
-            transform: translateX(-50% ) translateY(-50%);
+            z-index: 10009; /* Ensure it is above other elements */
+            transform: translateX(-50%) translateY(-50%);
             text-align: center;
             margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            span{
+            span {
                 display: block;
                 width: 12px;
                 height: 12px;
-                background-color: white;
                 border-radius: 50%;
                 margin-right: 10px;
             }
@@ -129,23 +125,22 @@
 }
 
 @media only screen and (max-width: 380px) and (max-height: 750px) {
-    .pageCurveTransition{
-        .route{
+    .pageCurveTransition {
+        .route {
             left: 15%;
             right: 15%;
             font-size: calc(1vw + 1.8em);
-            z-index: 9;
-            transform: translateX(-50% ) translateY(-50%);
+            z-index: 10009; /* Ensure it is above other elements */
+            transform: translateX(-50%) translateY(-50%);
             text-align: center;
             margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            span{
+            span {
                 display: block;
                 width: 12px;
                 height: 12px;
-                background-color: white;
                 border-radius: 50%;
                 margin-right: 10px;
             }

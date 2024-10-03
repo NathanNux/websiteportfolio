@@ -19,7 +19,7 @@
         overflow: hidden;
         z-index: 2;
         background-color: #fff;
-        padding: 15vh 0 35vh 0;
+        padding: 15vh 0 45vh 0;
 
         .textContainer {
             padding: 25vh 0 35vh 0;
@@ -179,7 +179,7 @@
 }
 
 @media only screen and (max-width: 1750px) {
-    .mainOffer {
+    .mainOffer__page {
         .textContainer {
             p {
                 max-width: 70vw;
@@ -190,7 +190,7 @@
 }
 
 @media only screen and (max-width: 1550px) {
-    .mainOffer {
+    .mainOffer__page {
         .textContainer {
             p {
                 max-width: 70vw;
@@ -201,7 +201,7 @@
 }
 
 @media only screen and (max-width: 1450px) {
-    .mainOffer {
+    .mainOffer__page {
         .textContainer {
             p {
                 max-width: 70vw;
@@ -212,48 +212,57 @@
 }
 
 @media only screen and (max-width: 1000px) and (min-height: 600px) {
-    .mainOffer {
-        .textContainer {
-            padding: 0 0 25vh 0;
-            p {
-                text-align: center;
-                max-width: 70vw;
-                font-size: 2.2em;
-                padding: 5em 0 0em 0;
-            }
-        }
-        .description {
-            .specialSpan {
-                font-size: 2.2em;
-            }
-            .dateY {
-                font-size: 1.5em;
-            }
-            .maintext {
-                font-size: 1.5em;
-                span {
-                    &:nth-of-type(1) {
-                        font-size: 3.5em;
-                    }
-                    &:nth-of-type(2) {
-                        font-weight: 300;
-                    }
-                }
-            }
-            .buttonContainer {
-                .button {
-                    height: 70px;
-                    width: 150px;
-                    p {
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-            .textSales {
+    .mainOffer__page {
+        height: 300vh;
+        padding: 0vh 0 0vh 0;
+        .main__container {
+            padding: 5vh 0 5vh 0;
+            .textContainer {
+                padding: 25vh 0 15vh 0;
                 p {
+                    text-align: center;
+                    max-width: 70vw;
+                    font-size: 2.2em;
+                    padding: 5em 0 0em 0;
+                }
+            }
+            .description {
+                .specialSpan {
+                    font-size: 2.2em;
+                }
+                .dateY {
+                    font-size: 1.5em;
+                }
+                .maintext {
                     font-size: 1.5em;
                     span {
-                        font-size: 1em;
+                        &:nth-of-type(1) {
+                            font-size: 3.5em;
+                        }
+                        &:nth-of-type(2) {
+                            font-weight: 300;
+                        }
+                    }
+                }
+                .buttonContainer {
+                    .button {
+                        height: 70px;
+                        width: 150px;
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .textSales {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p {
+                        width: 80%;
+                        font-size: 1.5em;
+                        span {
+                            font-size: 1em;
+                        }
                     }
                 }
             }
@@ -263,48 +272,51 @@
 
 // mobile version
 @media only screen and (max-width: 450px) and (max-height: 950px) {
-    .mainOffer {
+    .mainOffer__page {
         width: 90%;
         padding-left: 5%;
-        .textContainer {
-            p {
-                text-align: center;
-                max-width: 90vw;
-                font-size: 1.8em;
-            }
-        }
-        .description {
-            .specialSpan {
-                font-size: 2.2em;
-            }
-            .dateY {
-                font-size: 2em;
-            }
-            .maintext {
-                font-size: 2em;
-                span {
-                    &:nth-of-type(1) {
-                        font-size: 4em;
-                    }
-                    &:nth-of-type(2) {
-                        font-weight: 300;
-                    }
-                }
-            }
-            .buttonContainer {
-                .button {
-                    height: 80px;
-                    width: 160px;
-                    p {
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-            .textSales {
+        .main__container {
+
+            .textContainer {
                 p {
-                    font-size: 1.5em;
+                    text-align: center;
+                    max-width: 90vw;
+                    font-size: 1.8em;
+                }
+            }
+            .description {
+                .specialSpan {
+                    font-size: 2.2em;
+                }
+                .dateY {
+                    font-size: 2em;
+                }
+                .maintext {
+                    font-size: 2em;
                     span {
-                        font-size: 1em;
+                        &:nth-of-type(1) {
+                            font-size: 4em;
+                        }
+                        &:nth-of-type(2) {
+                            font-weight: 300;
+                        }
+                    }
+                }
+                .buttonContainer {
+                    .button {
+                        height: 80px;
+                        width: 160px;
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .textSales {
+                    p {
+                        font-size: 1.5em;
+                        span {
+                            font-size: 1em;
+                        }
                     }
                 }
             }
@@ -313,48 +325,51 @@
 }
 
 @media only screen and (max-width: 950px) and (max-height: 450px) {
-    .mainOffer {
+    .mainOffer__page {
         width: 90%;
         padding-left: 5%;
-        .textContainer {
-            p {
-                text-align: center;
-                max-width: 70vw;
-                font-size: 2em;
-            }
-        }
-        .description {
-            .specialSpan {
-                font-size: 2.2em;
-            }
-            .dateY {
-                font-size: 2em;
-            }
-            .maintext {
-                font-size: 2em;
-                span {
-                    &:nth-of-type(1) {
-                        font-size: 4em;
-                    }
-                    &:nth-of-type(2) {
-                        font-weight: 300;
-                    }
-                }
-            }
-            .buttonContainer {
-                .button {
-                    height: 80px;
-                    width: 160px;
-                    p {
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-            .textSales {
+        .main__container {
+
+            .textContainer {
                 p {
+                    text-align: center;
+                    max-width: 70vw;
+                    font-size: 2em;
+                }
+            }
+            .description {
+                .specialSpan {
+                    font-size: 2.2em;
+                }
+                .dateY {
+                    font-size: 2em;
+                }
+                .maintext {
                     font-size: 2em;
                     span {
-                        font-size: 1em;
+                        &:nth-of-type(1) {
+                            font-size: 4em;
+                        }
+                        &:nth-of-type(2) {
+                            font-weight: 300;
+                        }
+                    }
+                }
+                .buttonContainer {
+                    .button {
+                        height: 80px;
+                        width: 160px;
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .textSales {
+                    p {
+                        font-size: 2em;
+                        span {
+                            font-size: 1em;
+                        }
                     }
                 }
             }

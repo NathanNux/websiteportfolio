@@ -453,7 +453,7 @@
             .main {
                 height: 470vh;
                 .sectionContainer{
-                    font-size: 2rem;
+                    font-size: 3rem;
                     background-color: #22272d;
                     &:nth-of-type(1){
                         min-height: 150vh;
@@ -464,7 +464,7 @@
                                     position: absolute;
                                     top: 0%;
                                     left: 0;
-                                    width: 65vw;
+                                    width: 90vw;
                                     height: 50vh;
                                     margin-bottom: 40vh;
                                     margin-top: 10vh;
@@ -475,7 +475,7 @@
                                     position: absolute;
                                     bottom: 15%;
                                     right: 5%;
-                                    width: 50vw;
+                                    width: 90vw;
                                     text-align: right;
                                     
                                 }
@@ -520,7 +520,7 @@
                                     position: absolute;
                                     top: 10%;
                                     left: 0;
-                                    width: 65vw;
+                                    width: 90vw;
                                     height: 50vh;
                                     margin-bottom: 40vh;
                                     margin-top: 10vh;
@@ -531,7 +531,7 @@
                                     position: absolute;
                                     bottom: 20%;
                                     right: 5%;
-                                    width: 70vw;
+                                    width: 90vw;
                                     text-align: right;
                                     
                                 }
@@ -576,7 +576,7 @@
                                     position: absolute;
                                     top: 5%;
                                     left: 0;
-                                    width: 75vw;
+                                    width: 90vw;
                                     height: 50vh;
                                     margin-bottom: 40vh;
                                     margin-top: 10vh;
@@ -588,7 +588,7 @@
                                     bottom: 20%;
                                     right: 5%;
                                     margin-bottom: 5vh;
-                                    width: 70vw;
+                                    width: 90vw;
                                     text-align: right;
                                     
                                 }
@@ -639,13 +639,16 @@
 
 @media only screen and (max-width: 900px) and (min-height: 800px){
     .offersAbout{
+        width: 100vw;
         .mainSections{
             .main {
-    
+                height: 460vh;
+                overflow: hidden;
                 .sectionContainer{
                     font-size: 2rem;
                     background-color: #22272d;
                     &:nth-of-type(1){
+                        min-height: 160vh;
                         .text{
                             p{
                                 
@@ -653,7 +656,7 @@
                                     position: absolute;
                                     top: -5%;
                                     left: 0;
-                                    width: 45vw;
+                                    width: 90vw;
                                     height: 50vh;
                                     margin-bottom: 40vh;
                                     margin-top: 10vh;
@@ -664,13 +667,14 @@
                                     position: absolute;
                                     bottom: 15%;
                                     right: 5%;
-                                    width: 50vw;
-                                    text-align: center;
+                                    width: 90vw;
+                                    text-align: right;
                                     
                                 }
                             }
                         }
                         .images{
+                            top: 20vh;
                             .imageContainer{
                                 &:nth-of-type(1){
                                     left: 60%;
@@ -700,6 +704,7 @@
                     }
         
                     &:nth-of-type(2){
+                        min-height: 170vh;
                         .text{ 
                             p{
                                 
@@ -707,7 +712,7 @@
                                     position: absolute;
                                     top: -5%;
                                     left: 0;
-                                    width: 45vw;
+                                    width: 90vw;
                                     height: 50vh;
                                     margin-bottom: 40vh;
                                     margin-top: 10vh;
@@ -716,15 +721,16 @@
                                 }
                                 &:nth-of-type(2){
                                     position: absolute;
-                                    bottom: 0%;
+                                    bottom: 10%;
                                     right: 5%;
-                                    width: 50vw;
-                                    text-align: center;
+                                    width: 90vw;
+                                    text-align: right;
                                     
                                 }
                             }
                         }
                         .images{
+                            top: 25vh;
                             .imageContainer{
                                 &:nth-of-type(1){
                                     left: 35%;
@@ -754,6 +760,7 @@
                     }
         
                     &:nth-of-type(3){
+                        min-height: 150vh;
                         .text{
                             p{
                                 
@@ -761,7 +768,7 @@
                                     position: absolute;
                                     top: -5%;
                                     left: 0;
-                                    width: 45vw;
+                                    width: 90vw;
                                     height: 50vh;
                                     margin-bottom: 40vh;
                                     margin-top: 10vh;
@@ -770,16 +777,17 @@
                                 }
                                 &:nth-of-type(2){
                                     position: absolute;
-                                    bottom: 10%;
+                                    bottom: 20%;
                                     right: 5%;
                                     margin-bottom: 5vh;
-                                    width: 50vw;
-                                    text-align: center;
+                                    width: 90vw;
+                                    text-align: right;
                                     
                                 }
                             }
                         }
                         .images{
+                            top: 25vh;
                             .imageContainer{
                                 &:nth-of-type(1){
                                     left: 55%;
@@ -824,6 +832,7 @@
 
 @media only screen and (max-width: 450px) and (max-height: 950px){
     .offersAbout{
+
         .mainSections{
             .main {
                 height: 750vh;

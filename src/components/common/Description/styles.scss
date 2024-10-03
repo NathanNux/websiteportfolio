@@ -8,9 +8,10 @@
     z-index: 2;
     background-color: #fff;
     position: relative;
+    overflow: hidden;
 
     h2 {
-        width: 100%;
+        width: 95%;
         font-size: 6rem;
         font-weight: 400;
         color: #22272d;
@@ -70,7 +71,7 @@
 @media only screen and (max-width: 900px) and (min-height: 800px) {
     .mainDesc{
         h2{
-            width: 100%;
+            width: 90%;
             font-size: 4rem;
         }
     }

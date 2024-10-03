@@ -427,6 +427,7 @@ $bg-color: #fff;
 @media only screen and (max-width: 900px) and (min-height: 800px) {
     .mainServiceAbout {
         .serviceContainer {
+            overflow: hidden;
             .mainText {
                 position: absolute;
                 top: 10%;

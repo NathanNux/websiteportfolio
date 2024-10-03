@@ -3,6 +3,7 @@
     height: 120vh;
     z-index: -1;
     position: relative;
+    overflow: hidden;
 
     img {
         object-fit: cover;
