@@ -88,7 +88,7 @@ export default function Preloader() {
                         </motion.div>
 
                         {/* Text animation */}
-                        <motion.p variants={opacity} layout initial="initial" animate="enter">
+                        <motion.p variants={opacity} initial="initial" animate="enter">
                             <span></span>
                             {words[index]}
                         </motion.p>
