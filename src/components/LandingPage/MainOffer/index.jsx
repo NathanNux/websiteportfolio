@@ -76,9 +76,9 @@ export default function MainOffer() {
       </div>
         
 
-      <motion.div layout ref={curve} className="svgContainer">
+      <div ref={curve} className="svgContainer">
         <motion.div layout style={{ height }} className="svgDiv"></motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

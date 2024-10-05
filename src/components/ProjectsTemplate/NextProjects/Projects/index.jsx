@@ -60,8 +60,7 @@ export default function Projects () {
                             : 'exit'
                     }
                     variants={textTranslate}
-                    key={word + i}
-                    layout>
+                    key={word + i}>
                     {word}
                 </motion.span>
             );
@@ -165,7 +164,6 @@ export default function Projects () {
                                 <motion.div
                                     variants={shade} 
                                     animate={selectedProject.isActive && selectedProject.index != index ? "open" : "closed"}
-                                    layout
                                 >
                                     <Image 
                                         src={src} 
@@ -176,7 +174,7 @@ export default function Projects () {
                                         quality={60}
                                     />
                                 </motion.div>
-                                <motion.p layout>
+                                <motion.p>
                                     { disableAnimation ? title:  getWords(title, index)}
                                 </motion.p>
                             </Link>
@@ -184,8 +182,8 @@ export default function Projects () {
                     })
                 }
             </div>
-            <motion.div layout ref={cursor} className="cursor" variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
-            <motion.div layout ref={label} className="label" variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
+            <motion.div ref={cursor} className="cursor" variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
+            <motion.div ref={label} className="label" variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
                 <p>Zobrazit</p>
             </motion.div>
         </section>

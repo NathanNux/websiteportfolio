@@ -18,7 +18,7 @@ export default function IntroText({ phrases }) {
 const AnimatedWord = ({ word, range, progress, isHighlighted }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
-    <motion.span className={isHighlighted ? 'highlighted' : ''} layout style={{ opacity, display: 'inline-block', marginRight: '0.25em' }}>
+    <motion.span className={isHighlighted ? 'highlighted' : ''} style={{ opacity, display: 'inline-block', marginRight: '0.25em' }}>
       {word}
     </motion.span>
   );

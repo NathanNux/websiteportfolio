@@ -56,9 +56,9 @@ export default function Services() {
                     <ButtonLink title='Spojme se' href='/contact' className="buttonLink"/>
                 </div>
             </div>
-            <motion.div ref={curve} layout className="svgContainer">
-                <motion.div style={{ height }} layout className="svgDiv"></motion.div>
-            </motion.div>
+            <div ref={curve} className="svgContainer">
+                <motion.div layout style={{ height }} className="svgDiv"></motion.div>
+            </div>
         </section>
     )
 }
@@ -79,7 +79,7 @@ const Service = ({title, content, index}) => {
             </div>
 
             <div className="content" ref={section}>
-                <motion.div className="braker" style={{width}} layout></motion.div>
+                <motion.div className="braker" style={{width}}></motion.div>
                 <Paragraph text={content} />
             </div>
         </div>
@@ -92,7 +92,7 @@ const CharSpan = ({char, index, totalLenght, scrollYProgress}) => {
     const start = index / totalLenght;
     const end = start + (1 / totalLenght);
     const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-    return <motion.span style={{opacity}} layout>{char}</motion.span>;
+    return <motion.span style={{opacity}}>{char}</motion.span>;
 }
 
 

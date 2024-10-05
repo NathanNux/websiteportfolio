@@ -51,7 +51,7 @@ export default function Index({ isActive }) {
     //oterwise it will not work.
 
     return (
-        <motion.svg className="svgCurveHeader" layout>
+        <motion.svg layout className="svgCurveHeader">
             <motion.path layout ref={pathRef}></motion.path>
         </motion.svg>
     )

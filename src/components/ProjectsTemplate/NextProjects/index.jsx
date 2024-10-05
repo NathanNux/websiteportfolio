@@ -25,13 +25,12 @@ export default function NextProjects ({projects}) {
                 <Projects projects={projects}/>
             </div>
 
-            <motion.div 
+            <div 
                 ref={curve}
                 className="svgContainer" 
-                layout
             >
                 <motion.div layout style={{height}}  className="svgDiv"></motion.div>
-            </motion.div>
+            </div>
         </section>
     )
 }

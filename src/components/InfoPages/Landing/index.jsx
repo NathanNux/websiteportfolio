@@ -68,7 +68,7 @@ export default function LandingInfo({ landingText, src }) {
         />
       </div>
       
-      <motion.div layout variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
+      <motion.div variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
         <div ref={slider} className="slider">
           <p ref={firstText}>{landingText}</p>
           <p ref={secondText}>{landingText}</p>

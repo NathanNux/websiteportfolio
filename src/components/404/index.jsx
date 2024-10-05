@@ -82,7 +82,7 @@ export default function NotFoundPage() {
   }, [progress, setPath]);
 
   return (
-    <motion.footer style={{ y }} className="pageNotFound" ref={section} layout>
+    <motion.footer layout style={{ y }} className="pageNotFound" ref={section}>
       <div className="animContainer">
         <div className="head">
           <div className="imgContainer" data-scroll data-scroll-speed={0.002}>
@@ -105,7 +105,7 @@ export default function NotFoundPage() {
                onMouseLeave={handleMouseLeave}
           ></div>
           <motion.svg layout>
-            <motion.path ref={path} layout/>
+            <motion.path layout ref={path} />
           </motion.svg>
           <div data-scroll data-scroll-speed={0.1} className="button">
             <ButtonLink title={ isHomeCountry ? 'Hlavní stránka' : "Back to Main Page"} href='/' className="buttonLink" />
@@ -137,7 +137,7 @@ export default function NotFoundPage() {
             {footerLinks.map(({ title, href }, i) => (
               <div className="links" key={i} onMouseEnter={() => setIsHovered(i)} onMouseLeave={() => setIsHovered(null)}>
                 <Link href={href}>{title}
-                  <motion.div className="dot" layout variants={scale} initial='initial' animate={isHovered === i ? "enter" : "exit"}></motion.div>
+                  <motion.div className="dot" variants={scale} initial='initial' animate={isHovered === i ? "enter" : "exit"}></motion.div>
                 </Link>
               </div>
             ))}

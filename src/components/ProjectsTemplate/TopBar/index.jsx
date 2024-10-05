@@ -7,7 +7,7 @@ export default function TopBar ({ name, service, year, style, price }) {
     const { isHomeCountry } = useLoad();
 
     return (
-        <motion.section layout className="mainTopBarProjects" variants={slideUp} initial='initial' animate='enter'>
+        <motion.section className="mainTopBarProjects" variants={slideUp} initial='initial' animate='enter'>
             <div className="bar">
                 <div className="info">
                     <p>{ isHomeCountry ? "Klient" : "Client"}</p>

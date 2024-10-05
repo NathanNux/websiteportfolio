@@ -30,7 +30,7 @@ export default function PhoneButton() {
                     Tel: +420 777 157 476
                 </p>
             </a>
-            <motion.div layout className="dot" variants={scale} initial='initial' animate={isHovered ? 'enter' : 'exit'}></motion.div>
+            <motion.div className="dot" variants={scale} initial='initial' animate={isHovered ? 'enter' : 'exit'}></motion.div>
         </div>
     )
 }

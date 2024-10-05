@@ -169,7 +169,6 @@ export default function ZoomParallax({src2, src3, src4, src5, src6, src7, path, 
                         key={i}
                         className="motionContainer"
                         style={{ scale: video.scale }}
-                        layout
                     >
                         <div className="imageContainer">
                             {isLoaded && 

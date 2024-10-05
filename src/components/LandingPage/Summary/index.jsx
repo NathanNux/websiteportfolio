@@ -35,13 +35,12 @@ export default function Summary ({images}) {
             <h1>{ isHomeCountry ? "Rozpočet" : "Budget"}</h1>
             <p>{ isHomeCountry ? "60 000 - 120 000 ,-" :"$3000 - $6000"}</p>
         </div>
-        <motion.div 
+        <div 
             ref={curve}
             className="svgContainer"
-            layout
         >
             <motion.div layout style={{height}}  className="svgDiv"></motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
@@ -52,7 +51,7 @@ const CharSpan = ({char, index, totalLenght, scrollYProgress}) => {
     const start = index / totalLenght;
     const end = start + (1 / totalLenght);
     const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-    return <motion.span style={{opacity}} layout>{char}</motion.span>;
+    return <motion.span style={{opacity}}>{char}</motion.span>;
 }
 
 

@@ -58,12 +58,12 @@ export default function Index({ isActive, setIsActive }) {
                     <div onClick={() => {setIsActive(!isActive)}} className="el" ref={navbar}>
                         <div className={`burger ${isActive ? "burgerActive" : ""}`}></div>
                         <div className="label">
-                            <motion.p variants={opacity} layout animate={!isActive ? "open" : "closed"}>Menu</motion.p>
-                            <motion.p variants={opacity} layout animate={isActive ? "open" : "closed"}>{ isHomeCountry ? "Zavřít" : "Close"}</motion.p>
+                            <motion.p variants={opacity} animate={!isActive ? "open" : "closed"}>Menu</motion.p>
+                            <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>{ isHomeCountry ? "Zavřít" : "Close"}</motion.p>
                         </div>
                     </div>
                 </div>
-                <motion.div variants={background} layout initial="initial" animate={isActive ? "open" : "closed"} className="background">
+                <motion.div variants={background} initial="initial" animate={isActive ? "open" : "closed"} className="background">
                 </motion.div>
                 <AnimatePresence mode="wait">
                     {isActive && <Nav/>}

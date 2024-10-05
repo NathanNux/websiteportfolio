@@ -71,7 +71,7 @@ export default function Index() {
           quality={80}
         />
       </div>
-      <motion.div layout variants={scale} initial="initial" animate='enter' className="imageContainerSide" data-scroll data-scroll-speed={0.1}>
+      <motion.div variants={scale} initial="initial" animate='enter' className="imageContainerSide" data-scroll data-scroll-speed={0.1}>
         <Image 
           src='/images/done/materials.webp'
           alt='materials'
@@ -81,7 +81,7 @@ export default function Index() {
           quality={60}
         />
       </motion.div>
-      <motion.div layout variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
+      <motion.div variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
         <div ref={slider} className="slider">
           <p ref={firstText}>{landingText}</p>
           <p ref={secondText}>{landingText}</p>

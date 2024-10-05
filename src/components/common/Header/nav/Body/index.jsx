@@ -22,8 +22,7 @@ export default function Body({links, selectedLink, setSelectedLink}) {
                 variants={translate} initial="initial" 
                 animate="enter" 
                 exit="exit" 
-                key={char + i}
-                layout>
+                key={char + i}>
                 {char}
             </motion.span>
             )
@@ -50,7 +49,6 @@ export default function Body({links, selectedLink, setSelectedLink}) {
                         onMouseLeave={() => {setSelectedLink({isActive: false, index})}} 
                         variants={whichVariant(index)} 
                         animate={selectedLink.isActive && selectedLink.index != index ? "open" : "closed"}
-                        layout
                         >
                         {getChars(title)}
                     </motion.p>

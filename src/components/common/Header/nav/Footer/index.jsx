@@ -16,7 +16,6 @@ export default function Footer() {
                             variants={translate} initial="initial" 
                             animate="enter" 
                             exit="exit"
-                            layout
                         >
                             <span>Verze:</span>
                             <p> 2024 © Edice</p>
@@ -27,7 +26,6 @@ export default function Footer() {
                             variants={translate} initial="initial" 
                             animate="enter" 
                             exit="exit"
-                            layout
                         >
                             <span>Version:</span>
                             <p> 24 © Edition</p>
@@ -41,7 +39,6 @@ export default function Footer() {
                             variants={translate} initial="initial" 
                             animate="enter" 
                             exit="exit"
-                            layout
                         >   
                             <span>Místní čas:</span>
                             <p><TimeComponent isHomeCountry={isHomeCountry} /></p>                    
@@ -52,7 +49,6 @@ export default function Footer() {
                             variants={translate} initial="initial" 
                             animate="enter" 
                             exit="exit"
-                            layout
                         >   
                             <span>Current time:</span>
                             <p><TimeComponent isHomeCountry={isHomeCountry} /></p>                    
@@ -66,16 +62,14 @@ export default function Footer() {
                         custom={[0.3, 0]} 
                         variants={translate} initial="initial" 
                         animate="enter" 
-                        exit="exit"
-                        layout>
+                        exit="exit">
                         <Link href='/ochrana-osobnich-udaju'>Privacy Policy</Link>
                     </motion.li>
                     <motion.li 
                         custom={[0.3, 0]} 
                         variants={translate} initial="initial" 
                         animate="enter" 
-                        exit="exit"
-                        layout>
+                        exit="exit">
                         <Link href='/cookies'>Cookies</Link>
                     </motion.li>
                 </ul>

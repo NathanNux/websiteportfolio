@@ -101,7 +101,7 @@ export default function CookieBanner({ isSaved, setIsSaved, setModem, setIsVisib
     <AnimatePresence mode="wait">
       {!isSaved && (
         <motion.div layout className="banner" initial="initial" animate="enter" exit="exit" variants={slide}>
-          <motion.div layout className="banner__content">
+          <motion.div className="banner__content">
             <div className="banner__header">
               <h3 className="banner__title">Cookies</h3>
               <div className="banner__burger" onClick={handleDecline} />

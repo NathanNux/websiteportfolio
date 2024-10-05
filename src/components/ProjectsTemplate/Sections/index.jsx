@@ -33,7 +33,7 @@ export default function Sections ({photos, section1, text1, section2, text2 }) {
                 </div> */}
             </div>
 
-            <motion.div style={{height}} layout className="svgContainer">
+            <motion.div layout style={{height}} className="svgContainer">
                 <div className="svgDiv"></div>
             </motion.div>
         </section>

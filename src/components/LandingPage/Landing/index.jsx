@@ -73,14 +73,14 @@ export default function Index({ src }) {
         />
       </div>
 
-      <motion.div layout variants={ delayAnim ? FirstSliderSlideUp: SliderSlideUp } initial="initial" animate='enter' className="sliderContainer">
+      <motion.div variants={ delayAnim ? FirstSliderSlideUp: SliderSlideUp } initial="initial" animate='enter' className="sliderContainer">
         <div ref={slider} className="slider">
           <p ref={firstText}>Freelancer - Web Designer - Fullstack Dev - Freelancer - Web Designer - Fullstack Dev - Freelancer -</p>
           <p ref={secondText}>Freelancer - Web Designer - Fullstack Dev - Freelancer - Web Designer -  Fullstack Dev - Freelancer -</p>
         </div>
       </motion.div>
 
-      <motion.div layout variants={ delayAnim ? FirstTextSlideUp : TextSlideUp } initial="initial" animate='enter' data-scroll data-scroll-speed={-0.15} className="description">
+      <motion.div variants={ delayAnim ? FirstTextSlideUp : TextSlideUp } initial="initial" animate='enter' data-scroll data-scroll-speed={-0.15} className="description">
           <p> {isHomeCountry ?  "Jmenuji se" : "Name's"} <br /> Matěj Forejt</p>
           <p>{ isHomeCountry ?  "Vítejte u mě v Centru" : "Welcome at my Center"}</p>
       </motion.div>

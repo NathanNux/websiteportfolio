@@ -25,9 +25,8 @@ export default function MobileView ({images}) {
             <motion.div 
                 ref={curve}
                 className="svgContainer"
-                layout
             >
-                <motion.div layout style={{height}}  className="svgDiv"></motion.div>
+                <motion.div style={{height}}  className="svgDiv"></motion.div>
             </motion.div>
         </section>
     )

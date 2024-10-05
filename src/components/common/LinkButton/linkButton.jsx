@@ -11,7 +11,7 @@ export default function ButtonLink({ href, title, className }) {
             <Link href={href} className="link">
                 <p className="buttonText">{title}</p>
             </Link>
-            <motion.div layout className="dot" variants={scale} initial='initial' animate={isHovered ? 'enter' : 'exit'}></motion.div>
+            <motion.div className="dot" variants={scale} initial='initial' animate={isHovered ? 'enter' : 'exit'}></motion.div>
         </div>
     )
 }

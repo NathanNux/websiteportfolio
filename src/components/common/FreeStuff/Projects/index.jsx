@@ -47,8 +47,7 @@ export default function Projects () {
                             : 'exit'
                     }
                     variants={textTranslate}
-                    key={word + i}
-                    layout>
+                    key={word + i}>
                     {word}
                 </motion.span>
             );
@@ -96,7 +95,6 @@ export default function Projects () {
                                     <motion.div
                                         variants={shade} 
                                         animate={selectedProject.isActive && selectedProject.index != index ? "open" : "closed"}
-                                        layout
                                     >
                                         <Image 
                                             src={src} 
@@ -116,7 +114,7 @@ export default function Projects () {
                                             <source src={path} type="video/webm" />
                                         </video>}
                                     </motion.div>
-                                    <motion.p layout>
+                                    <motion.p>
                                         {disableAnimation ? devidedTitle(title) : getWords(title, index)}
                                     </motion.p>
                                 </Link>
