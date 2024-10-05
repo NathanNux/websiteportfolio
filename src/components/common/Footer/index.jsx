@@ -85,7 +85,7 @@ export default function Footer() {
   }, [progress, setPath]);
 
   return (
-    <motion.footer style={{ y }} className="mainFooter" ref={section}>
+    <motion.footer layout style={{ y }} className="mainFooter" ref={section}>
       <div className="toast">
         <Toaster />
       </div>
@@ -110,8 +110,8 @@ export default function Footer() {
                onMouseMove={handleMouseMove}
                onMouseLeave={handleMouseLeave}
           ></div>
-          <motion.svg>
-            <motion.path ref={path} />
+          <motion.svg layout>
+            <motion.path ref={path} layout/>
           </motion.svg>
           <div data-scroll data-scroll-speed={0.1} className="button">
             <ButtonLink title={ isHomeCountry ? 'Kontaktujte mne' : "Get in Touch"} href='/contact' className="buttonLink" />
@@ -149,7 +149,7 @@ export default function Footer() {
             {footerLinks.map(({ title, href }, i) => (
               <div className="links" key={i} onMouseEnter={() => setIsHovered(i)} onMouseLeave={() => setIsHovered(null)}>
                 <Link href={href}>{title}
-                  <motion.div className="dot" variants={scale} initial='initial' animate={isHovered === i ? "enter" : "exit"}></motion.div>
+                  <motion.div layout className="dot" variants={scale} initial='initial' animate={isHovered === i ? "enter" : "exit"}></motion.div>
                 </Link>
               </div>
             ))}

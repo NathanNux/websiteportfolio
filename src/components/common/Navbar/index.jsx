@@ -49,14 +49,14 @@ export default function Index ({ isActive, setIsActive }) {
                 navbarLinks.map(({ href, title }, i) => (
                   <div className="el" key={i} onMouseEnter={() => setHoveredIndex(i)} onMouseLeave={() => setHoveredIndex(null)}>
                     <Link href={href} className="Link">{title}</Link>
-                    <motion.div variants={scale} initial='initial' animate={active === i ? (hoveredIndex !== null && hoveredIndex !== i ? 'exit' : 'enter') : (hoveredIndex === i ? 'enter' : 'exit')} className="indicator"></motion.div>
+                    <motion.div layout variants={scale} initial='initial' animate={active === i ? (hoveredIndex !== null && hoveredIndex !== i ? 'exit' : 'enter') : (hoveredIndex === i ? 'enter' : 'exit')} className="indicator"></motion.div>
                   </div>
                 ))
               ) : (
                 navbarLinksEN.map(({ href, title }, i) => (
                   <div className="el" key={i} onMouseEnter={() => setHoveredIndex(i)} onMouseLeave={() => setHoveredIndex(null)}>
                     <Link href={href} className="Link">{title}</Link>
-                    <motion.div variants={scale} initial='initial' animate={active === i ? (hoveredIndex !== null && hoveredIndex !== i ? 'exit' : 'enter') : (hoveredIndex === i ? 'enter' : 'exit')} className="indicator"></motion.div>
+                    <motion.div layout variants={scale} initial='initial' animate={active === i ? (hoveredIndex !== null && hoveredIndex !== i ? 'exit' : 'enter') : (hoveredIndex === i ? 'enter' : 'exit')} className="indicator"></motion.div>
                   </div>
                 ))
               )

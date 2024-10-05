@@ -50,7 +50,7 @@ export default function Index() {
   ]
 
   return (
-    <motion.div variants={height} initial="initial" animate="enter" exit="exit" className={styles.nav}>
+    <motion.div variants={height} layout initial="initial" animate="enter" exit="exit" className={styles.nav}>
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <Body links={links} selectedLink={selectedLink} setSelectedLink={setSelectedLink}/>

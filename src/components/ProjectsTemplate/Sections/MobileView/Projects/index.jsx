@@ -23,7 +23,8 @@ export default function Projects ({photos}) {
                             : 'exit'
                     }
                     variants={textTranslate}
-                    key={word + i}>
+                    key={word + i}
+                    layout>
                     {word}
                 </motion.span>
             );
@@ -62,7 +63,7 @@ export default function Projects ({photos}) {
                                 onMouseOver={() => {setSelectedProject({isActive: true, index})}} 
                                 onMouseLeave={() => {setSelectedProject({isActive: false, index})}} 
                             >
-                                <motion.div>
+                                <div>
                                     <Image 
                                         src={src} 
                                         alt={alt} 
@@ -71,8 +72,8 @@ export default function Projects ({photos}) {
                                         quality={60}
                                         loading="lazy"
                                     />
-                                </motion.div>
-                                <motion.p>
+                                </div>
+                                <motion.p layout>
                                     { disableAnimation ? splitText(title) : getWords(title, index)}
                                 </motion.p>
                             </div>

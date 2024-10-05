@@ -129,10 +129,11 @@ const SVG = ({ height, width }) => {
 
     return (
         <motion.svg
+            layout
             {...anim(translate)}
             style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: `calc(100% + 600px)` }} // Keep SVG dimensions stable
         >
-            <motion.path {...anim(curve(initialPath, targetPath))} />
+            <motion.path layout {...anim(curve(initialPath, targetPath))} />
         </motion.svg>
     );
 };

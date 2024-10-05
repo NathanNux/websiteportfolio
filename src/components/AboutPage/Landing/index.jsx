@@ -60,7 +60,7 @@ export default function Index({ src }) {
 
 
   return (
-    <motion.main variants={slideUp} initial="initial" animate='enter' className="landingAbout">
+    <motion.main variants={slideUp} layout initial="initial" animate='enter' className="landingAbout">
       <div className='backgroundDiv' data-scroll data-scroll-speed={-0.85}>
         <Image 
           src={src}
@@ -72,7 +72,7 @@ export default function Index({ src }) {
         />
       </div>
       
-      <motion.div variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
+      <motion.div layout variants={SliderSlideUp} initial="initial" animate='enter' className="sliderContainer">
         <div ref={slider} className="slider">
           <p ref={firstText}>{landingText}</p>
           <p ref={secondText}>{landingText}</p>

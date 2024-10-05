@@ -180,7 +180,7 @@ const Column = ({ assets, y }) => {
     },[assets])
 
     return (
-        <motion.section className="column" style={{ y }}>
+        <motion.section layout className="column" style={{ y }}>
             {assets.map((asset, index) => {
                 const { src, alt, path } = asset;
                 return (

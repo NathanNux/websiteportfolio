@@ -14,7 +14,7 @@ export default function Intro({src, phrase1, phrase2, phrase3}) {
     const y = useTransform(scrollYProgress, [0, 1], ["-50%", "50%"]);
 
     return (
-        <motion.section ref={section} className="mainIntro" style={{y}} >
+        <motion.section ref={section} layout className="mainIntro" style={{y}} >
             <Image 
               src={src}
               fill={true}
@@ -56,7 +56,7 @@ const CharSpan = ({char, index, totalLenght, scrollYProgress}) => {
   const start = index / totalLenght;
   const end = start + (1 / totalLenght);
   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-  return <motion.span style={{opacity}}>{char}</motion.span>;
+  return <motion.span style={{opacity}} layout>{char}</motion.span>;
 }
 
 

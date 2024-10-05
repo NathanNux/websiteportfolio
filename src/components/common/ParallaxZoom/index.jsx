@@ -162,13 +162,14 @@ export default function ZoomParallax({src2, src3, src4, src5, src6, src7, path, 
     // we are again looping through the videos and checking if they are in the viewport, if they are, we are setting the isLoaded to true
 
     return(
-        <motion.section ref={ref} className="mainParallaxZoom" variants={slideUp} initial='initial' animate='enter'>
+        <motion.section layout ref={ref} className="mainParallaxZoom" variants={slideUp} initial='initial' animate='enter'>
             <div className="container">
                 {videos.map((video, i) => (
                     <motion.div
                         key={i}
                         className="motionContainer"
                         style={{ scale: video.scale }}
+                        layout
                     >
                         <div className="imageContainer">
                             {isLoaded && 

@@ -42,7 +42,7 @@ export default function ProjectsList() {
     },[isTouchDevice])
 
     return (
-        <motion.section className="mainAllProjectsPage" variants={slideUp} initial='initial' animate='enter'>
+        <motion.section layout className="mainAllProjectsPage" variants={slideUp} initial='initial' animate='enter'>
             <div className="barContainer">
                 
                 <div className="headerProjects">
@@ -108,7 +108,7 @@ export default function ProjectsList() {
             <AnimatePresence wait>
                 {/* need to have the key in there. without it. The el with list or icon will not be recognized as list or icon => no animations */}
                 {view === 'list' && (
-                    <motion.div className="list" ref={ref} key='list' variants={opacity} initial="exit" animate='enter' exit='exit'>
+                    <motion.div layout className="list" ref={ref} key='list' variants={opacity} initial="exit" animate='enter' exit='exit'>
                         <div className="options">
                             <div className="section">
                                 <Projects setActiveProject={setActiveProject} selectedCategory={selectedCategory}/>
@@ -119,7 +119,7 @@ export default function ProjectsList() {
                 )}
 
                 {view === 'icon' && (
-                    <motion.div className="iconList" key='icon' variants={opacity} initial='exit' animate='enter' exit='exit'>
+                    <motion.div layout className="iconList" key='icon' variants={opacity} initial='exit' animate='enter' exit='exit'>
                         <div>
                             <section className="mainIcon">
                                 <div className="projects">
@@ -132,10 +132,11 @@ export default function ProjectsList() {
             </AnimatePresence>
 
             <motion.div 
+                layout
                 ref={curve}
                 className="svgContainer"
             >
-                <motion.div style={{height}}  className="svgDiv"></motion.div>
+                <motion.div layout style={{height}}  className="svgDiv"></motion.div>
             </motion.div>
 
         </motion.section>

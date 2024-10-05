@@ -44,7 +44,7 @@ export default function Footer () {
                         {footerLinks.map(({ title, href }, i) => (
                             <div className="links" key={i} onMouseEnter={() => setIsHovered(i)} onMouseLeave={() => setIsHovered(null)}>
                                 <Link href={href}>{title}
-                                    <motion.div className="dot" variants={scale} initial='initial' animate={ isHovered === i ? "enter" : "exit"}></motion.div>
+                                    <motion.div layout className="dot" variants={scale} initial='initial' animate={ isHovered === i ? "enter" : "exit"}></motion.div>
                                 </Link>
                             </div>
                         ))}

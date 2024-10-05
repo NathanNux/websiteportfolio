@@ -24,6 +24,7 @@ export default function Points() {
                     }
                     variants={textTranslate}
                     key={word + i}
+                    layout
                 >
                     {word}
                 </motion.span>
@@ -87,7 +88,7 @@ export default function Points() {
                                             </li>
                                         ))}
                                     </ul>
-                                    <motion.p className='title'>
+                                    <motion.p className='title' layout>
                                         {disableAnimation ? splitText(title) : getWords(title, index)}
                                     </motion.p>
                                 </div>
@@ -126,7 +127,7 @@ export default function Points() {
                                             </li>
                                         ))}
                                     </ul>
-                                    <motion.p className='title'>
+                                    <motion.p className='title' layout>
                                         {disableAnimation ? splitText(title) : getWords(title, index)}
                                     </motion.p>
                                 </div>

@@ -75,7 +75,7 @@ export default function Preloader() {
                 {dimension.width > 0 && (
                     <>
                         {/* Ensuring the video container has a fixed size to prevent shifts */}
-                        <motion.div variants={videoPath} initial="initial" exit="exit" className="videoContainer" style={{ width: '100%', height: '100%' }}>
+                        <motion.div layout variants={videoPath} initial="initial" exit="exit" className="videoContainer" style={{ width: '100%', height: '100%' }}>
                             <video
                                 src="/assets/preloader/0819.webm"
                                 autoPlay={true}
@@ -88,14 +88,14 @@ export default function Preloader() {
                         </motion.div>
 
                         {/* Text animation */}
-                        <motion.p variants={opacity} initial="initial" animate="enter">
+                        <motion.p variants={opacity} layout initial="initial" animate="enter">
                             <span></span>
                             {words[index]}
                         </motion.p>
 
                         {/* SVG animation with pre-defined paths to prevent shifts */}
                         <svg>
-                            <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
+                            <motion.path layout variants={curve} initial="initial" exit="exit"></motion.path>
                         </svg>
                     </>
                 )}

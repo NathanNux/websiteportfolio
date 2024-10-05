@@ -124,7 +124,7 @@ export default function OfferSection () {
                 </div>
             </div>
 
-            <motion.div style={{height}} className="svgContainer">
+            <motion.div style={{height}} layout className="svgContainer">
                 <div className="svgDiv"></div>
             </motion.div>
         </section>

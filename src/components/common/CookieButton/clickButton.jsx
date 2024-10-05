@@ -25,7 +25,7 @@ export default function ButtonClick({ title, onClick, currentView, filterCategor
             <div className="link">
                 <p className={`${active ? 'black' : ''}`}>{title}</p>
             </div>
-            <motion.div className="dot" variants={scale} initial='initial' animate={active ? 'enter' : `${isHovered ? 'enter' : 'exit'}`}></motion.div>
+            <motion.div className="dot" layout variants={scale} initial='initial' animate={active ? 'enter' : `${isHovered ? 'enter' : 'exit'}`}></motion.div>
         </div>
     );
 }

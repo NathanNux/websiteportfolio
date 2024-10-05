@@ -34,7 +34,8 @@ export default function IconList({ selectedCategory}) {
                             : 'exit'
                     }
                     variants={textTranslate}
-                    key={word + i}>
+                    key={word + i}
+                    layout>
                     {word}
                 </motion.span>
             );
@@ -123,8 +124,8 @@ export default function IconList({ selectedCategory}) {
         
     return (
         <section className="mainIconList" ref={section}>
-            <motion.div ref={cursor} className="cursor" variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
-            <motion.div ref={label} className="label" variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
+            <motion.div layout ref={cursor} className="cursor" variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
+            <motion.div layout ref={label} className="label" variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
                 <p>Zobrazit</p>
             </motion.div>
 
@@ -151,7 +152,7 @@ export default function IconList({ selectedCategory}) {
                                         onMouseLeave={() => {setSelectedProject({isActive: false, index})}} 
                                         ref={el => projectsRef.current[index] = el}
                                         >
-                                            <motion.div className="imageContainer">
+                                            <motion.div className="imageContainer" layout>
                                                 <div>
                                                     <Image 
                                                         src={src} 
@@ -164,7 +165,7 @@ export default function IconList({ selectedCategory}) {
                                                 </div>
                                             </motion.div>
                                             
-                                            <motion.p>
+                                            <motion.p layout>
                                                 {disableAnimation ? title:  getWords(title, index)}
                                             </motion.p>
                                         </Link>

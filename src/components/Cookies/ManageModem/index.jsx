@@ -78,9 +78,9 @@ export default function CookieSettingsModal({ modem, setModem, setIsVisible, set
   return (
     <AnimatePresence mode="wait">
         {modem && 
-            <motion.div className="modem">
-                <motion.div className="modem__background" variants={blur} initial='initial' animate='enter' exit='exit'></motion.div>
-                <motion.div className="modem__content" variants={opacity} initial='initial' animate='enter' exit='exit'>
+            <motion.div className="modem" layout>
+                <motion.div layout className="modem__background" variants={blur} initial='initial' animate='enter' exit='exit'></motion.div>
+                <motion.div layout className="modem__content" variants={opacity} initial='initial' animate='enter' exit='exit'>
                     <div className="modem__header">
                     <h1>{ isHomeCountry ? "Nastavení Cookies" : "Cookie Settings"}</h1>
                     <div className="modem__burger" onClick={() => setModem(false)} />

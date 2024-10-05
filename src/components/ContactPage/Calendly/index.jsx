@@ -40,7 +40,7 @@ const CharSpan = ({char, index, totalLenght, scrollYProgress, className}) => {
   const start = index / totalLenght;
   const end = start + (1 / totalLenght);
   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-  return <motion.span style={{opacity}} className={className}>{char}</motion.span>;
+  return <motion.span style={{opacity}} layout className={className}>{char}</motion.span>;
 }
 
 

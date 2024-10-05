@@ -237,7 +237,7 @@ export default function Contact() {
     };
 
     return (
-        <motion.section variants={slideUp} initial="initial" animate='enter' className="mainContactIntro">
+        <motion.section layout variants={slideUp} initial="initial" animate='enter' className="mainContactIntro">
             <div className="toast">
                 <Toaster />
             </div>
@@ -282,6 +282,7 @@ export default function Contact() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1 }}
+                            layout
                         >
                             <Select
                                 isMulti
@@ -341,7 +342,7 @@ const Button =({ title, onClick }) => {
             <div className="link">
                 <p>{title}</p>
             </div>
-            <motion.div className="dot" variants={scale} initial='initial' animate={isHovered ? 'enter' : 'exit'}></motion.div>
+            <motion.div layout className="dot" variants={scale} initial='initial' animate={isHovered ? 'enter' : 'exit'}></motion.div>
         </div>
     )
 }

@@ -66,7 +66,7 @@ export default function InfoPages() {
                 <ContentBlock sections={sections} sectionRefs={sectionRefs} isHomeCountry={isHomeCountry} pathname={pathname} setIsVisible={setIsVisible} setModem={setModem} setIsSaved={setIsSaved}/>
             </div>
 
-            <motion.div style={{height}} className="svgContainer">
+            <motion.div style={{height}} className="svgContainer" layout>
                 <div className="svgDiv"></div>
             </motion.div>
         </main>
@@ -135,6 +135,7 @@ const StickyNav = ({ sections, activeSection, onLinkClick, isHomeCountry }) => {
                                 className="info__page__dot"
                                 animate={{ backgroundColor: activeSection === section.id ? '#fb6b28' : '#22272d' }}
                                 transition={{ duration: 0.3 }}
+                                layout
                             />
                             <motion.a
                                 href={`#${section.id}`}
@@ -144,6 +145,7 @@ const StickyNav = ({ sections, activeSection, onLinkClick, isHomeCountry }) => {
                                 }}
                                 animate={{ opacity: activeSection === section.id ? 0.6 : 1 }}
                                 transition={{ duration: 0.3 }}
+                                layout
                             >
                                 {section.title}
                             </motion.a>

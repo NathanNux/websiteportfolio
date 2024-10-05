@@ -112,14 +112,15 @@ export default function FreeOffers ({text}) {
                 <Projects/>
             </div>
 
-            <motion.div ref={cursor} className="cursor" variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
-            <motion.div ref={label} className="label" variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
+            <motion.div ref={cursor} layout className="cursor" variants={scaleAnim} animate={modal ? 'enter': 'exit'}></motion.div>
+            <motion.div ref={label} layout className="label" variants={scaleAnim} animate={modal ? 'enter': 'exit'}>
                 <p>{ isHomeCountry ?  "Získat" : "Obtain"}</p>
             </motion.div>
 
             <motion.div 
                 ref={curve}
                 className="svgContainer"
+                layout
             >
                 <motion.div style={{height}}  className="svgDiv"></motion.div>
             </motion.div>

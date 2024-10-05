@@ -37,7 +37,7 @@ export default function Index () {
         <section className="descriptionLanding" >
             <div className="body">
                 <div className="main" ref={elRef}>
-                    {!disableScene && <motion.div className="mask" animate={{
+                    {!disableScene && <motion.div layout className="mask" animate={{
                         WebkitMaskPosition: `${x - (size / 2)}px ${y - (size / 2)}px`,
                         WebkitMaskSize: `${size}px`,
                         }}
@@ -65,6 +65,7 @@ export default function Index () {
                     <motion.p
                         variants={textOpacity} animate={isInView ? "open" : "closed"}
                         className="text"
+                        layout
                     >
                         {aboutText}
                     </motion.p>

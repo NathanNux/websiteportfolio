@@ -5,7 +5,7 @@ import { opacity } from '../../anim';
 
 export default function Index({src, isActive, alt}) {
   return (
-    <motion.div variants={opacity} initial="initial" animate={isActive ? "open" : "closed"} className="imageContainerHeader">
+    <motion.div variants={opacity} layout initial="initial" animate={isActive ? "open" : "closed"} className="imageContainerHeader">
         <Image 
         src={`/assets/header/${src}`}
         fill={true}
