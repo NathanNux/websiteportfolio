@@ -27,7 +27,7 @@
                 gap: 0.5vw;
                 .imageContainer{ 
                     width: 40vw;
-                    height: calc(40vw * 0.825);
+                    height: calc(60vw * 0.825);
                     overflow: hidden;
                     position: relative; //this needs to be there, otherwise the Image will try 
                     border-radius: 10px;
@@ -82,7 +82,7 @@
                     width: 35%;
                     .imageContainer{
                         width: 45vw;
-                        height: calc(45vw * 0.825);
+                        height: calc(50vw * 0.825);
                         min-height: 480px;
                     }
                 }
