@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import ButtonLink from '@/components/common/LinkButton/linkButton'
 import { useLoad } from "@/context";
 
-export default function TopBar ({ name, service, year, style, price }) {
+export default function TopBar ({ name, service, year, style, price, link }) {
     const { isHomeCountry } = useLoad();
 
     return (
@@ -42,7 +42,7 @@ export default function TopBar ({ name, service, year, style, price }) {
             </div>
             
             <div className="buttonContainer" data-scroll data-scroll-speed={0.1}>
-              <ButtonLink title={ isHomeCountry ? 'Navštívit' : "Visit"} href='/projects' className="button"/>
+              <ButtonLink title={ isHomeCountry ? 'Navštívit' : "Visit"} href={link} className="button"/>
             </div>
         </motion.section>
     )

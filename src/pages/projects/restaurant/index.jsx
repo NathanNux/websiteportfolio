@@ -143,7 +143,7 @@ export default function Home() {
       <Header isActive={isActive} setIsActive={setIsActive}/>
       <Navbar isActive={isActive} setIsActive={setIsActive}/>
       <CurveTransition>
-        <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
+        <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000' link='https://restaurant-gericht-neon.vercel.app/'/>
         <ZoomParallax 
           src1='/assets/images/applesite/apple1.webp' 
           src2='/assets/images/applesite/apple2.webp' 

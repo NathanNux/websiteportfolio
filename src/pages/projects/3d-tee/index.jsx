@@ -128,7 +128,7 @@ export default function Home() {
       {isVisible && <CookieBanner isSaved={isSaved} setIsSaved={setIsSaved} setIsVisible={setIsVisible} setModem={setModem} />}
       {isVisible && <ManageModem modem={modem} setModem={setModem} setIsSaved={setIsSaved} setIsVisible={setIsVisible} />}
       <CurveTransition>
-        <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000'/>
+        <TopBar name='My Soul' service='Improving' year='2024' style='Simplistic' price='$2000' link='https://3-d-ai-t-shirt-web-app-demo-i1kn.vercel.app/'/>
         <ZoomParallax 
           src1='/assets/images/3d-tee/3dtee1.webp' 
           src2='/assets/images/3d-tee/3dtee2.webp' 
