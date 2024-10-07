@@ -14,6 +14,7 @@ export default function useGetLocation() {
           setIsHomeCountry(homeCountries.includes(country_code));
         } catch (error) {
           console.log('Error happened when detecting location:', error);
+          setIsHomeCountry(true)
         }
       };
   

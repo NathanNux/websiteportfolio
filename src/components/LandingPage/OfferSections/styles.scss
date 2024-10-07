@@ -273,9 +273,7 @@
                             }
                             &:nth-of-type(3) {
                                 position: relative;
-                                top: 70%;
-                                transform: translate(-50%, -50%);
-                                
+                                top: 70%;                                
                                 margin-bottom: 5vh;
                                 width: 70vw;
                                 text-align: center;
@@ -608,9 +606,7 @@
                                 }
                                 &:nth-of-type(3) {
                                     position: relative;
-                                    top: 50%;
-                                    transform: translate(-50%, -50%);
-                                    
+                                    top: 50%;                                    
                                     margin-bottom: 5vh;
                                     width: 70vw;
                                     text-align: center;
@@ -825,8 +821,6 @@
                                 &:nth-of-type(3) {
                                     position: relative;
                                     top: 70%;
-                                    transform: translate(-50%, -50%);
-                                    margin: 0;
                                     width: 90vw;
                                     text-align: center;
                                 }
@@ -879,7 +873,7 @@
     .offersLanding{
         .mainSections{
             .main {
-                height: 850vh;
+                height: 880vh;
                 gap: 20vh;
                 padding: 0 0 0 0;
                 .sectionContainer{
@@ -1018,7 +1012,7 @@
                     }
     
                     &:nth-of-type(3){
-                        min-height: 280vh;
+                        min-height: 300vh;
                         .text{
                             height: 100%;
                             p{
@@ -1043,9 +1037,7 @@
 
                                 &:nth-of-type(3) {
                                     position: relative;
-                                    top: 40%;
-                                    transform: translate(-50%, -50%);
-                                    
+                                    top: 35%;
                                     margin-bottom: 5vh;
                                     width: 90vw;
                                     text-align: center;
@@ -1091,7 +1083,7 @@
         
         .svgContainer {
             .svgDiv {
-                height: 25550%;
+                height: 15550%;
             }
         }
     }
@@ -1101,7 +1093,7 @@
     .offersLanding{
         .mainSections{
             .main {
-                height: 850vh;
+                height: 880vh;
                 gap: 20vh;
                 padding: 0 0 0 0;
                 .sectionContainer{
@@ -1266,9 +1258,6 @@
                                 &:nth-of-type(3) {
                                     position: relative;
                                     top: 40%;
-                                    transform: translate(-50%, -50%);
-                                    
-                                    margin-bottom: 5vh;
                                     width: 90vw;
                                     text-align: center;
                                 }
@@ -1484,9 +1473,7 @@
                                 }
                                 &:nth-of-type(3) {
                                     position: relative;
-                                    top: 30%;
-                                    transform: translate(-50%, -50%);
-                                    
+                                    top: 30%;                                    
                                     margin-bottom: 5vh;
                                     width: 90vw;
                                     text-align: center;
@@ -1542,15 +1529,15 @@
     .offersLanding{
         .mainSections{
             .main {
-                height: 850vh;
+                height: 1350vh;
                 gap: 40vh;
                 padding: 40vh 0;
                 .sectionContainer{
                     background-color: #22272d;
-                    font-size: 2em;
+                    font-size: 1.5em;
                     &:nth-of-type(1){
                         flex-direction: column;
-                        min-height: 260vh;
+                        min-height: 300vh;
                         position: relative;
                         .text{
                             height: 110%;
@@ -1611,7 +1598,7 @@
     
                     &:nth-of-type(2){
                         flex-direction: column;
-                        min-height: 260vh;
+                        min-height: 320vh;
                         position: relative;
                         .text{
                             height: 110%;
@@ -1634,7 +1621,14 @@
                                     position: absolute;
                                     bottom: 15%;
                                     width: 80vw;
-                                    text-align: center;
+                                    text-align: left;
+                                    
+                                }
+                                &:nth-of-type(3){
+                                    position: absolute;
+                                    bottom: 0%;
+                                    width: 80vw;
+                                    text-align: right;
                                     
                                 }
                             }
@@ -1674,7 +1668,7 @@
     
                     &:nth-of-type(3){
                         flex-direction: column;
-                        min-height: 280vh;
+                        min-height: 320vh;
                         position: relative;
                         .text{
                             height: 120%;
@@ -1690,7 +1684,7 @@
                                     margin-top: 10vh;
                                     margin-left: 5vw;
                                     z-index: 2;
-                                    text-align: center;
+                                    text-align: left;
                                 }
                                 &:nth-of-type(2){
                                     position: absolute;

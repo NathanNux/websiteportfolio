@@ -1,6 +1,6 @@
 .bodySummary {
     display: flex;
-    gap: 5vw;
+    gap: 3vw;
     align-items: center;
     justify-content: center;
     z-index: 6;
@@ -11,8 +11,8 @@
         padding: 4rem 2rem 2rem 2rem;
         display: flex;
         flex-direction: column;
-        width: calc(60vh * 0.625);
-        height: 70vh;
+        width: calc(70vh * 0.625);
+        height: 80vh;
         z-index: 7;
         position: relative;
         background-color: #22272d;

@@ -6,7 +6,7 @@
         justify-content: center;
         display: flex;
         padding: 2vw;
-        height: 175vh;
+        height: 225vh;
         width: 160vw;
         background-color: #ae8b79;
         .slider{ 
@@ -24,10 +24,10 @@
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                gap: 0.5vw;
+                gap: 1vw;
                 .imageContainer{ 
-                    width: 40vw;
-                    height: calc(60vw * 0.825);
+                    width: 35vw;
+                    height: calc(100vh * 0.825);
                     overflow: hidden;
                     position: relative; //this needs to be there, otherwise the Image will try 
                     border-radius: 10px;
@@ -53,16 +53,16 @@
                     top: -55%;
                 }
                 &:nth-of-type(2) {
-                    top: -45%;
+                    top: -35%;
                 }
                 &:nth-of-type(3) {
-                    top: -90%;
-                }
-                &:nth-of-type(4) {
                     top: -70%;
                 }
+                &:nth-of-type(4) {
+                    top: -50%;
+                }
                 &:nth-of-type(5) {
-                    top: -175%;
+                    top: -155%;
                 }
 
             }
@@ -82,7 +82,7 @@
                     width: 35%;
                     .imageContainer{
                         width: 45vw;
-                        height: calc(50vw * 0.825);
+                        height: calc(60vw * 0.825);
                         min-height: 480px;
                     }
                 }

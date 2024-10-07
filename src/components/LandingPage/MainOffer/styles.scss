@@ -5,10 +5,10 @@
     flex-direction: column;
     position: relative;
     width: 100vw;
-    height: 175vh;
+    height: 200vh;
     z-index: 2;
     background-color: #fff;
-    padding: 25vh 0 15vh 0;
+    padding: 35vh 0 25vh 0;
 
     .main__container {
         display: flex;
@@ -274,6 +274,7 @@
 @media only screen and (max-width: 450px) and (max-height: 950px) {
     .mainOffer__page {
         width: 100%;
+        height: 320vh;
         .main__container {
 
             .textContainer {
@@ -331,6 +332,7 @@
 @media only screen and (max-width: 400px) and (max-height: 950px) {
     .mainOffer__page {
         width: 100%;
+        height: 340vh;
         .main__container {
 
             .textContainer {
