@@ -18,7 +18,7 @@ export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const landingText = "Cookies - Cookies - Cookies - Cookies -"; 
-  const { isVisible, modem, setModem, setIsSaved, setIsVisible } = useLoad();
+  const { isHomeCountry, isVisible, isSaved, setIsSaved, modem, setModem, setIsVisible } = useLoad();
   // Call the useGetLocation hook
   useGetLocation();
 

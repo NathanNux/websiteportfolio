@@ -15,7 +15,7 @@ import { useLoad } from "@/context";
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const { isVisible, isSaved, setIsSaved, modem, setModem, setIsVisible, isHomeCountry } = useLoad();
+  const { isHomeCountry, isVisible, isSaved, setIsSaved, modem, setModem, setIsVisible } = useLoad();
   // Call the useGetLocation hook
   useGetLocation();
 

@@ -23,7 +23,7 @@ export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const landingText = "Privacy Policy - Privacy Policy - Privacy Policy - Privacy Policy -"; 
-  const { isVisible, isSaved, setIsSaved, modem, setModem, setIsVisible } = useLoad();
+  const { isHomeCountry, isVisible, isSaved, setIsSaved, modem, setModem, setIsVisible } = useLoad();
   // Call the useGetLocation hook
   useGetLocation();
 

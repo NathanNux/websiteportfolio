@@ -16,8 +16,7 @@ import ManageModem from "@/components/Cookies/ManageModem";
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const { isHomeCountry }  = useLoad();
-  const { isVisible, isSaved, setIsSaved, modem, setModem, setIsVisible } = useLoad();
+  const { isHomeCountry, isVisible, isSaved, setIsSaved, modem, setModem, setIsVisible } = useLoad();
   // Call the useGetLocation hook
   useGetLocation();
 
