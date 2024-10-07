@@ -95,7 +95,7 @@ export default function NotFoundPage() {
               quality={100}
             />
           </div>
-          <h1 data-scroll data-scroll-speed={0.001}>{ isHomeCountry ? "404; Stránka": "404; Page is not"}<br /> { isHomeCountry ? "Stránka není ve schránce":  "in the directory"}</h1>
+          <h1 data-scroll data-scroll-speed={0.001}>{ isHomeCountry ? "404; Stránka": "404; Page is not"}<br /> { isHomeCountry ? "není ve schránce":  "in the directory"}</h1>
         </div>
 
         <div className="line">
