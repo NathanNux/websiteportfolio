@@ -270,7 +270,7 @@
         gap: 15vw;
         overflow: hidden;
         .card {
-            width: calc(55vh * 0.625);
+            width: calc(60vh * 0.625);
             height: 85vh;
             padding: 2rem 1rem 1rem 1rem;
             .title{
@@ -305,18 +305,18 @@
         flex-direction: column;
         gap: 15vw;
         .card {
-            width: calc(60vh * 0.625);
-            height: 95vh;
+            width: calc(70vh * 0.625);
+            height: 90vh;
             padding: 1.5rem 0.8rem 0.8rem 0.8rem;
             .title{
                 padding: 0rem 0 0 0;
                 width: 90%;
                 .splitTitle{
                     margin-top: 0.5em;
-                    font-size: 2rem;
+                    font-size: 1.9rem;
                 }
                 span{
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                 }
             }
             ul{
@@ -329,7 +329,8 @@
             }
             .devider{
                 width: 100%;
-                font-size: 1.5em;
+                font-size: 1.4em;
+                padding: 0.5em 0.5em 0 0.5em;
             }
         }
     }   
